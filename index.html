@@ -93,6 +93,8 @@ p{max-width:68ch;margin:0 0 20px;overflow-wrap:break-word}
 @media(max-width:900px){.two{grid-template-columns:1fr;gap:34px}}
 figure{margin:0}
 figcaption{overflow-wrap:anywhere;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted);margin-top:10px;line-height:1.5}
+.quotefig{margin:26px 0 10px;font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:none}
+.byline{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted);padding-left:26px;margin-bottom:6px}
 .pull{font-family:var(--display);font-weight:300;font-size:clamp(1.25rem,3vw,1.85rem);line-height:1.35;color:var(--limestone);border-left:2px solid var(--olive);padding-left:24px;margin:40px 0;max-width:34ch}
 
 /* cards */
@@ -353,8 +355,6 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
       <p data-i18n="sound.p1"></p>
       <p data-i18n="sound.p2"></p>
       <p data-i18n="sound.p3"></p>
-      <blockquote class="pull" data-i18n="sound.quote"></blockquote>
-      <div class="ig" data-i18n="sound.quoteby" style="font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted);margin:-24px 0 30px 26px"></div>
       <div class="pgrid" style="margin-top:8px">
         <img src="img/framedrum.jpg" alt="">
         <img src="img/dj-mantra.jpg" alt="">
@@ -363,6 +363,8 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
     <figure>
       <img src="img/sound-karst.jpg" alt="">
       <figcaption data-i18n="sound.cap"></figcaption>
+      <blockquote class="pull quotefig" data-i18n="sound.quote"></blockquote>
+      <div class="byline" data-i18n="sound.quoteby"></div>
     </figure>
   </div>
 </div></section>
