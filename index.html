@@ -352,9 +352,14 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
       <p data-i18n="sound.p1"></p>
       <p data-i18n="sound.p2"></p>
       <p data-i18n="sound.p3"></p>
+      <div class="pgrid" style="margin-top:8px">
+        <img src="img/framedrum.jpg" alt="">
+        <img src="img/dj-mantra.jpg" alt="">
+        <img src="img/sunset.jpg" alt="">
+      </div>
     </div>
     <figure>
-      <img src="img/sunset.jpg" alt="">
+      <img src="img/sound-karst.jpg" alt="">
       <figcaption data-i18n="sound.cap"></figcaption>
     </figure>
   </div>
@@ -386,6 +391,7 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
     <div>
       <p data-i18n="who.p1"></p>
       <p data-i18n="who.p2"></p>
+      <p data-i18n="who.p3"></p>
       <h3 data-i18n="who.tonih"></h3>
       <p data-i18n="who.tonip"></p>
     </div>
@@ -394,10 +400,12 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
       <figcaption data-i18n="who.cap"></figcaption>
     </figure>
   </div>
+  <ul class="plain" id="cvfacts" style="margin-top:44px"></ul>
   <div class="pgrid">
+    <img src="img/marko-bw.jpg" alt="">
+    <img src="img/marko-auroville.jpg" alt="">
+    <img src="img/marko-filming.jpg" alt="">
     <img src="img/marko-matrimandir.jpg" alt="">
-    <img src="img/marko-india.jpg" alt="">
-    <img src="img/marko-equality.jpg" alt="">
   </div>
 </div></section>
 
@@ -513,6 +521,7 @@ en:{
 "who.h":"Two people who have both spent their lives looking at plants",
 "who.p1":"Marko Boško has twenty seven years in media production, currently as a video editor at Nova TV in Zagreb, and works as a filmmaker, sound designer and composer under Mantra Productions. He spent seven years in Auroville, the township in South India founded on the Integral Yoga of Sri Aurobindo and the Mother, living alongside Sadhana Forest as it turned eroded ground into forest.",
 "who.p2":"He is a percussionist and founder of the Tribal Jam Orchestra, a yoga teacher and author of the Sun Moon Yoga method, and performs as DJ Mantra. He is based between Zagreb and Rijeka, with family roots in Zadar, twenty minutes by ferry from the land.",
+"who.p3":"Two things from that working life matter here more than the rest. He trained as an engineer in industrial electronics and worked as a system and network administrator before the cameras, which is the skill set the test ground needs. And he documents for a living, so the survival rates, the water readings and the failures will be recorded properly and published rather than remembered loosely.",
 "who.tonih":"Toni Franović",
 "who.tonip":"Painter, co-author of this project. Born in Zagreb in 1964, he graduated from the Academy of Fine Arts in Zagreb in 1990 and taught life drawing and painting in nature there from 1995 to 2004. He is a professor at Sveučilište Sjever in Koprivnica and lives on an ecological estate in Legrad. He has spent his working life studying the flora of the southern Adriatic and the Mediterranean, which is why the plant list on this site is his as much as anyone's.",
 "who.cap":"Marko Boško.",
@@ -614,6 +623,7 @@ hr:{
 "who.h":"Dvoje ljudi koji su život proveli gledajući biljke",
 "who.p1":"Marko Boško ima dvadeset sedam godina u medijskoj produkciji, trenutno kao montažer na Novoj TV u Zagrebu, i radi kao filmaš, sound dizajner i skladatelj pod imenom Mantra Productions. Sedam godina proveo je u Auroville, gradu u južnoj Indiji utemeljenom na Integralnoj yogi Sri Aurobinda i Majke, živeći uz Sadhana Forest dok je erodirano tlo pretvarao u šumu.",
 "who.p2":"Perkusionist je i osnivač Tribal Jam Orchestra, učitelj yoge i autor metode Sun Moon Yoga, a nastupa kao DJ Mantra. Živi između Zagreba i Rijeke, s obiteljskim korijenima u Zadru, dvadeset minuta trajektom od zemlje.",
+"who.p3":"Dvije stvari iz tog radnog vijeka ovdje znače više od ostalog. Školovao se za inženjera industrijske elektronike i radio kao sistem i mrežni administrator prije kamera, a upravo to traži poligon. I dokumentiranje mu je zanat, pa će stope preživljavanja, očitanja vode i neuspjesi biti uredno zabilježeni i objavljeni, a ne tek otprilike zapamćeni.",
 "who.tonih":"Toni Franović",
 "who.tonip":"Slikar, suautor ovog projekta. Rođen u Zagrebu 1964., diplomirao na Akademiji likovnih umjetnosti u Zagrebu 1990., gdje je od 1995. do 2004. predavao crtanje akta i slikanje u prirodi. Profesor je na Sveučilištu Sjever u Koprivnici i živi na ekološkom imanju u Legradu. Radni vijek proveo je proučavajući floru južnog Jadrana i Mediterana, zbog čega je popis biljaka na ovoj stranici jednako njegov koliko i bilo čiji.",
 "who.cap":"Marko Boško.",
@@ -746,6 +756,14 @@ const CAL=[
 [11,"strawberry tree continuing, first rains bring green","planika još traje, prve kiše donose zelenilo","strawberry tree","planika","olive harvest and pressing, main planting season opens with the rain","berba i prešanje maslina, s kišom se otvara glavna sezona sadnje"],
 [12,"quiet, rosemary begins again","tiho, ružmarin ponovno kreće","rosemary in mild years","ružmarin u blagim godinama","planting continues, dry stone repair, processing olives and carob","sadnja se nastavlja, obnova suhozida, prerada maslina i rogača"]];
 
+
+const CVFACTS=[
+["27 years","27 godina","In production. Kanal Ri in Rijeka from 1998, Phenomena and PlanetB from 2004, RTL Hrvatska from 2007, Nova TV from 2009.","U produkciji. Kanal Ri u Rijeci od 1998., Phenomena i PlanetB od 2004., RTL Hrvatska od 2007., Nova TV od 2009."],
+["7 years","7 godina","In Auroville, filming and recording documentary and event work from 2018 to 2025.","U Aurovilleu, snimanje i ton na dokumentarnim i event produkcijama od 2018. do 2025."],
+["4 awards","4 nagrade","Croatian Film and Video Review 2008, International Minute Movie Cup 2002, Arena audience award 2002, KRAF special diploma for editing 2001.","Revija hrvatskog filma i videa 2008., International Minute Movie Cup 2002., nagrada publike Arena 2002., posebna diploma za montažu KRAF 2001."],
+["Engineering","Inženjerstvo","Diploma in electrical engineering and industrial electronics, 1999. Certified system and network administrator, 2004.","Inženjerska diploma iz elektrotehnike i industrijske elektronike, 1999. Certificirani sistem i mrežni administrator, 2004."],
+["Languages","Jezici","Croatian, English, working Italian, basic German and Tamil.","Hrvatski, engleski, radni talijanski, osnovni njemački i tamilski."]];
+
 /* ============================ render ============================ */
 let lang = (new URLSearchParams(location.search).get('lang')) ||
            (()=>{try{return localStorage.getItem('kel')}catch(e){return null}})() ||
@@ -766,7 +784,7 @@ function build(){
   const rows = (arr,el)=>document.getElementById(el).innerHTML =
     arr.map(r=>`<li><b>${L(r[0],r[1])}</b><span>${L(r[2],r[3])}</span></li>`).join('');
   rows(WATERL,'waterlist'); rows(FOODL,'foodlist'); rows(CRAFTL,'craftlist');
-  rows(TESTL,'testlist'); rows(LIVEL,'livelist'); rows(JOINL,'joinlist');
+  rows(TESTL,'testlist'); rows(LIVEL,'livelist'); rows(JOINL,'joinlist'); rows(CVFACTS,'cvfacts');
 
   document.getElementById('phaselist').innerHTML = PHASES.map(p=>
     `<div class="phase${p[4]?' now':''}"><div class="ph">${L(p[0],p[1])}</div><p>${L(p[2],p[3])}</p></div>`).join('');
