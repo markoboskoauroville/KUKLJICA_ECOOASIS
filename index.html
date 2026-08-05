@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kukljica EcoOasis</title>
+<meta name="description" content="A seven hectare ecosystem restoration site on the island of Ugljan, Croatia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap&subset=latin,latin-ext" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d1117; --surface:#151b23; --line:#232c37;
+  --text:#e6edf3; --muted:#8b949e;
+  --olive:#7d8f4f; --myrtle:#2f5d50; --adriatic:#2aa198;
+  --limestone:#d9d2c5; --ochre:#c8892f;
+  --display:'Fraunces',Georgia,serif;
+  --body:'IBM Plex Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --maxw:1180px;
+}
+html[data-mode="day"]{
+  --bg:#f4f2ed; --surface:#e9e5db; --line:#d2ccbe;
+  --text:#1a1f26; --muted:#5c6672;
+  --limestone:#3a3222;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-weight:300;line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--adriatic);text-decoration:none;border-bottom:1px solid rgba(42,161,152,.35)}
+a:hover{border-bottom-color:var(--adriatic)}
+:focus-visible{outline:2px solid var(--adriatic);outline-offset:3px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+.navin{max-width:var(--maxw);margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:22px}
+.mark{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--text);border:0;white-space:nowrap}
+.mark b{color:var(--olive);font-weight:500}
+.navlinks{display:flex;gap:18px;margin-left:auto;flex-wrap:wrap}
+.navlinks a{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:0}
+.navlinks a:hover{color:var(--text)}
+.toggles{display:flex;gap:8px;margin-left:6px}
+.tg{font-family:var(--mono);font-size:11px;letter-spacing:.1em;background:none;border:1px solid var(--line);color:var(--muted);padding:5px 9px;cursor:pointer;border-radius:2px}
+.tg:hover{color:var(--text);border-color:var(--muted)}
+.tg b{color:var(--adriatic);font-weight:500}
+@media(max-width:860px){.navlinks{display:none}}
+
+/* ---------- hero ---------- */
+header.hero{position:relative;border-bottom:1px solid var(--line);overflow:hidden}
+.heroimg{position:absolute;inset:0}
+.heroimg img{width:100%;height:100%;object-fit:cover;opacity:.42}
+.heroveil{position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0%,rgba(13,17,23,.35) 45%,var(--bg) 100%)}
+html[data-mode="day"] .heroveil{background:linear-gradient(180deg,var(--bg) 0%,rgba(244,242,237,.3) 45%,var(--bg) 100%)}
+.heroin{position:relative;max-width:var(--maxw);margin:0 auto;padding:110px 24px 70px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);margin-bottom:26px}
+h1{font-family:var(--display);font-weight:300;font-size:clamp(2.9rem,8vw,5.6rem);line-height:.98;margin:0 0 8px;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--olive)}
+.lede{font-family:var(--display);font-weight:300;font-size:clamp(1.15rem,2.5vw,1.55rem);line-height:1.45;max-width:30ch;margin:26px 0 34px;color:var(--text)}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:13px 22px;border:1px solid var(--olive);color:var(--olive);border-radius:2px}
+.btn.solid{background:var(--olive);color:var(--bg);border-color:var(--olive)}
+html[data-mode="day"] .btn.solid{color:#fff}
+.btn:hover{background:var(--olive);color:var(--bg)}
+html[data-mode="day"] .btn:hover{color:#fff}
+
+/* parcel outline */
+.parcel{position:absolute;right:5%;top:50%;transform:translateY(-50%);width:min(320px,32vw);opacity:.5;pointer-events:none}
+.parcel path{fill:none;stroke:var(--olive);stroke-width:1.5;stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 3.4s ease forwards .5s}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.parcel path{animation:none;stroke-dashoffset:0}}
+@media(max-width:860px){.parcel{display:none}}
+
+/* ---------- numbers ---------- */
+.figs{border-bottom:1px solid var(--line);background:var(--surface)}
+.figgrid{max-width:var(--maxw);margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(6,1fr)}
+.fig{padding:26px 14px 26px 0}
+.fig .n{font-family:var(--display);font-size:1.75rem;line-height:1;color:var(--adriatic)}
+.fig .l{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+@media(max-width:880px){.figgrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){.figgrid{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- sections ---------- */
+section{padding:84px 0;border-bottom:1px solid var(--line)}
+.slab{height:9px;width:100%;background:repeating-linear-gradient(90deg,var(--line) 0 22px,transparent 22px 25px,var(--line) 25px 40px,transparent 40px 44px,var(--line) 44px 71px,transparent 71px 75px);opacity:.55;margin-bottom:54px}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--olive);margin-bottom:18px}
+h2{font-family:var(--display);font-weight:300;font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.08;margin:0 0 24px;letter-spacing:-.015em;max-width:20ch}
+h3{font-family:var(--display);font-weight:400;font-size:1.3rem;margin:0 0 10px;line-height:1.25}
+p{max-width:68ch;margin:0 0 20px}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:start}
+@media(max-width:900px){.two{grid-template-columns:1fr;gap:34px}}
+figure{margin:0}
+figcaption{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted);margin-top:10px;line-height:1.5}
+.pull{font-family:var(--display);font-weight:300;font-size:clamp(1.25rem,3vw,1.85rem);line-height:1.35;color:var(--limestone);border-left:2px solid var(--olive);padding-left:24px;margin:40px 0;max-width:34ch}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:34px}
+.card{background:var(--bg);padding:26px 22px}
+.card .tag{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--olive);margin-bottom:12px}
+.card p{font-size:15px;margin:0 0 12px}
+.card .out{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.04em;line-height:1.5}
+
+/* species */
+.species{display:flex;flex-wrap:wrap;gap:7px;margin:26px 0 0;padding:0;list-style:none}
+.species li{font-family:var(--mono);font-size:11px;letter-spacing:.05em;border:1px solid var(--line);padding:6px 10px;color:var(--muted);border-radius:2px}
+.species li.new{border-color:var(--olive);color:var(--olive)}
+.species li.out{border-color:var(--ochre);color:var(--ochre);text-decoration:line-through}
+
+/* calendar ring */
+.calwrap{display:grid;grid-template-columns:minmax(280px,440px) 1fr;gap:54px;align-items:center;margin-top:20px}
+@media(max-width:900px){.calwrap{grid-template-columns:1fr;gap:34px}}
+#ring{width:100%;height:auto}
+#ring .sector{cursor:pointer;fill:transparent;stroke:var(--line);stroke-width:1;transition:fill .18s}
+#ring .sector:hover{fill:rgba(125,143,79,.16)}
+#ring .sector.on{fill:rgba(125,143,79,.34);stroke:var(--olive)}
+#ring .slabarc{fill:none;stroke:var(--line);stroke-width:1;opacity:.6}
+#ring text{font-family:var(--mono);font-size:11px;fill:var(--muted);pointer-events:none}
+#ring .on + text{fill:var(--text)}
+.calpanel .mo{font-family:var(--display);font-size:2.3rem;line-height:1;color:var(--adriatic);margin-bottom:20px}
+.calrow{border-top:1px solid var(--line);padding:14px 0;display:grid;grid-template-columns:112px 1fr;gap:16px}
+.calrow .k{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--olive);padding-top:3px}
+.calrow .v{font-size:15px}
+@media(max-width:520px){.calrow{grid-template-columns:1fr;gap:4px}}
+
+/* bunja drawing */
+.bunja{width:100%;max-width:420px}
+.bunja .stone{fill:none;stroke:var(--limestone);stroke-width:1.1;opacity:.85}
+.bunja .dim{stroke:var(--adriatic);stroke-width:.8;fill:none}
+.bunja text{font-family:var(--mono);font-size:9px;fill:var(--adriatic)}
+.bunja .ground{stroke:var(--olive);stroke-width:1.2}
+
+/* lists */
+.plain{list-style:none;padding:0;margin:24px 0 0}
+.plain li{border-top:1px solid var(--line);padding:15px 0;display:grid;grid-template-columns:150px 1fr;gap:18px;font-size:15px}
+.plain li b{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--olive);font-weight:500;padding-top:3px}
+@media(max-width:560px){.plain li{grid-template-columns:1fr;gap:5px}}
+
+/* timeline */
+.phase{border-left:1px solid var(--line);padding:0 0 30px 26px;position:relative}
+.phase:before{content:"";position:absolute;left:-4.5px;top:7px;width:8px;height:8px;background:var(--bg);border:1px solid var(--muted);border-radius:50%}
+.phase.now:before{background:var(--olive);border-color:var(--olive)}
+.phase .ph{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.phase.now .ph{color:var(--olive)}
+.phase p{font-size:15px;margin:0}
+
+/* portraits */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-top:30px}
+.pgrid img{border:1px solid var(--line);filter:saturate(.9)}
+
+/* influences */
+.inf{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px 40px;margin-top:34px}
+.inf div{border-top:1px solid var(--line);padding-top:16px}
+.inf h4{font-family:var(--display);font-weight:400;font-size:1.05rem;margin:0 0 6px}
+.inf p{font-size:14px;color:var(--muted);margin:0}
+
+footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.05em;line-height:1.9}
+.ver{position:fixed;right:10px;bottom:8px;font-family:var(--mono);font-size:9.5px;color:var(--muted);opacity:.55;z-index:60}
+.note{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--line);padding:14px 16px;margin-top:26px;line-height:1.7;max-width:70ch}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="navin">
+    <a href="#top" class="mark">KUKLJICA <b>ECOOASIS</b></a>
+    <div class="navlinks">
+      <a href="#land" data-i18n="nav.land"></a>
+      <a href="#history" data-i18n="nav.history"></a>
+      <a href="#method" data-i18n="nav.method"></a>
+      <a href="#calendar" data-i18n="nav.calendar"></a>
+      <a href="#craft" data-i18n="nav.craft"></a>
+      <a href="#living" data-i18n="nav.living"></a>
+      <a href="#who" data-i18n="nav.who"></a>
+      <a href="#join" data-i18n="nav.join"></a>
+    </div>
+    <div class="toggles">
+      <button class="tg" id="langbtn" aria-label="Language"></button>
+      <button class="tg" id="modebtn" aria-label="Light or dark"></button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="heroimg"><img src="img/panorama.jpg" alt=""></div>
+  <div class="heroveil"></div>
+  <svg class="parcel" viewBox="0 0 300 300" aria-hidden="true">
+    <path d="M148 62 L214 74 L228 158 L196 214 L120 208 L96 150 L108 92 Z"/>
+  </svg>
+  <div class="heroin">
+    <div class="eyebrow" data-i18n="hero.eyebrow"></div>
+    <h1>Kukljica <em>EcoOasis</em></h1>
+    <p class="lede" data-i18n="hero.lede"></p>
+    <div class="ctas">
+      <a class="btn solid" href="#join" data-i18n="hero.cta1"></a>
+      <a class="btn" href="#method" data-i18n="hero.cta2"></a>
+    </div>
+  </div>
+</header>
+
+<div class="figs">
+  <div class="figgrid">
+    <div class="fig"><div class="n">7,02</div><div class="l" data-i18n="fig.ha"></div></div>
+    <div class="fig"><div class="n">1,11</div><div class="l" data-i18n="fig.km"></div></div>
+    <div class="fig"><div class="n">4</div><div class="l" data-i18n="fig.parcels"></div></div>
+    <div class="fig"><div class="n">122,8</div><div class="l" data-i18n="fig.ridge"></div></div>
+    <div class="fig"><div class="n">0</div><div class="l" data-i18n="fig.wells"></div></div>
+    <div class="fig"><div class="n">0</div><div class="l" data-i18n="fig.irrigation"></div></div>
+  </div>
+</div>
+
+<section id="land"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="land.kicker"></div>
+  <div class="two">
+    <div>
+      <h2 data-i18n="land.h"></h2>
+      <p data-i18n="land.p1"></p>
+      <p data-i18n="land.p2"></p>
+      <ul class="species" id="species"></ul>
+      <div class="note" data-i18n="land.legend"></div>
+    </div>
+    <figure>
+      <img src="img/arkod.jpg" alt="ARKOD parcel measurement">
+      <figcaption data-i18n="land.cap"></figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section id="history"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="hist.kicker"></div>
+  <h2 data-i18n="hist.h"></h2>
+  <p data-i18n="hist.p1"></p>
+  <p data-i18n="hist.p2"></p>
+  <blockquote class="pull" data-i18n="hist.pull"></blockquote>
+  <p data-i18n="hist.p3"></p>
+</div></section>
+
+<section id="method"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="meth.kicker"></div>
+  <h2 data-i18n="meth.h"></h2>
+  <p data-i18n="meth.p"></p>
+  <div class="cards" id="workstreams"></div>
+  <div class="two" style="margin-top:44px;align-items:center">
+    <figure>
+      <img src="img/sketch-olive.jpg" alt="Hand sketch of olive pruning">
+      <figcaption data-i18n="meth.sketchcap"></figcaption>
+    </figure>
+    <div>
+      <h3 data-i18n="meth.sketchh"></h3>
+      <p data-i18n="meth.sketchp"></p>
+    </div>
+  </div>
+  <div class="note" data-i18n="meth.note"></div>
+</div></section>
+
+<section id="water"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="water.kicker"></div>
+  <div class="two">
+    <div>
+      <h2 data-i18n="water.h"></h2>
+      <p data-i18n="water.p1"></p>
+      <p data-i18n="water.p2"></p>
+      <ul class="plain" id="waterlist"></ul>
+    </div>
+    <figure>
+      <img src="img/topo.jpg" alt="Topographic map of Maženica and Bačina">
+      <figcaption data-i18n="water.cap"></figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section id="calendar"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="cal.kicker"></div>
+  <h2 data-i18n="cal.h"></h2>
+  <p data-i18n="cal.p"></p>
+  <div class="calwrap">
+    <svg id="ring" viewBox="0 0 400 400" role="group" aria-label="Phenological calendar"></svg>
+    <div class="calpanel">
+      <div class="mo" id="calmo"></div>
+      <div class="calrow"><div class="k" data-i18n="cal.k1"></div><div class="v" id="calflower"></div></div>
+      <div class="calrow"><div class="k" data-i18n="cal.k2"></div><div class="v" id="calbees"></div></div>
+      <div class="calrow"><div class="k" data-i18n="cal.k3"></div><div class="v" id="calwork"></div></div>
+    </div>
+  </div>
+  <div class="note" data-i18n="cal.note"></div>
+</div></section>
+
+<section id="food"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="food.kicker"></div>
+  <div class="two">
+    <div>
+      <h2 data-i18n="food.h"></h2>
+      <p data-i18n="food.p1"></p>
+      <p data-i18n="food.p2"></p>
+      <ul class="plain" id="foodlist"></ul>
+    </div>
+    <figure>
+      <img src="img/plants.jpg" alt="Species of the site">
+      <figcaption data-i18n="food.cap"></figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section id="craft"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="craft.kicker"></div>
+  <div class="two">
+    <div>
+      <h2 data-i18n="craft.h"></h2>
+      <p data-i18n="craft.p1"></p>
+      <p data-i18n="craft.p2"></p>
+      <ul class="plain" id="craftlist"></ul>
+    </div>
+    <figure>
+      <svg class="bunja" viewBox="0 0 340 300" aria-label="Bunja section drawing">
+        <g class="stone">
+          <path d="M170 34 L262 150 M170 34 L78 150"/>
+          <path d="M96 138 H244 M104 126 H236 M112 114 H228 M120 102 H220 M128 90 H212 M136 78 H204 M144 66 H196 M152 54 H188"/>
+          <path d="M78 150 V236 M262 150 V236 M78 150 H262"/>
+          <path d="M78 236 H262"/>
+          <path d="M96 150 V236 M244 150 V236"/>
+          <rect x="150" y="182" width="40" height="54"/>
+          <path d="M62 236 H278 M62 236 V252 H278 V236"/>
+        </g>
+        <path class="ground" d="M20 252 H320"/>
+        <g class="dim">
+          <path d="M78 266 H96 M78 262 V270 M96 262 V270"/>
+          <text x="66" y="284">80 cm</text>
+          <path d="M296 150 V236 M292 150 H300 M292 236 H300"/>
+          <text x="286" y="196" transform="rotate(-90 286 196)">~20 m²</text>
+          <path d="M170 20 V34"/>
+          <text x="176" y="26">kamene ploče</text>
+        </g>
+      </svg>
+      <figcaption data-i18n="craft.cap"></figcaption>
+    </figure>
+  </div>
+  <div class="note" data-i18n="craft.note"></div>
+</div></section>
+
+<section id="test"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="test.kicker"></div>
+  <h2 data-i18n="test.h"></h2>
+  <p data-i18n="test.p"></p>
+  <ul class="plain" id="testlist"></ul>
+</div></section>
+
+<section id="sound"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="sound.kicker"></div>
+  <div class="two">
+    <div>
+      <h2 data-i18n="sound.h"></h2>
+      <p data-i18n="sound.p1"></p>
+      <p data-i18n="sound.p2"></p>
+      <p data-i18n="sound.p3"></p>
+    </div>
+    <figure>
+      <img src="img/sunset.jpg" alt="">
+      <figcaption data-i18n="sound.cap"></figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section id="living"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="live.kicker"></div>
+  <h2 data-i18n="live.h"></h2>
+  <blockquote class="pull" data-i18n="live.pull"></blockquote>
+  <ul class="plain" id="livelist"></ul>
+  <div class="two" style="margin-top:54px">
+    <div>
+      <h3 data-i18n="live.volh"></h3>
+      <p data-i18n="live.volp"></p>
+      <h3 data-i18n="live.kidsh"></h3>
+      <p data-i18n="live.kidsp"></p>
+    </div>
+    <figure>
+      <img src="img/yoga.jpg" alt="">
+      <figcaption data-i18n="live.cap"></figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section id="who"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="who.kicker"></div>
+  <h2 data-i18n="who.h"></h2>
+  <div class="two">
+    <div>
+      <p data-i18n="who.p1"></p>
+      <p data-i18n="who.p2"></p>
+      <h3 data-i18n="who.tonih"></h3>
+      <p data-i18n="who.tonip"></p>
+    </div>
+    <figure>
+      <img src="img/marko-portrait.jpg" alt="Marko Boško">
+      <figcaption data-i18n="who.cap"></figcaption>
+    </figure>
+  </div>
+  <div class="pgrid">
+    <img src="img/marko-matrimandir.jpg" alt="">
+    <img src="img/marko-india.jpg" alt="">
+    <img src="img/marko-equality.jpg" alt="">
+  </div>
+</div></section>
+
+<section id="phases"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="ph.kicker"></div>
+  <h2 data-i18n="ph.h"></h2>
+  <div id="phaselist" style="margin-top:34px"></div>
+</div></section>
+
+<section id="influences"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="inf.kicker"></div>
+  <h2 data-i18n="inf.h"></h2>
+  <p data-i18n="inf.p"></p>
+  <div class="inf" id="inflist"></div>
+</div></section>
+
+<section id="join"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="join.kicker"></div>
+  <h2 data-i18n="join.h"></h2>
+  <p data-i18n="join.p"></p>
+  <ul class="plain" id="joinlist"></ul>
+</div></section>
+
+<footer><div class="wrap">
+  <div data-i18n="foot.loc"></div>
+  <div data-i18n="foot.credit"></div>
+  <div data-i18n="foot.sources"></div>
+</div></footer>
+<div class="ver">v1 (a)</div>
+
+<script>
+/* ============================ i18n ============================ */
+const T = {
+en:{
+"nav.land":"The land","nav.history":"History","nav.method":"Method","nav.calendar":"Calendar",
+"nav.craft":"Stone and craft","nav.living":"Living here","nav.who":"Who","nav.join":"Join",
+
+"hero.eyebrow":"Croatia · Island of Ugljan · Kukljica · Maženica",
+"hero.lede":"A seven hectare restoration site. Bringing back the landscape that fed this coast for two thousand years, and showing how to live in it.",
+"hero.cta1":"Volunteer","hero.cta2":"Read the method",
+
+"fig.ha":"hectares","fig.km":"km of perimeter","fig.parcels":"cadastral parcels",
+"fig.ridge":"m ridge above","fig.wells":"wells on site","fig.irrigation":"irrigation after establishment",
+
+"land.kicker":"The land",
+"land.h":"Four parcels above two bays",
+"land.p1":"The site lies in the bays of Maženica and Bačina, below the Čelinjak ridge on the island of Ugljan, twenty minutes by ferry from Zadar. Cadastral parcels 2448/6, 2448/14, 2448/13 and 2449/1, measured at 7,02 hectares with 1,11 km of perimeter.",
+"land.p2":"It carries old olive terraces in recoverable condition, dry stone walls, maquis, and a spreading cover of Aleppo pine. Most of the olives need pruning rather than replanting. There is no reliable surface water and no well.",
+"land.legend":"GREEN = growing here now and staying · ORANGE = being removed · OLIVE OUTLINE = to be planted",
+"land.cap":"ARKOD measurement of the parcel. Perimeter 1,11 km, area 7,02 ha, with individual section lengths.",
+
+"hist.kicker":"What happened here",
+"hist.h":"The forest that belongs here was cut for ships",
+"hist.p1":"The eastern Adriatic islands were originally covered by evergreen holm oak forest, Quercus ilex, with hop hornbeam, wild pistachio, myrtle, strawberry tree and laurel beneath it. Maquis, garrigue and bare rocky pasture are its degradation stages, not its natural state.",
+"hist.p2":"Clearing ran for centuries and had many causes: shipbuilding timber, including the Venetian Republic's long extraction of oak from Dalmatia, along with firewood, lime burning, goat and sheep grazing that stopped regrowth, and clearing for vineyards and olives that intensified through the 19th century. The first photographs of this coast show a nearly treeless landscape.",
+"hist.pull":"What was planted in its place was chosen for speed, not for the place.",
+"hist.p3":"Soil loss followed, and afforestation programmes intensified from the late 19th century under Austro-Hungarian administration. Aleppo pine, Pinus halepensis, was the species chosen, because it tolerates drought and colonises degraded ground. The stated intention was to build soil so that holm oak could return. That has largely not happened. Aleppo pine now self-seeds aggressively, dominates the littoral landscape, suppresses the flora beneath it and carries very high fire risk. We are removing the fast species and returning the slow ones, on seven hectares, so that at least one stretch of this coast shows what the island actually is.",
+
+"meth.kicker":"Method",
+"meth.h":"Five workstreams, each with something you can count",
+"meth.p":"The model is Sadhana Forest, founded in 2003 near Auroville by Aviram and Yorit Rozin, which turned seventy acres of eroded ground into indigenous forest using volunteers, water retention earthworks and native species alone. They publish their survival rates. So will we, including the seasons that go badly.",
+"meth.sketchh":"Pruning is the first intervention",
+"meth.sketchp":"Most of the olives here are not dead, they are overgrown. The method is to cut the lateral shoots from the root, keep one main stem or two to three where they are already well developed, and open the crown so light and air get through. Restoration by pruning costs nothing but hands and returns a grove that is already forty or a hundred years old. Planting a new tree buys you a decade of waiting instead.",
+"meth.sketchcap":"Working sketch. Lateral shoots crossed out, two to three main stems kept, figure for scale.",
+"meth.note":"Nothing on this site is marked as done that is not done. The project is at Phase 0.",
+
+"water.kicker":"Water",
+"water.h":"No well, no spring, and a great deal of dew",
+"water.p1":"Water is the hardest problem on this site and it is treated first, before any planting. Nothing is watered permanently. Irrigation exists only to establish young trees and then it stops.",
+"water.p2":"The lichen and moss on the lower ground indicate very high dew, which is a resource rather than a curiosity. Groundwater drains from the Čelinjak ridge toward Maženica and Bačina, and any source close to the shore has to be checked for salt intrusion before it is used.",
+"water.cap":"Čelinjak ridge, V. vrh at 122,8 m, and the drainage toward Maženica and Bačina uvala.",
+
+"cal.kicker":"The calendar",
+"cal.h":"The year decides the work, not the plan",
+"cal.p":"A Mediterranean site is run by phenology. What is flowering tells you what the bees are on, what can be cut, what can be distilled and what has to wait. This ring is the working calendar. It is also the honest answer to the question of when to come and what you would actually be doing.",
+"cal.k1":"In flower","cal.k2":"Bee forage","cal.k3":"Work",
+"cal.note":"This calendar is provisional, built from regional phenology and the project document. It will be corrected by observation on the site itself, and the corrections will be published.",
+
+"food.kicker":"Food forest",
+"food.h":"Trees that do not need watering",
+"food.p1":"Everything planted has to survive a Dalmatian summer without irrigation once established. That rules out most of what a garden centre sells and rules in what people here grew for centuries.",
+"food.p2":"Tamarisk goes closest to the sea as a salt and wind break. Cherry, peach and apricot go only in the moister lower ground. Chickpea ripens by mid month 8, before watering would be needed. Clover feeds nitrogen back into the soil and buhač keeps insects down without a spray.",
+"food.cap":"Species already growing on the site and species to be introduced.",
+
+"craft.kicker":"Stone and craft",
+"craft.h":"The wall is the infrastructure",
+"craft.p1":"Dry stone terracing is what makes agriculture possible on karst. It holds soil, slows water and shelters roots, and it is built without mortar from the stone already lying in the field. Dry stone walling is protected Croatian intangible heritage and is inscribed on the UNESCO list.",
+"craft.p2":"We intend to survey and repair the existing walls, enter them into the open public inventory at suhozid.hr, and host a workshop with the association 4 Grada Dragodid, who have been teaching the craft since their first workshop on Vis in 2002.",
+"craft.cap":"Bunja, section drawing. The round dry stone field hut with a conical roof of stone slabs, the building type we intend to use.",
+"craft.note":"Reference building: the bunja restored by designer Ana Reić in her olive grove near Ložišća on Brač. Walls 80 cm thick, roughly 20 m² inside, every stone cut by hand, roof covered in stone slabs, three years to build. Published by Slobodna Dalmacija on 30.10.2009, text Tanja Šimundić Bendić, photographs Joško Ponoš / CROPIX. Photographs are reproduced here only with licence.",
+
+"test.kicker":"Test ground",
+"test.h":"Every solution is an experiment with a published result",
+"test.p":"The site is a demonstration ground, so each of these is set up to be measured rather than admired. If something does not work in this climate, that is a result worth publishing too.",
+
+"sound.kicker":"Sound",
+"sound.h":"An old plan finding its ground",
+"sound.p1":"Years ago Marko wrote a plan called Sound Village: energy independent houses in permaculture gardens, built for research into sound and movement. Small structures demonstrating acoustic phenomena, each house holding one old sound culture, and a central building with a hall and a studio. It was never built. Kukljica is where it becomes possible.",
+"sound.p2":"The Integratron in the Mojave desert is worth naming here for one reason only, its acoustics. An all wood domed chamber, built without nails, still studied for how it behaves as a room. The claims made about it by its builder are not part of this project. The building geometry is.",
+"sound.p3":"Marko is a percussionist, founder of the Tribal Jam Orchestra, and a student of frame drum with Yshai Afterman. He performs as DJ Mantra with organic house and the set concept Od Gangesa do Amazone. Sound belongs on this land the way the bees do, as part of how the place works.",
+"sound.cap":"Above Maženica.",
+
+"live.kicker":"Living here",
+"live.h":"The heat writes the timetable",
+"live.pull":"Work starts at first light, while the stone is still cool. The middle of the day belongs to the sea.",
+"live.volh":"Volunteers",
+"live.volp":"Work exchanged for food and accommodation, listed on Workaway and WWOOF. Accommodation is basic: compost toilet, outdoor kitchen, simple shelter, no mains water. The work is physical, hot and slow. Anyone who wants comfort should read that sentence twice.",
+"live.kidsh":"Children",
+"live.kidsp":"Auroville runs free progress schools, where a child follows their own interest and pace rather than a fixed grade. A working landscape is a good place for that. Children come with their families, and there is real work here they can do at their own size.",
+"live.cap":"All life is yoga. Sri Aurobindo.",
+
+"who.kicker":"Who",
+"who.h":"Two people who have both spent their lives looking at plants",
+"who.p1":"Marko Boško has twenty seven years in media production, currently as a video editor at Nova TV in Zagreb, and works as a filmmaker, sound designer and composer under Mantra Productions. He spent seven years in Auroville, the township in South India founded on the Integral Yoga of Sri Aurobindo and the Mother, living alongside Sadhana Forest as it turned eroded ground into forest.",
+"who.p2":"He is a percussionist and founder of the Tribal Jam Orchestra, a yoga teacher and author of the Sun Moon Yoga method, and performs as DJ Mantra. He is based between Zagreb and Rijeka, with family roots in Zadar, twenty minutes by ferry from the land.",
+"who.tonih":"Toni Franović",
+"who.tonip":"Painter, co-author of this project. Born in Zagreb in 1964, he graduated from the Academy of Fine Arts in Zagreb in 1990 and taught life drawing and painting in nature there from 1995 to 2004. He is a professor at Sveučilište Sjever in Koprivnica and lives on an ecological estate in Legrad. He has spent his working life studying the flora of the southern Adriatic and the Mediterranean, which is why the plant list on this site is his as much as anyone's.",
+"who.cap":"Marko Boško.",
+
+"ph.kicker":"Phases",
+"ph.h":"Where the project actually is",
+
+"inf.kicker":"Influences",
+"inf.h":"Where this comes from",
+"inf.p":"These are the projects and practices that shaped this plan. They are listed as sources rather than as company we claim to keep.",
+
+"join.kicker":"Join",
+"join.h":"Come and work, or help it start",
+"join.p":"The project is at the beginning. The most useful things right now are hands, expertise and introductions, in that order.",
+
+"foot.loc":"Kukljica EcoOasis · Island of Ugljan · Maženica and Bačina uvala · Parcels 2448/6, 2448/14, 2448/13, 2449/1",
+"foot.credit":"Photographs and drawings by Marko Boško unless credited otherwise.",
+"foot.sources":"Sources: sadhanaforest.org · dragodid.org · suhozid.hr · geaviva.net · auroville.org"
+},
+hr:{
+"nav.land":"Zemlja","nav.history":"Povijest","nav.method":"Metoda","nav.calendar":"Kalendar",
+"nav.craft":"Kamen i zanat","nav.living":"Život ovdje","nav.who":"Tko","nav.join":"Pridruži se",
+
+"hero.eyebrow":"Hrvatska · Otok Ugljan · Kukljica · Maženica",
+"hero.lede":"Sedam hektara obnove. Vraćamo krajolik koji je hranio ovu obalu dvije tisuće godina i pokazujemo kako se u njemu živi.",
+"hero.cta1":"Volontiraj","hero.cta2":"Pročitaj metodu",
+
+"fig.ha":"hektara","fig.km":"km opsega","fig.parcels":"katastarske čestice",
+"fig.ridge":"m greben iznad","fig.wells":"bunara na terenu","fig.irrigation":"navodnjavanja nakon primanja",
+
+"land.kicker":"Zemlja",
+"land.h":"Četiri čestice iznad dvije uvale",
+"land.p1":"Teren leži u uvalama Maženica i Bačina, ispod grebena Čelinjak na otoku Ugljanu, dvadeset minuta trajektom od Zadra. Katastarske čestice 2448/6, 2448/14, 2448/13 i 2449/1, izmjereno 7,02 hektara uz 1,11 km opsega.",
+"land.p2":"Na njemu su stare maslinske terase u stanju iz kojeg se mogu vratiti, suhozidi, makija i sve gušći pokrov alepskog bora. Većini maslina treba rezidba, a ne nova sadnja. Nema pouzdane površinske vode ni bunara.",
+"land.legend":"ZELENO = raste ovdje i ostaje · NARANČASTO = uklanja se · MASLINASTI OKVIR = sadi se",
+"land.cap":"ARKOD izmjera čestice. Opseg 1,11 km, površina 7,02 ha, s duljinama pojedinih sekcija.",
+
+"hist.kicker":"Što se ovdje dogodilo",
+"hist.h":"Šuma koja pripada ovom mjestu posječena je za brodove",
+"hist.p1":"Jadranske otoke izvorno je pokrivala zimzelena šuma crnike, Quercus ilex, a ispod nje crni grab, tršlja, mirta, planika i lovor. Makija, garig i goli kamenjar njezini su stupnjevi degradacije, a ne prirodno stanje.",
+"hist.p2":"Sječa je trajala stoljećima i imala više uzroka: drvo za brodogradnju, među njima i dugo venecijansko vađenje hrastovine iz Dalmacije, zatim ogrjev, paljenje vapna, ispaša koza i ovaca koja je zaustavljala obnovu, te krčenje za vinograde i masline koje se pojačalo kroz 19. stoljeće. Prve fotografije ove obale pokazuju krajolik gotovo bez drveća.",
+"hist.pull":"Ono što je posađeno umjesto nje birano je po brzini, a ne po mjestu.",
+"hist.p3":"Uslijedio je gubitak tla, pa se pošumljavanje pojačalo od kraja 19. stoljeća pod austrougarskom upravom. Odabran je alepski bor, Pinus halepensis, jer podnosi sušu i osvaja degradirano tlo. Namjera je bila izgraditi tlo da se crnika može vratiti. To se uglavnom nije dogodilo. Alepski bor danas se agresivno sam sije, dominira priobalnim krajolikom, guši floru ispod sebe i nosi vrlo visok rizik od požara. Uklanjamo brze vrste i vraćamo spore, na sedam hektara, da barem jedan potez ove obale pokaže što otok zaista jest.",
+
+"meth.kicker":"Metoda",
+"meth.h":"Pet linija rada, svaka s nečim što se može izbrojati",
+"meth.p":"Model je Sadhana Forest, osnovan 2003. kraj Auroville, koji su pokrenuli Aviram i Yorit Rozin i koji je sedamdeset jutara erodiranog tla pretvorio u autohtonu šumu, samo volonterima, zemljanim radovima za zadržavanje vode i domaćim vrstama. Oni objavljuju svoje stope preživljavanja sadnica. Objavljivat ćemo i mi, uključujući sezone koje prođu loše.",
+"meth.sketchh":"Rezidba je prvi zahvat",
+"meth.sketchp":"Većina ovdašnjih maslina nije mrtva, nego zarasla. Metoda je odrezati izdanke iz korijena, ostaviti jednu glavnu žilu ili dvije do tri gdje su već dobro razvijene, i otvoriti krošnju da prolaze svjetlo i zrak. Obnova rezidbom ne košta ništa osim ruku, a vraća maslinik koji već ima četrdeset ili sto godina. Sadnja novog stabla umjesto toga kupuje ti desetljeće čekanja.",
+"meth.sketchcap":"Radna skica. Izdanci prekriženi, ostavljene dvije do tri glavne žile, figura za mjerilo.",
+"meth.note":"Ništa na ovoj stranici nije označeno kao gotovo ako nije gotovo. Projekt je u fazi 0.",
+
+"water.kicker":"Voda",
+"water.h":"Nema bunara, nema izvora, a rose ima jako puno",
+"water.p1":"Voda je najteži problem ovog terena i rješava se prva, prije bilo kakve sadnje. Ništa se ne navodnjava trajno. Navodnjavanje postoji samo da se mlado drveće primi, i onda prestaje.",
+"water.p2":"Lišajevi i mahovina na nižem terenu pokazuju vrlo visoku rosu, a to je resurs, ne zanimljivost. Podzemna voda otječe s Čelinjaka prema Maženici i Bačinoj uvali, a svaki izvor blizu obale mora se provjeriti na prodor soli prije upotrebe.",
+"water.cap":"Greben Čelinjak, V. vrh na 122,8 m, i otjecanje prema Maženici i Bačinoj uvali.",
+
+"cal.kicker":"Kalendar",
+"cal.h":"Godina određuje posao, a ne plan",
+"cal.p":"Mediteranskim terenom upravlja fenologija. Ono što cvate govori na čemu su pčele, što se smije rezati, što se destilira i što mora čekati. Ovaj prsten je radni kalendar. On je ujedno i pošten odgovor na pitanje kada doći i što bi ovdje stvarno radio.",
+"cal.k1":"Cvate","cal.k2":"Paša","cal.k3":"Posao",
+"cal.note":"Kalendar je privremen, sastavljen iz regionalne fenologije i projektnog dokumenta. Ispravljat će ga promatranje na samom terenu, a ispravci će biti objavljeni.",
+
+"food.kicker":"Šuma hrane",
+"food.h":"Drveće kojem ne treba zalijevanje",
+"food.p1":"Sve što se sadi mora preživjeti dalmatinsko ljeto bez navodnjavanja kad se jednom primi. To izbacuje većinu onoga što se prodaje u vrtnim centrima i uvodi ono što se ovdje uzgajalo stoljećima.",
+"food.p2":"Tamaris ide najbliže moru kao zaštita od soli i vjetra. Trešnja, breskva i marelica idu samo u vlažniji niži teren. Slanutak dozrijeva do sredine 8. mjeseca, prije nego bi trebalo zalijevati. Djetelina vraća dušik u tlo, a buhač drži kukce podalje bez prskanja.",
+"food.cap":"Vrste koje već rastu na terenu i vrste koje se uvode.",
+
+"craft.kicker":"Kamen i zanat",
+"craft.h":"Suhozid je infrastruktura",
+"craft.p1":"Suhozidne terase su ono što uopće omogućuje poljoprivredu na kršu. Drže tlo, usporavaju vodu i štite korijenje, a grade se bez veziva od kamena koji već leži u polju. Suhozidna gradnja zaštićeno je hrvatsko nematerijalno kulturno dobro i upisana je na UNESCO-vu listu.",
+"craft.p2":"Namjeravamo popisati i obnoviti postojeće suhozide, unijeti ih u otvoreni javni inventar suhozid.hr i ugostiti radionicu udruge 4 Grada Dragodid, koja podučava ovaj zanat od prve radionice na Visu 2002.",
+"craft.cap":"Bunja, crtež presjeka. Okrugla suhozidna poljska kućica s konusnim krovom od kamenih ploča, tip gradnje koji namjeravamo koristiti.",
+"craft.note":"Referentna građevina: bunja koju je dizajnerica Ana Reić uredila u svom masliniku kraj Ložišća na Braču. Zidovi debljine 80 cm, oko 20 m² unutra, svaki kamen ručno klesan, krov pokriven kamenim pločama, tri godine gradnje. Objavila Slobodna Dalmacija 30.10.2009., tekst Tanja Šimundić Bendić, fotografije Joško Ponoš / CROPIX. Fotografije se ovdje objavljuju samo uz licencu.",
+
+"test.kicker":"Poligon",
+"test.h":"Svako rješenje je pokus s objavljenim rezultatom",
+"test.p":"Teren je demonstracijski, pa je svaki od ovih postavljen tako da se mjeri, a ne da se divimo. Ako nešto ne radi u ovoj klimi, i to je rezultat vrijedan objave.",
+
+"sound.kicker":"Zvuk",
+"sound.h":"Stari plan koji je našao tlo",
+"sound.p1":"Marko je prije mnogo godina napisao plan pod imenom Sound Village: energetski neovisne kuće u permakulturnim vrtovima, građene za istraživanje zvuka i pokreta. Male građevine koje demonstriraju akustične pojave, kuće od kojih svaka nosi jednu drevnu zvučnu kulturu, i središnja zgrada s dvoranom i studijem. Nikad nije izgrađen. U Kukljici postaje moguć.",
+"sound.p2":"Integratron u pustinji Mojave spominjemo iz jednog jedinog razloga, zbog akustike. Drvena kupolasta dvorana građena bez ijednog čavla, koja se i danas proučava po tome kako se ponaša kao prostorija. Tvrdnje njezina graditelja nisu dio ovog projekta. Geometrija zgrade jest.",
+"sound.p3":"Marko je perkusionist, osnivač Tribal Jam Orchestra i učenik okvirnog bubnja kod Yshaija Aftermana. Nastupa kao DJ Mantra s organic house setom pod nazivom Od Gangesa do Amazone. Zvuk pripada ovoj zemlji jednako kao i pčele, kao dio načina na koji mjesto radi.",
+"sound.cap":"Iznad Maženice.",
+
+"live.kicker":"Život ovdje",
+"live.h":"Vrućina piše raspored",
+"live.pull":"Posao počinje u prvo svjetlo, dok je kamen još hladan. Sredina dana pripada moru.",
+"live.volh":"Volonteri",
+"live.volp":"Rad u zamjenu za hranu i smještaj, oglašeno na Workaway i WWOOF. Smještaj je osnovan: kompostni zahod, vanjska kuhinja, jednostavno sklonište, bez vodovoda. Posao je fizički, vruć i spor. Tko traži udobnost, neka tu rečenicu pročita dvaput.",
+"live.kidsh":"Djeca",
+"live.kidsp":"U Auroville rade free progress škole, gdje dijete prati vlastiti interes i ritam umjesto zadanog razreda. Radni krajolik je dobro mjesto za to. Djeca dolaze s obitelji, a ovdje ima stvarnog posla koji mogu raditi u svojoj mjeri.",
+"live.cap":"All life is yoga. Sri Aurobindo.",
+
+"who.kicker":"Tko",
+"who.h":"Dvoje ljudi koji su život proveli gledajući biljke",
+"who.p1":"Marko Boško ima dvadeset sedam godina u medijskoj produkciji, trenutno kao montažer na Novoj TV u Zagrebu, i radi kao filmaš, sound dizajner i skladatelj pod imenom Mantra Productions. Sedam godina proveo je u Auroville, gradu u južnoj Indiji utemeljenom na Integralnoj yogi Sri Aurobinda i Majke, živeći uz Sadhana Forest dok je erodirano tlo pretvarao u šumu.",
+"who.p2":"Perkusionist je i osnivač Tribal Jam Orchestra, učitelj yoge i autor metode Sun Moon Yoga, a nastupa kao DJ Mantra. Živi između Zagreba i Rijeke, s obiteljskim korijenima u Zadru, dvadeset minuta trajektom od zemlje.",
+"who.tonih":"Toni Franović",
+"who.tonip":"Slikar, suautor ovog projekta. Rođen u Zagrebu 1964., diplomirao na Akademiji likovnih umjetnosti u Zagrebu 1990., gdje je od 1995. do 2004. predavao crtanje akta i slikanje u prirodi. Profesor je na Sveučilištu Sjever u Koprivnici i živi na ekološkom imanju u Legradu. Radni vijek proveo je proučavajući floru južnog Jadrana i Mediterana, zbog čega je popis biljaka na ovoj stranici jednako njegov koliko i bilo čiji.",
+"who.cap":"Marko Boško.",
+
+"ph.kicker":"Faze",
+"ph.h":"Gdje je projekt zapravo",
+
+"inf.kicker":"Utjecaji",
+"inf.h":"Odakle ovo dolazi",
+"inf.p":"Ovo su projekti i prakse koje su oblikovale ovaj plan. Navedeni su kao izvori, a ne kao društvo za koje tvrdimo da nam pripada.",
+
+"join.kicker":"Pridruži se",
+"join.h":"Dođi raditi, ili pomozi da krene",
+"join.p":"Projekt je na početku. Najkorisnije su trenutno ruke, stručnost i veze, tim redom.",
+
+"foot.loc":"Kukljica EcoOasis · Otok Ugljan · Maženica i Bačina uvala · Čestice 2448/6, 2448/14, 2448/13, 2449/1",
+"foot.credit":"Fotografije i crteži Marko Boško osim gdje je navedeno drukčije.",
+"foot.sources":"Izvori: sadhanaforest.org · dragodid.org · suhozid.hr · geaviva.net · auroville.org"
+}};
+
+/* ============================ data ============================ */
+const SPECIES=[
+["olive","maslina","keep"],["holm oak","crnika","keep"],["myrtle","mirta","keep"],["strawberry tree","planika","keep"],
+["wild pistachio","tršlja","keep"],["juniper","borovica","keep"],["immortelle","smilje","keep"],["sage","kadulja","keep"],
+["thyme","majčina dušica","keep"],["oregano","origano","keep"],["rosemary","ružmarin","keep"],["laurel","lovor","keep"],
+["rocket","rikula","keep"],["chamomile","kamilica","keep"],["buhač","buhač","keep"],["clover","djetelina","keep"],
+["Aleppo pine","alepski bor","out"],
+["almond","badem","new"],["carob","rogač","new"],["fig","smokva","new"],["tamarisk","tamaris","new"],
+["cherry","trešnja","new"],["peach","breskva","new"],["apricot","marelica","new"],["chickpea","slanutak","new"]];
+
+const WORK=[
+["Stone","Kamen",
+ "Survey and repair of the dry stone walls and terraces that hold the soil in place.",
+ "Popis i obnova suhozida i terasa koje drže tlo na mjestu.",
+ "Output: metres rebuilt, walls entered into suhozid.hr","Rezultat: obnovljeni metri, suhozidi uneseni u suhozid.hr"],
+["Water","Voda",
+ "Baseline survey, dew harvest, runoff capture, assessment of groundwater from the ridge.",
+ "Nulto mjerenje, skupljanje rose, hvatanje otjecanja, procjena podzemne vode s grebena.",
+ "Output: litres captured, soil moisture readings","Rezultat: uhvaćene litre, očitanja vlage tla"],
+["Species","Vrste",
+ "Staged removal of Aleppo pine and its seedlings, keeping a few large ones near the sea for shade, and the return of indigenous species.",
+ "Postupno uklanjanje alepskog bora i mladica, uz zadržavanje nekoliko velikih uz more zbog hlada, i povratak autohtonih vrsta.",
+ "Output: individuals planted, species count, survival rate per season","Rezultat: broj sadnica, broj vrsta, stopa preživljavanja po sezoni"],
+["Craft","Zanat",
+ "The workshop for drying, fermenting, distilling, salting, curing and the old hand crafts.",
+ "Radionica za sušenje, fermentiranje, destiliranje, soljenje, konzerviranje i stare ručne zanate.",
+ "Output: workshops held, people trained, products made","Rezultat: održane radionice, obučeni ljudi, napravljeni proizvodi"],
+["People","Ljudi",
+ "Volunteers, apprenticeships and the field school that carries the method off the site.",
+ "Volonteri, naukovanje i terenska škola koja odnosi metodu dalje od ovog terena.",
+ "Output: volunteer days, what they took home","Rezultat: volonterski dani, ono što su odnijeli sa sobom"]];
+
+const WATERL=[
+["Dowsing and survey","Traženje vode i izmjera","Walk the terrain with a dowser and a soil surveyor before any intervention.","Prijeći teren s rašljarom i mjeriteljem tla prije bilo kakvog zahvata."],
+["Dew","Rosa","Harvest the dew that the lichen and moss on the lower ground already prove is there.","Skupljati rosu za koju lišajevi i mahovina na nižem terenu već dokazuju da je ima."],
+["Salt intrusion","Prodor soli","Avoid any source close to the shore that draws salt when it is pumped.","Izbjeći svaki izvor blizu obale koji vuče sol kad se crpi."],
+["Desalination","Desalinizacija","Passive desalinator built as an earthen vessel, producing both fresh water and salt.","Pasivni desalinator kao zemljana posuda, daje i slatku vodu i sol."]];
+
+const FOODL=[
+["Canopy","Krošnja","Holm oak, carob, almond, fig, olive.","Crnika, rogač, badem, smokva, maslina."],
+["Shrub","Grmlje","Myrtle, strawberry tree, wild pistachio, laurel, juniper.","Mirta, planika, tršlja, lovor, borovica."],
+["Ground","Prizemno","Sage, thyme, oregano, rosemary, immortelle, rocket, chamomile.","Kadulja, majčina dušica, origano, ružmarin, smilje, rikula, kamilica."],
+["Soil","Tlo","Clover for nitrogen, buhač as insect repellent, mulch from everything cut.","Djetelina za dušik, buhač protiv kukaca, malč od svega što se reže."],
+["Edge","Rub","Tamarisk against salt and wind, closest to the sea.","Tamaris protiv soli i vjetra, najbliže moru."]];
+
+const CRAFTL=[
+["Preserving","Čuvanje","Drying, fermenting, salting, curing, macerating, solar drying.","Sušenje, fermentiranje, soljenje, konzerviranje, maceriranje, solarno sušenje."],
+["Distilling","Destiliranje","Immortelle, laurel, myrtle, sage. Tinctures, macerates, hydrosols.","Smilje, lovor, mirta, kadulja. Tinkture, macerati, hidrolati."],
+["Stone","Kamen","Dry stone walling, stone mills, the bunja.","Suhozid, kameni mlinovi, bunja."],
+["Hand craft","Ručni zanat","Pottery, basket weaving, weaving, hand tools, soap making.","Lončarstvo, pletenje košara, tkanje, ručni alat, izrada sapuna."]];
+
+const TESTL=[
+["Dew collection","Skupljanje rose","Surfaces and vessels that condense the high overnight dew of the lower ground.","Površine i posude koje kondenziraju visoku noćnu rosu nižeg terena."],
+["Passive desalinator","Pasivni desalinator","An earthen vessel that separates fresh water and salt using sun alone.","Zemljana posuda koja samo suncem razdvaja slatku vodu i sol."],
+["Clay refrigerator","Glineni hladnjak","Pot in pot cooling, no electricity, for the hottest months.","Hlađenje posudom u posudi, bez struje, za najtoplije mjesece."],
+["Compost heating","Kompostno grijanje","Heat drawn from the compost pile for water and for the workshop.","Toplina iz kompostišta za vodu i za radionicu."],
+["Composting toilet","Kompostni zahod","No water, no septic tank, and soil at the end of it.","Bez vode, bez septičke jame, a na kraju tlo."],
+["Wind and sun","Vjetar i sunce","Electricity generated for on-site needs only, sized to the work.","Struja samo za potrebe terena, dimenzionirana prema poslu."]];
+
+const LIVEL=[
+["First light","Prvo svjetlo","Work on the terraces while the stone is cool. Pruning, walling, planting, watering the young trees.","Rad na terasama dok je kamen hladan. Rezidba, suhozid, sadnja, zalijevanje mladica."],
+["Morning","Jutro","Movement before the heat. Sun Moon Yoga, and the slow spinal work of Mana Movement in circles, spirals and waves.","Pokret prije vrućine. Sun Moon Yoga i spori rad kralježnice po metodi Mana Movement, u krugovima, spiralama i valovima."],
+["Midday","Podne","The sea. Total Immersion swimming, taught on site. Long body line, rotation around the spine, very little effort.","More. Plivanje metodom Total Immersion, poučava se na terenu. Duga linija tijela, rotacija oko kralježnice, vrlo malo napora."],
+["Late afternoon","Kasno poslijepodne","Back to work until the light goes. Processing, drying, distilling, the workshop.","Natrag na posao dok ima svjetla. Prerada, sušenje, destilacija, radionica."],
+["Night","Noć","Music. Frame drum, percussion, and occasionally organic house. Dances of Universal Peace, the circle dances Samuel Lewis built in the 1960s from the sacred phrases of many traditions, which anyone can join without knowing a step.","Glazba. Okvirni bubanj, perkusije, ponekad organic house. Dances of Universal Peace, kružni plesovi koje je Samuel Lewis šezdesetih složio od svetih fraza mnogih tradicija, a u koje se svatko može uključiti bez ijednog naučenog koraka."],
+["Food","Hrana","Raw and living food, cold pressed juices, dried fruit. Figs, almonds, carob, olive oil, herbs and preserves as the land comes into production.","Sirova i živa hrana, hladno tiješteni sokovi, sušeno voće. Smokve, bademi, rogač, maslinovo ulje, začinsko bilje i zimnica kako zemlja ulazi u proizvodnju."]];
+
+const PHASES=[
+["Phase 0","Faza 0","Documentation, mapping, this site, baseline survey design, first contacts with Dragodid and Sadhana Forest.","Dokumentacija, kartiranje, ova stranica, priprema nultog mjerenja, prvi kontakti s Dragodidom i Sadhana Forestom.",1],
+["Phase 1","Faza 1","Walk the terrain with a dowser and a soil surveyor. Measure soil, dew, existing species and wall condition before a single intervention.","Prijeći teren s rašljarom i mjeriteljem tla. Izmjeriti tlo, rosu, postojeće vrste i stanje suhozida prije ijednog zahvata.",0],
+["Phase 2","Faza 2","Dry stone repair and terrace stabilisation. First workshop with 4 Grada Dragodid.","Obnova suhozida i stabilizacija terasa. Prva radionica s udrugom 4 Grada Dragodid.",0],
+["Phase 3","Faza 3","Staged Aleppo pine removal, keeping the large specimens near the sea. Olive grove restoration by pruning.","Postupno uklanjanje alepskog bora uz zadržavanje velikih stabala uz more. Obnova maslinika rezidbom.",0],
+["Phase 4","Faza 4","First indigenous planting season. First bees. Water capture built.","Prva sezona sadnje autohtonih vrsta. Prve pčele. Izgrađeno hvatanje vode.",0],
+["Phase 5","Faza 5","The craft workshop. First volunteer season. First published survival numbers.","Radionica zanata. Prva volonterska sezona. Prvi objavljeni brojevi preživljavanja.",0],
+["Phase 6","Faza 6","Food forest maturing. Field school. Seed and seedling supply to other island projects.","Šuma hrane sazrijeva. Terenska škola. Sjeme i sadnice za druge otočne projekte.",0]];
+
+const INF=[
+["Sadhana Forest","Sadhana Forest","Auroville, India. Indigenous species, water retention earthworks, volunteers, and published survival rates. The direct model.","Auroville, Indija. Autohtone vrste, zemljani radovi za vodu, volonteri i objavljene stope preživljavanja. Izravan model.","https://sadhanaforest.org"],
+["Auroville","Auroville","The township founded on Sri Aurobindo's Integral Yoga, and its free progress schools. Seven years of Marko's life.","Grad utemeljen na Integralnoj yogi Sri Aurobinda i njegove free progress škole. Sedam godina Markova života.","https://auroville.org"],
+["4 Grada Dragodid","4 Grada Dragodid","Dry stone craft, workshops since 2002, and the open public inventory suhozid.hr.","Suhozidni zanat, radionice od 2002. i otvoreni javni inventar suhozid.hr.","https://dragodid.org"],
+["Gea Viva","Gea Viva","Sabine Engelhardt's eco smallholding on Brač. Permaculture, eco architecture, geomancy in the Marko Pogačnik lineage, charity since 2011.","Ekološko imanje Sabine Engelhardt na Braču. Permakultura, eko arhitektura, geomantija u tradiciji Marka Pogačnika, udruga od 2011.","https://www.geaviva.net"],
+["Eko selo Blatuša","Eko selo Blatuša","Petrova gora. Straw bale and cordwood houses, composting toilets, greywater treatment, permaculture. Croatian precedent.","Petrova gora. Kuće od bala slame i drvenih oblica, kompostni zahodi, pročišćavanje sivih voda, permakultura. Hrvatski presedan.","https://ekoseloblatusa.com"],
+["Reciklirano imanje","Reciklirano imanje","Vukomerić, south of Zagreb. The other established Croatian permaculture site.","Vukomerić, južno od Zagreba. Drugi uhodani hrvatski permakulturni teren.",""],
+["Earthship and Garbage Warrior","Earthship i Garbage Warrior","Michael Reynolds. Fully decentralised houses for heat, cooling, water and power. We take the logic and leave the tyres, building instead in stone, wood, clay, straw and glass.","Michael Reynolds. Potpuno decentralizirane kuće za grijanje, hlađenje, vodu i struju. Uzimamo logiku, ostavljamo gume, i gradimo kamenom, drvom, glinom, slamom i staklom.",""],
+["Nader Khalili","Nader Khalili","Superadobe. Earth bag domes built from the ground they stand on, tested for earthquake and fire. Relevant because the bunja is the same idea in stone.","Superadobe. Kupole od vreća zemlje građene od tla na kojem stoje, ispitane na potres i požar. Relevantno jer je bunja ista ideja u kamenu.",""],
+["Bunja, Ana Reić","Bunja, Ana Reić","Ložišća on Brač. The round dry stone hut done the old way, walls 80 cm thick, roof of stone slabs, three years of hand work.","Ložišća na Braču. Okrugla suhozidna kućica po starinski, zidovi 80 cm, krov od kamenih ploča, tri godine ručnog rada.",""],
+["Findhorn, Tamera, Sieben Linden","Findhorn, Tamera, Sieben Linden","Long running European communities that solved the questions of governance, water and food before we asked them.","Dugovječne europske zajednice koje su pitanja upravljanja, vode i hrane riješile prije nego smo ih mi postavili.",""],
+["The Integratron","Integratron","Mojave desert. An all wood domed chamber built without nails, cited here strictly as an acoustic architecture precedent.","Pustinja Mojave. Drvena kupolasta dvorana građena bez čavala, navedena isključivo kao presedan akustične arhitekture.",""],
+["Dances of Universal Peace","Dances of Universal Peace","Circle dances brought together by Samuel Lewis in the late 1960s from the sacred phrases of many traditions, led by a facilitator, open to anyone on the first evening.","Kružni plesovi koje je Samuel Lewis krajem šezdesetih složio od svetih fraza mnogih tradicija, vodi ih voditelj, a otvoreni su svakome već prve večeri.","https://dancesofuniversalpeace.org"],
+["AcroYoga","AcroYoga","Partner practice of trust, weight and counterweight. Two people cannot fake it, which is why it belongs where people work together.","Partnerska praksa povjerenja, težine i protuteže. Dvoje ljudi je ne mogu glumiti, zato pripada tamo gdje se radi zajedno.",""],
+["Ozora, Burning Man","Ozora, Burning Man","Large gatherings that showed what temporary infrastructure, sound and shared work can build. We take the craft and leave the scale.","Veliki skupovi koji su pokazali što privremena infrastruktura, zvuk i zajednički rad mogu izgraditi. Uzimamo zanat, ostavljamo mjerilo.",""]];
+
+const JOINL=[
+["Volunteer","Volontiraj","Workaway and WWOOF listings, work exchanged for food and basic accommodation.","Oglasi na Workaway i WWOOF, rad u zamjenu za hranu i osnovni smještaj."],
+["Expertise","Struka","Soil scientists, foresters, beekeepers, dry stone builders, hydrologists. Especially anyone who has removed Aleppo pine at scale.","Pedolozi, šumari, pčelari, suhozidari, hidrolozi. Osobito svatko tko je uklanjao alepski bor u većem opsegu."],
+["Partners","Partneri","Institutions, associations and funders working on karst restoration, dry stone heritage or island agriculture.","Institucije, udruge i financijeri koji rade na obnovi krša, suhozidnoj baštini ili otočnoj poljoprivredi."],
+["Contact","Kontakt","Write to Marko Boško. Say which of the five workstreams interests you.","Piši Marku Bošku. Napiši koja te od pet linija rada zanima."]];
+
+const CAL=[
+[1,"rosemary, first almond in warm years","ružmarin, u toplim godinama prvi badem","rosemary, early almond","ružmarin, rani badem","olive pruning in mild spells, dry stone repair, tool work","rezidba maslina u blažim danima, obnova suhozida, rad na alatu"],
+[2,"almond in full blossom, laurel starting","badem u punom cvatu, lovor kreće","almond, the first real forage of the year","badem, prva prava paša u godini","main olive pruning, planting of bare root trees, walling","glavna rezidba maslina, sadnja golog korijena, suhozid"],
+[3,"laurel, rosemary continuing, wild asparagus up","lovor, ružmarin još traje, šparoge niču","laurel, rosemary","lovor, ružmarin","grafting, last planting, clearing pine seedlings","cijepljenje, zadnja sadnja, čišćenje mladica bora"],
+[4,"maquis opening, sage and thyme beginning, immortelle greening","makija se otvara, kreću kadulja i majčina dušica, smilje zeleni","maquis in general, colonies building fast","makija općenito, zajednice brzo jačaju","sowing chickpea, mulching, first herb cutting","sjetva slanutka, malčiranje, prvo rezanje bilja"],
+[5,"sage and thyme at peak, buhač, olive flowering late in the month","kadulja i majčina dušica na vrhuncu, buhač, maslina cvate krajem mjeseca","sage, the best honey of the year","kadulja, najbolji med u godini","harvest buhač, cut and dry herbs, first honey","berba buhača, rezanje i sušenje bilja, prvi med"],
+[6,"olive fruit set, immortelle, myrtle, chamomile","zametanje ploda masline, smilje, mirta, kamilica","immortelle and myrtle","smilje i mirta","distilling immortelle and laurel, drying racks full","destilacija smilja i lovora, sušare pune"],
+[7,"little in flower, the land holds its breath","malo toga cvate, zemlja zadržava dah","thin, colonies live on stores","tanka, zajednice žive od zaliha","work only at dawn and dusk, watering young trees only, processing indoors","rad samo u zoru i sumrak, zalijevaju se samo mladice, prerada u hladu"],
+[8,"chickpea ripening, first figs","slanutak dozrijeva, prve smokve","thin, water for the bees matters more than forage","tanka, voda za pčele važnija od paše","chickpea harvest by mid month, first fig drying, dew observation begins","berba slanutka do sredine mjeseca, prvo sušenje smokava, počinje mjerenje rose"],
+[9,"myrtle berries forming, second flush of herbs","mirta zameće bobe, drugi rast bilja","autumn flowers returning","jesenski cvat se vraća","fig harvest and drying, sowing winter greens, second herb cut","berba i sušenje smokava, sjetva zimskog povrća, drugi rez bilja"],
+[10,"strawberry tree in flower and fruit at once, myrtle berries ripe","planika istovremeno cvate i rodi, bobe mirte zrele","strawberry tree, the last major forage","planika, zadnja velika paša","myrtle liqueur, carob harvest, olive harvest begins, rocket sown","liker od mirte, berba rogača, počinje berba maslina, sije se rikula"],
+[11,"strawberry tree continuing, first rains bring green","planika još traje, prve kiše donose zelenilo","strawberry tree","planika","olive harvest and pressing, main planting season opens with the rain","berba i prešanje maslina, s kišom se otvara glavna sezona sadnje"],
+[12,"quiet, rosemary begins again","tiho, ružmarin ponovno kreće","rosemary in mild years","ružmarin u blagim godinama","planting continues, dry stone repair, processing olives and carob","sadnja se nastavlja, obnova suhozida, prerada maslina i rogača"]];
+
+/* ============================ render ============================ */
+let lang = (new URLSearchParams(location.search).get('lang')) ||
+           (()=>{try{return localStorage.getItem('kel')}catch(e){return null}})() ||
+           ((navigator.language||'en').toLowerCase().startsWith('hr')?'hr':'en');
+let mode = (()=>{try{return localStorage.getItem('kem')}catch(e){return null}})() || 'night';
+let month = new Date().getMonth()+1;
+
+const L=(en,hr)=> lang==='hr'?hr:en;
+
+function build(){
+  document.getElementById('species').innerHTML = SPECIES.map(s=>{
+    const cls = s[2]==='out'?'out':(s[2]==='new'?'new':'');
+    return `<li class="${cls}">${L(s[0],s[1])}</li>`;}).join('');
+
+  document.getElementById('workstreams').innerHTML = WORK.map(w=>
+    `<div class="card"><div class="tag">${L(w[0],w[1])}</div><p>${L(w[2],w[3])}</p><div class="out">${L(w[4],w[5])}</div></div>`).join('');
+
+  const rows = (arr,el)=>document.getElementById(el).innerHTML =
+    arr.map(r=>`<li><b>${L(r[0],r[1])}</b><span>${L(r[2],r[3])}</span></li>`).join('');
+  rows(WATERL,'waterlist'); rows(FOODL,'foodlist'); rows(CRAFTL,'craftlist');
+  rows(TESTL,'testlist'); rows(LIVEL,'livelist'); rows(JOINL,'joinlist');
+
+  document.getElementById('phaselist').innerHTML = PHASES.map(p=>
+    `<div class="phase${p[4]?' now':''}"><div class="ph">${L(p[0],p[1])}</div><p>${L(p[2],p[3])}</p></div>`).join('');
+
+  document.getElementById('inflist').innerHTML = INF.map(i=>{
+    const t = i[4] ? `<a href="${i[4]}" target="_blank" rel="noopener">${L(i[0],i[1])}</a>` : L(i[0],i[1]);
+    return `<div><h4>${t}</h4><p>${L(i[2],i[3])}</p></div>`;}).join('');
+}
+
+function ring(){
+  const svg=document.getElementById('ring'), cx=200, cy=200, rO=180, rI=74;
+  let s='';
+  for(let k=0;k<7;k++){const r=rI+(rO-rI)*k/7;s+=`<circle class="slabarc" cx="${cx}" cy="${cy}" r="${r}"/>`;}
+  for(let m=1;m<=12;m++){
+    const a0=(m-1)*30-90, a1=m*30-90, rad=d=>d*Math.PI/180;
+    const p=(r,a)=>[cx+r*Math.cos(rad(a)),cy+r*Math.sin(rad(a))];
+    const [x1,y1]=p(rI,a0),[x2,y2]=p(rO,a0),[x3,y3]=p(rO,a1),[x4,y4]=p(rI,a1);
+    const [tx,ty]=p((rI+rO)/2,a0+15);
+    s+=`<path class="sector" data-m="${m}" d="M${x1} ${y1} L${x2} ${y2} A${rO} ${rO} 0 0 1 ${x3} ${y3} L${x4} ${y4} A${rI} ${rI} 0 0 0 ${x1} ${y1} Z"><title>${m}</title></path>`;
+    s+=`<text x="${tx}" y="${ty+4}" text-anchor="middle">${m}</text>`;
+  }
+  s+=`<circle cx="${cx}" cy="${cy}" r="${rI-2}" fill="none" stroke="var(--olive)" stroke-width="1"/>`;
+  svg.innerHTML=s;
+  svg.querySelectorAll('.sector').forEach(el=>{
+    el.addEventListener('click',()=>{month=+el.dataset.m;paint();});
+  });
+}
+
+function paint(){
+  document.querySelectorAll('#ring .sector').forEach(el=>
+    el.classList.toggle('on', +el.dataset.m===month));
+  const c=CAL[month-1];
+  document.getElementById('calmo').textContent = L(month+'.', month+'. mjesec');
+  document.getElementById('calflower').textContent=L(c[1],c[2]);
+  document.getElementById('calbees').textContent=L(c[3],c[4]);
+  document.getElementById('calwork').textContent=L(c[5],c[6]);
+}
+
+function apply(){
+  document.documentElement.lang = lang;
+  document.documentElement.dataset.mode = mode==='day'?'day':'night';
+  document.title = lang==='hr' ? 'Kukljica EcoOasis · Obnova ekosustava na otoku Ugljanu'
+                               : 'Kukljica EcoOasis · Ecosystem restoration on the island of Ugljan';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const v=T[lang][el.dataset.i18n]; if(v!==undefined) el.textContent=v;});
+  document.getElementById('langbtn').innerHTML = lang==='hr' ? '<b>HR</b> / EN' : 'HR / <b>EN</b>';
+  document.getElementById('modebtn').textContent = mode==='day' ? 'NIGHT' : 'DAY';
+  build(); paint();
+}
+
+document.getElementById('langbtn').addEventListener('click',()=>{
+  lang = lang==='hr'?'en':'hr';
+  try{localStorage.setItem('kel',lang)}catch(e){}
+  apply();
+});
+document.getElementById('modebtn').addEventListener('click',()=>{
+  mode = mode==='day'?'night':'day';
+  try{localStorage.setItem('kem',mode)}catch(e){}
+  apply();
+});
+
+ring(); apply();
+</script>
+</body>
+</html>
