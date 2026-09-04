@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0D1117"/>
+  <!-- olive fruit -->
+  <ellipse cx="32" cy="41" rx="14" ry="16" fill="#7D8F4F"/>
+  <ellipse cx="27" cy="36" rx="4" ry="6" fill="#8F9E63" opacity="0.75"/>
+  <!-- stem -->
+  <path d="M32 26 v-6" stroke="#2F5D50" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- two leaves -->
+  <path d="M31 22 C22 22 16 17 14 10 C23 9 30 13 31 22 Z" fill="#2F5D50"/>
+  <path d="M33 22 C42 21 48 15 49 8 C40 8 34 13 33 22 Z" fill="#4A7A66"/>
+</svg>
