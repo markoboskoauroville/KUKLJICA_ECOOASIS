@@ -155,6 +155,14 @@ figcaption{overflow-wrap:anywhere;font-family:var(--mono);font-size:10.5px;lette
 .phase.now .ph{color:var(--olive)}
 .phase p{font-size:15px;margin:0}
 
+/* nutrition matrix */
+.matrix{display:grid;grid-template-columns:118px minmax(0,1fr) minmax(0,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:30px 0}
+.mcell{background:var(--bg);padding:16px 14px;font-size:14.5px}
+.mcell.head{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--olive);display:flex;align-items:center}
+.mcell b{display:block;font-family:var(--display);font-weight:400;font-size:1.08rem;margin-bottom:5px}
+.mcell span{color:var(--muted);font-size:13.5px;line-height:1.5}
+@media(max-width:620px){.matrix{grid-template-columns:88px minmax(0,1fr) minmax(0,1fr)}.mcell{padding:12px 10px}}
+
 /* four trees */
 .tree{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:38px;align-items:center;padding:34px 0;border-top:1px solid var(--line)}
 .tree:nth-child(even) .treetext{order:-1}
@@ -273,6 +281,26 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
   <h2 data-i18n="tr.h"></h2>
   <p data-i18n="tr.p"></p>
   <div id="treelist"></div>
+
+  <h3 style="margin-top:54px" data-i18n="tr.pairh"></h3>
+  <p data-i18n="tr.pairp"></p>
+
+  <div class="matrix">
+    <div class="mcell head"></div>
+    <div class="mcell head" data-i18n="tr.mfat"></div>
+    <div class="mcell head" data-i18n="tr.mcarb"></div>
+
+    <div class="mcell head" data-i18n="tr.mwork"></div>
+    <div class="mcell"><b data-i18n="tr.molive"></b><span data-i18n="tr.moliveD"></span></div>
+    <div class="mcell"><b data-i18n="tr.moak"></b><span data-i18n="tr.moakD"></span></div>
+
+    <div class="mcell head" data-i18n="tr.mdry"></div>
+    <div class="mcell"><b data-i18n="tr.malmond"></b><span data-i18n="tr.malmondD"></span></div>
+    <div class="mcell"><b data-i18n="tr.mfig"></b><span data-i18n="tr.mfigD"></span></div>
+  </div>
+
+  <p data-i18n="tr.pairp2"></p>
+  <div class="note" data-i18n="tr.honest"></div>
   <div class="note" data-i18n="tr.fifth"></div>
 </div></section>
 
@@ -537,6 +565,16 @@ en:{
 "phil.p3":"That is why the olive is the mark of this project. In its natural state an olive never really dies of age. When the trunk goes hollow or burns or is cut, shoots rise from the stump and the tree continues, the same individual carrying on under a new shape. That is the whole argument in one plant: you do not start again from nothing, you grow forward out of what was already here.",
 "phil.p4":"Sadhana Forest showed this on the other side of the world. In 2003 Aviram and Yorit Rozin sold their house in Israel and moved with their baby daughter onto seventy acres of eroded, barren ground outside Auroville, to bring back the Tropical Dry Evergreen Forest, of which less than one hundredth of a percent still stands. Nothing was watered permanently. They worked the water first, slowing it, spreading it, sinking it into the ground instead of letting the monsoon run straight off bare land into the sea. Then they planted indigenous species and nothing else, tens of thousands of them across a hundred and sixty species.",
 "phil.p5":"The thing worth repeating is what happened next. The forest began planting itself. Birds and animals came back, carried seed, and now for every tree that gets planted by hand the forest raises several of its own. That is what an ecosystem does once you stop fighting it and give it back its own species. It stops being a project and becomes a place. That is what we are after here, on seven hectares of Croatian karst, with olive and almond and fig and holm oak instead of tropical dry evergreen, and with the same simple discipline: water first, indigenous species only, and enough patience to let the land do most of the work.",
+"tr.pairh":"They also work in two pairs",
+"tr.pairp":"Look at what comes off these four trees and they sort themselves twice over. Two of them give fat, which is dense, slow energy that keeps. Two give carbohydrate, which is quick energy. And crossing that, two of them have to be worked before a human can eat them at all, while two only need to be dried.",
+"tr.mfat":"Fat","tr.mcarb":"Carbohydrate",
+"tr.mwork":"Needs work","tr.mdry":"Needs only drying",
+"tr.molive":"Olive","tr.moliveD":"Bitter and inedible off the tree. Cured or pressed. Oil keeps a year in a dark jar.",
+"tr.moak":"Holm oak","tr.moakD":"Tannins leached out, then ground to flour and baked. Acorn bread has been made on Mediterranean islands since the Palaeolithic.",
+"tr.malmond":"Almond","tr.malmondD":"Roughly half fat. Left in the shell it keeps through to the next harvest with no work at all.",
+"tr.mfig":"Fig","tr.mfigD":"Dried on a rack in the sun. Sugar concentrates, and a good year feeds you until the next one.",
+"tr.pairp2":"That second axis is not a footnote. The two foods that need work are the two that were most valued, because the labour was the storage. In Sardinia, acorn bread sold for more than wheat bread precisely because it was harder to make, and the women who made it were known for it. The Latin name of the holm oak, ilex, is thought to come from eligo, to choose. It was the tree that got chosen.",
+"tr.honest":"Honest limit: these four give fat and carbohydrate, not a complete diet. Protein comes from the chickpea in the terraces, and historically from the sea and from sheep. Nobody here ever lived on trees alone.",
 "nav.land":"The land","nav.history":"History","nav.method":"Method","nav.calendar":"Calendar",
 "nav.craft":"Stone and craft","nav.living":"Living here","nav.who":"Who","nav.join":"Join",
 
@@ -662,6 +700,16 @@ hr:{
 "phil.p3":"Zato je maslina znak ovog projekta. U prirodnom stanju maslina zapravo nikad ne umire od starosti. Kad se deblo izduplji, izgori ili ga posijeku, iz panja se dižu mladice i stablo se nastavlja, isti pojedinac u novom obliku. To je cijeli argument u jednoj biljci: ne kreće se ispočetka iz ničega, nego se raste naprijed iz onoga što je već bilo ovdje.",
 "phil.p4":"Sadhana Forest to je pokazao na drugom kraju svijeta. Aviram i Yorit Rozin prodali su 2003. kuću u Izraelu i s malom kćeri se preselili na sedamdeset jutara erodiranog, golog tla kraj Auroville, da vrate tropsku suhu zimzelenu šumu, koje je preostalo manje od jedne stotinke postotka. Ništa se nije trajno navodnjavalo. Prvo su radili na vodi, usporavali je, razvlačili i upijali u zemlju umjesto da monsun otječe s gole zemlje ravno u more. Tek onda su sadili, i to isključivo autohtone vrste, desetke tisuća sadnica u sto šezdeset vrsta.",
 "phil.p5":"Ono što vrijedi ponoviti je što se dogodilo poslije. Šuma se počela saditi sama. Vratile su se ptice i životinje, raznijele sjeme, i danas na svako stablo posađeno rukom šuma podigne još nekoliko svojih. To ekosustav radi čim mu prestaneš smetati i vratiš mu njegove vrste. Prestaje biti projekt i postaje mjesto. To i mi tražimo ovdje, na sedam hektara hrvatskog krša, s maslinom, bademom, smokvom i crnikom umjesto tropske zimzelene šume, i s istom jednostavnom disciplinom: prvo voda, samo autohtone vrste, i dovoljno strpljenja da zemlja odradi najveći dio posla.",
+"tr.pairh":"Rade i u dva para",
+"tr.pairp":"Pogledaj što daju ta četiri stabla i sama se poslože dvaput. Dva daju mast, gustu i sporu energiju koja se čuva. Dva daju ugljikohidrate, brzu energiju. A poprijeko tome, dva se moraju obraditi da bi ih čovjek uopće mogao jesti, dok se druga dva samo osuše.",
+"tr.mfat":"Mast","tr.mcarb":"Ugljikohidrati",
+"tr.mwork":"Traži rad","tr.mdry":"Traži samo sušenje",
+"tr.molive":"Maslina","tr.moliveD":"Gorka i nejestiva sa stabla. Konzervira se ili tiješti. Ulje se drži godinu dana u tamnoj boci.",
+"tr.moak":"Crnika","tr.moakD":"Iz žira se ispiru tanini, pa se melje u brašno i peče. Kruh od žira peče se na mediteranskim otocima još od paleolitika.",
+"tr.malmond":"Badem","tr.malmondD":"Otprilike pola masti. U ljusci izdrži do sljedeće berbe bez ikakvog posla.",
+"tr.mfig":"Smokva","tr.mfigD":"Suši se na lesi na suncu. Šećer se koncentrira, i dobra godina te hrani do sljedeće.",
+"tr.pairp2":"Ta druga os nije fusnota. Dvije namirnice koje traže rad bile su i najcjenjenije, jer je rad bio način čuvanja. Na Sardiniji se kruh od žira prodavao skuplje od pšeničnog upravo zato što ga je bilo teže napraviti, a žene koje su ga pekle bile su po tome poznate. Latinsko ime crnike, ilex, izvodi se iz eligo, izabrati. To je bilo stablo koje se biralo.",
+"tr.honest":"Poštena granica: ova četiri daju mast i ugljikohidrate, ne cjelovitu prehranu. Bjelančevine dolaze od slanutka na terasama, a povijesno od mora i od ovaca. Nitko ovdje nikad nije živio samo od stabala.",
 "nav.land":"Zemlja","nav.history":"Povijest","nav.method":"Metoda","nav.calendar":"Kalendar",
 "nav.craft":"Kamen i zanat","nav.living":"Život ovdje","nav.who":"Tko","nav.join":"Pridruži se",
 
