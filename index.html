@@ -155,6 +155,14 @@ figcaption{overflow-wrap:anywhere;font-family:var(--mono);font-size:10.5px;lette
 .phase.now .ph{color:var(--olive)}
 .phase p{font-size:15px;margin:0}
 
+/* growing */
+.areabar{width:100%;height:auto;margin:22px 0 8px}
+.areabar text{font-family:var(--mono);font-size:15px}
+ol.steps{counter-reset:st;list-style:none;padding:0;margin:26px 0}
+ol.steps li{counter-increment:st;position:relative;padding:14px 0 14px 54px;border-top:1px solid var(--line);font-size:15px}
+ol.steps li:before{content:counter(st,decimal-leading-zero);position:absolute;left:0;top:15px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--olive)}
+ol.steps li b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
 /* gallery */
 .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin:34px 0}
 .gal figure{margin:0}
@@ -202,6 +210,7 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
       <a href="#trees" data-i18n="nav.trees"></a>
       <a href="#method" data-i18n="nav.method"></a>
       <a href="#calendar" data-i18n="nav.calendar"></a>
+      <a href="#growing" data-i18n="nav.growing"></a>
       <a href="#craft" data-i18n="nav.craft"></a>
       <a href="#living" data-i18n="nav.living"></a>
       <a href="#who" data-i18n="nav.who"></a>
@@ -389,6 +398,62 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
       <figcaption data-i18n="food.cap"></figcaption>
     </figure>
   </div>
+</div></section>
+
+
+<section id="growing"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="gr.kicker"></div>
+  <h2 data-i18n="gr.h"></h2>
+  <p data-i18n="gr.p1"></p>
+  <p data-i18n="gr.p2"></p>
+
+  <div class="figs" style="border:1px solid var(--line);margin:34px 0">
+    <div class="figgrid" style="padding:0">
+      <div class="fig" style="padding-left:14px"><div class="n">740</div><div class="l" data-i18n="gr.f1"></div></div>
+      <div class="fig"><div class="n">1</div><div class="l" data-i18n="gr.f2"></div></div>
+      <div class="fig"><div class="n">80%</div><div class="l" data-i18n="gr.f3"></div></div>
+      <div class="fig"><div class="n">0</div><div class="l" data-i18n="gr.f4"></div></div>
+      <div class="fig"><div class="n">45</div><div class="l" data-i18n="gr.f5"></div></div>
+      <div class="fig"><div class="n">13</div><div class="l" data-i18n="gr.f6"></div></div>
+    </div>
+  </div>
+
+  <h3 data-i18n="gr.areah"></h3>
+  <p data-i18n="gr.areap"></p>
+  <svg viewBox="0 0 1000 118" class="areabar" role="img">
+    <g id="areabar"></g>
+  </svg>
+
+  <h3 style="margin-top:54px" data-i18n="gr.s1h"></h3>
+  <p data-i18n="gr.s1p"></p>
+  <ol class="steps" id="stepsVeg"></ol>
+  <figure style="margin:28px 0"><img src="img/food-quarter.jpg" alt="" loading="lazy"><figcaption data-i18n="gr.c1"></figcaption></figure>
+  <div class="note" data-i18n="gr.s1n"></div>
+
+  <h3 style="margin-top:54px" data-i18n="gr.s2h"></h3>
+  <p data-i18n="gr.s2p"></p>
+  <ol class="steps" id="stepsGrain"></ol>
+  <figure style="margin:28px 0"><img src="img/food-sickle.jpg" alt="" loading="lazy"><figcaption data-i18n="gr.c2"></figcaption></figure>
+  <div class="note" data-i18n="gr.s2n"></div>
+
+  <h3 style="margin-top:54px" data-i18n="gr.s3h"></h3>
+  <p data-i18n="gr.s3p"></p>
+  <ol class="steps" id="stepsOil"></ol>
+  <figure style="margin:28px 0"><img src="img/food-olives.jpg" alt="" loading="lazy"><figcaption data-i18n="gr.c3"></figcaption></figure>
+
+  <h3 style="margin-top:54px" data-i18n="gr.s4h"></h3>
+  <p data-i18n="gr.s4p"></p>
+  <ol class="steps" id="stepsSugar"></ol>
+  <figure style="margin:28px 0"><img src="img/food-carob.jpg" alt="" loading="lazy"><figcaption data-i18n="gr.c4"></figcaption></figure>
+  <div class="note" data-i18n="gr.s4n"></div>
+
+  <h3 style="margin-top:54px" data-i18n="gr.pesth"></h3>
+  <p data-i18n="gr.pestp"></p>
+  <ul class="plain" id="pests"></ul>
+
+  <h3 style="margin-top:54px" data-i18n="gr.lessonh"></h3>
+  <p data-i18n="gr.lessonp"></p>
+  <div class="note" data-i18n="gr.source"></div>
 </div></section>
 
 <section id="craft"><div class="wrap"><div class="slab"></div>
@@ -609,6 +674,34 @@ en:{
 "bun.c5":"Part way up. The stone is sorted by size on the ground first, which is most of the work.",
 "bun.c6":"Dry stone wall. The same craft, the same stone, laid flat instead of curved.",
 "bun.note":"These six images are visualisations of the building type, made for this site. They are not photographs of existing buildings and not photographs of this parcel.",
+"nav.growing":"Growing food",
+"gr.kicker":"Growing food",
+"gr.h":"One day a month, and the food is done",
+"gr.p1":"There is a documented Mediterranean smallholding that feeds one person completely from 740 square metres, on an average of one working day per month, with no synthetic fertiliser, no herbicide and no pesticide. It has run that way since 2013 and it has been measured and published in a peer reviewed journal. Its owner holds a full time job elsewhere.",
+"gr.p2":"We are setting it out here because it answers the question everybody asks about a project like this, which is whether the food side is realistic or romantic. It is realistic, and the reason is the choice of crops. The staples are winter cereal for carbohydrate, winter pulse for protein and olive oil for fat, and all three were picked because they are indigenous, which is why they need no chemicals in the first place.",
+"gr.f1":"m² feeds one person","gr.f2":"work day per month","gr.f3":"of the area unirrigated","gr.f4":"synthetic inputs","gr.f5":"kg olive oil a year","gr.f6":"years of refinement",
+"gr.areah":"Where the area goes",
+"gr.areap":"The proportions are the whole argument. The vegetable garden is under a fifth of the ground, takes about half of the total labour, uses every drop of the irrigation water, and returns roughly fifteen per cent of the calories. The grain, pulse, oil and sugar occupy the rest, run on rainfall alone, and carry the diet.",
+"gr.s1h":"The vegetable garden, one quarter each month",
+"gr.s1p":"The garden is split into four beds of about 35 square metres. Every month one bed gets rebuilt from scratch, always the one holding the oldest crop, so the four are permanently at four different stages and there is always a mature bed to eat from. The whole cycle below takes about four hours.",
+"gr.c1":"Four beds at four stages. One rebuilt, one just planted, one half grown, one ready to cut.",
+"gr.s1n":"Rebuilding happens in months 9, 10, 11 and 2 for the winter crops and 3, 4, 5 and 6 for the summer ones. Nothing is planted in months 12 and 1 because it is too cold to move, or in 7 and 8 because it is too hot.",
+"gr.s2h":"Grain and pulse, four days for the whole year",
+"gr.s2p":"Wheat and fava beans are sown together in month 12 and harvested together in month 5. Between those two dates the plot is not touched at all. No compost has gone onto it in twelve years.",
+"gr.c2":"Wheat and fava standing ready. They ripen at different times but are cut and threshed as one job.",
+"gr.s2n":"Cut the stalks, never pull them up. Uprooted plants bring soil and small stones into the threshing, and those are too heavy for the winnowing blower to remove, so they end up in the grain.",
+"gr.s3h":"Olive oil, two days in month 11",
+"gr.s3p":"Nine mid sized trees give about 200 kg of olives, which press out to 40 to 50 kg of oil. That is roughly twice what one person uses in a year, and the surplus is what you give away. Two mature trees would cover one person.",
+"gr.c3":"Sheets spread under the tree. The whole harvest is one day for nine trees.",
+"gr.s4h":"Sugar, one day in month 8",
+"gr.s4p":"Carob is the sugar. It is native, it has been on this coast for millennia, it grows wild, and it needs nothing from anyone. One day of work in the hottest month of the year makes the sweetener for the whole year.",
+"gr.c4":"Carob pods, the reduction, and the year's sugar in jars.",
+"gr.s4n":"Stop the reduction well before it looks right. Syrup thickens a great deal as it cools, and taken to the consistency you actually want while hot, it sets into candy.",
+"gr.pesth":"Pests, and why the indigenous crops do not get them",
+"gr.pestp":"The wheat, the fava, the olives and the carob are barely troubled, because they are local and have not been bred far from what they were. The trouble is almost entirely in the vegetable garden, where many of the species are not from here. That is the same argument this whole project rests on, arriving from the direction of the plate.",
+"gr.lessonh":"What we take from it",
+"gr.lessonp":"Almost all of it transfers. Kukljica has the same climate, the same rainfall pattern, the same four staples and the same problem of thin soil over limestone. The differences are that our ground is steeper and stonier, which means terraces before beds, and that we have no water at all on site, which moves the whole water question in front of the whole food question. The order of work is not a preference here. It is the only order that can work.",
+"gr.source":"Source: Pelman, Nachtomy and Carmel, Individual nutritional self-sufficiency, a viable option in the present era, Frontiers in Sustainable Food Systems, 2024. Figures are from the published study of Alik Pelman's farm. The images on this page are visualisations made for this site, not photographs of that farm or of this parcel.",
 "nav.land":"The land","nav.history":"History","nav.method":"Method","nav.calendar":"Calendar",
 "nav.craft":"Stone and craft","nav.living":"Living here","nav.who":"Who","nav.join":"Join",
 
@@ -755,6 +848,34 @@ hr:{
 "bun.c5":"Na pola visine. Kamen se prvo posloži po veličini na tlu, a to je i najveći dio posla.",
 "bun.c6":"Suhozid. Isti zanat, isti kamen, samo položen ravno umjesto u luk.",
 "bun.note":"Ovih šest prikaza su vizualizacije tipa gradnje, izrađene za ovu stranicu. To nisu fotografije postojećih građevina niti fotografije ove čestice.",
+"nav.growing":"Uzgoj hrane",
+"gr.kicker":"Uzgoj hrane",
+"gr.h":"Jedan dan mjesečno, i hrana je gotova",
+"gr.p1":"Postoji dokumentirano mediteransko malo gospodarstvo koje u potpunosti prehranjuje jednu osobu sa 740 četvornih metara, uz prosječno jedan radni dan mjesečno, bez umjetnog gnojiva, herbicida i pesticida. Tako radi od 2013., izmjereno je i objavljeno u recenziranom časopisu. Vlasnik uz to ima puno radno vrijeme drugdje.",
+"gr.p2":"Iznosimo to ovdje jer odgovara na pitanje koje se uz ovakav projekt uvijek postavi, a to je je li strana s hranom realna ili romantična. Realna je, a razlog je izbor kultura. Osnovica su zimska žitarica za ugljikohidrate, zimska mahunarka za bjelančevine i maslinovo ulje za mast, a sve troje izabrano je zato što je autohtono, i upravo zato im kemija uopće ne treba.",
+"gr.f1":"m² hrani jednu osobu","gr.f2":"radni dan mjesečno","gr.f3":"površine bez navodnjavanja","gr.f4":"umjetnih ulaza","gr.f5":"kg maslinovog ulja godišnje","gr.f6":"godina dotjerivanja",
+"gr.areah":"Kamo ide površina",
+"gr.areap":"Omjeri su cijeli argument. Povrtnjak zauzima manje od petine zemlje, odnosi otprilike pola ukupnog rada, troši svu vodu za navodnjavanje i vraća oko petnaest posto kalorija. Žito, mahunarka, ulje i šećer zauzimaju sve ostalo, žive samo od kiše i nose prehranu.",
+"gr.s1h":"Povrtnjak, jedna četvrtina svaki mjesec",
+"gr.s1p":"Vrt je podijeljen na četiri gredice od oko 35 četvornih metara. Svaki mjesec se jedna gredica gradi ispočetka, uvijek ona s najstarijom kulturom, pa su sve četiri stalno u četiri različite faze i uvijek postoji zrela gredica s koje se jede. Cijeli ciklus ispod traje oko četiri sata.",
+"gr.c1":"Četiri gredice u četiri faze. Jedna obnovljena, jedna tek posađena, jedna napola narasla, jedna spremna za rez.",
+"gr.s1n":"Obnova ide u 9., 10., 11. i 2. mjesecu za zimske kulture te u 3., 4., 5. i 6. za ljetne. U 12. i 1. mjesecu ne sadi se ništa jer je prehladno da se išta miče, ni u 7. i 8. jer je prevruće.",
+"gr.s2h":"Žito i mahunarka, četiri dana za cijelu godinu",
+"gr.s2p":"Pšenica i bob siju se zajedno u 12. mjesecu i žanju zajedno u 5. Između ta dva datuma parcela se uopće ne dira. Dvanaest godina na nju nije došao ni gram komposta.",
+"gr.c2":"Pšenica i bob spremni. Dozrijevaju u različito vrijeme, ali se režu i vrše kao jedan posao.",
+"gr.s2n":"Stabljike se režu, nikad ne čupaju. Iščupane biljke donesu zemlju i sitno kamenje u vršidbu, a to je pretaško da ga puhalo izbaci, pa završi u zrnu.",
+"gr.s3h":"Maslinovo ulje, dva dana u 11. mjesecu",
+"gr.s3p":"Devet stabala srednje veličine daje oko 200 kg maslina, iz čega se istiješti 40 do 50 kg ulja. To je otprilike dvostruko više nego što jedna osoba potroši u godini, a višak je ono što se daruje. Dva zrela stabla pokrila bi jednu osobu.",
+"gr.c3":"Plahte razastrte pod stablom. Cijela berba je jedan dan za devet stabala.",
+"gr.s4h":"Šećer, jedan dan u 8. mjesecu",
+"gr.s4p":"Rogač je šećer. Autohton je, na ovoj obali je tisućljećima, raste divlje i ne treba mu ništa ni od koga. Jedan dan rada u najtoplijem mjesecu godine napravi sladilo za cijelu godinu.",
+"gr.c4":"Rogačeve mahune, ukuhavanje i godišnji šećer u staklenkama.",
+"gr.s4n":"Ukuhavanje se prekida znatno prije nego izgleda gotovo. Sirup se hlađenjem jako zgusne, pa ako ga vrućeg dovedeš do gustoće koju zapravo želiš, stegne se u bombon.",
+"gr.pesth":"Nametnici, i zašto ih autohtone kulture nemaju",
+"gr.pestp":"Pšenicu, bob, masline i rogač jedva da išta dira, jer su domaći i nisu daleko odselekcionirani od onoga što su bili. Problem je gotovo isključivo u povrtnjaku, gdje mnoge vrste nisu odavde. To je isti argument na kojem stoji cijeli ovaj projekt, samo stiže sa strane tanjura.",
+"gr.lessonh":"Što od toga uzimamo",
+"gr.lessonp":"Gotovo sve se prenosi. Kukljica ima istu klimu, isti raspored kiša, iste četiri osnovne namirnice i isti problem tankog tla na vapnencu. Razlike su da je naš teren strmiji i kamenitiji, što znači terase prije gredica, i da na terenu nemamo nimalo vode, što cijelo pitanje vode stavlja ispred cijelog pitanja hrane. Redoslijed posla ovdje nije stvar ukusa. To je jedini redoslijed koji može raditi.",
+"gr.source":"Izvor: Pelman, Nachtomy i Carmel, Individual nutritional self-sufficiency, a viable option in the present era, Frontiers in Sustainable Food Systems, 2024. Brojke su iz objavljene studije gospodarstva Alika Pelmana. Slike na ovoj stranici su vizualizacije izrađene za ovu stranicu, a ne fotografije tog gospodarstva ni ove čestice.",
 "nav.land":"Zemlja","nav.history":"Povijest","nav.method":"Metoda","nav.calendar":"Kalendar",
 "nav.craft":"Kamen i zanat","nav.living":"Život ovdje","nav.who":"Tko","nav.join":"Pridruži se",
 
@@ -995,6 +1116,56 @@ const TREES=[
 ["fire","vatra","Holm oak","Crnika","Quercus ilex","tree-oak.jpg",
  "It answers the sun. This is the tree the whole coast was made of before it was cut, and its dense evergreen canopy turns hard Mediterranean light into deep shade. Under that shade the ground stays cool, moisture stays in the soil, and the understorey of myrtle and strawberry tree can live. Unlike the pine that replaced it, it does not carry fire.",
  "Ona odgovara suncu. To je stablo od kojeg je bila cijela ova obala prije nego je posječena, a njezina gusta zimzelena krošnja tvrdo mediteransko svjetlo pretvara u dubok hlad. Pod tim hladom tlo ostaje hladno, vlaga ostaje u zemlji, a podrast mirte i planike može živjeti. Za razliku od bora koji ju je zamijenio, ona ne nosi vatru."]];
+
+
+const AREA=[
+ ["Fava bean","Bob",350,"#7d8f4f"],
+ ["Wheat","Pšenica",200,"#c8892f"],
+ ["Vegetables","Povrće",140,"#2aa198"],
+ ["Olives","Masline",45,"#2f5d50"],
+ ["Carob","Rogač",5,"#d9d2c5"]];
+
+const VEG=[
+ ["Water the bed the day before, so the soil tills like cake instead of dust.","Zalij gredicu dan prije, da se tlo obrađuje kao kolač, a ne kao prašina.",""],
+ ["String trim the whole plot down to a green mulch and leave it lying.","Trimerom pokosi cijelu gredicu u zeleni malč i ostavi ga da leži.","15 min"],
+ ["Spread compost one centimetre thin, about 10 litres per square metre.","Raspi kompost debljine jednog centimetra, oko 10 litara po četvornom metru.","30 min"],
+ ["Pull the irrigation hoses out of the bed.","Izvuci crijeva za navodnjavanje iz gredice.",""],
+ ["Shallow till the whole bed. Shallow keeps the nutrients in the topsoil where the next crop is.","Plitko obradi cijelu gredicu. Plitko drži hranjiva u površinskom sloju gdje je i sljedeća kultura.","1 h"],
+ ["Rake flat.","Poravnaj grabljama.","15 min"],
+ ["Plant and sow the next crop in the rotation.","Posadi i posij sljedeću kulturu u plodoredu.","2 h"]];
+
+const GRAIN=[
+ ["Wait for the first real rain in mid month 11. Within two weeks every weed seed in the ground has germinated.","Čekaj prvu pravu kišu sredinom 11. mjeseca. U dva tjedna proklija svako sjeme korova u zemlji.",""],
+ ["In early month 12, shallow till the whole plot once. That single pass kills the entire flush of young weeds at once.","Početkom 12. mjeseca jednom plitko obradi cijelu parcelu. Taj jedan prolaz odjednom uništi cijeli val mladog korova.","1 h"],
+ ["Walk behind and broadcast the seed with a hand spreader, wheat and fava in separate plots.","Idi iza i razbaci sjeme ručnom sijačicom, pšenicu i bob na odvojenim parcelama.",""],
+ ["Till a second time to bury the seed. Left on the surface, ants carry it off overnight.","Obradi drugi put da se sjeme zatrpa. Ostavljeno na površini, mravi ga odnesu preko noći.","4 h total"],
+ ["Do nothing at all until month 5. No compost, no water, no weeding.","Ne radi apsolutno ništa do 5. mjeseca. Bez komposta, bez vode, bez plijevljenja.",""],
+ ["Cut with a sickle, one or two hours each morning for a fortnight. Cut both crops together.","Reži srpom, sat ili dva svako jutro dva tjedna. Obje kulture reži zajedno.","16 h"],
+ ["Thresh and winnow, then store dry in sealed barrels.","Ovrši i provijaj, pa spremi suho u zatvorene bačve.","12 h"],
+ ["Keep back next year's seed, and buy a little in occasionally to keep the genetics moving.","Ostavi sjeme za sljedeću godinu, a povremeno dokupi malo da se genetika miče.",""]];
+
+const OIL=[
+ ["Spread sheets on the ground under the tree.","Razastri plahte po tlu pod stablom.",""],
+ ["Comb the branches with a handheld harvester. The olives fall onto the sheets.","Počešljaj grane ručnim otresačem. Masline padaju na plahte.","30 to 60 min per tree"],
+ ["Gather the sheets to the middle and bag the fruit.","Skupi plahte prema sredini i vreći plod.",""],
+ ["Press the same day. Olives left overnight begin to ferment and the oil loses grade.","Tiješti isti dan. Masline ostavljene preko noći počnu fermentirati i ulje gubi kakvoću.","1 h at the press"],
+ ["Store in stainless steel, in the dark, indoors.","Čuvaj u nehrđajućem čeliku, u mraku, u zatvorenom.",""],
+ ["Prune the following day, every second year. The prunings dry for a year and then burn as firewood.","Sutradan reži, svake druge godine. Rezano drvo se suši godinu dana pa gori kao ogrjev.","8 h"]];
+
+const SUGAR=[
+ ["Pick ripe pods from a wild tree. Choose the tree by tasting the fruit.","Uberi zrele mahune s divljeg stabla. Stablo biraj kušanjem ploda.",""],
+ ["Blend the pods with water into a coarse wet mash.","Izblendaj mahune s vodom u grubu mokru kašu.",""],
+ ["Leave it to stand overnight. The sugars move out of the fruit and into the water.","Ostavi da odstoji preko noći. Šećeri prijeđu iz ploda u vodu.","overnight"],
+ ["Strain off and discard the solids. Keep only the liquid.","Ocijedi i baci krutinu. Zadrži samo tekućinu.",""],
+ ["Reduce on the stove until it is thinner than you want, then take it off.","Ukuhavaj na štednjaku dok ne bude rjeđe nego što želiš, pa skini.",""],
+ ["Bottle and seal. About 10 kg covers a year of sweetening.","Ulij u boce i zatvori. Oko 10 kg pokriva godinu slađenja.","1 day total"]];
+
+const PESTS=[
+ ["Rotate","Plodored","Never the same family in the same bed twice running. The monthly rebuild forces this by itself.","Nikad ista porodica dvaput zaredom u istoj gredici. Mjesečna obnova to sama nameće."],
+ ["Underwater","Manje vode","Water only what the plant needs. Excess water is what draws most of the pests in.","Zalijevaj samo koliko biljci treba. Višak vode je ono što privuče većinu nametnika."],
+ ["Host predators","Ugosti grabežljivce","Keep one permanent bed of sage, rosemary, lavender and local herbs. It feeds the insects that eat the aphids.","Drži jednu trajnu gredicu kadulje, ružmarina, lavande i domaćeg bilja. Ona hrani kukce koji jedu lisne uši."],
+ ["Grow a surplus","Uzgoji višak","Plant twenty to thirty per cent more than you need. That surplus is the price of not spraying, and it is cheaper than spraying.","Posadi dvadeset do trideset posto više nego što ti treba. Taj višak je cijena neprskanja, i jeftiniji je od prskanja."],
+ ["Tolerate","Toleriraj","Losses run around five per cent. Weeds under a standing crop can stay, they lift nutrients from deeper down and the next shallow tilling returns them.","Gubici su oko pet posto. Korov ispod uspravne kulture može ostati, on diže hranjiva iz dubine, a sljedeća plitka obrada ih vraća."]];
 
 /* ============================ render ============================ */
 let lang = (new URLSearchParams(location.search).get('lang')) ||
