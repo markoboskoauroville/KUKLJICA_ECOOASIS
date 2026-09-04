@@ -155,6 +155,10 @@ figcaption{overflow-wrap:anywhere;font-family:var(--mono);font-size:10.5px;lette
 .phase.now .ph{color:var(--olive)}
 .phase p{font-size:15px;margin:0}
 
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin:34px 0}
+.gal figure{margin:0}
+
 /* nutrition matrix */
 .matrix{display:grid;grid-template-columns:118px minmax(0,1fr) minmax(0,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:30px 0}
 .mcell{background:var(--bg);padding:16px 14px;font-size:14.5px}
@@ -424,6 +428,23 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
       <figcaption data-i18n="craft.cap2"></figcaption>
     </figure>
   </div>
+
+  <h3 style="margin-top:60px" data-i18n="bun.h"></h3>
+  <p data-i18n="bun.p1"></p>
+  <p data-i18n="bun.p2"></p>
+
+  <div class="gal">
+    <figure><img src="img/bunja-grove.jpg" alt="" loading="lazy"><figcaption data-i18n="bun.c1"></figcaption></figure>
+    <figure><img src="img/bunja-interior.jpg" alt="" loading="lazy"><figcaption data-i18n="bun.c2"></figcaption></figure>
+    <figure><img src="img/bunja-roof.jpg" alt="" loading="lazy"><figcaption data-i18n="bun.c3"></figcaption></figure>
+    <figure><img src="img/bunja-pair.jpg" alt="" loading="lazy"><figcaption data-i18n="bun.c4"></figcaption></figure>
+    <figure><img src="img/bunja-build.jpg" alt="" loading="lazy"><figcaption data-i18n="bun.c5"></figcaption></figure>
+    <figure><img src="img/bunja-wall.jpg" alt="" loading="lazy"><figcaption data-i18n="bun.c6"></figcaption></figure>
+  </div>
+
+  <div class="note" data-i18n="bun.note"></div>
+  <div style="display:none">
+  </div>
   <div class="note" data-i18n="craft.note"></div>
 </div></section>
 
@@ -575,6 +596,16 @@ en:{
 "tr.mfig":"Fig","tr.mfigD":"Dried on a rack in the sun. Sugar concentrates, and a good year feeds you until the next one.",
 "tr.pairp2":"That second axis is not a footnote. The two foods that need work are the two that were most valued, because the labour was the storage. In Sardinia, acorn bread sold for more than wheat bread precisely because it was harder to make, and the women who made it were known for it. The Latin name of the holm oak, ilex, is thought to come from eligo, to choose. It was the tree that got chosen.",
 "tr.honest":"Honest limit: these four give fat and carbohydrate, not a complete diet. Protein comes from the chickpea in the terraces, and historically from the sea and from sheep. Nobody here ever lived on trees alone.",
+"bun.h":"The bunja, what we intend to build",
+"bun.p1":"A bunja is the round field hut of this coast, built from the stone lying in the field and nothing else. The wall goes up thick and circular, and the roof is corbelled, each ring of flat slabs stepping a little further inward than the one below until a single capstone closes it. No mortar, no timber frame, no imported material. The same principle as the terrace walls, only turned upward into a dome.",
+"bun.p2":"It works because of what it is made of. Walls up to eighty centimetres thick hold the night's cool through the middle of the day, the stone does not burn, and when a bunja finally falls it becomes a pile of stone again with nothing left to take away. We intend to build a small number of them here, for shelter, for tool storage and for the workshop, using the same method the walls will be repaired with.",
+"bun.c1":"A single bunja in an old olive grove. One window, one low door, everything else stone.",
+"bun.c2":"Inside. Thick wall, deep window, two niches, and the corbelled dome closing to a small opening at the top.",
+"bun.c3":"The roof from below. Flat slabs laid in rings, each stepping inward, held by weight and friction alone.",
+"bun.c4":"Two of them on a coastal slope. The smaller has no window and stores tools, the larger is for shelter.",
+"bun.c5":"Part way up. The stone is sorted by size on the ground first, which is most of the work.",
+"bun.c6":"Dry stone wall. The same craft, the same stone, laid flat instead of curved.",
+"bun.note":"These six images are visualisations of the building type, made for this site. They are not photographs of existing buildings and not photographs of this parcel.",
 "nav.land":"The land","nav.history":"History","nav.method":"Method","nav.calendar":"Calendar",
 "nav.craft":"Stone and craft","nav.living":"Living here","nav.who":"Who","nav.join":"Join",
 
@@ -710,6 +741,16 @@ hr:{
 "tr.mfig":"Smokva","tr.mfigD":"Suši se na lesi na suncu. Šećer se koncentrira, i dobra godina te hrani do sljedeće.",
 "tr.pairp2":"Ta druga os nije fusnota. Dvije namirnice koje traže rad bile su i najcjenjenije, jer je rad bio način čuvanja. Na Sardiniji se kruh od žira prodavao skuplje od pšeničnog upravo zato što ga je bilo teže napraviti, a žene koje su ga pekle bile su po tome poznate. Latinsko ime crnike, ilex, izvodi se iz eligo, izabrati. To je bilo stablo koje se biralo.",
 "tr.honest":"Poštena granica: ova četiri daju mast i ugljikohidrate, ne cjelovitu prehranu. Bjelančevine dolaze od slanutka na terasama, a povijesno od mora i od ovaca. Nitko ovdje nikad nije živio samo od stabala.",
+"bun.h":"Bunja, ono što namjeravamo graditi",
+"bun.p1":"Bunja je okrugla poljska kućica ove obale, građena od kamena koji leži u polju i ni od čega drugog. Zid ide debeo i kružan, a krov je na lažni svod, svaki prsten ravnih ploča stupa malo više prema unutra od onog ispod dok ga jedan zaglavni kamen ne zatvori. Bez morta, bez drvene konstrukcije, bez dovezenog materijala. Isto načelo kao i kod suhozida, samo okrenuto uvis u kupolu.",
+"bun.p2":"Radi zbog onoga od čega je. Zidovi debeli i do osamdeset centimetara drže noćnu hladnoću kroz sredinu dana, kamen ne gori, a kad bunja jednom padne opet postane hrpa kamena i nema se što odvoziti. Namjeravamo ih ovdje podići nekoliko, za sklonište, za spremanje alata i za radionicu, istom metodom kojom će se obnavljati i suhozidi.",
+"bun.c1":"Jedna bunja u starom masliniku. Jedan prozor, jedna niska vrata, sve ostalo kamen.",
+"bun.c2":"Iznutra. Debeo zid, duboki prozor, dvije niše i lažni svod koji se zatvara malim otvorom na vrhu.",
+"bun.c3":"Krov odozdo. Ravne ploče slagane u prstenove, svaki uvučen prema unutra, drži ih samo težina i trenje.",
+"bun.c4":"Dvije na obalnoj padini. Manja nema prozor i služi za alat, veća je za sklonište.",
+"bun.c5":"Na pola visine. Kamen se prvo posloži po veličini na tlu, a to je i najveći dio posla.",
+"bun.c6":"Suhozid. Isti zanat, isti kamen, samo položen ravno umjesto u luk.",
+"bun.note":"Ovih šest prikaza su vizualizacije tipa gradnje, izrađene za ovu stranicu. To nisu fotografije postojećih građevina niti fotografije ove čestice.",
 "nav.land":"Zemlja","nav.history":"Povijest","nav.method":"Metoda","nav.calendar":"Kalendar",
 "nav.craft":"Kamen i zanat","nav.living":"Život ovdje","nav.who":"Tko","nav.join":"Pridruži se",
 
