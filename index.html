@@ -50,7 +50,7 @@ nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px soli
 /* ---------- hero ---------- */
 header.hero{position:relative;border-bottom:1px solid var(--line);overflow:hidden}
 .heroimg{position:absolute;inset:0}
-.heroimg img{width:100%;height:100%;object-fit:cover;opacity:.42}
+.heroimg img{width:100%;height:100%;object-fit:cover;opacity:.55}
 .heroveil{position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0%,rgba(13,17,23,.35) 45%,var(--bg) 100%)}
 html[data-mode="day"] .heroveil{background:linear-gradient(180deg,var(--bg) 0%,rgba(244,242,237,.3) 45%,var(--bg) 100%)}
 .heroin{position:relative;max-width:var(--maxw);margin:0 auto;padding:110px 24px 70px}
@@ -59,6 +59,9 @@ h1{font-family:var(--display);font-weight:300;font-size:clamp(2.9rem,8vw,5.6rem)
 h1 em{font-style:normal;color:var(--olive)}
 .lede{font-family:var(--display);font-weight:300;font-size:clamp(1.15rem,2.5vw,1.55rem);line-height:1.45;max-width:30ch;margin:26px 0 34px;color:var(--text)}
 .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.herocredit{margin-top:34px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.herocredit a{color:var(--muted);border:0}
+.herocredit a:hover{color:var(--adriatic)}
 .btn{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:13px 22px;border:1px solid var(--olive);color:var(--olive);border-radius:2px}
 .btn.solid{background:var(--olive);color:var(--bg);border-color:var(--olive)}
 html[data-mode="day"] .btn.solid{color:#fff}
@@ -185,7 +188,7 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
 </nav>
 
 <header class="hero" id="top">
-  <div class="heroimg"><img src="img/panorama.jpg" alt=""></div>
+  <div class="heroimg"><img src="img/aerial-hero.jpg" alt=""></div>
   <div class="heroveil"></div>
   <svg class="parcel" viewBox="0 0 300 300" aria-hidden="true">
     <path d="M148 62 L214 74 L228 158 L196 214 L120 208 L96 150 L108 92 Z"/>
@@ -198,6 +201,7 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
       <a class="btn solid" href="#join" data-i18n="hero.cta1"></a>
       <a class="btn" href="#method" data-i18n="hero.cta2"></a>
     </div>
+    <div class="herocredit"><a href="https://www.boriskacan.com" target="_blank" rel="noopener" data-i18n="credit.kacan"></a></div>
   </div>
 </header>
 
@@ -222,10 +226,16 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
       <ul class="species" id="species"></ul>
       <div class="note" data-i18n="land.legend"></div>
     </div>
-    <figure>
-      <img src="img/arkod.jpg" alt="ARKOD parcel measurement">
-      <figcaption data-i18n="land.cap"></figcaption>
-    </figure>
+    <div>
+      <figure style="margin-bottom:26px">
+        <img src="img/aerial-headland.jpg" alt="The headland and the tombolo from the air">
+        <figcaption data-i18n="land.cap2"></figcaption>
+      </figure>
+      <figure>
+        <img src="img/arkod.jpg" alt="ARKOD parcel measurement">
+        <figcaption data-i18n="land.cap"></figcaption>
+      </figure>
+    </div>
   </div>
 </div></section>
 
@@ -235,6 +245,10 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
   <p data-i18n="hist.p1"></p>
   <p data-i18n="hist.p2"></p>
   <blockquote class="pull" data-i18n="hist.pull"></blockquote>
+  <figure style="margin:34px 0">
+    <img src="img/aerial-pine.jpg" alt="Aleppo pine canopy from the air">
+    <figcaption data-i18n="hist.cap"></figcaption>
+  </figure>
   <p data-i18n="hist.p3"></p>
 </div></section>
 
@@ -265,10 +279,16 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
       <p data-i18n="water.p2"></p>
       <ul class="plain" id="waterlist"></ul>
     </div>
-    <figure>
-      <img src="img/topo.jpg" alt="Topographic map of Bačina uvala and the Čelinjak ridge">
-      <figcaption data-i18n="water.cap"></figcaption>
-    </figure>
+    <div>
+      <figure style="margin-bottom:26px">
+        <img src="img/aerial-shallows.jpg" alt="Turquoise shallows and seagrass">
+        <figcaption data-i18n="water.cap2"></figcaption>
+      </figure>
+      <figure>
+        <img src="img/topo.jpg" alt="Topographic map of Bačina uvala and the Čelinjak ridge">
+        <figcaption data-i18n="water.cap"></figcaption>
+      </figure>
+    </div>
   </div>
 </div></section>
 
@@ -336,6 +356,10 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
       </svg>
       <figcaption data-i18n="craft.cap"></figcaption>
     </figure>
+    <figure style="margin-top:26px">
+      <img src="img/aerial-coast.jpg" alt="Limestone shore from the air">
+      <figcaption data-i18n="craft.cap2"></figcaption>
+    </figure>
   </div>
   <div class="note" data-i18n="craft.note"></div>
 </div></section>
@@ -381,10 +405,16 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
       <h3 data-i18n="live.kidsh"></h3>
       <p data-i18n="live.kidsp"></p>
     </div>
-    <figure>
-      <img src="img/yoga.jpg" alt="">
-      <figcaption data-i18n="live.cap"></figcaption>
-    </figure>
+    <div>
+      <figure style="margin-bottom:26px">
+        <img src="img/aerial-shore.jpg" alt="Houses at the shore">
+        <figcaption data-i18n="live.cap2"></figcaption>
+      </figure>
+      <figure>
+        <img src="img/yoga.jpg" alt="">
+        <figcaption data-i18n="live.cap"></figcaption>
+      </figure>
+    </div>
   </div>
 </div></section>
 
@@ -453,6 +483,12 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
 /* ============================ i18n ============================ */
 const T = {
 en:{
+"credit.kacan":"Aerial photographs by Boris Kačan · boriskacan.com · used with permission",
+"land.cap2":"The headland and the tombolo that joins it to the rest of the land. The pale line is the beach path. Photo: Boris Kačan.",
+"hist.cap":"Aleppo pine canopy on the parcel. Dense, even and almost unbroken, with the old terrace lines still readable beneath it. Photo: Boris Kačan.",
+"water.cap2":"The shallows on the west side. The dark patches are seagrass, and the pale rim is limestone that holds no water at all. Photo: Boris Kačan.",
+"craft.cap2":"The stone rim of the shore. Every wall on the parcel was built from this, gathered by hand where it lay. Photo: Boris Kačan.",
+"live.cap2":"The few houses at the shore. This is the whole of the built landscape here, and it is meant to stay that way. Photo: Boris Kačan.",
 "nav.land":"The land","nav.history":"History","nav.method":"Method","nav.calendar":"Calendar",
 "nav.craft":"Stone and craft","nav.living":"Living here","nav.who":"Who","nav.join":"Join",
 
@@ -555,10 +591,16 @@ en:{
 "join.p":"The project is at the beginning. The most useful things right now are hands, expertise and introductions, in that order.",
 
 "foot.loc":"Kukljica EcoOasis · Island of Ugljan · Bačina uvala · Parcels 2448/6, 2448/14, 2448/13, 2449/1",
-"foot.credit":"Photographs and drawings by Marko Boško unless credited otherwise.",
-"foot.sources":"Sources: sadhanaforest.org · dragodid.org · suhozid.hr · geaviva.net · auroville.org"
+"foot.credit":"Aerial photographs © Boris Kačan, boriskacan.com, used with permission. Other photographs and drawings by Marko Boško.",
+"foot.sources":"Sources: boriskacan.com · sadhanaforest.org · dragodid.org · suhozid.hr · geaviva.net · auroville.org"
 },
 hr:{
+"credit.kacan":"Zračne fotografije Boris Kačan · boriskacan.com · objavljeno uz dopuštenje",
+"land.cap2":"Rt i prevlaka koja ga spaja s ostatkom zemlje. Svijetla crta je put po žalu. Foto: Boris Kačan.",
+"hist.cap":"Sklop alepskog bora na čestici. Gust, ujednačen i gotovo neprekinut, a ispod njega se još čitaju stare linije terasa. Foto: Boris Kačan.",
+"water.cap2":"Plićina sa zapadne strane. Tamne mrlje su morska trava, a svijetli rub je vapnenac koji ne drži ni kap vode. Foto: Boris Kačan.",
+"craft.cap2":"Kameni rub obale. Svaki suhozid na čestici sagrađen je od ovoga, skupljenog rukom ondje gdje je ležao. Foto: Boris Kačan.",
+"live.cap2":"Ono malo kuća uz obalu. To je cijeli izgrađeni krajolik ovdje i namjera je da tako i ostane. Foto: Boris Kačan.",
 "nav.land":"Zemlja","nav.history":"Povijest","nav.method":"Metoda","nav.calendar":"Kalendar",
 "nav.craft":"Kamen i zanat","nav.living":"Život ovdje","nav.who":"Tko","nav.join":"Pridruži se",
 
@@ -661,8 +703,8 @@ hr:{
 "join.p":"Projekt je na početku. Najkorisnije su trenutno ruke, stručnost i veze, tim redom.",
 
 "foot.loc":"Kukljica EcoOasis · Otok Ugljan · Bačina uvala · Čestice 2448/6, 2448/14, 2448/13, 2449/1",
-"foot.credit":"Fotografije i crteži Marko Boško osim gdje je navedeno drukčije.",
-"foot.sources":"Izvori: sadhanaforest.org · dragodid.org · suhozid.hr · geaviva.net · auroville.org"
+"foot.credit":"Zračne fotografije © Boris Kačan, boriskacan.com, objavljeno uz dopuštenje. Ostale fotografije i crteži Marko Boško.",
+"foot.sources":"Izvori: boriskacan.com · sadhanaforest.org · dragodid.org · suhozid.hr · geaviva.net · auroville.org"
 }};
 
 /* ============================ data ============================ */
