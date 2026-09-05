@@ -2,6 +2,8 @@ backend:
   name: github
   repo: markoboskoauroville/KUKLJICA_ECOOASIS
   branch: cms
+  base_url: https://kukljica-cms-auth.marko-bosko-925.workers.dev
+  auth_endpoint: auth
   commit_messages:
     create: "Sadržaj: novo {{collection}} · {{author-name}}"
     update: "Sadržaj: izmjena {{collection}} · {{author-name}}"
