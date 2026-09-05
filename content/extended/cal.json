@@ -1,0 +1,113 @@
+{
+ "_label": "Fenološki kalendar",
+ "items": [
+  {
+   "month": 1,
+   "flower_en": "rosemary, first almond in warm years",
+   "flower_hr": "ružmarin, u toplim godinama prvi badem",
+   "bees_en": "rosemary, early almond",
+   "bees_hr": "ružmarin, rani badem",
+   "work_en": "olive pruning in mild spells, dry stone repair, tool work",
+   "work_hr": "rezidba maslina u blažim danima, obnova suhozida, rad na alatu"
+  },
+  {
+   "month": 2,
+   "flower_en": "almond in full blossom, laurel starting",
+   "flower_hr": "badem u punom cvatu, lovor kreće",
+   "bees_en": "almond, the first real forage of the year",
+   "bees_hr": "badem, prva prava paša u godini",
+   "work_en": "main olive pruning, planting of bare root trees, walling",
+   "work_hr": "glavna rezidba maslina, sadnja golog korijena, suhozid"
+  },
+  {
+   "month": 3,
+   "flower_en": "laurel, rosemary continuing, wild asparagus up",
+   "flower_hr": "lovor, ružmarin još traje, šparoge niču",
+   "bees_en": "laurel, rosemary",
+   "bees_hr": "lovor, ružmarin",
+   "work_en": "grafting, last planting, clearing pine seedlings",
+   "work_hr": "cijepljenje, zadnja sadnja, čišćenje mladica bora"
+  },
+  {
+   "month": 4,
+   "flower_en": "maquis opening, sage and thyme beginning, immortelle greening",
+   "flower_hr": "makija se otvara, kreću kadulja i majčina dušica, smilje zeleni",
+   "bees_en": "maquis in general, colonies building fast",
+   "bees_hr": "makija općenito, zajednice brzo jačaju",
+   "work_en": "sowing chickpea, mulching, first herb cutting",
+   "work_hr": "sjetva slanutka, malčiranje, prvo rezanje bilja"
+  },
+  {
+   "month": 5,
+   "flower_en": "sage and thyme at peak, buhač, olive flowering late in the month",
+   "flower_hr": "kadulja i majčina dušica na vrhuncu, buhač, maslina cvate krajem mjeseca",
+   "bees_en": "sage, the best honey of the year",
+   "bees_hr": "kadulja, najbolji med u godini",
+   "work_en": "harvest buhač, cut and dry herbs, first honey",
+   "work_hr": "berba buhača, rezanje i sušenje bilja, prvi med"
+  },
+  {
+   "month": 6,
+   "flower_en": "olive fruit set, immortelle, myrtle, chamomile",
+   "flower_hr": "zametanje ploda masline, smilje, mirta, kamilica",
+   "bees_en": "immortelle and myrtle",
+   "bees_hr": "smilje i mirta",
+   "work_en": "distilling immortelle and laurel, drying racks full",
+   "work_hr": "destilacija smilja i lovora, sušare pune"
+  },
+  {
+   "month": 7,
+   "flower_en": "little in flower, the land holds its breath",
+   "flower_hr": "malo toga cvate, zemlja zadržava dah",
+   "bees_en": "thin, colonies live on stores",
+   "bees_hr": "tanka, zajednice žive od zaliha",
+   "work_en": "work only at dawn and dusk, watering young trees only, processing indoors",
+   "work_hr": "rad samo u zoru i sumrak, zalijevaju se samo mladice, prerada u hladu"
+  },
+  {
+   "month": 8,
+   "flower_en": "chickpea ripening, first figs",
+   "flower_hr": "slanutak dozrijeva, prve smokve",
+   "bees_en": "thin, water for the bees matters more than forage",
+   "bees_hr": "tanka, voda za pčele važnija od paše",
+   "work_en": "chickpea harvest by mid month, first fig drying, dew observation begins",
+   "work_hr": "berba slanutka do sredine mjeseca, prvo sušenje smokava, počinje mjerenje rose"
+  },
+  {
+   "month": 9,
+   "flower_en": "myrtle berries forming, second flush of herbs",
+   "flower_hr": "mirta zameće bobe, drugi rast bilja",
+   "bees_en": "autumn flowers returning",
+   "bees_hr": "jesenski cvat se vraća",
+   "work_en": "fig harvest and drying, sowing winter greens, second herb cut",
+   "work_hr": "berba i sušenje smokava, sjetva zimskog povrća, drugi rez bilja"
+  },
+  {
+   "month": 10,
+   "flower_en": "strawberry tree in flower and fruit at once, myrtle berries ripe",
+   "flower_hr": "planika istovremeno cvate i rodi, bobe mirte zrele",
+   "bees_en": "strawberry tree, the last major forage",
+   "bees_hr": "planika, zadnja velika paša",
+   "work_en": "myrtle liqueur, carob harvest, olive harvest begins, rocket sown",
+   "work_hr": "liker od mirte, berba rogača, počinje berba maslina, sije se rikula"
+  },
+  {
+   "month": 11,
+   "flower_en": "strawberry tree continuing, first rains bring green",
+   "flower_hr": "planika još traje, prve kiše donose zelenilo",
+   "bees_en": "strawberry tree",
+   "bees_hr": "planika",
+   "work_en": "olive harvest and pressing, main planting season opens with the rain",
+   "work_hr": "berba i prešanje maslina, s kišom se otvara glavna sezona sadnje"
+  },
+  {
+   "month": 12,
+   "flower_en": "quiet, rosemary begins again",
+   "flower_hr": "tiho, ružmarin ponovno kreće",
+   "bees_en": "rosemary in mild years",
+   "bees_hr": "ružmarin u blagim godinama",
+   "work_en": "planting continues, dry stone repair, processing olives and carob",
+   "work_hr": "sadnja se nastavlja, obnova suhozida, prerada maslina i rogača"
+  }
+ ]
+}

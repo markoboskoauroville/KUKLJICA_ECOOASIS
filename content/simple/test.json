@@ -1,0 +1,20 @@
+{
+ "_label": "Poligon",
+ "fields": [
+  {
+   "key": "test.h",
+   "en": "Every solution is an experiment with a published result",
+   "hr": "Svako rješenje je pokus s objavljenim rezultatom"
+  },
+  {
+   "key": "test.kicker",
+   "en": "Test ground",
+   "hr": "Poligon"
+  },
+  {
+   "key": "test.p",
+   "en": "The site is a demonstration ground, so each of these is set up to be measured rather than admired. If something does not work in this climate, that is a result worth publishing too.",
+   "hr": "Teren je demonstracijski, pa je svaki od ovih postavljen tako da se mjeri, a ne da se divimo. Ako nešto ne radi u ovoj klimi, i to je rezultat vrijedan objave."
+  }
+ ]
+}

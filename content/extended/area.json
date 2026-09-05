@@ -1,0 +1,35 @@
+{
+ "_label": "Raspodjela površine",
+ "items": [
+  {
+   "name_en": "Fava bean",
+   "name_hr": "Bob",
+   "m2": 350,
+   "colour": "#7d8f4f"
+  },
+  {
+   "name_en": "Wheat",
+   "name_hr": "Pšenica",
+   "m2": 200,
+   "colour": "#c8892f"
+  },
+  {
+   "name_en": "Vegetables",
+   "name_hr": "Povrće",
+   "m2": 140,
+   "colour": "#2aa198"
+  },
+  {
+   "name_en": "Olives",
+   "name_hr": "Masline",
+   "m2": 45,
+   "colour": "#2f5d50"
+  },
+  {
+   "name_en": "Carob",
+   "name_hr": "Rogač",
+   "m2": 5,
+   "colour": "#d9d2c5"
+  }
+ ]
+}

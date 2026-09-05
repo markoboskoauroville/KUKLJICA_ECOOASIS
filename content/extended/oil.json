@@ -1,0 +1,35 @@
+{
+ "_label": "Koraci, ulje",
+ "items": [
+  {
+   "text_en": "Spread sheets on the ground under the tree.",
+   "text_hr": "Razastri plahte po tlu pod stablom.",
+   "time": ""
+  },
+  {
+   "text_en": "Comb the branches with a handheld harvester. The olives fall onto the sheets.",
+   "text_hr": "Počešljaj grane ručnim otresačem. Masline padaju na plahte.",
+   "time": "30 to 60 min per tree"
+  },
+  {
+   "text_en": "Gather the sheets to the middle and bag the fruit.",
+   "text_hr": "Skupi plahte prema sredini i vreći plod.",
+   "time": ""
+  },
+  {
+   "text_en": "Press the same day. Olives left overnight begin to ferment and the oil loses grade.",
+   "text_hr": "Tiješti isti dan. Masline ostavljene preko noći počnu fermentirati i ulje gubi kakvoću.",
+   "time": "1 h at the press"
+  },
+  {
+   "text_en": "Store in stainless steel, in the dark, indoors.",
+   "text_hr": "Čuvaj u nehrđajućem čeliku, u mraku, u zatvorenom.",
+   "time": ""
+  },
+  {
+   "text_en": "Prune the following day, every second year. The prunings dry for a year and then burn as firewood.",
+   "text_hr": "Sutradan reži, svake druge godine. Rezano drvo se suši godinu dana pa gori kao ogrjev.",
+   "time": "8 h"
+  }
+ ]
+}

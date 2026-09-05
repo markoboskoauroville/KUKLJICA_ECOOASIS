@@ -1,0 +1,45 @@
+{
+ "_label": "Linije rada",
+ "items": [
+  {
+   "name_en": "Stone",
+   "name_hr": "Kamen",
+   "text_en": "Survey and repair of the dry stone walls and terraces that hold the soil in place.",
+   "text_hr": "Popis i obnova suhozida i terasa koje drže tlo na mjestu.",
+   "output_en": "Output: metres rebuilt, walls entered into suhozid.hr",
+   "output_hr": "Rezultat: obnovljeni metri, suhozidi uneseni u suhozid.hr"
+  },
+  {
+   "name_en": "Water",
+   "name_hr": "Voda",
+   "text_en": "Baseline survey, dew harvest, runoff capture, assessment of groundwater from the ridge.",
+   "text_hr": "Nulto mjerenje, skupljanje rose, hvatanje otjecanja, procjena podzemne vode s grebena.",
+   "output_en": "Output: litres captured, soil moisture readings",
+   "output_hr": "Rezultat: uhvaćene litre, očitanja vlage tla"
+  },
+  {
+   "name_en": "Species",
+   "name_hr": "Vrste",
+   "text_en": "Staged removal of Aleppo pine and its seedlings, keeping a few large ones near the sea for shade, and the return of indigenous species.",
+   "text_hr": "Postupno uklanjanje alepskog bora i mladica, uz zadržavanje nekoliko velikih uz more zbog hlada, i povratak autohtonih vrsta.",
+   "output_en": "Output: individuals planted, species count, survival rate per season",
+   "output_hr": "Rezultat: broj sadnica, broj vrsta, stopa preživljavanja po sezoni"
+  },
+  {
+   "name_en": "Craft",
+   "name_hr": "Zanat",
+   "text_en": "The workshop for drying, fermenting, distilling, salting, curing and the old hand crafts.",
+   "text_hr": "Radionica za sušenje, fermentiranje, destiliranje, soljenje, konzerviranje i stare ručne zanate.",
+   "output_en": "Output: workshops held, people trained, products made",
+   "output_hr": "Rezultat: održane radionice, obučeni ljudi, napravljeni proizvodi"
+  },
+  {
+   "name_en": "People",
+   "name_hr": "Ljudi",
+   "text_en": "Volunteers, apprenticeships and the field school that carries the method off the site.",
+   "text_hr": "Volonteri, naukovanje i terenska škola koja odnosi metodu dalje od ovog terena.",
+   "output_en": "Output: volunteer days, what they took home",
+   "output_hr": "Rezultat: volonterski dani, ono što su odnijeli sa sobom"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "_label": "Zanat, stavke",
+ "items": [
+  {
+   "name_en": "Preserving",
+   "name_hr": "Čuvanje",
+   "text_en": "Drying, fermenting, salting, curing, macerating, solar drying.",
+   "text_hr": "Sušenje, fermentiranje, soljenje, konzerviranje, maceriranje, solarno sušenje."
+  },
+  {
+   "name_en": "Distilling",
+   "name_hr": "Destiliranje",
+   "text_en": "Immortelle, laurel, myrtle, sage. Tinctures, macerates, hydrosols.",
+   "text_hr": "Smilje, lovor, mirta, kadulja. Tinkture, macerati, hidrolati."
+  },
+  {
+   "name_en": "Stone",
+   "name_hr": "Kamen",
+   "text_en": "Dry stone walling, stone mills, the bunja.",
+   "text_hr": "Suhozid, kameni mlinovi, bunja."
+  },
+  {
+   "name_en": "Hand craft",
+   "name_hr": "Ručni zanat",
+   "text_en": "Pottery, basket weaving, weaving, hand tools, soap making.",
+   "text_hr": "Lončarstvo, pletenje košara, tkanje, ručni alat, izrada sapuna."
+  }
+ ]
+}

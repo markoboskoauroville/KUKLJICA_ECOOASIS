@@ -1,0 +1,40 @@
+{
+ "_label": "Metoda",
+ "fields": [
+  {
+   "key": "meth.h",
+   "en": "Five workstreams, each with something you can count",
+   "hr": "Pet linija rada, svaka s nečim što se može izbrojati"
+  },
+  {
+   "key": "meth.kicker",
+   "en": "Method",
+   "hr": "Metoda"
+  },
+  {
+   "key": "meth.note",
+   "en": "Nothing on this site is marked as done that is not done. The project is at Phase 0.",
+   "hr": "Ništa na ovoj stranici nije označeno kao gotovo ako nije gotovo. Projekt je u fazi 0."
+  },
+  {
+   "key": "meth.p",
+   "en": "The model is Sadhana Forest, founded in 2003 near Auroville by Aviram and Yorit Rozin, which turned seventy acres of eroded ground into indigenous forest using volunteers, water retention earthworks and native species alone. They publish their survival rates. So will we, including the seasons that go badly.",
+   "hr": "Model je Sadhana Forest, osnovan 2003. kraj Auroville, koji su pokrenuli Aviram i Yorit Rozin i koji je sedamdeset jutara erodiranog tla pretvorio u autohtonu šumu, samo volonterima, zemljanim radovima za zadržavanje vode i domaćim vrstama. Oni objavljuju svoje stope preživljavanja sadnica. Objavljivat ćemo i mi, uključujući sezone koje prođu loše."
+  },
+  {
+   "key": "meth.sketchcap",
+   "en": "Working sketch. Lateral shoots crossed out, two to three main stems kept, figure for scale.",
+   "hr": "Radna skica. Izdanci prekriženi, ostavljene dvije do tri glavne žile, figura za mjerilo."
+  },
+  {
+   "key": "meth.sketchh",
+   "en": "Pruning is the first intervention",
+   "hr": "Rezidba je prvi zahvat"
+  },
+  {
+   "key": "meth.sketchp",
+   "en": "Most of the olives here are not dead, they are overgrown. The method is to cut the lateral shoots from the root, keep one main stem or two to three where they are already well developed, and open the crown so light and air get through. Restoration by pruning costs nothing but hands and returns a grove that is already forty or a hundred years old. Planting a new tree buys you a decade of waiting instead.",
+   "hr": "Većina ovdašnjih maslina nije mrtva, nego zarasla. Metoda je odrezati izdanke iz korijena, ostaviti jednu glavnu žilu ili dvije do tri gdje su već dobro razvijene, i otvoriti krošnju da prolaze svjetlo i zrak. Obnova rezidbom ne košta ništa osim ruku, a vraća maslinik koji već ima četrdeset ili sto godina. Sadnja novog stabla umjesto toga kupuje ti desetljeće čekanja."
+  }
+ ]
+}

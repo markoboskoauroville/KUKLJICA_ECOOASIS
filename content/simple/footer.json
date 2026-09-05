@@ -1,0 +1,20 @@
+{
+ "_label": "Podnožje",
+ "fields": [
+  {
+   "key": "foot.credit",
+   "en": "Aerial photographs © Boris Kačan, boriskacan.com, used with permission. Other photographs and drawings by Marko Boško.",
+   "hr": "Zračne fotografije © Boris Kačan, boriskacan.com, objavljeno uz dopuštenje. Ostale fotografije i crteži Marko Boško."
+  },
+  {
+   "key": "foot.loc",
+   "en": "Kukljica EcoOasis · Island of Ugljan · Bačina uvala · Parcels 2448/6, 2448/14, 2448/13, 2449/1",
+   "hr": "Kukljica EcoOasis · Otok Ugljan · Bačina uvala · Čestice 2448/6, 2448/14, 2448/13, 2449/1"
+  },
+  {
+   "key": "foot.sources",
+   "en": "Sources: boriskacan.com · sadhanaforest.org · dragodid.org · suhozid.hr · geaviva.net · auroville.org",
+   "hr": "Izvori: boriskacan.com · sadhanaforest.org · dragodid.org · suhozid.hr · geaviva.net · auroville.org"
+  }
+ ]
+}

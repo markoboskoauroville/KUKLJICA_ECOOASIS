@@ -1,0 +1,40 @@
+{
+ "_label": "Povijest",
+ "fields": [
+  {
+   "key": "hist.cap",
+   "en": "Aleppo pine canopy on the parcel. Dense, even and almost unbroken, with the old terrace lines still readable beneath it.",
+   "hr": "Sklop alepskog bora na čestici. Gust, ujednačen i gotovo neprekinut, a ispod njega se još čitaju stare linije terasa."
+  },
+  {
+   "key": "hist.h",
+   "en": "The forest that belongs here was cut for ships",
+   "hr": "Šuma koja pripada ovom mjestu posječena je za brodove"
+  },
+  {
+   "key": "hist.kicker",
+   "en": "What happened here",
+   "hr": "Što se ovdje dogodilo"
+  },
+  {
+   "key": "hist.p1",
+   "en": "The eastern Adriatic islands were originally covered by evergreen holm oak forest, Quercus ilex, with hop hornbeam, wild pistachio, myrtle, strawberry tree and laurel beneath it. Maquis, garrigue and bare rocky pasture are its degradation stages, not its natural state.",
+   "hr": "Jadranske otoke izvorno je pokrivala zimzelena šuma crnike, Quercus ilex, a ispod nje crni grab, tršlja, mirta, planika i lovor. Makija, garig i goli kamenjar njezini su stupnjevi degradacije, a ne prirodno stanje."
+  },
+  {
+   "key": "hist.p2",
+   "en": "Clearing ran for centuries and had many causes: shipbuilding timber, including the Venetian Republic's long extraction of oak from Dalmatia, along with firewood, lime burning, goat and sheep grazing that stopped regrowth, and clearing for vineyards and olives that intensified through the 19th century. The first photographs of this coast show a nearly treeless landscape.",
+   "hr": "Sječa je trajala stoljećima i imala više uzroka: drvo za brodogradnju, među njima i dugo venecijansko vađenje hrastovine iz Dalmacije, zatim ogrjev, paljenje vapna, ispaša koza i ovaca koja je zaustavljala obnovu, te krčenje za vinograde i masline koje se pojačalo kroz 19. stoljeće. Prve fotografije ove obale pokazuju krajolik gotovo bez drveća."
+  },
+  {
+   "key": "hist.p3",
+   "en": "Soil loss followed, and afforestation programmes intensified from the late 19th century under Austro-Hungarian administration. Aleppo pine, Pinus halepensis, was the species chosen, because it tolerates drought and colonises degraded ground. The stated intention was to build soil so that holm oak could return. That has largely not happened. Aleppo pine now self-seeds aggressively, dominates the littoral landscape, suppresses the flora beneath it and carries very high fire risk. We are removing the fast species and returning the slow ones, on seven hectares, so that at least one stretch of this coast shows what the island actually is.",
+   "hr": "Uslijedio je gubitak tla, pa se pošumljavanje pojačalo od kraja 19. stoljeća pod austrougarskom upravom. Odabran je alepski bor, Pinus halepensis, jer podnosi sušu i osvaja degradirano tlo. Namjera je bila izgraditi tlo da se crnika može vratiti. To se uglavnom nije dogodilo. Alepski bor danas se agresivno sam sije, dominira priobalnim krajolikom, guši floru ispod sebe i nosi vrlo visok rizik od požara. Uklanjamo brze vrste i vraćamo spore, na sedam hektara, da barem jedan potez ove obale pokaže što otok zaista jest."
+  },
+  {
+   "key": "hist.pull",
+   "en": "What was planted in its place was chosen for speed, not for the place.",
+   "hr": "Ono što je posađeno umjesto nje birano je po brzini, a ne po mjestu."
+  }
+ ]
+}

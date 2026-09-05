@@ -1,0 +1,35 @@
+{
+ "_label": "Nametnici",
+ "items": [
+  {
+   "name_en": "Rotate",
+   "name_hr": "Plodored",
+   "text_en": "Never the same family in the same bed twice running. The monthly rebuild forces this by itself.",
+   "text_hr": "Nikad ista porodica dvaput zaredom u istoj gredici. Mjesečna obnova to sama nameće."
+  },
+  {
+   "name_en": "Underwater",
+   "name_hr": "Manje vode",
+   "text_en": "Water only what the plant needs. Excess water is what draws most of the pests in.",
+   "text_hr": "Zalijevaj samo koliko biljci treba. Višak vode je ono što privuče većinu nametnika."
+  },
+  {
+   "name_en": "Host predators",
+   "name_hr": "Ugosti grabežljivce",
+   "text_en": "Keep one permanent bed of sage, rosemary, lavender and local herbs. It feeds the insects that eat the aphids.",
+   "text_hr": "Drži jednu trajnu gredicu kadulje, ružmarina, lavande i domaćeg bilja. Ona hrani kukce koji jedu lisne uši."
+  },
+  {
+   "name_en": "Grow a surplus",
+   "name_hr": "Uzgoji višak",
+   "text_en": "Plant twenty to thirty per cent more than you need. That surplus is the price of not spraying, and it is cheaper than spraying.",
+   "text_hr": "Posadi dvadeset do trideset posto više nego što ti treba. Taj višak je cijena neprskanja, i jeftiniji je od prskanja."
+  },
+  {
+   "name_en": "Tolerate",
+   "name_hr": "Toleriraj",
+   "text_en": "Losses run around five per cent. Weeds under a standing crop can stay, they lift nutrients from deeper down and the next shallow tilling returns them.",
+   "text_hr": "Gubici su oko pet posto. Korov ispod uspravne kulture može ostati, on diže hranjiva iz dubine, a sljedeća plitka obrada ih vraća."
+  }
+ ]
+}

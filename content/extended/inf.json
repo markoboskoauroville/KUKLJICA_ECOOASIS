@@ -1,0 +1,96 @@
+{
+ "_label": "Utjecaji",
+ "items": [
+  {
+   "name_en": "Sadhana Forest",
+   "name_hr": "Sadhana Forest",
+   "text_en": "Auroville, India. Indigenous species, water retention earthworks, volunteers, and published survival rates. The direct model.",
+   "text_hr": "Auroville, Indija. Autohtone vrste, zemljani radovi za vodu, volonteri i objavljene stope preživljavanja. Izravan model.",
+   "url": "https://sadhanaforest.org"
+  },
+  {
+   "name_en": "Auroville",
+   "name_hr": "Auroville",
+   "text_en": "The township founded on Sri Aurobindo's Integral Yoga, and its free progress schools. Seven years of Marko's life.",
+   "text_hr": "Grad utemeljen na Integralnoj yogi Sri Aurobinda i njegove free progress škole. Sedam godina Markova života.",
+   "url": "https://auroville.org"
+  },
+  {
+   "name_en": "4 Grada Dragodid",
+   "name_hr": "4 Grada Dragodid",
+   "text_en": "Dry stone craft, workshops since 2002, and the open public inventory suhozid.hr.",
+   "text_hr": "Suhozidni zanat, radionice od 2002. i otvoreni javni inventar suhozid.hr.",
+   "url": "https://dragodid.org"
+  },
+  {
+   "name_en": "Gea Viva",
+   "name_hr": "Gea Viva",
+   "text_en": "Sabine Engelhardt's eco smallholding on Brač. Permaculture, eco architecture, geomancy in the Marko Pogačnik lineage, charity since 2011.",
+   "text_hr": "Ekološko imanje Sabine Engelhardt na Braču. Permakultura, eko arhitektura, geomantija u tradiciji Marka Pogačnika, udruga od 2011.",
+   "url": "https://www.geaviva.net"
+  },
+  {
+   "name_en": "Eko selo Blatuša",
+   "name_hr": "Eko selo Blatuša",
+   "text_en": "Petrova gora. Straw bale and cordwood houses, composting toilets, greywater treatment, permaculture. Croatian precedent.",
+   "text_hr": "Petrova gora. Kuće od bala slame i drvenih oblica, kompostni zahodi, pročišćavanje sivih voda, permakultura. Hrvatski presedan.",
+   "url": "https://ekoseloblatusa.com"
+  },
+  {
+   "name_en": "Reciklirano imanje",
+   "name_hr": "Reciklirano imanje",
+   "text_en": "Vukomerić, south of Zagreb. The other established Croatian permaculture site.",
+   "text_hr": "Vukomerić, južno od Zagreba. Drugi uhodani hrvatski permakulturni teren.",
+   "url": ""
+  },
+  {
+   "name_en": "Earthship and Garbage Warrior",
+   "name_hr": "Earthship i Garbage Warrior",
+   "text_en": "Michael Reynolds. Fully decentralised houses for heat, cooling, water and power. We take the logic and leave the tyres, building instead in stone, wood, clay, straw and glass.",
+   "text_hr": "Michael Reynolds. Potpuno decentralizirane kuće za grijanje, hlađenje, vodu i struju. Uzimamo logiku, ostavljamo gume, i gradimo kamenom, drvom, glinom, slamom i staklom.",
+   "url": ""
+  },
+  {
+   "name_en": "Nader Khalili",
+   "name_hr": "Nader Khalili",
+   "text_en": "Superadobe. Earth bag domes built from the ground they stand on, tested for earthquake and fire. Relevant because the bunja is the same idea in stone.",
+   "text_hr": "Superadobe. Kupole od vreća zemlje građene od tla na kojem stoje, ispitane na potres i požar. Relevantno jer je bunja ista ideja u kamenu.",
+   "url": ""
+  },
+  {
+   "name_en": "Findhorn, Tamera, Sieben Linden",
+   "name_hr": "Findhorn, Tamera, Sieben Linden",
+   "text_en": "Long running European communities that solved the questions of governance, water and food before we asked them.",
+   "text_hr": "Dugovječne europske zajednice koje su pitanja upravljanja, vode i hrane riješile prije nego smo ih mi postavili.",
+   "url": ""
+  },
+  {
+   "name_en": "The Integratron",
+   "name_hr": "Integratron",
+   "text_en": "Mojave desert. An all wood domed chamber built without nails, cited here strictly as an acoustic architecture precedent.",
+   "text_hr": "Pustinja Mojave. Drvena kupolasta dvorana građena bez čavala, navedena isključivo kao presedan akustične arhitekture.",
+   "url": ""
+  },
+  {
+   "name_en": "Dances of Universal Peace",
+   "name_hr": "Dances of Universal Peace",
+   "text_en": "Circle dances brought together by Samuel Lewis in the late 1960s from the sacred phrases of many traditions, led by a facilitator, open to anyone on the first evening.",
+   "text_hr": "Kružni plesovi koje je Samuel Lewis krajem šezdesetih složio od svetih fraza mnogih tradicija, vodi ih voditelj, a otvoreni su svakome već prve večeri.",
+   "url": "https://dancesofuniversalpeace.org"
+  },
+  {
+   "name_en": "AcroYoga",
+   "name_hr": "AcroYoga",
+   "text_en": "Partner practice of trust, weight and counterweight. Two people cannot fake it, which is why it belongs where people work together.",
+   "text_hr": "Partnerska praksa povjerenja, težine i protuteže. Dvoje ljudi je ne mogu glumiti, zato pripada tamo gdje se radi zajedno.",
+   "url": ""
+  },
+  {
+   "name_en": "Ozora, Burning Man",
+   "name_hr": "Ozora, Burning Man",
+   "text_en": "Large gatherings that showed what temporary infrastructure, sound and shared work can build. We take the craft and leave the scale.",
+   "text_hr": "Veliki skupovi koji su pokazali što privremena infrastruktura, zvuk i zajednički rad mogu izgraditi. Uzimamo zanat, ostavljamo mjerilo.",
+   "url": ""
+  }
+ ]
+}

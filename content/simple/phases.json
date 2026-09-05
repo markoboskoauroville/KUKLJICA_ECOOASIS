@@ -1,0 +1,15 @@
+{
+ "_label": "Faze",
+ "fields": [
+  {
+   "key": "ph.h",
+   "en": "Where the project actually is",
+   "hr": "Gdje je projekt zapravo"
+  },
+  {
+   "key": "ph.kicker",
+   "en": "Phases",
+   "hr": "Faze"
+  }
+ ]
+}

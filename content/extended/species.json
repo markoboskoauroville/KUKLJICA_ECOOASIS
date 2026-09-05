@@ -1,0 +1,130 @@
+{
+ "_label": "Popis vrsta",
+ "items": [
+  {
+   "en": "olive",
+   "hr": "maslina",
+   "status": "keep"
+  },
+  {
+   "en": "holm oak",
+   "hr": "crnika",
+   "status": "keep"
+  },
+  {
+   "en": "myrtle",
+   "hr": "mirta",
+   "status": "keep"
+  },
+  {
+   "en": "strawberry tree",
+   "hr": "planika",
+   "status": "keep"
+  },
+  {
+   "en": "wild pistachio",
+   "hr": "tršlja",
+   "status": "keep"
+  },
+  {
+   "en": "juniper",
+   "hr": "borovica",
+   "status": "keep"
+  },
+  {
+   "en": "immortelle",
+   "hr": "smilje",
+   "status": "keep"
+  },
+  {
+   "en": "sage",
+   "hr": "kadulja",
+   "status": "keep"
+  },
+  {
+   "en": "thyme",
+   "hr": "majčina dušica",
+   "status": "keep"
+  },
+  {
+   "en": "oregano",
+   "hr": "origano",
+   "status": "keep"
+  },
+  {
+   "en": "rosemary",
+   "hr": "ružmarin",
+   "status": "keep"
+  },
+  {
+   "en": "laurel",
+   "hr": "lovor",
+   "status": "keep"
+  },
+  {
+   "en": "rocket",
+   "hr": "rikula",
+   "status": "keep"
+  },
+  {
+   "en": "chamomile",
+   "hr": "kamilica",
+   "status": "keep"
+  },
+  {
+   "en": "buhač",
+   "hr": "buhač",
+   "status": "keep"
+  },
+  {
+   "en": "clover",
+   "hr": "djetelina",
+   "status": "keep"
+  },
+  {
+   "en": "Aleppo pine",
+   "hr": "alepski bor",
+   "status": "out"
+  },
+  {
+   "en": "almond",
+   "hr": "badem",
+   "status": "new"
+  },
+  {
+   "en": "carob",
+   "hr": "rogač",
+   "status": "new"
+  },
+  {
+   "en": "fig",
+   "hr": "smokva",
+   "status": "new"
+  },
+  {
+   "en": "tamarisk",
+   "hr": "tamaris",
+   "status": "new"
+  },
+  {
+   "en": "cherry",
+   "hr": "trešnja",
+   "status": "new"
+  },
+  {
+   "en": "peach",
+   "hr": "breskva",
+   "status": "new"
+  },
+  {
+   "en": "apricot",
+   "hr": "marelica",
+   "status": "new"
+  },
+  {
+   "en": "chickpea",
+   "hr": "slanutak",
+   "status": "new"
+  }
+ ]
+}

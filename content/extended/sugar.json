@@ -1,0 +1,35 @@
+{
+ "_label": "Koraci, šećer",
+ "items": [
+  {
+   "text_en": "Pick ripe pods from a wild tree. Choose the tree by tasting the fruit.",
+   "text_hr": "Uberi zrele mahune s divljeg stabla. Stablo biraj kušanjem ploda.",
+   "time": ""
+  },
+  {
+   "text_en": "Blend the pods with water into a coarse wet mash.",
+   "text_hr": "Izblendaj mahune s vodom u grubu mokru kašu.",
+   "time": ""
+  },
+  {
+   "text_en": "Leave it to stand overnight. The sugars move out of the fruit and into the water.",
+   "text_hr": "Ostavi da odstoji preko noći. Šećeri prijeđu iz ploda u vodu.",
+   "time": "overnight"
+  },
+  {
+   "text_en": "Strain off and discard the solids. Keep only the liquid.",
+   "text_hr": "Ocijedi i baci krutinu. Zadrži samo tekućinu.",
+   "time": ""
+  },
+  {
+   "text_en": "Reduce on the stove until it is thinner than you want, then take it off.",
+   "text_hr": "Ukuhavaj na štednjaku dok ne bude rjeđe nego što želiš, pa skini.",
+   "time": ""
+  },
+  {
+   "text_en": "Bottle and seal. About 10 kg covers a year of sweetening.",
+   "text_hr": "Ulij u boce i zatvori. Oko 10 kg pokriva godinu slađenja.",
+   "time": "1 day total"
+  }
+ ]
+}

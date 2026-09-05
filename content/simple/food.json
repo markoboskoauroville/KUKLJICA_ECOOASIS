@@ -1,0 +1,30 @@
+{
+ "_label": "Šuma hrane",
+ "fields": [
+  {
+   "key": "food.cap",
+   "en": "Species already growing on the site and species to be introduced.",
+   "hr": "Vrste koje već rastu na terenu i vrste koje se uvode."
+  },
+  {
+   "key": "food.h",
+   "en": "Trees that do not need watering",
+   "hr": "Drveće kojem ne treba zalijevanje"
+  },
+  {
+   "key": "food.kicker",
+   "en": "Food forest",
+   "hr": "Šuma hrane"
+  },
+  {
+   "key": "food.p1",
+   "en": "Everything planted has to survive a Dalmatian summer without irrigation once established. That rules out most of what a garden centre sells and rules in what people here grew for centuries.",
+   "hr": "Sve što se sadi mora preživjeti dalmatinsko ljeto bez navodnjavanja kad se jednom primi. To izbacuje većinu onoga što se prodaje u vrtnim centrima i uvodi ono što se ovdje uzgajalo stoljećima."
+  },
+  {
+   "key": "food.p2",
+   "en": "Tamarisk goes closest to the sea as a salt and wind break. Cherry, peach and apricot go only in the moister lower ground. Chickpea ripens by mid month 8, before watering would be needed. Clover feeds nitrogen back into the soil and buhač keeps insects down without a spray.",
+   "hr": "Tamaris ide najbliže moru kao zaštita od soli i vjetra. Trešnja, breskva i marelica idu samo u vlažniji niži teren. Slanutak dozrijeva do sredine 8. mjeseca, prije nego bi trebalo zalijevati. Djetelina vraća dušik u tlo, a buhač drži kukce podalje bez prskanja."
+  }
+ ]
+}

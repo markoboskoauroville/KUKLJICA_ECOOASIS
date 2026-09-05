@@ -1,0 +1,70 @@
+{
+ "_label": "Navigacija i gumbi",
+ "fields": [
+  {
+   "key": "credit.kacan",
+   "en": "Aerial photographs by Boris Kačan · boriskacan.com · used with permission",
+   "hr": "Zračne fotografije Boris Kačan · boriskacan.com · objavljeno uz dopuštenje"
+  },
+  {
+   "key": "hero.cta1",
+   "en": "Volunteer",
+   "hr": "Volontiraj"
+  },
+  {
+   "key": "hero.cta2",
+   "en": "Read the method",
+   "hr": "Pročitaj metodu"
+  },
+  {
+   "key": "nav.calendar",
+   "en": "Calendar",
+   "hr": "Kalendar"
+  },
+  {
+   "key": "nav.craft",
+   "en": "Stone and craft",
+   "hr": "Kamen i zanat"
+  },
+  {
+   "key": "nav.growing",
+   "en": "Growing food",
+   "hr": "Uzgoj hrane"
+  },
+  {
+   "key": "nav.history",
+   "en": "History",
+   "hr": "Povijest"
+  },
+  {
+   "key": "nav.join",
+   "en": "Join",
+   "hr": "Pridruži se"
+  },
+  {
+   "key": "nav.land",
+   "en": "The land",
+   "hr": "Zemlja"
+  },
+  {
+   "key": "nav.living",
+   "en": "Living here",
+   "hr": "Život ovdje"
+  },
+  {
+   "key": "nav.method",
+   "en": "Method",
+   "hr": "Metoda"
+  },
+  {
+   "key": "nav.trees",
+   "en": "Four trees",
+   "hr": "Četiri stabla"
+  },
+  {
+   "key": "nav.who",
+   "en": "Who",
+   "hr": "Tko"
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "_label": "Naslovna",
+ "fields": [
+  {
+   "key": "fig.ha",
+   "en": "hectares",
+   "hr": "hektara"
+  },
+  {
+   "key": "fig.irrigation",
+   "en": "irrigation after establishment",
+   "hr": "navodnjavanja nakon primanja"
+  },
+  {
+   "key": "fig.km",
+   "en": "km of perimeter",
+   "hr": "km opsega"
+  },
+  {
+   "key": "fig.parcels",
+   "en": "cadastral parcels",
+   "hr": "katastarske čestice"
+  },
+  {
+   "key": "fig.ridge",
+   "en": "m ridge above",
+   "hr": "m greben iznad"
+  },
+  {
+   "key": "fig.wells",
+   "en": "wells on site",
+   "hr": "bunara na terenu"
+  },
+  {
+   "key": "hero.eyebrow",
+   "en": "Croatia · Island of Ugljan · Kukljica · Bačina uvala",
+   "hr": "Hrvatska · Otok Ugljan · Kukljica · Bačina uvala"
+  },
+  {
+   "key": "hero.lede",
+   "en": "A seven hectare restoration site. Bringing back the landscape that fed this coast for two thousand years, and showing how to live in it.",
+   "hr": "Sedam hektara obnove. Vraćamo krajolik koji je hranio ovu obalu dvije tisuće godina i pokazujemo kako se u njemu živi."
+  }
+ ]
+}

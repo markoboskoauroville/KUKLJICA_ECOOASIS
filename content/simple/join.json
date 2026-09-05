@@ -1,0 +1,20 @@
+{
+ "_label": "Pridruži se",
+ "fields": [
+  {
+   "key": "join.h",
+   "en": "Come and work, or help it start",
+   "hr": "Dođi raditi, ili pomozi da krene"
+  },
+  {
+   "key": "join.kicker",
+   "en": "Join",
+   "hr": "Pridruži se"
+  },
+  {
+   "key": "join.p",
+   "en": "The project is at the beginning. The most useful things right now are hands, expertise and introductions, in that order.",
+   "hr": "Projekt je na početku. Najkorisnije su trenutno ruke, stručnost i veze, tim redom."
+  }
+ ]
+}

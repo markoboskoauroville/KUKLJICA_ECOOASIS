@@ -1,0 +1,45 @@
+{
+ "_label": "Filozofija",
+ "fields": [
+  {
+   "key": "phil.h",
+   "en": "We grow forward out of what was already here",
+   "hr": "Rastemo naprijed iz onoga što je već bilo ovdje"
+  },
+  {
+   "key": "phil.kicker",
+   "en": "Why indigenous",
+   "hr": "Zašto autohtono"
+  },
+  {
+   "key": "phil.p1",
+   "en": "There is a way of farming that needs constant support. You bring in a species that did not evolve here, and then you spend the rest of your life defending it. Water it, feed it, spray it, replace it. The plant never settles, the soil never builds, and the work never ends. That is not agriculture, it is life support.",
+   "hr": "Postoji način poljoprivrede koji traži stalnu podršku. Dovedeš vrstu koja se ovdje nije razvila, i onda ostatak života provedeš braneći je. Zalij, nahrani, poprskaj, zamijeni. Biljka se nikad ne primi, tlo se nikad ne izgradi, a posao nikad ne prestane. To nije poljoprivreda, to je održavanje na aparatima."
+  },
+  {
+   "key": "phil.p2",
+   "en": "An indigenous species asks for none of that. It has spent thousands of years being selected by exactly this rainfall, this thin soil, this wind and these pests. It knows the summer is coming. Everything it needs is already written into it. You plant it, you protect it for two or three years, and then it takes over its own life.",
+   "hr": "Autohtona vrsta ne traži ništa od toga. Tisućama godina birala ju je upravo ova kiša, ovo tanko tlo, ovaj vjetar i ovi nametnici. Ona zna da ljeto dolazi. Sve što joj treba već je zapisano u njoj. Posadiš je, čuvaš dvije ili tri godine, i onda preuzme vlastiti život."
+  },
+  {
+   "key": "phil.p3",
+   "en": "That is why the olive is the mark of this project. In its natural state an olive never really dies of age. When the trunk goes hollow or burns or is cut, shoots rise from the stump and the tree continues, the same individual carrying on under a new shape. That is the whole argument in one plant: you do not start again from nothing, you grow forward out of what was already here.",
+   "hr": "Zato je maslina znak ovog projekta. U prirodnom stanju maslina zapravo nikad ne umire od starosti. Kad se deblo izduplji, izgori ili ga posijeku, iz panja se dižu mladice i stablo se nastavlja, isti pojedinac u novom obliku. To je cijeli argument u jednoj biljci: ne kreće se ispočetka iz ničega, nego se raste naprijed iz onoga što je već bilo ovdje."
+  },
+  {
+   "key": "phil.p4",
+   "en": "Sadhana Forest showed this on the other side of the world. In 2003 Aviram and Yorit Rozin sold their house in Israel and moved with their baby daughter onto seventy acres of eroded, barren ground outside Auroville, to bring back the Tropical Dry Evergreen Forest, of which less than one hundredth of a percent still stands. Nothing was watered permanently. They worked the water first, slowing it, spreading it, sinking it into the ground instead of letting the monsoon run straight off bare land into the sea. Then they planted indigenous species and nothing else, tens of thousands of them across a hundred and sixty species.",
+   "hr": "Sadhana Forest to je pokazao na drugom kraju svijeta. Aviram i Yorit Rozin prodali su 2003. kuću u Izraelu i s malom kćeri se preselili na sedamdeset jutara erodiranog, golog tla kraj Auroville, da vrate tropsku suhu zimzelenu šumu, koje je preostalo manje od jedne stotinke postotka. Ništa se nije trajno navodnjavalo. Prvo su radili na vodi, usporavali je, razvlačili i upijali u zemlju umjesto da monsun otječe s gole zemlje ravno u more. Tek onda su sadili, i to isključivo autohtone vrste, desetke tisuća sadnica u sto šezdeset vrsta."
+  },
+  {
+   "key": "phil.p5",
+   "en": "The thing worth repeating is what happened next. The forest began planting itself. Birds and animals came back, carried seed, and now for every tree that gets planted by hand the forest raises several of its own. That is what an ecosystem does once you stop fighting it and give it back its own species. It stops being a project and becomes a place. That is what we are after here, on seven hectares of Croatian karst, with olive and almond and fig and holm oak instead of tropical dry evergreen, and with the same simple discipline: water first, indigenous species only, and enough patience to let the land do most of the work.",
+   "hr": "Ono što vrijedi ponoviti je što se dogodilo poslije. Šuma se počela saditi sama. Vratile su se ptice i životinje, raznijele sjeme, i danas na svako stablo posađeno rukom šuma podigne još nekoliko svojih. To ekosustav radi čim mu prestaneš smetati i vratiš mu njegove vrste. Prestaje biti projekt i postaje mjesto. To i mi tražimo ovdje, na sedam hektara hrvatskog krša, s maslinom, bademom, smokvom i crnikom umjesto tropske zimzelene šume, i s istom jednostavnom disciplinom: prvo voda, samo autohtone vrste, i dovoljno strpljenja da zemlja odradi najveći dio posla."
+  },
+  {
+   "key": "phil.pull",
+   "en": "When an old olive sends a shoot up from its stump, it is not a new tree. It is a new expression of the same genotype.",
+   "hr": "Kad stara maslina istjera mladicu iz panja, to nije novo stablo. To je novi izraz istog genotipa."
+  }
+ ]
+}

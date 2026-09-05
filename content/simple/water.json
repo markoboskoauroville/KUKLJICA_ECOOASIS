@@ -1,0 +1,35 @@
+{
+ "_label": "Voda",
+ "fields": [
+  {
+   "key": "water.cap",
+   "en": "Čelinjak ridge, V. vrh at 122,8 m, and the drainage down into Bačina uvala.",
+   "hr": "Greben Čelinjak, V. vrh na 122,8 m, i otjecanje u Bačinu uvalu."
+  },
+  {
+   "key": "water.cap2",
+   "en": "The shallows on the west side. The dark patches are seagrass, and the pale rim is limestone that holds no water at all.",
+   "hr": "Plićina sa zapadne strane. Tamne mrlje su morska trava, a svijetli rub je vapnenac koji ne drži ni kap vode."
+  },
+  {
+   "key": "water.h",
+   "en": "No well, no spring, and a great deal of dew",
+   "hr": "Nema bunara, nema izvora, a rose ima jako puno"
+  },
+  {
+   "key": "water.kicker",
+   "en": "Water",
+   "hr": "Voda"
+  },
+  {
+   "key": "water.p1",
+   "en": "Water is the hardest problem on this site and it is treated first, before any planting. Nothing is watered permanently. Irrigation exists only to establish young trees and then it stops.",
+   "hr": "Voda je najteži problem ovog terena i rješava se prva, prije bilo kakve sadnje. Ništa se ne navodnjava trajno. Navodnjavanje postoji samo da se mlado drveće primi, i onda prestaje."
+  },
+  {
+   "key": "water.p2",
+   "en": "The lichen and moss on the lower ground indicate very high dew, which is a resource rather than a curiosity. Groundwater drains from the Čelinjak ridge down into Bačina uvala, and any source close to the shore has to be checked for salt intrusion before it is used.",
+   "hr": "Lišajevi i mahovina na nižem terenu pokazuju vrlo visoku rosu, a to je resurs, ne zanimljivost. Podzemna voda otječe s Čelinjaka u Bačinu uvalu, a svaki izvor blizu obale mora se provjeriti na prodor soli prije upotrebe."
+  }
+ ]
+}

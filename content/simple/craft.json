@@ -1,0 +1,95 @@
+{
+ "_label": "Kamen i zanat",
+ "fields": [
+  {
+   "key": "bun.c1",
+   "en": "A single bunja in an old olive grove. One window, one low door, everything else stone.",
+   "hr": "Jedna bunja u starom masliniku. Jedan prozor, jedna niska vrata, sve ostalo kamen."
+  },
+  {
+   "key": "bun.c2",
+   "en": "Inside. Thick wall, deep window, two niches, and the corbelled dome closing to a small opening at the top.",
+   "hr": "Iznutra. Debeo zid, duboki prozor, dvije niše i lažni svod koji se zatvara malim otvorom na vrhu."
+  },
+  {
+   "key": "bun.c3",
+   "en": "The roof from below. Flat slabs laid in rings, each stepping inward, held by weight and friction alone.",
+   "hr": "Krov odozdo. Ravne ploče slagane u prstenove, svaki uvučen prema unutra, drži ih samo težina i trenje."
+  },
+  {
+   "key": "bun.c4",
+   "en": "Two of them on a coastal slope. The smaller has no window and stores tools, the larger is for shelter.",
+   "hr": "Dvije na obalnoj padini. Manja nema prozor i služi za alat, veća je za sklonište."
+  },
+  {
+   "key": "bun.c5",
+   "en": "Part way up. The stone is sorted by size on the ground first, which is most of the work.",
+   "hr": "Na pola visine. Kamen se prvo posloži po veličini na tlu, a to je i najveći dio posla."
+  },
+  {
+   "key": "bun.c6",
+   "en": "Dry stone wall. The same craft, the same stone, laid flat instead of curved.",
+   "hr": "Suhozid. Isti zanat, isti kamen, samo položen ravno umjesto u luk."
+  },
+  {
+   "key": "bun.h",
+   "en": "The bunja",
+   "hr": "Bunja, ono što namjeravamo graditi"
+  },
+  {
+   "key": "bun.note",
+   "en": "These six images are visualisations of the building type, made for this site. They are not photographs of existing buildings and not photographs of this parcel.",
+   "hr": "Ovih šest prikaza su vizualizacije tipa gradnje, izrađene za ovu stranicu. To nisu fotografije postojećih građevina niti fotografije ove čestice."
+  },
+  {
+   "key": "bun.p1",
+   "en": "A bunja is the round dry stone field hut of the Croatian coast. The same building appears the length of the Adriatic under different names: kažun in Istria, trim on Hvar, komarda on Krk, vrtujak and toreta on Korčula, and ćemer, poljarica, pudarica or kućarica depending on which village you ask. Typically three to four metres across, with walls up to eighty centimetres thick.",
+   "hr": "Bunja je okrugla poljska kućica ove obale, građena od kamena koji leži u polju i ni od čega drugog. Zid ide debeo i kružan, a krov je na lažni svod, svaki prsten ravnih ploča stupa malo više prema unutra od onog ispod dok ga jedan zaglavni kamen ne zatvori. Bez morta, bez drvene konstrukcije, bez dovezenog materijala. Isto načelo kao i kod suhozida, samo okrenuto uvis u kupolu."
+  },
+  {
+   "key": "bun.p2",
+   "en": "It is built entirely of stone, with no mortar and no timber. The wall goes up in circular courses, then the builder begins stepping each ring of flat slabs slightly further inward than the one below until the rings close overhead. That is a false vault, and it holds by weight and friction alone. A single round stone caps the apex.",
+   "hr": "Radi zbog onoga od čega je. Zidovi debeli i do osamdeset centimetara drže noćnu hladnoću kroz sredinu dana, kamen ne gori, a kad bunja jednom padne opet postane hrpa kamena i nema se što odvoziti. Namjeravamo ih ovdje podići nekoliko, za sklonište, za spremanje alata i za radionicu, istom metodom kojom će se obnavljati i suhozidi."
+  },
+  {
+   "key": "bun.p3",
+   "en": "What makes it belong here is where the stone comes from. On karst you cannot farm until you clear the rock, and the cleared rock has to go somewhere. It went into the terrace walls, and what was left over went into the hut. One of these takes roughly thirty cubic metres of stone. The building is not placed on the field, it is what the field gave up in order to become a field.",
+   "hr": "Ono što je čini ovdašnjom jest odakle dolazi kamen. Na kršu ne možeš obrađivati dok ne iskrčiš kamen, a iskrčeni kamen mora nekamo. Išao je u suhozide, a ono što bi preteklo išlo je u kućicu. Za jednu treba oko trideset kubika kamena. Građevina nije postavljena na polje, ona je ono što je polje moralo dati od sebe da bi uopće postalo polje."
+  },
+  {
+   "key": "bun.p4",
+   "en": "Their great period was the 18th and 19th centuries, when a growing population pushed new olive groves and vineyards onto ever stonier ground. They gave shade in the working day and shelter in a storm, and before the harvest people slept in them to guard the crop. Shepherds used them. In the villages the same shape became a pigsty or a donkey stable. Many were later broken up for building material, which is the ordinary way this kind of heritage disappears.",
+   "hr": "Njihovo veliko doba bilo je 18. i 19. stoljeće, kad je rast stanovništva gurao nove maslinike i vinograde na sve kamenitiji teren. Davale su hlad u radnom danu i zaklon u nevremenu, a pred berbu se u njima spavalo da se čuva urod. Koristili su ih pastiri. U selima je isti oblik postajao svinjac ili staja za magarca. Mnoge su kasnije samljevene za građevinski materijal, što je i inače uobičajen način na koji ovakva baština nestaje."
+  },
+  {
+   "key": "craft.cap",
+   "en": "Bunja, section drawing. The round dry stone field hut with a conical roof of stone slabs, the building type we intend to use.",
+   "hr": "Bunja, crtež presjeka. Okrugla suhozidna poljska kućica s konusnim krovom od kamenih ploča, tip gradnje koji namjeravamo koristiti."
+  },
+  {
+   "key": "craft.cap2",
+   "en": "The stone rim of the shore. Every wall on the parcel was built from this, gathered by hand where it lay.",
+   "hr": "Kameni rub obale. Svaki suhozid na čestici sagrađen je od ovoga, skupljenog rukom ondje gdje je ležao."
+  },
+  {
+   "key": "craft.h",
+   "en": "The wall is the infrastructure",
+   "hr": "Suhozid je infrastruktura"
+  },
+  {
+   "key": "craft.kicker",
+   "en": "Stone and craft",
+   "hr": "Kamen i zanat"
+  },
+  {
+   "key": "craft.p1",
+   "en": "Dry stone terracing is what makes agriculture possible on karst. It holds soil, slows water and shelters roots, and it is built without mortar from the stone already lying in the field. Dry stone walling is protected Croatian intangible heritage and is inscribed on the UNESCO list.",
+   "hr": "Suhozidne terase su ono što uopće omogućuje poljoprivredu na kršu. Drže tlo, usporavaju vodu i štite korijenje, a grade se bez veziva od kamena koji već leži u polju. Suhozidna gradnja zaštićeno je hrvatsko nematerijalno kulturno dobro i upisana je na UNESCO-vu listu."
+  },
+  {
+   "key": "craft.p2",
+   "en": "We intend to survey and repair the existing walls, enter them into the open public inventory at suhozid.hr, and host a workshop with the association 4 Grada Dragodid, who have been teaching the craft since their first workshop on Vis in 2002.",
+   "hr": "Namjeravamo popisati i obnoviti postojeće suhozide, unijeti ih u otvoreni javni inventar suhozid.hr i ugostiti radionicu udruge 4 Grada Dragodid, koja podučava ovaj zanat od prve radionice na Visu 2002."
+  }
+ ]
+}

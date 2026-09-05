@@ -1,0 +1,20 @@
+{
+ "_label": "Utjecaji",
+ "fields": [
+  {
+   "key": "inf.h",
+   "en": "Where this comes from",
+   "hr": "Odakle ovo dolazi"
+  },
+  {
+   "key": "inf.kicker",
+   "en": "Influences",
+   "hr": "Utjecaji"
+  },
+  {
+   "key": "inf.p",
+   "en": "These are the projects and practices that shaped this plan. They are listed as sources rather than as company we claim to keep.",
+   "hr": "Ovo su projekti i prakse koje su oblikovale ovaj plan. Navedeni su kao izvori, a ne kao društvo za koje tvrdimo da nam pripada."
+  }
+ ]
+}

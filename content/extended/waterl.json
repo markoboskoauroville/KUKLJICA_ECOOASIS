@@ -1,0 +1,29 @@
+{
+ "_label": "Voda, stavke",
+ "items": [
+  {
+   "name_en": "Dowsing and survey",
+   "name_hr": "Traženje vode i izmjera",
+   "text_en": "Walk the terrain with a dowser and a soil surveyor before any intervention.",
+   "text_hr": "Prijeći teren s rašljarom i mjeriteljem tla prije bilo kakvog zahvata."
+  },
+  {
+   "name_en": "Dew",
+   "name_hr": "Rosa",
+   "text_en": "Harvest the dew that the lichen and moss on the lower ground already prove is there.",
+   "text_hr": "Skupljati rosu za koju lišajevi i mahovina na nižem terenu već dokazuju da je ima."
+  },
+  {
+   "name_en": "Salt intrusion",
+   "name_hr": "Prodor soli",
+   "text_en": "Avoid any source close to the shore that draws salt when it is pumped.",
+   "text_hr": "Izbjeći svaki izvor blizu obale koji vuče sol kad se crpi."
+  },
+  {
+   "name_en": "Desalination",
+   "name_hr": "Desalinizacija",
+   "text_en": "Passive desalinator built as an earthen vessel, producing both fresh water and salt.",
+   "text_hr": "Pasivni desalinator kao zemljana posuda, daje i slatku vodu i sol."
+  }
+ ]
+}

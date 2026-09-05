@@ -1,0 +1,40 @@
+{
+ "_label": "Koraci, povrtnjak",
+ "items": [
+  {
+   "text_en": "Water the bed the day before, so the soil tills like cake instead of dust.",
+   "text_hr": "Zalij gredicu dan prije, da se tlo obrađuje kao kolač, a ne kao prašina.",
+   "time": ""
+  },
+  {
+   "text_en": "String trim the whole plot down to a green mulch and leave it lying.",
+   "text_hr": "Trimerom pokosi cijelu gredicu u zeleni malč i ostavi ga da leži.",
+   "time": "15 min"
+  },
+  {
+   "text_en": "Spread compost one centimetre thin, about 10 litres per square metre.",
+   "text_hr": "Raspi kompost debljine jednog centimetra, oko 10 litara po četvornom metru.",
+   "time": "30 min"
+  },
+  {
+   "text_en": "Pull the irrigation hoses out of the bed.",
+   "text_hr": "Izvuci crijeva za navodnjavanje iz gredice.",
+   "time": ""
+  },
+  {
+   "text_en": "Shallow till the whole bed. Shallow keeps the nutrients in the topsoil where the next crop is.",
+   "text_hr": "Plitko obradi cijelu gredicu. Plitko drži hranjiva u površinskom sloju gdje je i sljedeća kultura.",
+   "time": "1 h"
+  },
+  {
+   "text_en": "Rake flat.",
+   "text_hr": "Poravnaj grabljama.",
+   "time": "15 min"
+  },
+  {
+   "text_en": "Plant and sow the next crop in the rotation.",
+   "text_hr": "Posadi i posij sljedeću kulturu u plodoredu.",
+   "time": "2 h"
+  }
+ ]
+}

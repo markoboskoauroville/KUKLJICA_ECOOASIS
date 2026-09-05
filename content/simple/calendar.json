@@ -1,0 +1,40 @@
+{
+ "_label": "Kalendar",
+ "fields": [
+  {
+   "key": "cal.h",
+   "en": "The year decides the work, not the plan",
+   "hr": "Godina određuje posao, a ne plan"
+  },
+  {
+   "key": "cal.k1",
+   "en": "In flower",
+   "hr": "Cvate"
+  },
+  {
+   "key": "cal.k2",
+   "en": "Bee forage",
+   "hr": "Paša"
+  },
+  {
+   "key": "cal.k3",
+   "en": "Work",
+   "hr": "Posao"
+  },
+  {
+   "key": "cal.kicker",
+   "en": "The calendar",
+   "hr": "Kalendar"
+  },
+  {
+   "key": "cal.note",
+   "en": "This calendar is provisional, built from regional phenology and the project document. It will be corrected by observation on the site itself, and the corrections will be published.",
+   "hr": "Kalendar je privremen, sastavljen iz regionalne fenologije i projektnog dokumenta. Ispravljat će ga promatranje na samom terenu, a ispravci će biti objavljeni."
+  },
+  {
+   "key": "cal.p",
+   "en": "A Mediterranean site is run by phenology. What is flowering tells you what the bees are on, what can be cut, what can be distilled and what has to wait. This ring is the working calendar. It is also the honest answer to the question of when to come and what you would actually be doing.",
+   "hr": "Mediteranskim terenom upravlja fenologija. Ono što cvate govori na čemu su pčele, što se smije rezati, što se destilira i što mora čekati. Ovaj prsten je radni kalendar. On je ujedno i pošten odgovor na pitanje kada doći i što bi ovdje stvarno radio."
+  }
+ ]
+}

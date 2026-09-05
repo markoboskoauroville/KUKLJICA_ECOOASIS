@@ -1,0 +1,45 @@
+{
+ "_label": "Zvuk",
+ "fields": [
+  {
+   "key": "sound.cap",
+   "en": "Above the project land. Bačina uvala, Kukljica, island of Ugljan.",
+   "hr": "Iznad projektne zemlje. Bačina uvala, Kukljica, otok Ugljan."
+  },
+  {
+   "key": "sound.h",
+   "en": "An old plan finding its ground",
+   "hr": "Stari plan koji je našao tlo"
+  },
+  {
+   "key": "sound.kicker",
+   "en": "Sound",
+   "hr": "Zvuk"
+  },
+  {
+   "key": "sound.p1",
+   "en": "Years ago Marko wrote a plan called Sound Village: energy independent houses in permaculture gardens, built for research into sound and movement. Small structures demonstrating acoustic phenomena, each house holding one old sound culture, and a central building with a hall and a studio. It was never built. Kukljica is where it becomes possible.",
+   "hr": "Marko je prije mnogo godina napisao plan pod imenom Sound Village: energetski neovisne kuće u permakulturnim vrtovima, građene za istraživanje zvuka i pokreta. Male građevine koje demonstriraju akustične pojave, kuće od kojih svaka nosi jednu drevnu zvučnu kulturu, i središnja zgrada s dvoranom i studijem. Nikad nije izgrađen. U Kukljici postaje moguć."
+  },
+  {
+   "key": "sound.p2",
+   "en": "The Integratron in the Mojave desert is worth naming here for one reason only, its acoustics. An all wood domed chamber, built without nails, still studied for how it behaves as a room. The claims made about it by its builder are not part of this project. The building geometry is.",
+   "hr": "Integratron u pustinji Mojave spominjemo iz jednog jedinog razloga, zbog akustike. Drvena kupolasta dvorana građena bez ijednog čavla, koja se i danas proučava po tome kako se ponaša kao prostorija. Tvrdnje njezina graditelja nisu dio ovog projekta. Geometrija zgrade jest."
+  },
+  {
+   "key": "sound.p3",
+   "en": "Marko is a percussionist, founder of the Tribal Jam Orchestra, and a student of frame drum with Yshai Afterman. He performs as DJ Mantra with organic house and the set concept Od Gangesa do Amazone. Sound belongs on this land the way the bees do, as part of how the place works.",
+   "hr": "Marko je perkusionist, osnivač Tribal Jam Orchestra i učenik okvirnog bubnja kod Yshaija Aftermana. Nastupa kao DJ Mantra s organic house setom pod nazivom Od Gangesa do Amazone. Zvuk pripada ovoj zemlji jednako kao i pčele, kao dio načina na koji mjesto radi."
+  },
+  {
+   "key": "sound.quote",
+   "en": "The drone carries across the sea. Up here the earth does not care about continents or borders, and the didgeridoo has been singing the same thing for forty thousand years, that we are echoes of one song played on different instruments in different lands.",
+   "hr": "Ton putuje preko mora. Ovdje gore zemlju ne zanimaju kontinenti ni granice, a didgeridoo pjeva istu stvar već četrdeset tisuća godina, da smo odjeci jedne pjesme svirane na različitim instrumentima u različitim zemljama."
+  },
+  {
+   "key": "sound.quoteby",
+   "en": "Marko Boško, 19.12.2025, sitting on the stone above the land",
+   "hr": "Marko Boško, 19.12.2025., sjedeći na kamenu iznad zemlje"
+  }
+ ]
+}

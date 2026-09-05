@@ -1,0 +1,40 @@
+{
+ "_label": "Zemlja",
+ "fields": [
+  {
+   "key": "land.cap",
+   "en": "ARKOD measurement of the parcel. Perimeter 1,11 km, area 7,02 ha, with individual section lengths.",
+   "hr": "ARKOD izmjera čestice. Opseg 1,11 km, površina 7,02 ha, s duljinama pojedinih sekcija."
+  },
+  {
+   "key": "land.cap2",
+   "en": "The headland and the tombolo that joins it to the rest of the land. The pale line is the beach path.",
+   "hr": "Rt i prevlaka koja ga spaja s ostatkom zemlje. Svijetla crta je put po žalu."
+  },
+  {
+   "key": "land.h",
+   "en": "Four parcels above two bays",
+   "hr": "Četiri čestice iznad dvije uvale"
+  },
+  {
+   "key": "land.kicker",
+   "en": "The land",
+   "hr": "Zemlja"
+  },
+  {
+   "key": "land.legend",
+   "en": "GREEN = growing here now and staying · ORANGE = being removed · OLIVE OUTLINE = to be planted",
+   "hr": "ZELENO = raste ovdje i ostaje · NARANČASTO = uklanja se · MASLINASTI OKVIR = sadi se"
+  },
+  {
+   "key": "land.p1",
+   "en": "The site lies in Bačina uvala, below the Čelinjak ridge on the island of Ugljan, twenty minutes by ferry from Zadar. Cadastral parcels 2448/6, 2448/14, 2448/13 and 2449/1, measured at 7,02 hectares with 1,11 km of perimeter.",
+   "hr": "Teren leži u Bačinoj uvali, ispod grebena Čelinjak na otoku Ugljanu, dvadeset minuta trajektom od Zadra. Katastarske čestice 2448/6, 2448/14, 2448/13 i 2449/1, izmjereno 7,02 hektara uz 1,11 km opsega."
+  },
+  {
+   "key": "land.p2",
+   "en": "It carries old olive terraces in recoverable condition, dry stone walls, maquis, and a spreading cover of Aleppo pine. Most of the olives need pruning rather than replanting. There is no reliable surface water and no well.",
+   "hr": "Na njemu su stare maslinske terase u stanju iz kojeg se mogu vratiti, suhozidi, makija i sve gušći pokrov alepskog bora. Većini maslina treba rezidba, a ne nova sadnja. Nema pouzdane površinske vode ni bunara."
+  }
+ ]
+}

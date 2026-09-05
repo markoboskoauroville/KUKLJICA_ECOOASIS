@@ -1,0 +1,29 @@
+{
+ "_label": "Pridruži se, stavke",
+ "items": [
+  {
+   "name_en": "Volunteer",
+   "name_hr": "Volontiraj",
+   "text_en": "Workaway and WWOOF listings, work exchanged for food and basic accommodation.",
+   "text_hr": "Oglasi na Workaway i WWOOF, rad u zamjenu za hranu i osnovni smještaj."
+  },
+  {
+   "name_en": "Expertise",
+   "name_hr": "Struka",
+   "text_en": "Soil scientists, foresters, beekeepers, dry stone builders, hydrologists. Especially anyone who has removed Aleppo pine at scale.",
+   "text_hr": "Pedolozi, šumari, pčelari, suhozidari, hidrolozi. Osobito svatko tko je uklanjao alepski bor u većem opsegu."
+  },
+  {
+   "name_en": "Partners",
+   "name_hr": "Partneri",
+   "text_en": "Institutions, associations and funders working on karst restoration, dry stone heritage or island agriculture.",
+   "text_hr": "Institucije, udruge i financijeri koji rade na obnovi krša, suhozidnoj baštini ili otočnoj poljoprivredi."
+  },
+  {
+   "name_en": "Contact",
+   "name_hr": "Kontakt",
+   "text_en": "Write to Marko Boško. Say which of the five workstreams interests you.",
+   "text_hr": "Piši Marku Bošku. Napiši koja te od pet linija rada zanima."
+  }
+ ]
+}

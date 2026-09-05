@@ -1,0 +1,41 @@
+{
+ "_label": "Poligon, pokusi",
+ "items": [
+  {
+   "name_en": "Dew collection",
+   "name_hr": "Skupljanje rose",
+   "text_en": "Surfaces and vessels that condense the high overnight dew of the lower ground.",
+   "text_hr": "Površine i posude koje kondenziraju visoku noćnu rosu nižeg terena."
+  },
+  {
+   "name_en": "Passive desalinator",
+   "name_hr": "Pasivni desalinator",
+   "text_en": "An earthen vessel that separates fresh water and salt using sun alone.",
+   "text_hr": "Zemljana posuda koja samo suncem razdvaja slatku vodu i sol."
+  },
+  {
+   "name_en": "Clay refrigerator",
+   "name_hr": "Glineni hladnjak",
+   "text_en": "Pot in pot cooling, no electricity, for the hottest months.",
+   "text_hr": "Hlađenje posudom u posudi, bez struje, za najtoplije mjesece."
+  },
+  {
+   "name_en": "Compost heating",
+   "name_hr": "Kompostno grijanje",
+   "text_en": "Heat drawn from the compost pile for water and for the workshop.",
+   "text_hr": "Toplina iz kompostišta za vodu i za radionicu."
+  },
+  {
+   "name_en": "Composting toilet",
+   "name_hr": "Kompostni zahod",
+   "text_en": "No water, no septic tank, and soil at the end of it.",
+   "text_hr": "Bez vode, bez septičke jame, a na kraju tlo."
+  },
+  {
+   "name_en": "Wind and sun",
+   "name_hr": "Vjetar i sunce",
+   "text_en": "Electricity generated for on-site needs only, sized to the work.",
+   "text_hr": "Struja samo za potrebe terena, dimenzionirana prema poslu."
+  }
+ ]
+}

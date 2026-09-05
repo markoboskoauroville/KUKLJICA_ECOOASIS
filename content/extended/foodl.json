@@ -1,0 +1,35 @@
+{
+ "_label": "Šuma hrane, slojevi",
+ "items": [
+  {
+   "name_en": "Canopy",
+   "name_hr": "Krošnja",
+   "text_en": "Holm oak, carob, almond, fig, olive.",
+   "text_hr": "Crnika, rogač, badem, smokva, maslina."
+  },
+  {
+   "name_en": "Shrub",
+   "name_hr": "Grmlje",
+   "text_en": "Myrtle, strawberry tree, wild pistachio, laurel, juniper.",
+   "text_hr": "Mirta, planika, tršlja, lovor, borovica."
+  },
+  {
+   "name_en": "Ground",
+   "name_hr": "Prizemno",
+   "text_en": "Sage, thyme, oregano, rosemary, immortelle, rocket, chamomile.",
+   "text_hr": "Kadulja, majčina dušica, origano, ružmarin, smilje, rikula, kamilica."
+  },
+  {
+   "name_en": "Soil",
+   "name_hr": "Tlo",
+   "text_en": "Clover for nitrogen, buhač as insect repellent, mulch from everything cut.",
+   "text_hr": "Djetelina za dušik, buhač protiv kukaca, malč od svega što se reže."
+  },
+  {
+   "name_en": "Edge",
+   "name_hr": "Rub",
+   "text_en": "Tamarisk against salt and wind, closest to the sea.",
+   "text_hr": "Tamaris protiv soli i vjetra, najbliže moru."
+  }
+ ]
+}

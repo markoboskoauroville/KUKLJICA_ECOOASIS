@@ -1,0 +1,558 @@
+backend:
+  name: github
+  repo: markoboskoauroville/KUKLJICA_ECOOASIS
+  branch: cms
+  commit_messages:
+    create: "Sadržaj: novo {{collection}} · {{author-name}}"
+    update: "Sadržaj: izmjena {{collection}} · {{author-name}}"
+    delete: "Sadržaj: brisanje {{collection}} · {{author-name}}"
+    uploadMedia: "Slika: {{path}}"
+    deleteMedia: "Slika obrisana: {{path}}"
+
+media_folder: img
+public_folder: img
+publish_mode: simple
+locale: en
+
+collections:
+  - name: simple
+    label: "① Jednostavno — tekstovi i slike"
+    description: "Svaki tekst na stranici, hrvatski i engleski jedan do drugog. Ovdje se mijenja 95 posto svega."
+    files:
+      - name: calendar
+        label: "Kalendar"
+        file: content/simple/calendar.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Kalendar" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: craft
+        label: "Kamen i zanat"
+        file: content/simple/craft.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Kamen i zanat" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: food
+        label: "Šuma hrane"
+        file: content/simple/food.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Šuma hrane" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: footer
+        label: "Podnožje"
+        file: content/simple/footer.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Podnožje" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: growing
+        label: "Uzgoj hrane"
+        file: content/simple/growing.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Uzgoj hrane" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: hero
+        label: "Naslovna"
+        file: content/simple/hero.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Naslovna" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: history
+        label: "Povijest"
+        file: content/simple/history.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Povijest" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: influences
+        label: "Utjecaji"
+        file: content/simple/influences.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Utjecaji" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: join
+        label: "Pridruži se"
+        file: content/simple/join.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Pridruži se" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: land
+        label: "Zemlja"
+        file: content/simple/land.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Zemlja" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: living
+        label: "Život ovdje"
+        file: content/simple/living.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Život ovdje" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: method
+        label: "Metoda"
+        file: content/simple/method.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Metoda" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: nav
+        label: "Navigacija i gumbi"
+        file: content/simple/nav.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Navigacija i gumbi" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: phases
+        label: "Faze"
+        file: content/simple/phases.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Faze" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: philosophy
+        label: "Filozofija"
+        file: content/simple/philosophy.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Filozofija" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: sound
+        label: "Zvuk"
+        file: content/simple/sound.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Zvuk" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: test
+        label: "Poligon"
+        file: content/simple/test.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Poligon" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: trees
+        label: "Četiri stabla"
+        file: content/simple/trees.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Četiri stabla" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: water
+        label: "Voda"
+        file: content/simple/water.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Voda" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+      - name: who
+        label: "Tko"
+        file: content/simple/who.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Tko" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
+
+  - name: extended
+    label: "② Napredno — popisi i tablice"
+    description: "Vrste, kalendar, faze, koraci rada. Mijenjaj samo ako znaš što radiš, redoslijed stupaca je važan."
+    files:
+      - name: species
+        label: "Popis vrsta"
+        file: content/extended/species.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Popis vrsta" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.en}} — {{fields.hr}}"
+            fields:
+              - { name: en, label: "Tekst EN", widget: string, required: false }
+              - { name: hr, label: "Tekst HR", widget: string, required: false }
+              - { name: status, label: "Status", widget: select, options: [keep, new, out] }
+      - name: trees
+        label: "Četiri stabla"
+        file: content/extended/trees.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Četiri stabla" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.element_en}} — {{fields.element_hr}}"
+            fields:
+              - { name: element_en, label: "Element EN", widget: string, required: false }
+              - { name: element_hr, label: "Element HR", widget: string, required: false }
+              - { name: name_en, label: "Naziv EN", widget: string, required: false }
+              - { name: name_hr, label: "Naziv HR", widget: string, required: false }
+              - { name: latin, label: "Latinski naziv", widget: string, required: false }
+              - { name: image, label: "Slika", widget: image, required: false }
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+      - name: work
+        label: "Linije rada"
+        file: content/extended/work.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Linije rada" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.name_en}} — {{fields.name_hr}}"
+            fields:
+              - { name: name_en, label: "Naziv EN", widget: string, required: false }
+              - { name: name_hr, label: "Naziv HR", widget: string, required: false }
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+              - { name: output_en, label: "Rezultat EN", widget: text }
+              - { name: output_hr, label: "Rezultat HR", widget: text }
+      - name: cal
+        label: "Fenološki kalendar"
+        file: content/extended/cal.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Fenološki kalendar" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.month}} — {{fields.flower_en}}"
+            fields:
+              - { name: month, label: "Mjesec", widget: number, value_type: int }
+              - { name: flower_en, label: "Cvate EN", widget: text }
+              - { name: flower_hr, label: "Cvate HR", widget: text }
+              - { name: bees_en, label: "Paša EN", widget: text }
+              - { name: bees_hr, label: "Paša HR", widget: text }
+              - { name: work_en, label: "Posao EN", widget: text }
+              - { name: work_hr, label: "Posao HR", widget: text }
+      - name: area
+        label: "Raspodjela površine"
+        file: content/extended/area.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Raspodjela površine" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.name_en}} — {{fields.name_hr}}"
+            fields:
+              - { name: name_en, label: "Naziv EN", widget: string, required: false }
+              - { name: name_hr, label: "Naziv HR", widget: string, required: false }
+              - { name: m2, label: "Površina m²", widget: number, value_type: int }
+              - { name: colour, label: "Boja", widget: color, required: false }
+      - name: veg
+        label: "Koraci, povrtnjak"
+        file: content/extended/veg.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Koraci, povrtnjak" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.text_en}} — {{fields.text_hr}}"
+            fields:
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+              - { name: time, label: "Trajanje", widget: string, required: false }
+      - name: grain
+        label: "Koraci, žito i mahunarka"
+        file: content/extended/grain.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Koraci, žito i mahunarka" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.text_en}} — {{fields.text_hr}}"
+            fields:
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+              - { name: time, label: "Trajanje", widget: string, required: false }
+      - name: oil
+        label: "Koraci, ulje"
+        file: content/extended/oil.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Koraci, ulje" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.text_en}} — {{fields.text_hr}}"
+            fields:
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+              - { name: time, label: "Trajanje", widget: string, required: false }
+      - name: sugar
+        label: "Koraci, šećer"
+        file: content/extended/sugar.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Koraci, šećer" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.text_en}} — {{fields.text_hr}}"
+            fields:
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+              - { name: time, label: "Trajanje", widget: string, required: false }
+      - name: pests
+        label: "Nametnici"
+        file: content/extended/pests.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Nametnici" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.name_en}} — {{fields.name_hr}}"
+            fields:
+              - { name: name_en, label: "Naziv EN", widget: string, required: false }
+              - { name: name_hr, label: "Naziv HR", widget: string, required: false }
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+      - name: waterl
+        label: "Voda, stavke"
+        file: content/extended/waterl.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Voda, stavke" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.name_en}} — {{fields.name_hr}}"
+            fields:
+              - { name: name_en, label: "Naziv EN", widget: string, required: false }
+              - { name: name_hr, label: "Naziv HR", widget: string, required: false }
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+      - name: foodl
+        label: "Šuma hrane, slojevi"
+        file: content/extended/foodl.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Šuma hrane, slojevi" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.name_en}} — {{fields.name_hr}}"
+            fields:
+              - { name: name_en, label: "Naziv EN", widget: string, required: false }
+              - { name: name_hr, label: "Naziv HR", widget: string, required: false }
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+      - name: craftl
+        label: "Zanat, stavke"
+        file: content/extended/craftl.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Zanat, stavke" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.name_en}} — {{fields.name_hr}}"
+            fields:
+              - { name: name_en, label: "Naziv EN", widget: string, required: false }
+              - { name: name_hr, label: "Naziv HR", widget: string, required: false }
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+      - name: testl
+        label: "Poligon, pokusi"
+        file: content/extended/testl.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Poligon, pokusi" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.name_en}} — {{fields.name_hr}}"
+            fields:
+              - { name: name_en, label: "Naziv EN", widget: string, required: false }
+              - { name: name_hr, label: "Naziv HR", widget: string, required: false }
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+      - name: livel
+        label: "Ritam dana"
+        file: content/extended/livel.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Ritam dana" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.name_en}} — {{fields.name_hr}}"
+            fields:
+              - { name: name_en, label: "Naziv EN", widget: string, required: false }
+              - { name: name_hr, label: "Naziv HR", widget: string, required: false }
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+      - name: joinl
+        label: "Pridruži se, stavke"
+        file: content/extended/joinl.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Pridruži se, stavke" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.name_en}} — {{fields.name_hr}}"
+            fields:
+              - { name: name_en, label: "Naziv EN", widget: string, required: false }
+              - { name: name_hr, label: "Naziv HR", widget: string, required: false }
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+      - name: cvfacts
+        label: "Činjenice iz karijere"
+        file: content/extended/cvfacts.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Činjenice iz karijere" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.name_en}} — {{fields.name_hr}}"
+            fields:
+              - { name: name_en, label: "Naziv EN", widget: string, required: false }
+              - { name: name_hr, label: "Naziv HR", widget: string, required: false }
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+      - name: phases
+        label: "Faze projekta"
+        file: content/extended/phases.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Faze projekta" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.name_en}} — {{fields.name_hr}}"
+            fields:
+              - { name: name_en, label: "Naziv EN", widget: string, required: false }
+              - { name: name_hr, label: "Naziv HR", widget: string, required: false }
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+              - { name: current, label: "Trenutna faza", widget: boolean, default: false, required: false }
+      - name: inf
+        label: "Utjecaji"
+        file: content/extended/inf.json
+        fields:
+          - { name: _label, label: Naziv, widget: hidden, default: "Utjecaji" }
+          - name: items
+            label: Stavke
+            widget: list
+            summary: "{{fields.name_en}} — {{fields.name_hr}}"
+            fields:
+              - { name: name_en, label: "Naziv EN", widget: string, required: false }
+              - { name: name_hr, label: "Naziv HR", widget: string, required: false }
+              - { name: text_en, label: "Tekst EN", widget: text }
+              - { name: text_hr, label: "Tekst HR", widget: text }
+              - { name: url, label: "Poveznica", widget: string, required: false }

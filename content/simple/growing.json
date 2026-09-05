@@ -1,0 +1,165 @@
+{
+ "_label": "Uzgoj hrane",
+ "fields": [
+  {
+   "key": "gr.areah",
+   "en": "Where the area goes",
+   "hr": "Kamo ide površina"
+  },
+  {
+   "key": "gr.areap",
+   "en": "The proportions are the whole argument. The vegetable garden is under a fifth of the ground, takes about half of the total labour, uses every drop of the irrigation water, and returns roughly fifteen per cent of the calories. The grain, pulse, oil and sugar occupy the rest, run on rainfall alone, and carry the diet.",
+   "hr": "Omjeri su cijeli argument. Povrtnjak zauzima manje od petine zemlje, odnosi otprilike pola ukupnog rada, troši svu vodu za navodnjavanje i vraća oko petnaest posto kalorija. Žito, mahunarka, ulje i šećer zauzimaju sve ostalo, žive samo od kiše i nose prehranu."
+  },
+  {
+   "key": "gr.c1",
+   "en": "Four beds at four stages. One rebuilt, one just planted, one half grown, one ready to cut.",
+   "hr": "Četiri gredice u četiri faze. Jedna obnovljena, jedna tek posađena, jedna napola narasla, jedna spremna za rez."
+  },
+  {
+   "key": "gr.c2",
+   "en": "Wheat and fava standing ready. They ripen at different times but are cut and threshed as one job.",
+   "hr": "Pšenica i bob spremni. Dozrijevaju u različito vrijeme, ali se režu i vrše kao jedan posao."
+  },
+  {
+   "key": "gr.c3",
+   "en": "Sheets spread under the tree. The whole harvest is one day for nine trees.",
+   "hr": "Plahte razastrte pod stablom. Cijela berba je jedan dan za devet stabala."
+  },
+  {
+   "key": "gr.c4",
+   "en": "Carob pods, the reduction, and the year's sugar in jars.",
+   "hr": "Rogačeve mahune, ukuhavanje i godišnji šećer u staklenkama."
+  },
+  {
+   "key": "gr.f1",
+   "en": "m² feeds one person",
+   "hr": "m² hrani jednu osobu"
+  },
+  {
+   "key": "gr.f2",
+   "en": "work day per month",
+   "hr": "radni dan mjesečno"
+  },
+  {
+   "key": "gr.f3",
+   "en": "of the area unirrigated",
+   "hr": "površine bez navodnjavanja"
+  },
+  {
+   "key": "gr.f4",
+   "en": "synthetic inputs",
+   "hr": "umjetnih ulaza"
+  },
+  {
+   "key": "gr.f5",
+   "en": "kg olive oil a year",
+   "hr": "kg maslinovog ulja godišnje"
+  },
+  {
+   "key": "gr.f6",
+   "en": "years of refinement",
+   "hr": "godina dotjerivanja"
+  },
+  {
+   "key": "gr.h",
+   "en": "One day a month, and the food is done",
+   "hr": "Jedan dan mjesečno, i hrana je gotova"
+  },
+  {
+   "key": "gr.kicker",
+   "en": "Growing food",
+   "hr": "Uzgoj hrane"
+  },
+  {
+   "key": "gr.lessonh",
+   "en": "What we take from it",
+   "hr": "Što od toga uzimamo"
+  },
+  {
+   "key": "gr.lessonp",
+   "en": "Almost all of it transfers. Kukljica has the same climate, the same rainfall pattern, the same four staples and the same problem of thin soil over limestone. The differences are that our ground is steeper and stonier, which means terraces before beds, and that we have no water at all on site, which moves the whole water question in front of the whole food question. The order of work is not a preference here. It is the only order that can work.",
+   "hr": "Gotovo sve se prenosi. Kukljica ima istu klimu, isti raspored kiša, iste četiri osnovne namirnice i isti problem tankog tla na vapnencu. Razlike su da je naš teren strmiji i kamenitiji, što znači terase prije gredica, i da na terenu nemamo nimalo vode, što cijelo pitanje vode stavlja ispred cijelog pitanja hrane. Redoslijed posla ovdje nije stvar ukusa. To je jedini redoslijed koji može raditi."
+  },
+  {
+   "key": "gr.p1",
+   "en": "There is a documented Mediterranean smallholding that feeds one person completely from 740 square metres, on an average of one working day per month, with no synthetic fertiliser, no herbicide and no pesticide. It has run that way since 2013 and it has been measured and published in a peer reviewed journal. Its owner holds a full time job elsewhere.",
+   "hr": "Postoji dokumentirano mediteransko malo gospodarstvo koje u potpunosti prehranjuje jednu osobu sa 740 četvornih metara, uz prosječno jedan radni dan mjesečno, bez umjetnog gnojiva, herbicida i pesticida. Tako radi od 2013., izmjereno je i objavljeno u recenziranom časopisu. Vlasnik uz to ima puno radno vrijeme drugdje."
+  },
+  {
+   "key": "gr.p2",
+   "en": "We are setting it out here because it answers the question everybody asks about a project like this, which is whether the food side is realistic or romantic. It is realistic, and the reason is the choice of crops. The staples are winter cereal for carbohydrate, winter pulse for protein and olive oil for fat, and all three were picked because they are indigenous, which is why they need no chemicals in the first place.",
+   "hr": "Iznosimo to ovdje jer odgovara na pitanje koje se uz ovakav projekt uvijek postavi, a to je je li strana s hranom realna ili romantična. Realna je, a razlog je izbor kultura. Osnovica su zimska žitarica za ugljikohidrate, zimska mahunarka za bjelančevine i maslinovo ulje za mast, a sve troje izabrano je zato što je autohtono, i upravo zato im kemija uopće ne treba."
+  },
+  {
+   "key": "gr.pesth",
+   "en": "Pests, and why the indigenous crops do not get them",
+   "hr": "Nametnici, i zašto ih autohtone kulture nemaju"
+  },
+  {
+   "key": "gr.pestp",
+   "en": "The wheat, the fava, the olives and the carob are barely troubled, because they are local and have not been bred far from what they were. The trouble is almost entirely in the vegetable garden, where many of the species are not from here. That is the same argument this whole project rests on, arriving from the direction of the plate.",
+   "hr": "Pšenicu, bob, masline i rogač jedva da išta dira, jer su domaći i nisu daleko odselekcionirani od onoga što su bili. Problem je gotovo isključivo u povrtnjaku, gdje mnoge vrste nisu odavde. To je isti argument na kojem stoji cijeli ovaj projekt, samo stiže sa strane tanjura."
+  },
+  {
+   "key": "gr.s1h",
+   "en": "The vegetable garden, one quarter each month",
+   "hr": "Povrtnjak, jedna četvrtina svaki mjesec"
+  },
+  {
+   "key": "gr.s1n",
+   "en": "Rebuilding happens in months 9, 10, 11 and 2 for the winter crops and 3, 4, 5 and 6 for the summer ones. Nothing is planted in months 12 and 1 because it is too cold to move, or in 7 and 8 because it is too hot.",
+   "hr": "Obnova ide u 9., 10., 11. i 2. mjesecu za zimske kulture te u 3., 4., 5. i 6. za ljetne. U 12. i 1. mjesecu ne sadi se ništa jer je prehladno da se išta miče, ni u 7. i 8. jer je prevruće."
+  },
+  {
+   "key": "gr.s1p",
+   "en": "The garden is split into four beds of about 35 square metres. Every month one bed gets rebuilt from scratch, always the one holding the oldest crop, so the four are permanently at four different stages and there is always a mature bed to eat from. The whole cycle below takes about four hours.",
+   "hr": "Vrt je podijeljen na četiri gredice od oko 35 četvornih metara. Svaki mjesec se jedna gredica gradi ispočetka, uvijek ona s najstarijom kulturom, pa su sve četiri stalno u četiri različite faze i uvijek postoji zrela gredica s koje se jede. Cijeli ciklus ispod traje oko četiri sata."
+  },
+  {
+   "key": "gr.s2h",
+   "en": "Grain and pulse, four days for the whole year",
+   "hr": "Žito i mahunarka, četiri dana za cijelu godinu"
+  },
+  {
+   "key": "gr.s2n",
+   "en": "Cut the stalks, never pull them up. Uprooted plants bring soil and small stones into the threshing, and those are too heavy for the winnowing blower to remove, so they end up in the grain.",
+   "hr": "Stabljike se režu, nikad ne čupaju. Iščupane biljke donesu zemlju i sitno kamenje u vršidbu, a to je pretaško da ga puhalo izbaci, pa završi u zrnu."
+  },
+  {
+   "key": "gr.s2p",
+   "en": "Wheat and fava beans are sown together in month 12 and harvested together in month 5. Between those two dates the plot is not touched at all. No compost has gone onto it in twelve years.",
+   "hr": "Pšenica i bob siju se zajedno u 12. mjesecu i žanju zajedno u 5. Između ta dva datuma parcela se uopće ne dira. Dvanaest godina na nju nije došao ni gram komposta."
+  },
+  {
+   "key": "gr.s3h",
+   "en": "Olive oil, two days in month 11",
+   "hr": "Maslinovo ulje, dva dana u 11. mjesecu"
+  },
+  {
+   "key": "gr.s3p",
+   "en": "Nine mid sized trees give about 200 kg of olives, which press out to 40 to 50 kg of oil. That is roughly twice what one person uses in a year, and the surplus is what you give away. Two mature trees would cover one person.",
+   "hr": "Devet stabala srednje veličine daje oko 200 kg maslina, iz čega se istiješti 40 do 50 kg ulja. To je otprilike dvostruko više nego što jedna osoba potroši u godini, a višak je ono što se daruje. Dva zrela stabla pokrila bi jednu osobu."
+  },
+  {
+   "key": "gr.s4h",
+   "en": "Sugar, one day in month 8",
+   "hr": "Šećer, jedan dan u 8. mjesecu"
+  },
+  {
+   "key": "gr.s4n",
+   "en": "Stop the reduction well before it looks right. Syrup thickens a great deal as it cools, and taken to the consistency you actually want while hot, it sets into candy.",
+   "hr": "Ukuhavanje se prekida znatno prije nego izgleda gotovo. Sirup se hlađenjem jako zgusne, pa ako ga vrućeg dovedeš do gustoće koju zapravo želiš, stegne se u bombon."
+  },
+  {
+   "key": "gr.s4p",
+   "en": "Carob is the sugar. It is native, it has been on this coast for millennia, it grows wild, and it needs nothing from anyone. One day of work in the hottest month of the year makes the sweetener for the whole year.",
+   "hr": "Rogač je šećer. Autohton je, na ovoj obali je tisućljećima, raste divlje i ne treba mu ništa ni od koga. Jedan dan rada u najtoplijem mjesecu godine napravi sladilo za cijelu godinu."
+  },
+  {
+   "key": "gr.source",
+   "en": "Source: Pelman, Nachtomy and Carmel, Individual nutritional self-sufficiency, a viable option in the present era, Frontiers in Sustainable Food Systems, 2024. Figures are from the published study of Alik Pelman's farm. The images on this page are visualisations made for this site, not photographs of that farm or of this parcel.",
+   "hr": "Izvor: Pelman, Nachtomy i Carmel, Individual nutritional self-sufficiency, a viable option in the present era, Frontiers in Sustainable Food Systems, 2024. Brojke su iz objavljene studije gospodarstva Alika Pelmana. Slike na ovoj stranici su vizualizacije izrađene za ovu stranicu, a ne fotografije tog gospodarstva ni ove čestice."
+  }
+ ]
+}

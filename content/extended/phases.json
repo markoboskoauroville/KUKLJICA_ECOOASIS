@@ -1,0 +1,54 @@
+{
+ "_label": "Faze projekta",
+ "items": [
+  {
+   "name_en": "Phase 0",
+   "name_hr": "Faza 0",
+   "text_en": "Documentation, mapping, this site, baseline survey design, first contacts with Dragodid and Sadhana Forest.",
+   "text_hr": "Dokumentacija, kartiranje, ova stranica, priprema nultog mjerenja, prvi kontakti s Dragodidom i Sadhana Forestom.",
+   "current": true
+  },
+  {
+   "name_en": "Phase 1",
+   "name_hr": "Faza 1",
+   "text_en": "Walk the terrain with a dowser and a soil surveyor. Measure soil, dew, existing species and wall condition before a single intervention.",
+   "text_hr": "Prijeći teren s rašljarom i mjeriteljem tla. Izmjeriti tlo, rosu, postojeće vrste i stanje suhozida prije ijednog zahvata.",
+   "current": false
+  },
+  {
+   "name_en": "Phase 2",
+   "name_hr": "Faza 2",
+   "text_en": "Dry stone repair and terrace stabilisation. First workshop with 4 Grada Dragodid.",
+   "text_hr": "Obnova suhozida i stabilizacija terasa. Prva radionica s udrugom 4 Grada Dragodid.",
+   "current": false
+  },
+  {
+   "name_en": "Phase 3",
+   "name_hr": "Faza 3",
+   "text_en": "Staged Aleppo pine removal, keeping the large specimens near the sea. Olive grove restoration by pruning.",
+   "text_hr": "Postupno uklanjanje alepskog bora uz zadržavanje velikih stabala uz more. Obnova maslinika rezidbom.",
+   "current": false
+  },
+  {
+   "name_en": "Phase 4",
+   "name_hr": "Faza 4",
+   "text_en": "First indigenous planting season. First bees. Water capture built.",
+   "text_hr": "Prva sezona sadnje autohtonih vrsta. Prve pčele. Izgrađeno hvatanje vode.",
+   "current": false
+  },
+  {
+   "name_en": "Phase 5",
+   "name_hr": "Faza 5",
+   "text_en": "The craft workshop. First volunteer season. First published survival numbers.",
+   "text_hr": "Radionica zanata. Prva volonterska sezona. Prvi objavljeni brojevi preživljavanja.",
+   "current": false
+  },
+  {
+   "name_en": "Phase 6",
+   "name_hr": "Faza 6",
+   "text_en": "Food forest maturing. Field school. Seed and seedling supply to other island projects.",
+   "text_hr": "Šuma hrane sazrijeva. Terenska škola. Sjeme i sadnice za druge otočne projekte.",
+   "current": false
+  }
+ ]
+}

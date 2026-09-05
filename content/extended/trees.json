@@ -1,0 +1,45 @@
+{
+ "_label": "Četiri stabla",
+ "items": [
+  {
+   "element_en": "earth",
+   "element_hr": "zemlja",
+   "name_en": "Olive",
+   "name_hr": "Maslina",
+   "latin": "Olea europaea",
+   "image": "tree-olive.jpg",
+   "text_en": "It makes food out of bare rock. Deep roots go down into the fissures of the karst where nothing else reaches, waxy leaves hold water back, and the tree keeps working at soil moisture levels that would stop almost anything else. Most of the olives standing here are not dead, only overgrown. They need cutting, not replacing.",
+   "text_hr": "Od golog kamena pravi hranu. Duboko korijenje ide u pukotine krša do kojih ništa drugo ne dopire, voštani list zadržava vodu, a stablo radi i pri vlažnosti tla na kojoj bi gotovo sve drugo stalo. Većina ovdašnjih maslina nije mrtva, samo zarasla. Njima treba rezidba, ne zamjena."
+  },
+  {
+   "element_en": "air",
+   "element_hr": "zrak",
+   "name_en": "Almond",
+   "name_hr": "Badem",
+   "latin": "Prunus dulcis",
+   "image": "tree-almond.jpg",
+   "text_en": "It opens the year. Almond flowers in month 2, on bare wood, before any leaf and before anything else on this coast is awake. That blossom is the first real forage of the season and it decides whether the bees come through the end of winter in good order. Where the almond stands, the year has a beginning.",
+   "text_hr": "Ono otvara godinu. Badem cvate u 2. mjesecu, na golom drvu, prije ijednog lista i prije nego se išta drugo na ovoj obali probudi. Taj cvat je prva prava paša u sezoni i on odlučuje hoće li pčele izaći iz zime u dobrom stanju. Gdje stoji badem, godina ima početak."
+  },
+  {
+   "element_en": "water",
+   "element_hr": "voda",
+   "name_en": "Fig",
+   "name_hr": "Smokva",
+   "latin": "Ficus carica",
+   "image": "tree-fig.jpg",
+   "text_en": "It finds the water that is there. A fig will root into a gap in a dry stone wall and follow the damp down through the joints, living off moisture no measurement would call a supply. Its fruit dries well and keeps through winter without a jar or a freezer, which is why every old house here had one.",
+   "text_hr": "Ona nalazi vodu koja postoji. Smokva se ukorijeni u pukotinu suhozida i prati vlagu kroz sljubnice, živeći od vode koju nijedno mjerenje ne bi nazvalo zalihom. Plod joj se dobro suši i drži kroz zimu bez staklenke i bez zamrzivača, zato je uz svaku staru kuću ovdje stajala jedna."
+  },
+  {
+   "element_en": "fire",
+   "element_hr": "vatra",
+   "name_en": "Holm oak",
+   "name_hr": "Crnika",
+   "latin": "Quercus ilex",
+   "image": "tree-oak.jpg",
+   "text_en": "It answers the sun. This is the tree the whole coast was made of before it was cut, and its dense evergreen canopy turns hard Mediterranean light into deep shade. Under that shade the ground stays cool, moisture stays in the soil, and the understorey of myrtle and strawberry tree can live. Unlike the pine that replaced it, it does not carry fire.",
+   "text_hr": "Ona odgovara suncu. To je stablo od kojeg je bila cijela ova obala prije nego je posječena, a njezina gusta zimzelena krošnja tvrdo mediteransko svjetlo pretvara u dubok hlad. Pod tim hladom tlo ostaje hladno, vlaga ostaje u zemlji, a podrast mirte i planike može živjeti. Za razliku od bora koji ju je zamijenio, ona ne nosi vatru."
+  }
+ ]
+}
