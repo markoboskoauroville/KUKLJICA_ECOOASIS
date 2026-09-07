@@ -195,3 +195,31 @@ has already saved this project twice.
 ---
 
 *Kukljica EcoOasis · handoff v1 (a) · 6.9.2026.*
+
+---
+
+## 8. FIELD MAP — DONE 7.9.2026. (this chat)
+
+`/karta` is built and in the pipeline. `karta.template.html` → `tools/inject.py` → `dist/karta/index.html`.
+Texts in `content/simple/karta.json` (43 keys, `karta.*`, editable in the admin panel), geometry and
+holders in `data/parcele.json`, GeoJSON export in `data/bacina-cestice.geojson`. Linked from LAND.
+
+**The geometry is real, not a placeholder.** DGU's INSPIRE WFS is public and needs no token:
+`https://api.uredjenazemlja.hr/services/inspire/cp/wfs` — `cp:CadastralParcel`, EPSG:4326, filter by
+BBOX; `nationalCadastralReference` is `334723-2448/6`. All 232 parcels of the Bačina block are embedded.
+
+### Findings that change the site
+
+| | |
+|---|---|
+| **The four parcels total 5 208 m² = 0,52 ha, not 7,02 ha.** | 2448/6 = 317 · 2448/13 = 3 213 · 2448/14 = 380 · 2449/1 = 1 298 (DGU, 7.9.2026.). The green 7,02 ha ARKOD polygon is the whole block from Maževica to Bačina uvala — some thirty other holders' parcels plus the Općina peninsula 2450. `hero` ("Sedam hektara"), `land.p1`, `land.cap` and the numbers strip all say 7 ha. **Not yet changed — Marko decides the wording.** |
+| **2449/2 (1 324 m²)** is marked "naše" on the čestice sheet but is not among the four in this handoff. | Drawn dashed teal on the map, labelled "provjeriti". Decide which list is right. With it: 6 532 m² = 0,65 ha. |
+| **No document covers any of the four parcels.** | The 14 posjedovni listovi are all neighbours. Needed: PL 70 (Bosotina Ante), PL 79 (Bosotina Šime), PL 442 (Martinović Šimica / Boško Ivana) and a zemljišnoknjižni izvadak. |
+| Each posjedovni list gives **its own share in m²**; shares sum to the DGU area. | Verified on nine parcels to the metre. The map says when an attached set doesn't sum. |
+| Općina Kukljica (PL 657) holds **2450** (12 401 m², the peninsula), **2445/7 Maževica** (138 296 m²) and **2445/13**. | Put the numbers in the Općina email. The čestice sheet's "1241 m²" for 2450 is a typo. |
+
+### Not done
+
+- The 7 ha texts (above). One edit in `hero.json`, `land.json` once Marko picks 0,52 or 0,65.
+- Field photography, CROPIX, Općina and Toni emails — unchanged from §4.
+- The GitHub token used for this push must be revoked (§4, token rotation).

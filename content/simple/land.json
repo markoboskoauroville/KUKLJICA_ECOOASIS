@@ -17,6 +17,11 @@
    "hr": "Četiri čestice iznad dvije uvale"
   },
   {
+   "key": "land.karta",
+   "en": "Open the field map",
+   "hr": "Otvori terensku kartu"
+  },
+  {
    "key": "land.kicker",
    "en": "The land",
    "hr": "Zemlja"

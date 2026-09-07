@@ -138,6 +138,19 @@ collections:
               - { name: key, label: Šifra (ne dirati), widget: string }
               - { name: hr, label: Hrvatski, widget: text }
               - { name: en, label: English, widget: text }
+      - name: karta
+        label: "Karta čestica"
+        file: content/simple/karta.json
+        fields:
+          - { name: _label, label: Naziv sekcije, widget: hidden, default: "Karta čestica" }
+          - name: fields
+            label: Tekstovi
+            widget: list
+            summary: "{{fields.key}} — {{fields.hr}}"
+            fields:
+              - { name: key, label: Šifra (ne dirati), widget: string }
+              - { name: hr, label: Hrvatski, widget: text }
+              - { name: en, label: English, widget: text }
       - name: land
         label: "Zemlja"
         file: content/simple/land.json

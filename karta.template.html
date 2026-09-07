@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0d1117">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap&subset=latin,latin-ext" rel="stylesheet">
+<title>Karta čestica · Kukljica EcoOasis</title>
+<meta name="description" content="Terenska karta katastarskih čestica Kukljica EcoOasis, Bačina uvala. Radi bez mreže.">
+<style>
+/* ── Tokens — same palette and faces as index.template.html ─────────── */
+:root{
+  --base:#0d1117; --base-2:#161c25; --base-3:#1f2733;
+  --ink:#e8e4d8; --ink-2:#a9a596; --line:#2b3442;
+  --olive:#7d8f4f; --olive-ink:#0d1117;
+  --sea:#2aa198;
+  --ochre:#c8892f; --ochre-ink:#0d1117;
+  --font-ui:'IBM Plex Sans',system-ui,sans-serif;
+  --font-display:'Fraunces',Georgia,serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --sat: env(safe-area-inset-top,0px); --sab: env(safe-area-inset-bottom,0px);
+}
+html[data-mode="day"]{
+  --base:#f3efe4; --base-2:#e9e3d3; --base-3:#ddd6c3;
+  --ink:#1a1a17; --ink-2:#5a5850; --line:#c9c1ab;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;background:var(--base);color:var(--ink);font-family:var(--font-ui);-webkit-text-size-adjust:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:focus-visible,a:focus-visible{outline:3px solid var(--sea);outline-offset:2px}
+
+/* ── Layout ───────────────────────────────────────────────────────────── */
+#app{position:fixed;inset:0;display:flex;flex-direction:column}
+
+/* The one loud element on the page: the readout. Legible at arm's length in sun. */
+#status{
+  padding:calc(var(--sat) + 10px) 14px 10px;
+  background:var(--base-2);border-bottom:1px solid var(--line);
+  min-height:calc(var(--sat) + 92px);
+}
+#status.in {background:var(--olive);color:var(--olive-ink);border-color:var(--olive)}
+#status.out{background:var(--ochre);color:var(--ochre-ink);border-color:var(--ochre)}
+#s-main{font-family:var(--font-display);font-size:clamp(28px,8.4vw,42px);font-weight:700;letter-spacing:-.015em;line-height:1.02}
+#s-sub {font-size:clamp(15px,4.2vw,19px);margin-top:6px;font-weight:600}
+#s-acc {font-size:14px;margin-top:4px;opacity:.85}
+#s-acc.warn{opacity:1;font-weight:700}
+#status.idle #s-main{font-size:clamp(20px,6vw,28px);font-weight:700}
+
+#map{position:relative;flex:1;overflow:hidden;background:#1a2230;touch-action:none;user-select:none;-webkit-user-select:none}
+#tiles{position:absolute;inset:0;overflow:hidden}
+#tiles img{position:absolute;display:block;pointer-events:none;image-rendering:auto}
+#ov{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#ov .p{fill:rgba(125,143,79,.14);stroke:var(--olive);stroke-width:2.5;vector-effect:non-scaling-stroke;pointer-events:none}
+#ov .p.check{fill:rgba(42,161,152,.14);stroke:var(--sea);stroke-dasharray:6 4}
+#ov .p.opcina{fill:rgba(200,137,47,.08);stroke:var(--ochre);stroke-width:1.5;stroke-dasharray:4 4}
+#ov .p.doc{fill:none;stroke:rgba(232,228,216,.55);stroke-width:1}
+#ov .p.other{fill:none;stroke:rgba(232,228,216,.28);stroke-width:1}
+#ov .p.sel{stroke-width:4;stroke:#fff}
+#ov .lbl{font:700 13px var(--font-ui);fill:#fff;paint-order:stroke;stroke:#0d1117;stroke-width:3px;stroke-linejoin:round;text-anchor:middle;pointer-events:none}
+#ov .lbl.small{font-size:10px;font-weight:600;fill:#d8d4c8}
+#ov .acc{fill:rgba(42,161,152,.18);stroke:var(--sea);stroke-width:1}
+#ov .me{fill:var(--sea);stroke:#fff;stroke-width:3}
+#ov .me-h{fill:none;stroke:var(--sea);stroke-width:2;opacity:.6}
+
+#notice{position:absolute;left:10px;right:10px;top:10px;padding:8px 12px;background:var(--base-2);border:1px solid var(--line);border-radius:8px;font-size:13px;display:none;z-index:3}
+#notice.on{display:block}
+
+/* Controls */
+.ctl{position:absolute;z-index:4;display:flex;gap:8px}
+#ctl-r{right:10px;top:10px;flex-direction:column}
+#ctl-l{left:10px;bottom:calc(var(--sab) + 12px);flex-direction:column}
+#ctl-b{right:10px;bottom:calc(var(--sab) + 12px)}
+.btn{min-width:46px;height:46px;padding:0 14px;border-radius:10px;background:var(--base-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:var(--ink);box-shadow:0 2px 0 rgba(0,0,0,.35)}
+.btn.sq{width:46px;padding:0;font-size:22px}
+.btn.on{background:var(--sea);color:#0d1117;border-color:var(--sea)}
+#b-locate{background:var(--olive);color:#0d1117;border-color:var(--olive);height:54px;font-size:17px;padding:0 20px}
+#b-locate.live{background:var(--sea);border-color:var(--sea)}
+#b-locate.live::before{content:"";width:10px;height:10px;border-radius:50%;background:#0d1117;margin-right:10px;animation:blink 1.2s infinite}
+@keyframes blink{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){#b-locate.live::before{animation:none}}
+
+/* Sheet */
+#sheet{position:absolute;left:0;right:0;bottom:0;z-index:6;background:var(--base-2);border-top:1px solid var(--line);border-radius:14px 14px 0 0;max-height:72%;overflow:auto;padding:12px 16px calc(var(--sab) + 18px);transform:translateY(105%);transition:transform .22s ease}
+#sheet.on{transform:none}
+@media (prefers-reduced-motion:reduce){#sheet{transition:none}}
+#sheet .grab{width:44px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 12px}
+#sheet h2{font-family:var(--font-display);font-size:32px;font-weight:700;letter-spacing:-.01em;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+#sheet h2 .tag{font-size:13px;font-weight:700;padding:3px 9px;border-radius:6px;letter-spacing:.02em}
+.tag.core{background:var(--olive);color:#0d1117}.tag.check{background:var(--sea);color:#0d1117}.tag.opcina{background:var(--ochre);color:#0d1117}.tag.doc,.tag.other{background:var(--base-3);color:var(--ink)}
+#sheet .row{display:grid;grid-template-columns:minmax(0,120px) minmax(0,1fr);gap:4px 12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+#sheet .row b{color:var(--ink-2);font-weight:600}
+#sheet .h{padding:8px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.35}
+#sheet .h .pl{color:var(--sea);font-weight:700}
+#sheet .h .m2{float:right;color:var(--ink-2)}
+#sheet .note{font-size:13px;color:var(--ink-2);margin-top:12px;line-height:1.4}
+#sheet .x{position:absolute;right:10px;top:8px;width:40px;height:40px;font-size:24px;color:var(--ink-2)}
+
+#bar{font-family:var(--mono);display:flex;align-items:center;gap:10px;padding:6px 12px calc(var(--sab) + 6px);background:var(--base-2);border-top:1px solid var(--line);font-size:11px;color:var(--ink-2);white-space:nowrap}
+#src{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis}
+#bar a{color:var(--ink-2)}
+#bar .sp{flex:1}
+#ver{opacity:.7}
+#off{display:none}#off.on{display:inline}
+</style>
+</head>
+<body>
+<div id="app">
+
+  <div id="status" class="idle" role="status" aria-live="polite">
+    <div id="s-main" data-i18n="karta.idle_main">Pritisni „Gdje sam“</div>
+    <div id="s-sub"  data-i18n="karta.idle_sub">Čestice su ucrtane. Za položaj treba GPS.</div>
+    <div id="s-acc"></div>
+  </div>
+
+  <div id="map">
+    <div id="tiles"></div>
+    <svg id="ov" xmlns="http://www.w3.org/2000/svg"></svg>
+    <div id="notice"></div>
+
+    <div class="ctl" id="ctl-r">
+      <button class="btn sq" id="b-zin"  aria-label="+">+</button>
+      <button class="btn sq" id="b-zout" aria-label="−">−</button>
+      <button class="btn"    id="b-layer" data-i18n="karta.layer_sat">Satelit</button>
+      <button class="btn sq" id="b-home" aria-label="center" title="Čestice">⌖</button>
+    </div>
+    <div class="ctl" id="ctl-l">
+      <button class="btn" id="b-lang">EN</button>
+      <button class="btn" id="b-day" data-i18n="karta.day">Dan</button>
+      <button class="btn" id="b-cache" data-i18n="karta.cache">Spremi karte</button>
+    </div>
+    <div class="ctl" id="ctl-b">
+      <button class="btn" id="b-locate" data-i18n="karta.locate">Gdje sam</button>
+    </div>
+
+    <section id="sheet" aria-hidden="true">
+      <div class="grab"></div>
+      <button class="x" id="b-close" aria-label="close">×</button>
+      <div id="sheet-body"></div>
+    </section>
+  </div>
+
+  <div id="bar">
+    <span id="src"></span>
+        <span id="off" data-i18n="karta.offline">bez mreže</span>
+    <a href="../" data-i18n="karta.back">← Kukljica EcoOasis</a>
+    <span id="ver">v1 (a)</span>
+  </div>
+</div>
+
+<script>
+/* T (texts, from content/simple/karta.json) and PARCELS (official DGU geometry
+   of k.o. Kukljica 334723 with holders from the posjedovni listovi, from
+   data/parcele.json) are injected by tools/inject.py. Edit those files,
+   never this block. Everything on this page works with no network. */
+const DATA_DATE = '7. 9. 2026.';
+const HOME = {lat:44.03638, lon:15.22827, z:17};
+
+/* ── Dictionary (HR native, EN alongside) ───────────────────────────── */
+/*__KARTA__*/
+let lang = (new URLSearchParams(location.search).get('lang')) ||
+           (()=>{try{return localStorage.getItem('kel')}catch(e){return null}})() ||
+           ((navigator.language||'en').toLowerCase().startsWith('hr')?'hr':'en');
+let mode = (()=>{try{return localStorage.getItem('kem')}catch(e){return null}})() || 'night';
+const t = (k, v={}) => (T[lang]['karta.'+k] ?? k).replace(/\{(\w+)\}/g,(_,n)=>v[n]??'');
+function applyLang(){
+  document.documentElement.lang = lang;
+  document.documentElement.dataset.mode = mode==='day'?'day':'night';
+  document.title = lang==='hr' ? 'Karta čestica · Kukljica EcoOasis' : 'Parcel map · Kukljica EcoOasis';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{ const v=T[lang][el.dataset.i18n]; if(v!==undefined) el.textContent=v; });
+  document.getElementById('b-lang').textContent = lang==='hr' ? 'EN' : 'HR';
+  document.getElementById('b-layer').textContent = t(layer==='sat'?'layer_osm':'layer_sat');
+  document.getElementById('b-day').textContent = t(mode==='day'?'night':'day');
+  document.getElementById('b-locate').textContent = t(watchId!=null?'stop':'locate');
+  document.getElementById('src').textContent = t(layer==='sat'?'src_sat':'src_osm');
+  renderStatus(); if(selected) openSheet(selected);
+}
+
+/* ── Projection (Web Mercator, 256px tiles) ─────────────────────────── */
+const TS=256;
+const lon2x=(lon,z)=>(lon+180)/360*TS*2**z;
+const lat2y=(lat,z)=>{const s=Math.sin(lat*Math.PI/180);return(.5-Math.log((1+s)/(1-s))/(4*Math.PI))*TS*2**z;};
+const x2lon=(x,z)=>x/(TS*2**z)*360-180;
+const y2lat=(y,z)=>{const n=Math.PI-2*Math.PI*y/(TS*2**z);return 180/Math.PI*Math.atan(.5*(Math.exp(n)-Math.exp(-n)));};
+
+/* ── Geometry in metres (local equirectangular about the point) ─────── */
+function mpd(lat){const p=lat*Math.PI/180;return{lat:111132.92-559.82*Math.cos(2*p)+1.175*Math.cos(4*p),lon:111412.84*Math.cos(p)-93.5*Math.cos(3*p)};}
+function pip(lon,lat,ring){let c=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const xi=ring[i][0],yi=ring[i][1],xj=ring[j][0],yj=ring[j][1];if((yi>lat)!==(yj>lat)&&lon<(xj-xi)*(lat-yi)/(yj-yi)+xi)c=!c;}return c;}
+function inParcel(lon,lat,p){return p.g.some(r=>pip(lon,lat,r));}
+function distToRing(lon,lat,ring){const k=mpd(lat);let best=Infinity;for(let i=0;i<ring.length-1;i++){const ax=(ring[i][0]-lon)*k.lon,ay=(ring[i][1]-lat)*k.lat,bx=(ring[i+1][0]-lon)*k.lon,by=(ring[i+1][1]-lat)*k.lat;const dx=bx-ax,dy=by-ay;let u=(-ax*dx-ay*dy)/(dx*dx+dy*dy||1);u=Math.max(0,Math.min(1,u));const px=ax+u*dx,py=ay+u*dy;best=Math.min(best,Math.hypot(px,py));}return best;}
+function distToParcel(lon,lat,p){return Math.min(...p.g.map(r=>distToRing(lon,lat,r)));}
+
+/* ── Map state ──────────────────────────────────────────────────────── */
+const mapEl=document.getElementById('map'), tilesEl=document.getElementById('tiles'), ov=document.getElementById('ov');
+let center={lat:HOME.lat,lon:HOME.lon}, zoom=HOME.z, layer='sat', W=0,H=0;
+const ZMIN=13, ZMAX=19;
+const LAYERS={
+  osm:{url:(z,x,y)=>`https://tile.openstreetmap.org/${z}/${x}/${y}.png`},
+  sat:{url:(z,x,y)=>`https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/${z}/${y}/${x}`}
+};
+function size(){W=mapEl.clientWidth;H=mapEl.clientHeight;ov.setAttribute('viewBox',`0 0 ${W} ${H}`);}
+function toScreen(lon,lat){const cx=lon2x(center.lon,zoom),cy=lat2y(center.lat,zoom);return[lon2x(lon,zoom)-cx+W/2,lat2y(lat,zoom)-cy+H/2];}
+function fromScreen(sx,sy){const cx=lon2x(center.lon,zoom),cy=lat2y(center.lat,zoom);return{lon:x2lon(cx-W/2+sx,zoom),lat:y2lat(cy-H/2+sy,zoom)};}
+
+/* ── Tiles (fetch → Cache API → blob) so they survive with no signal ── */
+const CACHE='kukljica-karta-tiles-v1';
+const canCache = 'caches' in window && (location.protocol==='https:'||location.hostname==='localhost');
+const imgCache=new Map(); // url -> objectURL | 'fail'
+let tileFails=0, tileOK=0;
+async function tileBlobURL(url){
+  if(imgCache.has(url)) return imgCache.get(url);
+  const p=(async()=>{
+    try{
+      let r=null;
+      if(canCache){ const c=await caches.open(CACHE); r=await c.match(url); }
+      if(!r){ r=await fetch(url,{mode:'cors'}); if(!r.ok) throw 0; if(canCache){ const c=await caches.open(CACHE); c.put(url,r.clone()); } }
+      const u=URL.createObjectURL(await r.blob()); tileOK++; return u;
+    }catch(e){ tileFails++; noticeTiles(); return 'fail'; }
+  })();
+  imgCache.set(url,p); const v=await p; imgCache.set(url,v); return v;
+}
+function noticeTiles(){ if(tileFails>=4 && tileOK===0){ notice(t('tiles_off')); document.getElementById('off').classList.add('on'); } }
+const liveImgs=new Map();
+function drawTiles(){
+  const tz=Math.max(ZMIN,Math.min(ZMAX,Math.round(zoom))), sc=2**(zoom-tz);
+  const cx=lon2x(center.lon,tz), cy=lat2y(center.lat,tz);
+  const tlx=cx-(W/2)/sc, tly=cy-(H/2)/sc;
+  const x0=Math.floor(tlx/TS), y0=Math.floor(tly/TS), x1=Math.floor((tlx+W/sc)/TS), y1=Math.floor((tly+H/sc)/TS);
+  const n=2**tz, want=new Set();
+  for(let x=x0;x<=x1;x++)for(let y=y0;y<=y1;y++){
+    if(y<0||y>=n)continue; const xx=((x%n)+n)%n; const key=`${layer}/${tz}/${xx}/${y}`; want.add(key);
+    let img=liveImgs.get(key);
+    if(!img){ img=document.createElement('img'); img.alt=''; img.decoding='async'; img.style.opacity='0'; liveImgs.set(key,img); tilesEl.appendChild(img);
+      tileBlobURL(LAYERS[layer].url(tz,xx,y)).then(u=>{ if(u!=='fail'){ img.src=u; img.onload=()=>{img.style.opacity='1';}; } }); }
+    const px=(x*TS-tlx)*sc, py=(y*TS-tly)*sc, s=TS*sc+0.5;
+    img.style.transform=`translate(${px}px,${py}px)`; img.style.width=s+'px'; img.style.height=s+'px';
+  }
+  for(const [k,img] of liveImgs){ if(!want.has(k)){ img.remove(); liveImgs.delete(k); } }
+}
+
+/* ── Overlay ────────────────────────────────────────────────────────── */
+let selected=null, me=null; // me = {lat,lon,acc}
+function drawOverlay(){
+  let s='';
+  const showLabels = zoom>=16.5, showSmall = zoom>=17.6;
+  for(const p of PARCELS){
+    const d=p.g.map(r=>'M'+r.map(([lo,la])=>{const [x,y]=toScreen(lo,la);return x.toFixed(1)+' '+y.toFixed(1);}).join('L')+'Z').join('');
+    s+=`<path class="p ${p.s}${selected&&selected.id===p.id?' sel':''}" d="${d}"/>`;
+  }
+  for(const p of PARCELS){
+    const major=p.s==='core'||p.s==='check'||p.s==='opcina';
+    if(!(major?showLabels:showSmall)) continue;
+    const [x,y]=toScreen(p.c[0],p.c[1]); if(x<-40||y<-20||x>W+40||y>H+20)continue;
+    s+=`<text class="lbl${major?'':' small'}" x="${x.toFixed(1)}" y="${(y+4).toFixed(1)}">${p.id}</text>`;
+  }
+  if(me){
+    const [x,y]=toScreen(me.lon,me.lat); const k=mpd(me.lat);
+    const rpx = me.acc * (lon2x(me.lon+1/k.lon,zoom)-lon2x(me.lon,zoom)); // metres → px
+    s+=`<circle class="acc" cx="${x}" cy="${y}" r="${Math.max(rpx,4).toFixed(1)}"/>`;
+    s+=`<circle class="me-h" cx="${x}" cy="${y}" r="14"/><circle class="me" cx="${x}" cy="${y}" r="7"/>`;
+  }
+  ov.innerHTML=s;
+}
+function render(){ drawTiles(); drawOverlay(); }
+
+/* ── Interaction: drag, pinch, tap, wheel ───────────────────────────── */
+const ptrs=new Map(); let dragStart=null, pinch=null, moved=false;
+mapEl.addEventListener('pointerdown',e=>{ if(e.target.closest('.ctl,#sheet,#notice'))return; mapEl.setPointerCapture(e.pointerId); ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY}); moved=false;
+  if(ptrs.size===1){ dragStart={x:e.clientX,y:e.clientY,c:{...center}}; }
+  else if(ptrs.size===2){ const [a,b]=[...ptrs.values()]; pinch={d:Math.hypot(a.x-b.x,a.y-b.y),z:zoom,mx:(a.x+b.x)/2,my:(a.y+b.y)/2}; dragStart=null; } });
+mapEl.addEventListener('pointermove',e=>{ if(!ptrs.has(e.pointerId))return; ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  if(ptrs.size===2&&pinch){ const [a,b]=[...ptrs.values()]; const d=Math.hypot(a.x-b.x,a.y-b.y); const nz=Math.max(ZMIN,Math.min(ZMAX,pinch.z+Math.log2(d/pinch.d))); zoomAbout(nz,pinch.mx,pinch.my); moved=true; }
+  else if(ptrs.size===1&&dragStart){ const dx=e.clientX-dragStart.x, dy=e.clientY-dragStart.y; if(Math.abs(dx)+Math.abs(dy)>4)moved=true;
+    const cx=lon2x(dragStart.c.lon,zoom)-dx, cy=lat2y(dragStart.c.lat,zoom)-dy; center={lon:x2lon(cx,zoom),lat:y2lat(cy,zoom)}; render(); } });
+function endPtr(e){ if(!ptrs.has(e.pointerId))return; ptrs.delete(e.pointerId);
+  if(ptrs.size===0){ if(!moved&&e.type==='pointerup'){ const r=mapEl.getBoundingClientRect(); tap(e.clientX-r.left,e.clientY-r.top); } dragStart=null; pinch=null; }
+  else if(ptrs.size===1){ const [a]=[...ptrs.values()]; dragStart={x:a.x,y:a.y,c:{...center}}; pinch=null; } }
+mapEl.addEventListener('pointerup',endPtr); mapEl.addEventListener('pointercancel',endPtr);
+mapEl.addEventListener('wheel',e=>{ e.preventDefault(); const r=mapEl.getBoundingClientRect(); zoomAbout(Math.max(ZMIN,Math.min(ZMAX,zoom-e.deltaY*0.002)),e.clientX-r.left,e.clientY-r.top); },{passive:false});
+function zoomAbout(nz,sx,sy){ const g=fromScreen(sx,sy); zoom=nz; const gx=lon2x(g.lon,zoom)-(sx-W/2), gy=lat2y(g.lat,zoom)-(sy-H/2); center={lon:x2lon(gx,zoom),lat:y2lat(gy,zoom)}; render(); }
+function tap(sx,sy){ const g=fromScreen(sx,sy);
+  const hits=PARCELS.filter(p=>inParcel(g.lon,g.lat,p)); if(!hits.length){ closeSheet(); return; }
+  hits.sort((a,b)=>a.m2-b.m2); openSheet(hits[0]); }
+
+/* ── Sheet ──────────────────────────────────────────────────────────── */
+const sheet=document.getElementById('sheet');
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function openSheet(p){
+  selected=p; let h=`<h2>${esc(p.id)} <span class="tag ${p.s}">${t('st_'+p.s)}</span></h2>`;
+  h+=`<div class="row"><b>${t('area')}</b><span>${t('area_v',{m2:p.m2.toLocaleString('hr-HR'),d:DATA_DATE})}</span></div>`;
+  h+=`<div class="row"><b>${t('ko')}</b><span>Kukljica (334723) · Bačina uvala</span></div>`;
+  if(p.h){
+    h+=`<div class="row" style="border:0;padding-bottom:4px"><b style="grid-column:1/-1">${t('holders')}</b></div>`;
+    let sum=0; for(const x of p.h){ sum+=x.m2; h+=`<div class="h"><span class="m2">${x.m2} m²</span><span class="pl">PL ${esc(x.pl)}</span> · ${esc(x.who)}</div>`; }
+    h+=`<div class="note">${sum<p.m2 ? t('sum_gap',{a:sum,b:p.m2}) : t('sum_note')}</div>`;
+  } else if(p.n){
+    h+=`<div class="note"><strong>${t('nodoc')}</strong> ${t('noted',{pl:p.n,nn:esc(p.nn)})}</div>`;
+  } else { h+=`<div class="note">${t('nothing')}</div>`; }
+  if(p.s==='check') h+=`<div class="note" style="color:var(--sea)">${t('check_note')}</div>`;
+  h+=`<div class="note">${t('pl_note')}</div>`;
+  document.getElementById('sheet-body').innerHTML=h; sheet.classList.add('on'); sheet.setAttribute('aria-hidden','false'); drawOverlay();
+}
+function closeSheet(){ if(!selected)return; selected=null; sheet.classList.remove('on'); sheet.setAttribute('aria-hidden','true'); drawOverlay(); }
+document.getElementById('b-close').onclick=closeSheet;
+
+/* ── Geolocation + readout ──────────────────────────────────────────── */
+const st=document.getElementById('status'), sMain=document.getElementById('s-main'), sSub=document.getElementById('s-sub'), sAcc=document.getElementById('s-acc');
+let watchId=null, gpsErr=null, follow=true;
+function renderStatus(){
+  sAcc.className='';
+  if(gpsErr){ st.className='idle'; sMain.textContent=t('nogps'); sSub.textContent=gpsErr===1?t('denied'):''; sAcc.textContent=''; return; }
+  if(!me){ st.className='idle'; sMain.textContent=t(watchId!=null?'wait':'idle_main'); sSub.textContent=watchId!=null?'':t('idle_sub'); sAcc.textContent=''; return; }
+  const core=PARCELS.filter(p=>p.s==='core');
+  const inside=core.find(p=>inParcel(me.lon,me.lat,p));
+  let edge;
+  if(inside){ edge=distToParcel(me.lon,me.lat,inside); st.className='in'; sMain.textContent=`${t('on')} ${inside.id}`; sSub.textContent=t('from_edge',{m:Math.round(edge)}); }
+  else { let best=null,bd=Infinity; for(const p of core){ const d=distToParcel(me.lon,me.lat,p); if(d<bd){bd=d;best=p;} } edge=bd; st.className='out'; sMain.textContent=t('out'); sSub.textContent=t('to_parcel',{m:Math.round(bd),p:best.id}); }
+  const acc=Math.round(me.acc);
+  if(me.acc>edge){ sAcc.className='warn'; sAcc.textContent=t('acc_warn',{m:acc}); } else sAcc.textContent=t('acc',{m:acc});
+}
+const bLoc=document.getElementById('b-locate');
+function startWatch(){
+  if(!navigator.geolocation){ gpsErr=2; renderStatus(); return; }
+  gpsErr=null; follow=true; bLoc.classList.add('live'); bLoc.textContent=t('stop'); renderStatus();
+  watchId=navigator.geolocation.watchPosition(pos=>{
+    me={lat:pos.coords.latitude,lon:pos.coords.longitude,acc:pos.coords.accuracy||50}; gpsErr=null;
+    if(follow){ center={lat:me.lat,lon:me.lon}; if(zoom<17)zoom=18; follow=false; }
+    render(); renderStatus();
+  },err=>{ gpsErr=err.code; renderStatus(); },{enableHighAccuracy:true,maximumAge:2000,timeout:20000});
+}
+function stopWatch(){ if(watchId!=null)navigator.geolocation.clearWatch(watchId); watchId=null; bLoc.classList.remove('live'); bLoc.textContent=t('locate'); renderStatus(); }
+bLoc.onclick=()=>{ if(watchId!=null){ if(me){ center={lat:me.lat,lon:me.lon}; render(); } stopWatch(); } else startWatch(); };
+
+/* ── Controls ───────────────────────────────────────────────────────── */
+document.getElementById('b-zin').onclick=()=>zoomAbout(Math.min(ZMAX,Math.round(zoom)+1),W/2,H/2);
+document.getElementById('b-zout').onclick=()=>zoomAbout(Math.max(ZMIN,Math.round(zoom)-1),W/2,H/2);
+document.getElementById('b-home').onclick=()=>{ center={lat:HOME.lat,lon:HOME.lon}; zoom=HOME.z; render(); };
+document.getElementById('b-layer').onclick=()=>{ layer=layer==='sat'?'osm':'sat'; for(const img of liveImgs.values())img.remove(); liveImgs.clear(); tileFails=0; tileOK=0; applyLang(); render(); };
+document.getElementById('b-lang').onclick=()=>{ lang = lang==='hr'?'en':'hr'; try{localStorage.setItem('kel',lang)}catch(e){} applyLang(); };
+document.getElementById('b-day').onclick=()=>{ mode = mode==='day'?'night':'day'; try{localStorage.setItem('kem',mode)}catch(e){} applyLang(); };
+
+/* ── Offline: prefetch tiles for the parcel block ───────────────────── */
+let noticeT=null; function notice(msg,ms=6000){ const n=document.getElementById('notice'); n.textContent=msg; n.classList.add('on'); clearTimeout(noticeT); noticeT=setTimeout(()=>n.classList.remove('on'),ms); }
+const bCache=document.getElementById('b-cache');
+bCache.onclick=async()=>{
+  if(!canCache){ notice(t('nocache')); return; }
+  // bbox of the whole Bačina block, padded ~150 m
+  const lats=[],lons=[]; for(const p of PARCELS)if(p.s!=='other')for(const r of p.g)for(const [lo,la] of r){lats.push(la);lons.push(lo);}
+  const pad=0.0015, s=Math.min(...lats)-pad, n=Math.max(...lats)+pad, w=Math.min(...lons)-pad*1.4, e=Math.max(...lons)+pad*1.4;
+  const jobs=[];
+  for(const L of ['sat','osm'])for(let z=15;z<=ZMAX;z++){
+    const x0=Math.floor(lon2x(w,z)/TS),x1=Math.floor(lon2x(e,z)/TS),y0=Math.floor(lat2y(n,z)/TS),y1=Math.floor(lat2y(s,z)/TS);
+    for(let x=x0;x<=x1;x++)for(let y=y0;y<=y1;y++)jobs.push(LAYERS[L].url(z,x,y));
+  }
+  const c=await caches.open(CACHE); let done=0, ok=0; bCache.disabled=true;
+  const worker=async()=>{ while(jobs.length){ const u=jobs.shift(); try{ if(!(await c.match(u))){ const r=await fetch(u,{mode:'cors'}); if(r.ok){await c.put(u,r);} } ok++; }catch(e){} done++; if(done%10===0)bCache.textContent=t('caching',{n:done,t:done+jobs.length}); } };
+  await Promise.all([worker(),worker(),worker(),worker()]);
+  bCache.disabled=false; bCache.textContent=t('cached',{n:ok}); setTimeout(()=>bCache.textContent=t('cache'),5000);
+};
+window.addEventListener('online',()=>{ document.getElementById('off').classList.remove('on'); tileFails=0; });
+window.addEventListener('offline',()=>document.getElementById('off').classList.add('on'));
+if(!navigator.onLine)document.getElementById('off').classList.add('on');
+
+/* ── Go ─────────────────────────────────────────────────────────────── */
+size(); applyLang(); render();
+window.addEventListener('resize',()=>{ size(); render(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+{
+ "_label": "Karta čestica",
+ "fields": [
+  {
+   "key": "karta.acc",
+   "en": "GPS ± {m} m",
+   "hr": "GPS ± {m} m"
+  },
+  {
+   "key": "karta.acc_warn",
+   "en": "GPS ± {m} m — the edge is closer than the accuracy, don’t rely on this",
+   "hr": "GPS ± {m} m — rub je bliže od točnosti, ne oslanjaj se na ovo"
+  },
+  {
+   "key": "karta.area",
+   "en": "Area",
+   "hr": "Površina"
+  },
+  {
+   "key": "karta.area_v",
+   "en": "{m2} m² (DGU, {d})",
+   "hr": "{m2} m² (DGU, {d})"
+  },
+  {
+   "key": "karta.back",
+   "en": "← Kukljica EcoOasis",
+   "hr": "← Kukljica EcoOasis"
+  },
+  {
+   "key": "karta.cache",
+   "en": "Save tiles",
+   "hr": "Spremi karte"
+  },
+  {
+   "key": "karta.cached",
+   "en": "Saved {n}",
+   "hr": "Spremljeno {n}"
+  },
+  {
+   "key": "karta.caching",
+   "en": "{n}/{t}…",
+   "hr": "{n}/{t}…"
+  },
+  {
+   "key": "karta.check_note",
+   "en": "Marked “ours” on the parcel list but not among the four in the handoff. Decide which is right.",
+   "hr": "Na popisu čestica označena kao „naše“, ali nije među četiri čestice u predaji. Odluči koje je točno."
+  },
+  {
+   "key": "karta.day",
+   "en": "Day",
+   "hr": "Dan"
+  },
+  {
+   "key": "karta.denied",
+   "en": "Location access denied. Allow it in the browser settings.",
+   "hr": "Pristup lokaciji odbijen. Dopusti ga u postavkama preglednika."
+  },
+  {
+   "key": "karta.from_edge",
+   "en": "{m} m from the edge",
+   "hr": "{m} m od ruba"
+  },
+  {
+   "key": "karta.holders",
+   "en": "Holders (possession sheet 11.06.2014)",
+   "hr": "Posjednici (posjedovni list 11.06.2014.)"
+  },
+  {
+   "key": "karta.idle_main",
+   "en": "Tap “Where am I”",
+   "hr": "Pritisni „Gdje sam“"
+  },
+  {
+   "key": "karta.idle_sub",
+   "en": "Parcels are drawn. Position needs GPS.",
+   "hr": "Čestice su ucrtane. Za položaj treba GPS."
+  },
+  {
+   "key": "karta.ko",
+   "en": "Cadastral mun.",
+   "hr": "Kat. općina"
+  },
+  {
+   "key": "karta.layer_osm",
+   "en": "Map",
+   "hr": "Karta"
+  },
+  {
+   "key": "karta.layer_sat",
+   "en": "Satellite",
+   "hr": "Satelit"
+  },
+  {
+   "key": "karta.locate",
+   "en": "Where am I",
+   "hr": "Gdje sam"
+  },
+  {
+   "key": "karta.night",
+   "en": "Night",
+   "hr": "Noć"
+  },
+  {
+   "key": "karta.nocache",
+   "en": "Saving not possible (needs https)",
+   "hr": "Spremanje nije moguće (treba https)"
+  },
+  {
+   "key": "karta.nodoc",
+   "en": "No possession sheet attached.",
+   "hr": "Posjedovni list nije priložen."
+  },
+  {
+   "key": "karta.nogps",
+   "en": "GPS unavailable",
+   "hr": "GPS nije dostupan"
+  },
+  {
+   "key": "karta.noted",
+   "en": "Per the parcel list: {pl} — {nn}. Extract needed.",
+   "hr": "Prema popisu čestica: {pl} — {nn}. Treba izvod."
+  },
+  {
+   "key": "karta.nothing",
+   "en": "No data for this parcel.",
+   "hr": "Nema podataka za ovu česticu."
+  },
+  {
+   "key": "karta.offline",
+   "en": "offline",
+   "hr": "bez mreže"
+  },
+  {
+   "key": "karta.on",
+   "en": "ON PARCEL",
+   "hr": "NA ČESTICI"
+  },
+  {
+   "key": "karta.out",
+   "en": "OUTSIDE THE PARCELS",
+   "hr": "IZVAN ČESTICA"
+  },
+  {
+   "key": "karta.pl_note",
+   "en": "A possession sheet is not proof of ownership. Ownership is proven by the land-registry extract.",
+   "hr": "Posjedovni list nije dokaz vlasništva. Vlasništvo dokazuje zemljišnoknjižni izvadak."
+  },
+  {
+   "key": "karta.share",
+   "en": "share",
+   "hr": "udio"
+  },
+  {
+   "key": "karta.src_osm",
+   "en": "© OpenStreetMap · parcels: DGU",
+   "hr": "© OpenStreetMap · čestice: DGU"
+  },
+  {
+   "key": "karta.src_sat",
+   "en": "© Esri, Maxar, Earthstar · parcels: DGU",
+   "hr": "© Esri, Maxar, Earthstar · čestice: DGU"
+  },
+  {
+   "key": "karta.st_check",
+   "en": "to verify",
+   "hr": "provjeriti"
+  },
+  {
+   "key": "karta.st_core",
+   "en": "our parcel",
+   "hr": "naša čestica"
+  },
+  {
+   "key": "karta.st_doc",
+   "en": "neighbour",
+   "hr": "susjed"
+  },
+  {
+   "key": "karta.st_opcina",
+   "en": "Kukljica municipality",
+   "hr": "Općina Kukljica"
+  },
+  {
+   "key": "karta.st_other",
+   "en": "k.o. Kukljica",
+   "hr": "k.o. Kukljica"
+  },
+  {
+   "key": "karta.stop",
+   "en": "Stop",
+   "hr": "Stani"
+  },
+  {
+   "key": "karta.sum_gap",
+   "en": "Attached sheets cover {a} of {b} m². The rest is held by someone whose sheet is not attached.",
+   "hr": "Priloženi listovi pokrivaju {a} od {b} m². Ostatak drži netko čiji list nije priložen."
+  },
+  {
+   "key": "karta.sum_note",
+   "en": "Each possession sheet lists its own share in m². Shares add up to the parcel area.",
+   "hr": "Svaki posjedovni list navodi svoj udio u m². Zbroj udjela = površina čestice."
+  },
+  {
+   "key": "karta.tiles_off",
+   "en": "No network — base map won’t load. Parcels and GPS still work.",
+   "hr": "Nema mreže — podloga se ne učitava. Čestice i GPS rade."
+  },
+  {
+   "key": "karta.to_parcel",
+   "en": "{m} m to {p}",
+   "hr": "{m} m do {p}"
+  },
+  {
+   "key": "karta.wait",
+   "en": "Searching for GPS…",
+   "hr": "Tražim GPS…"
+  }
+ ]
+}
