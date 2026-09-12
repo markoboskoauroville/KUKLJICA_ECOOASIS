@@ -18,4 +18,8 @@ grep -q '__KARTA__' dist/karta/index.html && { echo "FATAL: karta content was no
 grep -q 'const PARCELS = \[' dist/karta/index.html || { echo "FATAL: karta has no parcel data"; exit 1; }
 grep -q '__CONTENT__' dist/index.html && { echo "FATAL: content was not injected"; exit 1; }
 
+
+# Arhiva ne smije nikad završiti u dist/
+if [ -e dist/arhiva ]; then echo "FATAL: arhiva je u dist/, to se ne objavljuje"; exit 1; fi
+
 echo "built dist/ — $(find dist -type f | wc -l) files, $(du -sh dist | cut -f1)"

@@ -2,3 +2,6 @@ dist/
 .build/
 node_modules/
 .secret/
+
+# Arhiva se čuva u repozitoriju, ali se NIKAD ne objavljuje.
+# build.sh kopira u dist/ samo index.html, img/ i admin/.
