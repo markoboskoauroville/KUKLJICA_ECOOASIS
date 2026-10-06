@@ -166,6 +166,7 @@ ol.steps li b{display:block;font-family:var(--mono);font-size:10px;letter-spacin
 /* gallery */
 .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin:34px 0}
 .gal figure{margin:0}
+.gal.real img{width:100%;aspect-ratio:4/3;object-fit:cover}
 
 /* nutrition matrix */
 .matrix{display:grid;grid-template-columns:118px minmax(0,1fr) minmax(0,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:30px 0}
@@ -510,6 +511,17 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
   </div>
 
   <div class="note" data-i18n="bun.note"></div>
+
+  <h3 style="margin-top:54px" data-i18n="bun.real.h"></h3>
+  <p data-i18n="bun.real.p"></p>
+  <div class="gal real">
+    <figure><img src="img/bunja-brac-olives.jpg" alt="" loading="lazy"><figcaption data-i18n="bun.r1"></figcaption></figure>
+    <figure><img src="img/bunja-brac-pair-sea.jpg" alt="" loading="lazy"><figcaption data-i18n="bun.r2"></figcaption></figure>
+    <figure><img src="img/bunja-brac-terrace.jpg" alt="" loading="lazy"><figcaption data-i18n="bun.r3"></figcaption></figure>
+    <figure><img src="img/bunja-brac-solar.jpg" alt="" loading="lazy"><figcaption data-i18n="bun.r4"></figcaption></figure>
+    <figure><img src="img/bunja-brac-solar-door.jpg" alt="" loading="lazy"><figcaption data-i18n="bun.r5"></figcaption></figure>
+    <figure><img src="img/bunja-brac-steps.jpg" alt="" loading="lazy"><figcaption data-i18n="bun.r6"></figcaption></figure>
+  </div>
   <div style="display:none">
   </div>
 </div></section>
@@ -602,6 +614,15 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
   </div>
 </div></section>
 
+<section id="greenandgo"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="gg.kicker"></div>
+  <h2 data-i18n="gg.h"></h2>
+  <p data-i18n="gg.p1"></p>
+  <p data-i18n="gg.p2"></p>
+  <figure style="margin:30px 0;max-width:620px"><img src="img/bunja-brac-solar.jpg" alt="" loading="lazy"><figcaption data-i18n="gg.c"></figcaption></figure>
+  <p><a href="https://markoboskoauroville.github.io/green-and-go-croatian-islands/" data-i18n="gg.link"></a></p>
+</div></section>
+
 <section id="phases"><div class="wrap"><div class="slab"></div>
   <div class="kicker" data-i18n="ph.kicker"></div>
   <h2 data-i18n="ph.h"></h2>
@@ -627,7 +648,7 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
   <div data-i18n="foot.credit"></div>
   <div data-i18n="foot.sources"></div>
 </div></footer>
-<div class="ver">v2</div>
+<div class="ver">v3</div>
 
 <script>
 /* ============================ i18n ============================ */
@@ -662,6 +683,14 @@ en:{
 "tr.mfig":"Fig","tr.mfigD":"Dried on a rack in the sun. Sugar concentrates, and a good year feeds you until the next one.",
 "tr.pairp2":"That second axis is not a footnote. The two foods that need work are the two that were most valued, because the labour was the storage. In Sardinia, acorn bread sold for more than wheat bread precisely because it was harder to make, and the women who made it were known for it. The Latin name of the holm oak, ilex, is thought to come from eligo, to choose. It was the tree that got chosen.",
 "tr.honest":"Honest limit: these four give fat and carbohydrate, not a complete diet. Protein comes from the chickpea in the terraces, and historically from the sea and from sheep. Nobody here ever lived on trees alone.",
+"bun.real.h":"Real bunje, Brač, May 2014",
+"bun.real.p":"These are photographs, mine, taken on Brač on 27 May 2014. Bunje restored and still in use: a stone terrace, agaves in pots, olives all around, and on two of them a solar panel laid on the slab roof.",
+"bun.r1":"A bunja among the olives, Brač.","bun.r2":"Two bunje on a slope above the sea.","bun.r3":"A restored bunja with a stone terrace and agaves.",
+"bun.r4":"A solar panel on a roof of stone slabs: the oldest building of the coast carrying new power.","bun.r5":"A narrow door, a panel above it, nothing else needed.","bun.r6":"Stone steps up to the bunja.",
+"gg.kicker":"Child project","gg.h":"Green and Go Croatian Islands",
+"gg.p1":"Electric scooters for rent on the Croatian islands, run out of renovated shipping containers: one container on every island a car can reach, in the season. It grew out of this land and starts here, on Ugljan, in Kukljica, where we know the ground and the people.",
+"gg.p2":"The two ideas meet in the sun. A bunja with a panel on its roof can charge what moves quietly on the island, the way the solar bunja on Brač already does.",
+"gg.c":"A bunja with a solar panel, Brač, May 2014. Photo: Marko Boško.","gg.link":"Green and Go Croatian Islands, the project page →",
 "bun.h":"The bunja",
 "bun.p1":"A bunja is the round dry stone field hut of the Croatian coast. The same building appears the length of the Adriatic under different names: kažun in Istria, trim on Hvar, komarda on Krk, vrtujak and toreta on Korčula, and ćemer, poljarica, pudarica or kućarica depending on which village you ask. Typically three to four metres across, with walls up to eighty centimetres thick.",
 "bun.p2":"It is built entirely of stone, with no mortar and no timber. The wall goes up in circular courses, then the builder begins stepping each ring of flat slabs slightly further inward than the one below until the rings close overhead. That is a false vault, and it holds by weight and friction alone. A single round stone caps the apex.",
@@ -836,6 +865,14 @@ hr:{
 "tr.mfig":"Smokva","tr.mfigD":"Suši se na lesi na suncu. Šećer se koncentrira, i dobra godina te hrani do sljedeće.",
 "tr.pairp2":"Ta druga os nije fusnota. Dvije namirnice koje traže rad bile su i najcjenjenije, jer je rad bio način čuvanja. Na Sardiniji se kruh od žira prodavao skuplje od pšeničnog upravo zato što ga je bilo teže napraviti, a žene koje su ga pekle bile su po tome poznate. Latinsko ime crnike, ilex, izvodi se iz eligo, izabrati. To je bilo stablo koje se biralo.",
 "tr.honest":"Poštena granica: ova četiri daju mast i ugljikohidrate, ne cjelovitu prehranu. Bjelančevine dolaze od slanutka na terasama, a povijesno od mora i od ovaca. Nitko ovdje nikad nije živio samo od stabala.",
+"bun.real.h":"Prave bunje, Brač, svibanj 2014.",
+"bun.real.p":"Ovo su fotografije, moje, snimljene na Braču 27. svibnja 2014. Obnovljene bunje koje se još koriste: kamena terasa, agave u teglama, masline uokolo, a na dvije od njih solarna ploča položena na krov od kamenih ploča.",
+"bun.r1":"Bunja među maslinama, Brač.","bun.r2":"Dvije bunje na padini iznad mora.","bun.r3":"Obnovljena bunja s kamenom terasom i agavama.",
+"bun.r4":"Solarna ploča na krovu od kamenih ploča: najstarija gradnja obale nosi novu struju.","bun.r5":"Uska vrata, ploča iznad njih, ništa više ne treba.","bun.r6":"Kamene stube do bunje.",
+"gg.kicker":"Projekt izdanak","gg.h":"Green and Go Croatian Islands",
+"gg.p1":"Električni skuteri za najam na hrvatskim otocima, iz obnovljenih brodskih kontejnera: jedan kontejner na svakom otoku do kojeg se može doći autom, u sezoni. Izrastao je iz ove zemlje i počinje ovdje, na Ugljanu, u Kukljici, gdje poznajemo teren i ljude.",
+"gg.p2":"Dvije ideje sastaju se u suncu. Bunja s pločom na krovu može puniti ono što se tiho kreće otokom, kao što solarna bunja na Braču već radi.",
+"gg.c":"Bunja sa solarnom pločom, Brač, svibanj 2014. Fotografija: Marko Boško.","gg.link":"Green and Go Croatian Islands, stranica projekta →",
 "bun.h":"Bunja, ono što namjeravamo graditi",
 "bun.p1":"Bunja je okrugla poljska kućica ove obale, građena od kamena koji leži u polju i ni od čega drugog. Zid ide debeo i kružan, a krov je na lažni svod, svaki prsten ravnih ploča stupa malo više prema unutra od onog ispod dok ga jedan zaglavni kamen ne zatvori. Bez morta, bez drvene konstrukcije, bez dovezenog materijala. Isto načelo kao i kod suhozida, samo okrenuto uvis u kupolu.",
 "bun.p2":"Radi zbog onoga od čega je. Zidovi debeli i do osamdeset centimetara drže noćnu hladnoću kroz sredinu dana, kamen ne gori, a kad bunja jednom padne opet postane hrpa kamena i nema se što odvoziti. Namjeravamo ih ovdje podići nekoliko, za sklonište, za spremanje alata i za radionicu, istom metodom kojom će se obnavljati i suhozidi.",
