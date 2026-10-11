@@ -163,6 +163,19 @@ ol.steps li{counter-increment:st;position:relative;padding:14px 0 14px 54px;bord
 ol.steps li:before{content:counter(st,decimal-leading-zero);position:absolute;left:0;top:15px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--olive)}
 ol.steps li b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 
+/* marko's plate */
+.tbl{width:100%;border-collapse:collapse;margin:26px 0;font-size:14.5px}
+.tbl th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--olive);font-weight:500;text-align:left;padding:10px 10px 10px 0;border-bottom:1px solid var(--line)}
+.tbl td{padding:12px 10px 12px 0;border-top:1px solid var(--line);vertical-align:top}
+.tbl td.num,.tbl th.num{text-align:right;font-family:var(--mono);font-size:13px;white-space:nowrap}
+.tbl tr.tot td{font-weight:500;border-top:1px solid var(--muted)}
+.tbl small{display:block;color:var(--muted);font-size:12.5px}
+.tblwrap{overflow-x:auto}
+.legend{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;margin-right:7px;vertical-align:-1px}
+.legend b{color:var(--text);font-weight:500;margin-left:5px}
+@media(max-width:620px){.tbl .hide-s{display:none}}
+
 /* gallery */
 .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin:34px 0}
 .gal figure{margin:0}
@@ -212,6 +225,7 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
       <a href="#method" data-i18n="nav.method"></a>
       <a href="#calendar" data-i18n="nav.calendar"></a>
       <a href="#growing" data-i18n="nav.growing"></a>
+      <a href="#plate" data-i18n="nav.plate"></a>
       <a href="#craft" data-i18n="nav.craft"></a>
       <a href="#living" data-i18n="nav.living"></a>
       <a href="#who" data-i18n="nav.who"></a>
@@ -421,9 +435,8 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
 
   <h3 data-i18n="gr.areah"></h3>
   <p data-i18n="gr.areap"></p>
-  <svg viewBox="0 0 1000 118" class="areabar" role="img">
-    <g id="areabar"></g>
-  </svg>
+  <svg viewBox="0 0 1000 40" class="areabar" role="img" preserveAspectRatio="none" style="height:22px"><g id="areabar"></g></svg>
+  <ul class="legend" id="arealegend"></ul>
 
   <h3 style="margin-top:54px" data-i18n="gr.s1h"></h3>
   <p data-i18n="gr.s1p"></p>
@@ -455,6 +468,63 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
   <h3 style="margin-top:54px" data-i18n="gr.lessonh"></h3>
   <p data-i18n="gr.lessonp"></p>
   <div class="note" data-i18n="gr.source"></div>
+</div></section>
+
+<section id="plate"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="pl.kicker"></div>
+  <h2 data-i18n="pl.h"></h2>
+  <p data-i18n="pl.p1"></p>
+  <p data-i18n="pl.p2"></p>
+
+  <div class="figs" style="border:1px solid var(--line);margin:34px 0">
+    <div class="figgrid" style="padding:0">
+      <div class="fig" style="padding-left:14px"><div class="n">2200</div><div class="l" data-i18n="pl.f1"></div></div>
+      <div class="fig"><div class="n">67</div><div class="l" data-i18n="pl.f2"></div></div>
+      <div class="fig"><div class="n">91</div><div class="l" data-i18n="pl.f3"></div></div>
+      <div class="fig"><div class="n">55</div><div class="l" data-i18n="pl.f4"></div></div>
+      <div class="fig"><div class="n">20</div><div class="l" data-i18n="pl.f5"></div></div>
+      <div class="fig"><div class="n">1175</div><div class="l" data-i18n="pl.f6"></div></div>
+    </div>
+  </div>
+
+  <h3 data-i18n="pl.qh"></h3>
+  <ul class="plain" id="plateq"></ul>
+
+  <h3 style="margin-top:54px" data-i18n="pl.dh"></h3>
+  <p data-i18n="pl.dp"></p>
+  <div class="tblwrap"><table class="tbl" id="platetbl"></table></div>
+  <svg viewBox="0 0 1000 40" class="areabar" role="img" preserveAspectRatio="none" style="height:22px"><g id="platebar"></g></svg>
+  <ul class="legend" id="platelegend"></ul>
+  <div class="note" data-i18n="pl.dn"></div>
+
+  <h3 style="margin-top:54px" data-i18n="pl.yh"></h3>
+  <p data-i18n="pl.yp"></p>
+  <div class="tblwrap"><table class="tbl" id="yeartbl"></table></div>
+  <svg viewBox="0 0 1000 40" class="areabar" role="img" preserveAspectRatio="none" style="height:22px"><g id="yearbar"></g></svg>
+  <ul class="legend" id="yearlegend"></ul>
+  <div class="note" data-i18n="pl.rice"></div>
+
+  <h3 style="margin-top:54px" data-i18n="pl.wh"></h3>
+  <ul class="plain" id="plateways"></ul>
+
+  <h3 style="margin-top:54px" data-i18n="pl.ch"></h3>
+  <p data-i18n="pl.cp"></p>
+  <div class="figs" style="border:1px solid var(--line);margin:30px 0">
+    <div class="figgrid" style="padding:0">
+      <div class="fig" style="padding-left:14px"><div class="n">~900</div><div class="l" data-i18n="pl.k1"></div></div>
+      <div class="fig"><div class="n">~70%</div><div class="l" data-i18n="pl.k2"></div></div>
+      <div class="fig"><div class="n">~25</div><div class="l" data-i18n="pl.k3"></div></div>
+      <div class="fig"><div class="n">7 °C</div><div class="l" data-i18n="pl.k4"></div></div>
+      <div class="fig"><div class="n">24 °C</div><div class="l" data-i18n="pl.k5"></div></div>
+      <div class="fig"><div class="n">~2600</div><div class="l" data-i18n="pl.k6"></div></div>
+    </div>
+  </div>
+  <div class="matrix" id="growmatrix"></div>
+  <div class="note" data-i18n="pl.cn"></div>
+
+  <h3 style="margin-top:54px" data-i18n="pl.calh"></h3>
+  <ul class="plain" id="platecal"></ul>
+  <div class="note" data-i18n="pl.src"></div>
 </div></section>
 
 <section id="craft"><div class="wrap"><div class="slab"></div>
@@ -731,6 +801,26 @@ en:{
 "gr.lessonh":"What we take from it",
 "gr.lessonp":"Almost all of it transfers. Kukljica has the same climate, the same rainfall pattern, the same four staples and the same problem of thin soil over limestone. The differences are that our ground is steeper and stonier, which means terraces before beds, and that we have no water at all on site, which moves the whole water question in front of the whole food question. The order of work is not a preference here. It is the only order that can work.",
 "gr.source":"Source: Pelman, Nachtomy and Carmel, Individual nutritional self-sufficiency, a viable option in the present era, Frontiers in Sustainable Food Systems, 2024. Figures are from the published study of Alik Pelman's farm. The images on this page are visualisations made for this site, not photographs of that farm or of this parcel.",
+"nav.plate":"Marko's plate",
+"pl.kicker":"Marko's plate",
+"pl.h":"Rice, dal and olive oil, worked out for one person",
+"pl.p1":"Every farming culture arrived on its own at the same staple formula: one cereal for carbohydrate, one pulse for protein, one oil for fat, and vegetables around them. In the Galilee it is wheat, fava and olive oil. In China it was rice and soy, in Mexico maize and beans. Marko eats the Indian version, rice and dal, with olive oil as the fat. This section takes the method from the section above, start from the daily need, multiply by 365, then plant for it, and applies it to that plate.",
+"pl.p2":"The answer has one hard edge. Dal belongs here and rice does not. Lentils and chickpeas are winter and spring crops of the eastern Mediterranean and grow on rainfall alone. Rice needs standing water through the hottest, driest months, which is exactly when Ugljan has none. Alik Pelman said it plainly: grow rice in this climate and it is failure after failure. So the plan keeps the plate and changes where the cereal comes from.",
+"pl.f1":"kcal a day","pl.f2":"g protein a day","pl.f3":"kg rice a year","pl.f4":"kg dal a year","pl.f5":"litres olive oil a year","pl.f6":"m² grows all of it",
+"pl.qh":"Is rice a cereal and dal a protein?",
+"pl.dh":"The daily plate",
+"pl.dp":"Set for an adult of moderate activity at about 2,200 kcal. Weights are dry, before cooking. For a heavier day scale everything together: 2,600 kcal is the same plate times 1.18.",
+"pl.dn":"Pelman's plate takes 20 per cent of its energy from protein because fava is 30 per cent protein and he eats more beans than wheat. This plate is rice heavy, as Indian plates are, so protein is 12 per cent of energy, 63 per cent carbohydrate and 25 per cent fat. That still gives 67 g of protein a day, enough for an adult up to about 80 kg at the usual 0.8 g per kg. Moving 50 g from rice to dal adds about 9 g of protein for the same calories.",
+"pl.yh":"The year, and the land it takes",
+"pl.yp":"Multiply by 365, add seed for next year and the loss in hulling and splitting, then divide by what the ground gives. The yields are deliberately low, rainfed figures for thin soil over limestone, below what Pelman measured on his farm. This is the full version, with a local winter grain growing the cereal in place of rice.",
+"pl.rice":"If rice were grown here anyway: 91 kg of milled rice is about 140 kg of paddy. At an irrigated yield of 0.5 kg per m² that is 280 m², needing roughly 1,200 mm of water through the summer, about 340 m³ or 340,000 litres, in the four months when it barely rains. That is four and a half times the water of the whole vegetable garden, on a site whose only spring has not yet been found.",
+"pl.wh":"Two ways to keep the plate",
+"pl.ch":"What grows in Dalmatia",
+"pl.cp":"Ugljan has the same climate pattern as Pelman's Galilee: warm, almost rainless summers and mild, wet winters, with somewhat more rain than his 750 mm. The rule follows from the rain. Staples are sown in late autumn and winter, grow on rainfall, are harvested by early summer and are stored dry for the year. Only one season is used, as in the Galilee. Anything that has to grow through July and August needs water carried to it.",
+"pl.k1":"mm rain a year","pl.k2":"of it from 10 to 4","pl.k3":"mm rain in July","pl.k4":"mean in month 1","pl.k5":"mean in month 7","pl.k6":"hours of sun a year",
+"pl.cn":"Turmeric, ginger and curry leaf will not live outdoors here. Keep them in pots under cover or buy them, they are a few hundred grams a year. Grass pea is the khesari dal of India and grows wild in Dalmatia, but eaten as the main pulse for months it can cause lathyrism, so it stays a small share mixed with lentils and chickpeas.",
+"pl.calh":"The staple year on Ugljan",
+"pl.src":"Nutrient values per 100 g dry are from USDA FoodData Central, rounded: white rice 365 kcal and 7.1 g protein, red lentil 352 and 24.6, chickpea 378 and 20.5, olive oil 884; mixed vegetables are taken as 30 kcal and 1.5 g protein. Yields are typical rainfed Mediterranean figures, not measurements from this parcel, and will be replaced by our own after the first harvest. Climate values are rounded long-term figures for Zadar, the nearest long record. Marko's own weight and activity are not in the calculation, so the plate is set at a typical 2,200 kcal and scales in a straight line. Method from Pelman, Nachtomy and Carmel, 2024.",
 "nav.land":"The land","nav.history":"History","nav.method":"Method","nav.calendar":"Calendar",
 "nav.craft":"Stone and craft","nav.living":"Living here","nav.who":"Who","nav.join":"Join",
 
@@ -913,6 +1003,26 @@ hr:{
 "gr.lessonh":"Što od toga uzimamo",
 "gr.lessonp":"Gotovo sve se prenosi. Kukljica ima istu klimu, isti raspored kiša, iste četiri osnovne namirnice i isti problem tankog tla na vapnencu. Razlike su da je naš teren strmiji i kamenitiji, što znači terase prije gredica, i da na terenu nemamo nimalo vode, što cijelo pitanje vode stavlja ispred cijelog pitanja hrane. Redoslijed posla ovdje nije stvar ukusa. To je jedini redoslijed koji može raditi.",
 "gr.source":"Izvor: Pelman, Nachtomy i Carmel, Individual nutritional self-sufficiency, a viable option in the present era, Frontiers in Sustainable Food Systems, 2024. Brojke su iz objavljene studije gospodarstva Alika Pelmana. Slike na ovoj stranici su vizualizacije izrađene za ovu stranicu, a ne fotografije tog gospodarstva ni ove čestice.",
+"nav.plate":"Markov tanjur",
+"pl.kicker":"Markov tanjur",
+"pl.h":"Riža, dal i maslinovo ulje, izračunato za jednu osobu",
+"pl.p1":"Svaka zemljoradnička kultura sama je došla do iste osnovne formule: jedna žitarica za ugljikohidrate, jedna mahunarka za bjelančevine, jedno ulje za mast, a oko toga povrće. U Galileji su to pšenica, bob i maslinovo ulje. U Kini su to bili riža i soja, u Meksiku kukuruz i grah. Marko jede indijsku inačicu, rižu i dal, a mast mu je maslinovo ulje. Ovaj dio uzima metodu iz prethodnog dijela, kreni od dnevne potrebe, pomnoži s 365, pa posadi za to, i primjenjuje je na taj tanjur.",
+"pl.p2":"Odgovor ima jedan tvrdi rub. Dal ovamo pripada, riža ne. Leća i slanutak su zimske i proljetne kulture istočnog Mediterana i rastu samo od kiše. Riži treba stajaća voda kroz najtoplije i najsuše mjesece, a upravo tada je na Ugljanu nema. Alik Pelman je to rekao ravno: sadi rižu u ovoj klimi i bit će neuspjeh za neuspjehom. Zato plan zadržava tanjur, a mijenja odakle dolazi žitarica.",
+"pl.f1":"kcal dnevno","pl.f2":"g bjelančevina dnevno","pl.f3":"kg riže godišnje","pl.f4":"kg dala godišnje","pl.f5":"litara maslinovog ulja godišnje","pl.f6":"m² uzgaja sve",
+"pl.qh":"Je li riža žitarica, a dal bjelančevina?",
+"pl.dh":"Dnevni tanjur",
+"pl.dp":"Postavljeno za odraslu osobu umjerene aktivnosti, oko 2.200 kcal. Težine su suhe, prije kuhanja. Za zahtjevniji dan sve se povećava zajedno: 2.600 kcal je isti tanjur puta 1,18.",
+"pl.dn":"Pelmanov tanjur dobiva 20 posto energije iz bjelančevina jer bob ima 30 posto bjelančevina, a on jede više boba nego pšenice. Ovaj tanjur je, kao i indijski, pretežno riža, pa su bjelančevine 12 posto energije, ugljikohidrati 63, a mast 25 posto. To i dalje daje 67 g bjelančevina dnevno, dovoljno za odraslu osobu do otprilike 80 kg uz uobičajenih 0,8 g po kilogramu. Premjesti li se 50 g s riže na dal, dobije se oko 9 g bjelančevina više uz iste kalorije.",
+"pl.yh":"Godina, i zemlja koju traži",
+"pl.yp":"Pomnoži s 365, dodaj sjeme za sljedeću godinu i gubitak pri ljuštenju i polovljenju, pa podijeli s onim što zemlja daje. Prinosi su namjerno niski, za uzgoj na kiši u tankom tlu na vapnencu, ispod onoga što je Pelman izmjerio na svom imanju. Ovo je puna inačica, u kojoj žitaricu umjesto riže daje domaća ozima žitarica.",
+"pl.rice":"Kad bi se riža ipak uzgajala ovdje: 91 kg oljuštene riže je oko 140 kg neoljuštene. Uz prinos od 0,5 kg po m² pod navodnjavanjem to je 280 m², a trebalo bi oko 1.200 mm vode kroz ljeto, otprilike 340 m³ ili 340.000 litara, u četiri mjeseca kad gotovo ne pada kiša. To je četiri i pol puta više vode nego za cijeli povrtnjak, na terenu čiji jedini izvor još nije pronađen.",
+"pl.wh":"Dva načina da tanjur ostane",
+"pl.ch":"Što raste u Dalmaciji",
+"pl.cp":"Ugljan ima isti raspored klime kao Pelmanova Galileja: topla, gotovo suha ljeta i blage, kišne zime, s nešto više kiše od njegovih 750 mm. Pravilo slijedi iz kiše. Osnovne kulture siju se kasno ujesen i zimi, rastu od kiše, žanju se do početka ljeta i čuvaju se suhe kroz godinu. Koristi se samo jedna sezona, kao u Galileji. Sve što mora rasti kroz 7. i 8. mjesec treba vodu donesenu do sebe.",
+"pl.k1":"mm kiše godišnje","pl.k2":"toga od 10. do 4. mj.","pl.k3":"mm kiše u 7. mj.","pl.k4":"prosjek 1. mjeseca","pl.k5":"prosjek 7. mjeseca","pl.k6":"sunčanih sati godišnje",
+"pl.cn":"Kurkuma, đumbir i list curryja ovdje ne žive vani. Drže se u posudama pod krovom ili se kupuju, to je nekoliko stotina grama godišnje. Sjekirica je indijski khesari dal i raste divlje u Dalmaciji, ali jedena mjesecima kao glavna mahunarka može izazvati latirizam, pa ostaje mali udio pomiješan s lećom i slanutkom.",
+"pl.calh":"Godina osnovnih kultura na Ugljanu",
+"pl.src":"Hranjive vrijednosti na 100 g suhe tvari su iz baze USDA FoodData Central, zaokružene: bijela riža 365 kcal i 7,1 g bjelančevina, crvena leća 352 i 24,6, slanutak 378 i 20,5, maslinovo ulje 884; miješano povrće uzeto je kao 30 kcal i 1,5 g bjelančevina. Prinosi su uobičajene brojke za mediteranski uzgoj na kiši, a ne mjerenja s ove čestice, i zamijenit će ih naše vlastite nakon prve žetve. Klimatske vrijednosti su zaokruženi dugogodišnji podaci za Zadar, najbliži dugi niz mjerenja. Markova vlastita težina i aktivnost nisu u izračunu, pa je tanjur postavljen na uobičajenih 2.200 kcal i mijenja se razmjerno. Metoda prema Pelman, Nachtomy i Carmel, 2024.",
 "nav.land":"Zemlja","nav.history":"Povijest","nav.method":"Metoda","nav.calendar":"Kalendar",
 "nav.craft":"Kamen i zanat","nav.living":"Život ovdje","nav.who":"Tko","nav.join":"Pridruži se",
 
@@ -1204,6 +1314,53 @@ const PESTS=[
  ["Grow a surplus","Uzgoji višak","Plant twenty to thirty per cent more than you need. That surplus is the price of not spraying, and it is cheaper than spraying.","Posadi dvadeset do trideset posto više nego što ti treba. Taj višak je cijena neprskanja, i jeftiniji je od prskanja."],
  ["Tolerate","Toleriraj","Losses run around five per cent. Weeds under a standing crop can stay, they lift nutrients from deeper down and the next shallow tilling returns them.","Gubici su oko pet posto. Korov ispod uspravne kulture može ostati, on diže hranjiva iz dubine, a sljedeća plitka obrada ih vraća."]];
 
+/* Marko's plate. Daily: food, grams, kcal, protein g, colour. Per 100 g dry: rice 365/7.1, red lentil 352/24.6, chickpea 378/20.5, olive oil 884/0, veg 30/1.5 */
+const PLATE=[
+ ["Rice","Riža","cereal","žitarica","250 g",912,17.8,"#c8892f"],
+ ["Masoor dal, red lentil","Masoor dal, crvena leća","pulse","mahunarka","75 g",264,18.4,"#7d8f4f"],
+ ["Chana dal, split chickpea","Chana dal, polovljeni slanutak","pulse","mahunarka","75 g",284,15.4,"#a3b46f"],
+ ["Olive oil","Maslinovo ulje","fat, about 4 tablespoons","mast, oko 4 žlice","50 g",442,0,"#2f5d50"],
+ ["Vegetables","Povrće","fresh, mixed","svježe, miješano","1 kg",300,15,"#2aa198"]];
+
+const PLATEQ=[
+ ["Rice","Riža","A cereal. It is the seed of a grass, family Poaceae, the same family as wheat, barley, millet and maize. About 80 per cent carbohydrate by dry weight and 7 per cent protein. On this plate it is the energy, as wheat is on Pelman's.","Žitarica. To je sjeme trave iz porodice Poaceae, iste porodice kao pšenica, ječam, proso i kukuruz. Oko 80 posto ugljikohidrata u suhoj tvari i 7 posto bjelančevina. Na ovom tanjuru ona je energija, kao pšenica na Pelmanovom."],
+ ["Dal","Dal","A pulse, which is the protein of the plate. Dal is the Indian word for dried pulses that are hulled and split so they cook fast without soaking: masoor dal is red lentil, chana dal is split chickpea, toor dal is pigeon pea, moong and urad are mung and black gram. All are legumes, family Fabaceae, like the fava bean. Lentil is about 25 per cent protein by dry weight and chickpea about 21. By weight they are still mostly carbohydrate, but they carry three times the protein of rice, and that is their job.","Mahunarka, dakle bjelančevine tanjura. Dal je indijska riječ za suhe mahunarke koje su oljuštene i prepolovljene, pa se kuhaju brzo i bez namakanja: masoor dal je crvena leća, chana dal je polovljeni slanutak, toor dal je golubinji grašak, moong i urad su mungo i crni grah. Sve su to mahunarke, porodica Fabaceae, kao i bob. Leća ima oko 25 posto bjelančevina u suhoj tvari, slanutak oko 21. Po težini su i dalje većinom ugljikohidrati, ali nose tri puta više bjelančevina od riže, i to im je posao."],
+ ["Together","Zajedno","Rice is short of the amino acid lysine and pulses are short of methionine. Each fills the other's gap, which is why rice with dal, like bread with beans, gives complete protein without any animal food.","Riži nedostaje aminokiselina lizin, a mahunarkama metionin. Svaka popunjava prazninu druge, i zato riža s dalom, kao kruh s grahom, daje potpune bjelančevine bez ikakve životinjske hrane."],
+ ["Olive oil","Maslinovo ulje","The fat, and the easiest of the three here. It has grown on this coast for more than two thousand years, needs no water once established, and the olive is already one of the four trees of this site. Nitrogen comes back into the soil through the dal, as Pelman says of fava: the plant gives the soil what it needs most and gives us what we need most.","Mast, i ovdje najlakša od tri. Na ovoj obali raste više od dvije tisuće godina, kad se primi ne treba joj voda, a maslina je već jedno od četiri stabla ovog terena. Dušik se u tlo vraća preko dala, kako Pelman kaže za bob: biljka daje tlu ono što mu najviše treba, a nama ono što nama najviše treba."]];
+
+/* Year: crop, needed, harvest, yield, m2, water, colour */
+const YEAR=[
+ ["Local grain in place of rice","Domaća žitarica umjesto riže","barley, wheat or spelt","ječam, pšenica ili pir",["91 kg","91 kg"],["100 kg","100 kg"],["0.25 kg/m²","0,25 kg/m²"],400,["rain only","samo kiša"],"#c8892f"],
+ ["Lentils, for masoor dal","Leća, za masoor dal","sown in month 12","sije se u 12. mj.",["28 kg split","28 kg polovljene"],["38 kg","38 kg"],["0.12 kg/m²","0,12 kg/m²"],320,["rain only","samo kiša"],"#7d8f4f"],
+ ["Chickpeas, for chana dal","Slanutak, za chana dal","sown in month 2 or 3","sije se u 2. ili 3. mj.",["28 kg split","28 kg polovljenog"],["38 kg","38 kg"],["0.15 kg/m²","0,15 kg/m²"],255,["rain only","samo kiša"],"#a3b46f"],
+ ["Vegetables","Povrće","four beds, as above","četiri gredice, kao gore",["365 kg","365 kg"],["450 kg","450 kg"],["3 kg/m²","3 kg/m²"],150,["about 75 m³ a year","oko 75 m³ godišnje"],"#2aa198"],
+ ["Olives, for oil","Masline, za ulje","6 trees standing in the grain","6 stabala usred žitarice",["18 kg oil, 20 l","18 kg ulja, 20 l"],["120 kg olives","120 kg maslina"],["15% oil","15% ulja"],50,["rain, once established","kiša, kad se prime"],"#2f5d50"]];
+
+const WAYS=[
+ ["A. Buy the rice","A. Rižu kupovati","Grow the dal, the oil and the vegetables and buy 91 kg of organic rice a year. 775 m² on site, 59 per cent of the calories home grown, and rice is the only thing that comes in. This is where to begin, from the first harvest year.","Uzgajati dal, ulje i povrće, a kupovati 91 kg ekološke riže godišnje. 775 m² na terenu, 59 posto kalorija iz vlastitog uzgoja, i riža je jedino što dolazi izvana. Odavde se kreće, od prve godine žetve."],
+ ["B. Grain cooked like rice","B. Žitarica kuhana kao riža","Grow a winter cereal and cook it the way rice is cooked. Pearled barley, whole wheat berries, spelt and bulgur all boil, steam and sit beside dal as rice does, and barley khichdi and wheat dalia are old dishes in north India itself. 1,175 m², everything from the site, still around one and a half days of work a month.","Uzgajati ozimu žitaricu i kuhati je kako se kuha riža. Ječmena kaša, cijela zrna pšenice, pir i bulgur kuhaju se, pare i stoje uz dal kao riža, a ječmeni khichdi i pšenična dalia stara su jela i u samoj sjevernoj Indiji. 1.175 m², sve s terena, i dalje oko dan i pol rada mjesečno."],
+ ["The way across","Put između","Start with A. Sow the first grain in the second winter, then let local grain replace rice two days a week, then four, then on all but feast days. The palate moves more slowly than the soil, so let it.","Krenuti s A. Prvu žitaricu posijati druge zime, pa neka domaća žitarica zamijeni rižu dva dana u tjednu, zatim četiri, pa svaki dan osim blagdana. Nepce se mijenja sporije od tla, i neka."]];
+
+/* What grows: group, rain only, needs summer water */
+const GROW=[
+ ["Cereal","Žitarica","Barley, durum and bread wheat, spelt, emmer, einkorn, oats","Ječam, tvrda i meka pšenica, pir, dvozrna i jednozrna pšenica, zob","Maize, proso millet, sorghum. Rice: no","Kukuruz, proso, sirak. Riža: ne"],
+ ["Dal","Dal","Lentil, chickpea, fava (split fava is a dal too), pea for split pea dal, grass pea in small amounts","Leća, slanutak, bob (i polovljeni bob je dal), grašak za dal od graška, sjekirica u malim količinama","Cowpea, the lobia of India, common bean, mung as a trial","Vigna ili crnooki grah, indijska lobia, obični grah, mungo kao pokus"],
+ ["Oil","Ulje","Olive, almond","Maslina, badem","Sunflower, sesame","Suncokret, sezam"],
+ ["Winter veg","Zimsko povrće","Raštika, chard, cabbage, broccoli, onion, garlic, leek, fennel, peas, rocket, lettuce, radish, carrot, wild asparagus","Raštika, blitva, kupus, brokula, luk, češnjak, poriluk, komorač, grašak, rukola, salata, rotkvica, mrkva, divlje šparoge","",""],
+ ["Summer veg","Ljetno povrće","","","Tomato, pepper, chilli, aubergine, okra, courgette, cucumber, pumpkin, melon, potato","Rajčica, paprika, ljuta papričica, patlidžan, bamija, tikvica, krastavac, bundeva, dinja, krumpir"],
+ ["Dal spices","Začini za dal","Coriander, fenugreek, brown mustard, cumin, fennel seed, garlic, bay laurel, rosemary","Korijandar, piskavica, smeđa gorušica, kumin, sjeme komorača, češnjak, lovor, ružmarin","Chilli","Ljuta papričica"],
+ ["Sugar, fruit","Šećer, voće","Carob, fig, grape, pomegranate, almond","Rogač, smokva, loza, šipak, badem","",""]];
+
+const PLATECAL=[
+ ["Month 10","10. mjesec","Winter vegetable beds go in. Seed of grain and pulses is cleaned and checked.","Sade se zimske gredice povrća. Sjeme žitarica i mahunarki se čisti i pregledava."],
+ ["Month 11","11. mjesec","Olive harvest, pressed the same day. First real rain, then two weeks for the weeds to germinate.","Berba maslina, tiješti se isti dan. Prva prava kiša, pa dva tjedna da korov proklija."],
+ ["Month 12","12. mjesec","One shallow till, broadcast grain and lentils, second till to bury the seed. Then nothing until month 5.","Jedna plitka obrada, razbacati žitaricu i leću, druga obrada da se sjeme zatrpa. Zatim ništa do 5. mjeseca."],
+ ["Months 2 and 3","2. i 3. mjesec","Chickpeas sown. Sown in spring rather than winter they escape the blight that comes with wet cold weather. Summer vegetable beds begin.","Sije se slanutak. Posijan u proljeće, a ne zimi, izbjegne palež koja dolazi s vlažnim hladnim vremenom. Počinju ljetne gredice povrća."],
+ ["Months 5 and 6","5. i 6. mjesec","Barley ripens first, late in month 5, then wheat and lentils in month 6. Cut with the sickle, thresh, winnow, store dry in sealed barrels.","Prvi dozrijeva ječam, krajem 5. mjeseca, zatim pšenica i leća u 6. Reže se srpom, vrši, vije i sprema suho u zatvorene bačve."],
+ ["Month 7","7. mjesec","Chickpeas are ready when the pods rattle. Cut, thresh, store dry.","Slanutak je spreman kad mahune zveckaju. Reže se, vrši i sprema suho."],
+ ["Month 8","8. mjesec","Carob for the sugar. The year's dal is split: seed dried hard in the sun, run once through a stone or plate mill set wide, hulls winnowed off. About two days.","Rogač za šećer. Polovi se godišnji dal: sjeme se dobro osuši na suncu, jednom propusti kroz kameni ili pločasti mlin postavljen široko, a ljuske se otpušu. Oko dva dana."],
+ ["The total","Ukupno","About 18 working days a year against Pelman's 12. The extra is the second pulse, the low lentil harvest and the splitting.","Oko 18 radnih dana godišnje naspram Pelmanovih 12. Razlika su druga mahunarka, niska žetva leće i polovljenje."]];
+
 /* ============================ render ============================ */
 let lang = (new URLSearchParams(location.search).get('lang')) ||
            (()=>{try{return localStorage.getItem('kel')}catch(e){return null}})() ||
@@ -1212,6 +1369,18 @@ let mode = (()=>{try{return localStorage.getItem('kem')}catch(e){return null}})(
 let month = new Date().getMonth()+1;
 
 const L=(en,hr)=> lang==='hr'?hr:en;
+/* decimal comma in Croatian; thousands separator flips with it */
+const num=v=> lang==='hr' ? String(v).replace(/[.,]/g,c=>c==='.'?',':'.') : String(v);
+
+/* horizontal proportion bar with an HTML legend below it: [label, value, colour, shown value] */
+function bar(data,id){
+  const tot=data.reduce((t,d)=>t+d[1],0); let x=0;
+  document.getElementById(id).innerHTML=data.map(d=>{
+    const w=d[1]/tot*1000, r=`<rect x="${x}" y="0" width="${Math.max(w-2,1)}" height="40" fill="${d[2]}"><title>${d[0]} ${d[3]}</title></rect>`;
+    x+=w; return r;}).join('');
+  const lg=document.getElementById(id.replace('bar','legend'));
+  if(lg) lg.innerHTML=data.map(d=>`<li><i style="background:${d[2]}"></i>${d[0]}<b>${num(d[3])}</b></li>`).join('');
+}
 
 function build(){
   document.getElementById('species').innerHTML = SPECIES.map(s=>{
@@ -1225,6 +1394,27 @@ function build(){
     arr.map(r=>`<li><b>${L(r[0],r[1])}</b><span>${L(r[2],r[3])}</span></li>`).join('');
   rows(WATERL,'waterlist'); rows(FOODL,'foodlist'); rows(CRAFTL,'craftlist');
   rows(TESTL,'testlist'); rows(LIVEL,'livelist'); rows(JOINL,'joinlist'); rows(CVFACTS,'cvfacts');
+
+  rows(PLATEQ,'plateq'); rows(WAYS,'plateways'); rows(PLATECAL,'platecal');
+  bar(AREA.map(a=>[L(a[0],a[1]),a[2],a[3],a[2]+' m²']),'areabar');
+
+  const kc=PLATE.reduce((t,r)=>t+r[5],0), pr=PLATE.reduce((t,r)=>t+r[6],0);
+  document.getElementById('platetbl').innerHTML =
+    `<tr><th>${L('Food','Namirnica')}</th><th class="num">${L('A day','Dnevno')}</th><th class="num">kcal</th><th class="num">${L('Protein','Bjel.')}</th><th class="num hide-s">${L('Share','Udio')}</th></tr>`+
+    PLATE.map(r=>`<tr><td>${L(r[0],r[1])}<small>${L(r[2],r[3])}</small></td><td class="num">${r[4]}</td><td class="num">${r[5]}</td><td class="num">${num(r[6])} g</td><td class="num hide-s">${Math.round(r[5]/kc*100)}%</td></tr>`).join('')+
+    `<tr class="tot"><td>${L('Total','Ukupno')}</td><td class="num"></td><td class="num">${kc}</td><td class="num">${num(Math.round(pr*10)/10)} g</td><td class="num hide-s">100%</td></tr>`;
+  bar(PLATE.map(r=>[L(r[0],r[1]).split(',')[0],r[5],r[7],Math.round(r[5]/kc*100)+'%']),'platebar');
+
+  const m2=YEAR.reduce((t,r)=>t+r[7],0);
+  document.getElementById('yeartbl').innerHTML =
+    `<tr><th>${L('Crop','Kultura')}</th><th class="num">${L('Eaten','Pojede se')}</th><th class="num hide-s">${L('Harvest','Žetva')}</th><th class="num hide-s">${L('Yield','Prinos')}</th><th class="num">m²</th><th class="hide-s">${L('Water','Voda')}</th></tr>`+
+    YEAR.map(r=>`<tr><td>${L(r[0],r[1])}<small>${L(r[2],r[3])}</small></td><td class="num">${L(...r[4])}</td><td class="num hide-s">${L(...r[5])}</td><td class="num hide-s">${L(...r[6])}</td><td class="num">${r[7]}</td><td class="hide-s">${L(...r[8])}</td></tr>`).join('')+
+    `<tr class="tot"><td>${L('Total, of 70,200 m² on site','Ukupno, od 70.200 m² terena')}</td><td class="num"></td><td class="num hide-s"></td><td class="num hide-s"></td><td class="num">${num(m2.toLocaleString('en'))}</td><td class="hide-s">${num('1.7%')}</td></tr>`;
+  bar(YEAR.map(r=>[L(r[0],r[1]).split(',')[0],r[7],r[9],r[7]+' m²']),'yearbar');
+
+  document.getElementById('growmatrix').innerHTML =
+    `<div class="mcell head"></div><div class="mcell head">${L('On rain alone','Samo na kiši')}</div><div class="mcell head">${L('Only with summer water','Samo uz ljetnu vodu')}</div>`+
+    GROW.map(g=>`<div class="mcell head">${L(g[0],g[1])}</div><div class="mcell"><span>${L(g[2],g[3])||'–'}</span></div><div class="mcell"><span>${L(g[4],g[5])||'–'}</span></div>`).join('');
   document.getElementById('treelist').innerHTML = TREES.map(t=>
     `<div class="tree">
        <figure><img src="img/${t[5]}" alt="${t[2]}" loading="lazy"></figure>
