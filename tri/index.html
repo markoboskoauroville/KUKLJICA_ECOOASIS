@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Three Crops · Kukljica EcoOasis</title>
+<meta name="description" content="Choose your three staple crops, a cereal, a pulse and an oil, and see on the climate map where they grow together on rain alone.">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../img/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<meta name="theme-color" content="#0D1117">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap&subset=latin,latin-ext" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d1117; --surface:#151b23; --line:#232c37;
+  --text:#e6edf3; --muted:#8b949e;
+  --olive:#7d8f4f; --myrtle:#2f5d50; --adriatic:#2aa198;
+  --limestone:#d9d2c5; --ochre:#c8892f;
+  --cereal:#c8892f; --protein:#7d8f4f; --oil:#2aa198;
+  --land:#2b333d;
+  --display:'Fraunces',Georgia,serif;
+  --body:'IBM Plex Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --maxw:1180px;
+}
+html[data-mode="day"]{
+  --bg:#f4f2ed; --surface:#e9e5db; --line:#d2ccbe;
+  --text:#1a1f26; --muted:#5c6672;
+  --limestone:#3a3222; --land:#d6d0c2;
+  --cereal:#a86b18; --protein:#5f7136; --oil:#1d7f78;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;overflow-x:hidden;background:var(--bg);color:var(--text);font-family:var(--body);font-weight:300;line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:var(--adriatic);text-decoration:none;border-bottom:1px solid rgba(42,161,152,.35)}
+a:hover{border-bottom-color:var(--adriatic)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--adriatic);outline-offset:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;width:100%}
+@media(max-width:560px){.wrap{padding:0 16px}}
+
+nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+.navin{max-width:var(--maxw);margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+@media(max-width:560px){.navin{padding:10px 16px}}
+.mark{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--text);border:0;white-space:nowrap;display:flex;align-items:center;gap:9px}
+.mark b{color:var(--olive);font-weight:500}
+.back{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:0;margin-left:auto}
+.back:hover{color:var(--text)}
+.toggles{display:flex;gap:8px}
+.tg{font-family:var(--mono);font-size:11px;letter-spacing:.1em;background:none;border:1px solid var(--line);color:var(--muted);padding:5px 9px;cursor:pointer;border-radius:2px}
+.tg:hover{color:var(--text);border-color:var(--muted)}
+.tg b{color:var(--adriatic);font-weight:500}
+
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--olive);margin-bottom:16px}
+h1{font-family:var(--display);font-weight:300;font-size:clamp(2.4rem,7vw,4.4rem);line-height:1;margin:0 0 18px;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--olive)}
+h2{font-family:var(--display);font-weight:300;font-size:clamp(1.6rem,3.6vw,2.4rem);line-height:1.1;margin:0 0 16px;letter-spacing:-.015em}
+h3{font-family:var(--display);font-weight:400;font-size:1.2rem;margin:0 0 8px;line-height:1.25}
+p{max-width:68ch;margin:0 0 16px}
+.lede{font-family:var(--display);font-weight:300;font-size:clamp(1.1rem,2.3vw,1.4rem);line-height:1.45;max-width:46ch;color:var(--text)}
+.note{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--line);padding:12px 14px;margin-top:20px;line-height:1.7;max-width:80ch}
+
+/* principle */
+.three{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:30px}
+@media(max-width:900px){.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.three{grid-template-columns:minmax(0,1fr)}}
+.pc{background:var(--bg);padding:22px 20px}
+.pc .tag{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
+.pc .big{font-family:var(--display);font-size:1.9rem;line-height:1;margin-bottom:10px}
+.pc p{font-size:14.5px;margin:0;color:var(--text)}
+.pc.veg{background:var(--surface)}
+.c-c{color:var(--cereal)} .c-p{color:var(--protein)} .c-o{color:var(--oil)}
+
+/* map */
+.mapgrid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start;margin-top:26px}
+@media(max-width:980px){.mapgrid{grid-template-columns:minmax(0,1fr)}}
+.mapbox{position:relative;width:100%;aspect-ratio:2/1;border:1px solid var(--line);background:var(--bg);cursor:crosshair;overflow:hidden;touch-action:manipulation}
+.mapbox canvas{position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated}
+.mapbox svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.mapbox .borders{fill:none;stroke:var(--bg);stroke-width:.45;opacity:.85}
+.mapbox .grat{fill:none;stroke:var(--line);stroke-width:.4}
+.pin{fill:var(--bg);stroke:var(--text);stroke-width:1.4}
+.pin.home{fill:var(--olive);stroke:var(--bg)}
+.pintext{font-family:var(--mono);font-size:8px;fill:var(--text);paint-order:stroke;stroke:var(--bg);stroke-width:2.5px}
+.hover{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:8px;min-height:1.6em}
+.mapstate{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:2px;line-height:1.6}
+.mapstate b{color:var(--text);font-weight:500}
+.info{border:1px solid var(--line);padding:18px;background:var(--surface);min-height:120px}
+.info .code{font-family:var(--display);font-size:2.2rem;line-height:1}
+.info .nm{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--olive);margin:8px 0 10px}
+.info p{font-size:14.5px;margin:0 0 10px}
+.info .where{font-size:14px;color:var(--muted)}
+.info .where b{color:var(--text);font-weight:400}
+.sw{display:inline-block;width:12px;height:12px;border-radius:2px;vertical-align:-1px;margin-right:6px;border:1px solid rgba(0,0,0,.25)}
+.btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.btn{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:8px 12px;border:1px solid var(--olive);color:var(--olive);background:none;border-radius:2px;cursor:pointer}
+.btn:hover{background:var(--olive);color:var(--bg)}
+.btn.ghost{border-color:var(--line);color:var(--muted)}
+.btn.ghost:hover{background:none;color:var(--text);border-color:var(--muted)}
+
+/* climate list */
+.clist{margin-top:26px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+@media(max-width:980px){.clist{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.clist{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cg h4{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 8px;border-top:1px solid var(--line);padding-top:10px}
+.zb{display:flex;align-items:center;gap:8px;width:100%;text-align:left;background:none;border:1px solid transparent;padding:5px 6px;cursor:pointer;border-radius:2px;font-size:13px;line-height:1.3}
+.zb:hover{border-color:var(--line)}
+.zb.on{border-color:var(--text);background:var(--surface)}
+.zb.fit{box-shadow:inset 3px 0 0 var(--olive)}
+.zb .k{font-family:var(--mono);font-size:11px;min-width:30px}
+.zb .n{font-family:var(--mono);font-size:10px;color:var(--muted);margin-left:auto}
+.zb .t{flex:1;min-width:0}
+
+/* chooser */
+.filterline{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin:16px 0 0;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.filterline b{color:var(--text);font-weight:500}
+.tree{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:56px;margin-top:26px}
+.tree>svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.tree>svg path{fill:none;stroke-width:1.3;opacity:.75}
+@media(max-width:860px){.tree{grid-template-columns:minmax(0,1fr);gap:30px}.tree>svg{display:none}}
+.col{position:relative;z-index:1;min-width:0}
+.colh{display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:10px}
+.colh .step{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.colh h3{margin:0;font-size:1.15rem}
+.colh .cnt{font-family:var(--mono);font-size:10px;color:var(--muted);margin-left:auto;white-space:nowrap}
+.crop{display:block;width:100%;text-align:left;background:var(--bg);border:1px solid var(--line);border-radius:2px;padding:9px 11px;margin:0 0 6px;cursor:pointer;transition:opacity .15s,border-color .15s}
+.crop:hover{border-color:var(--muted)}
+.crop .row{display:flex;align-items:baseline;gap:8px}
+.crop .nm{font-size:15px;font-weight:400}
+.crop .lt{font-family:var(--mono);font-size:9.5px;color:var(--muted);font-style:italic;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.crop .br{font-family:var(--mono);font-size:10px;color:var(--muted);margin-left:auto;white-space:nowrap}
+.crop .tr{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:var(--olive);margin-top:3px}
+.crop.out{opacity:.32}
+.crop.out .br{color:var(--ochre)}
+.crop.sel{border-color:currentColor;background:var(--surface)}
+.col[data-g="c"] .crop.sel{color:var(--cereal)} .col[data-g="p"] .crop.sel{color:var(--protein)} .col[data-g="o"] .crop.sel{color:var(--oil)}
+.crop.sel .nm{color:var(--text)}
+.crop .more{display:none;font-size:13.5px;color:var(--text);margin-top:6px;line-height:1.5}
+.crop .facts{font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:6px}
+.crop.sel .more{display:block}
+.hideout .crop.out{display:none}
+
+/* result */
+.result{margin-top:34px;border:1px solid var(--line);background:var(--surface);padding:24px}
+.result h2{margin-bottom:6px}
+.triad{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-family:var(--display);font-size:clamp(1.3rem,3vw,1.9rem);line-height:1.2;margin-bottom:14px}
+.triad span.plus{color:var(--muted);font-size:.8em}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}
+.chip{font-family:var(--mono);font-size:11px;border:1px solid var(--line);background:var(--bg);padding:4px 8px;border-radius:2px;cursor:pointer;color:var(--text)}
+.chip:hover{border-color:var(--muted)}
+.chip.on{border-color:var(--text)}
+.plate{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:16px 0}
+@media(max-width:700px){.plate{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.plate div{background:var(--bg);padding:14px}
+.plate .v{font-family:var(--display);font-size:1.6rem;line-height:1}
+.plate .l{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px;line-height:1.5}
+.trad{border-left:2px solid var(--olive);padding-left:16px;margin:14px 0}
+.trad .tn{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--olive)}
+.ok{color:var(--olive)} .warn{color:var(--ochre)}
+
+.tlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:22px}
+.tcard{text-align:left;background:var(--bg);border:1px solid var(--line);padding:14px 16px;cursor:pointer;border-radius:2px}
+.tcard:hover{border-color:var(--muted)}
+.tcard .tn{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--olive);margin-bottom:4px}
+.tcard .tt{font-family:var(--display);font-size:1.05rem;margin-bottom:4px}
+.tcard .tp{font-size:13px;color:var(--muted)}
+
+footer{padding:40px 0 60px;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em;line-height:1.9}
+.ver{position:fixed;right:10px;bottom:8px;font-family:var(--mono);font-size:9.5px;color:var(--muted);opacity:.55;z-index:60}
+</style>
+</head>
+<body>
+<nav><div class="navin">
+  <a href="../" class="mark"><img src="../img/mark.svg" alt="" width="26" height="26">KUKLJICA <b>ECOOASIS</b></a>
+  <a href="../#growing" class="back" data-i18n="back"></a>
+  <div class="toggles">
+    <button class="tg" id="langbtn" aria-label="Language"></button>
+    <button class="tg" id="modebtn" aria-label="Light or dark"></button>
+  </div>
+</div></nav>
+
+<section style="padding-top:64px"><div class="wrap">
+  <div class="kicker" data-i18n="k"></div>
+  <h1 id="h1"></h1>
+  <p class="lede" data-i18n="lede"></p>
+  <div class="three">
+    <div class="pc"><div class="tag c-c" data-i18n="p.c.t"></div><div class="big c-c" data-i18n="p.c.b"></div><p data-i18n="p.c.p"></p></div>
+    <div class="pc"><div class="tag c-p" data-i18n="p.p.t"></div><div class="big c-p" data-i18n="p.p.b"></div><p data-i18n="p.p.p"></p></div>
+    <div class="pc"><div class="tag c-o" data-i18n="p.o.t"></div><div class="big c-o" data-i18n="p.o.b"></div><p data-i18n="p.o.p"></p></div>
+    <div class="pc veg"><div class="tag" style="color:var(--muted)" data-i18n="p.v.t"></div><div class="big" data-i18n="p.v.b"></div><p data-i18n="p.v.p"></p></div>
+  </div>
+  <p style="margin-top:22px" data-i18n="p.why"></p>
+</div></section>
+
+<section id="climate"><div class="wrap">
+  <div class="kicker" data-i18n="m.k"></div>
+  <h2 data-i18n="m.h"></h2>
+  <p data-i18n="m.p"></p>
+  <div class="mapgrid">
+    <div>
+      <div class="mapbox" id="mapbox" role="application" aria-label="Climate map">
+        <canvas id="map"></canvas>
+        <svg viewBox="0 0 720 360" preserveAspectRatio="none" id="mapsvg"></svg>
+      </div>
+      <div class="hover" id="hover"></div>
+      <div class="mapstate" id="mapstate"></div>
+    </div>
+    <div class="info" id="info"></div>
+  </div>
+  <div class="clist" id="clist"></div>
+</div></section>
+
+<section id="choose"><div class="wrap">
+  <div class="kicker" data-i18n="c.k"></div>
+  <h2 data-i18n="c.h"></h2>
+  <p data-i18n="c.p"></p>
+  <div class="filterline" id="filterline"></div>
+  <div class="tree" id="tree"><svg id="links"></svg></div>
+  <div id="result"></div>
+</div></section>
+
+<section id="traditions"><div class="wrap">
+  <div class="kicker" data-i18n="t.k"></div>
+  <h2 data-i18n="t.h"></h2>
+  <p data-i18n="t.p"></p>
+  <div class="tlist" id="tlist"></div>
+  <div class="note" data-i18n="src"></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div data-i18n="foot"></div>
+  <div><a href="../" data-i18n="home"></a></div>
+</div></footer>
+<div class="ver">tri v1</div>
+
+<script src="crops.js"></script>
+<script src="kg.js"></script>
+<script>
+const T={
+en:{
+back:"← Growing food",
+k:"Growing food · an app",
+h1:"Three <em>crops</em>",
+lede:"Every lasting diet stands on three crops: a cereal for energy, a pulse for protein, an oil for fat. Choose yours, and see where on Earth they grow together on rain alone.",
+"p.c.t":"1 · Carbohydrate","p.c.b":"Cereal","p.c.p":"Wheat, rice, maize, millet. The base of calories, 4 kcal per gram, and the bulk of the plate. Where cereals struggle, a starchy root takes their place.",
+"p.p.t":"2 · Protein","p.p.b":"Pulse","p.p.p":"Bean, lentil, chickpea, fava. Cereals are short of the amino acid lysine and pulses are rich in it; pulses lack methionine, which cereals have. Eaten together they make a complete protein, and the pulse feeds the soil with nitrogen.",
+"p.o.t":"3 · Fat","p.o.b":"Oil","p.o.p":"Olive, sesame, sunflower, coconut. 9 kcal per gram, more than twice the others, carrying the fat-soluble vitamins and the essential fatty acids. A small area of oil carries a lot of the diet.",
+"p.v.t":"On top · vitamins","p.v.b":"Vegetables","p.v.p":"Greens, fruit and herbs bring the vitamins, minerals and taste, but only around a sixth of the calories. They take the most work and all the water, so they come on top of the three, not instead of them.",
+"p.why":"The three only work together if they grow in the same place. The map below shows the climates of the world; choose one, or click anywhere, and the crops narrow to those that grow there without irrigation, greenhouses or other special modification.",
+"m.k":"Step 0 · Climate","m.h":"Where are you growing?",
+"m.p":"Click on the map to find out what climate a place has and where else on Earth the same climate exists. Or pick a climate from the list. Once you choose crops, the map shows where your combination can grow.",
+"c.k":"Steps 1 to 3 · Choose","c.h":"Choose your three",
+"c.p":"Start with a cereal. The pulses that can grow alongside it branch out from it, and each one shows how many oils are still possible. Pick a pulse and the oils narrow again, until one combination is left. Crops that do not fit stay greyed with the reason; click one anyway to start a new branch from it.",
+"t.k":"Tested by time","t.h":"Triads people have lived on",
+"t.p":"Every farming culture found its own three. Click one to load it into the chooser.",
+src:"Climate map: Köppen-Geiger classification, 1986 to 2010, after Rubel and Kottek (koeppen-geiger.vu-wien.ac.at), from the high resolution raster in the kgcpy package (CWRU SDLE, BSD licence), resampled to one third of a degree. Borders: Natural Earth via world-atlas. Nutrition: USDA FoodData Central, rounded, per 100 g of dry seed (fresh for roots). Crop climates are our own reading of where each crop is traditionally grown on rain alone, at the level of climate class; altitude, soil and microclimate decide in the end.",
+foot:"Kukljica EcoOasis · island of Ugljan, Croatia · a learning tool, not an agronomic guarantee",
+home:"Back to Kukljica EcoOasis",
+step:"Step",cereal:"Cereal",protein:"Pulse",oil:"Oil",
+anyclimate:"All climates",inclimate:"Only crops that grow in",
+clear:"Clear climate",reset:"Start again",showout:"Show crops that do not fit",hideout:"Hide crops that do not fit",
+fits:"fit",of:"of",
+noshare:"no shared climate",notin:"does not grow in",
+branch:n=>n===1?"1 oil":n+" oils",branchp:n=>n===1?"→ 1 pulse":"→ "+n+" pulses",
+climates:n=>n===1?"1 climate":n+" climates",
+pick:"Pick",
+sea:"Sea. Click on land.",
+landshare:"of the world's land",
+alsoin:"Also found in",
+cropsHere:n=>n+" of 42 crops grow here",
+choose:"Choose this climate",
+here:"You clicked",
+info0:"Click on the map or choose a climate.",
+home2:"Kukljica",
+homeBtn:"Our land: Kukljica",
+zerocrops:"No staple crop grows here on rain alone.",
+mapAll:"Showing all climates.",
+mapClimate:"Highlighted: ",
+mapCrops:"Highlighted: where your crops grow together",
+mapNone:"Your crops share no climate. Nothing is highlighted.",
+yourtriad:"Your three",
+growTogether:"They grow together on rain alone in",
+inKuk:"This triad can grow in Kukljica.",
+notKuk:"This triad would need irrigation or shelter in Kukljica.",
+plate:"One person, one day, 2000 kcal",
+plateNote:"Assumed split of calories: 55% cereal, 20% pulse, 15% oil, 10% vegetables on top. Weights are of the dry grain and dry pulse (fresh for roots), and of the pressed oil; the seed or fruit to press is shown below it.",
+gday:"g a day",
+kgyear:"kg a year",
+protday:"g protein a day",
+ofseed:"of seed or fruit to press",
+known:"A known tradition",
+newcombo:"Not a classic triad, but it fits the climate. Worth a try.",
+amino:"Cereal plus pulse: the amino acids complete each other.",
+aminoRoot:"A starchy root brings very little protein, so more of the protein has to come from the pulse.",
+seasonW:"winter crop",seasonS:"summer crop",seasonT:"tree",seasonP:"perennial",
+kcal:"kcal",fat:"fat",prot:"protein",oilc:"oil in seed",
+pickC:"Pick a cereal to begin.",pickP:"Now pick a pulse.",pickO:"Now pick an oil.",
+},
+hr:{
+back:"← Uzgoj hrane",
+k:"Uzgoj hrane · aplikacija",
+h1:"Tri <em>kulture</em>",
+lede:"Svaka trajna prehrana stoji na tri kulture: žitarici za energiju, mahunarki za bjelančevine i uljarici za mast. Izaberi svoje i pogledaj gdje na Zemlji rastu zajedno samo na kiši.",
+"p.c.t":"1 · Ugljikohidrati","p.c.b":"Žitarica","p.c.p":"Pšenica, riža, kukuruz, proso. Osnova kalorija, 4 kcal po gramu, i najveći dio tanjura. Gdje žitarice teško uspijevaju, mjesto im preuzima škrobni gomolj.",
+"p.p.t":"2 · Bjelančevine","p.p.b":"Mahunarka","p.p.p":"Grah, leća, slanutak, bob. Žitaricama nedostaje aminokiselina lizin, a mahunarke ga imaju u izobilju; mahunarkama nedostaje metionin, koji žitarice imaju. Zajedno daju potpunu bjelančevinu, a mahunarka još i hrani tlo dušikom.",
+"p.o.t":"3 · Mast","p.o.b":"Ulje","p.o.p":"Maslina, sezam, suncokret, kokos. 9 kcal po gramu, više nego dvostruko od ostalih, nosi vitamine topive u mastima i esencijalne masne kiseline. Mala površina pod uljem nosi velik dio prehrane.",
+"p.v.t":"Povrh · vitamini","p.v.b":"Povrće","p.v.p":"Zelje, voće i začinsko bilje donose vitamine, minerale i okus, ali tek oko šestinu kalorija. Traže najviše rada i svu vodu, pa dolaze povrh trojke, a ne umjesto nje.",
+"p.why":"Tri kulture rade samo ako rastu na istom mjestu. Karta ispod pokazuje klime svijeta; izaberi jednu ili klikni bilo gdje, i kulture se suze na one koje ondje rastu bez navodnjavanja, staklenika ili druge posebne prilagodbe.",
+"m.k":"Korak 0 · Klima","m.h":"Gdje uzgajaš?",
+"m.p":"Klikni na kartu da saznaš kakvu klimu neko mjesto ima i gdje još na Zemlji postoji ista klima. Ili izaberi klimu s popisa. Kad izabereš kulture, karta pokazuje gdje tvoja kombinacija može rasti.",
+"c.k":"Koraci 1 do 3 · Izbor","c.h":"Izaberi svoje tri",
+"c.p":"Počni od žitarice. Iz nje se granaju mahunarke koje mogu rasti uz nju, i svaka pokazuje koliko je uljarica još moguće. Izaberi mahunarku i uljarice se opet suze, dok ne ostane jedna kombinacija. Kulture koje ne odgovaraju ostaju posivljene s razlogom; klikni ipak na neku da iz nje kreneš novu granu.",
+"t.k":"Provjereno vremenom","t.h":"Trojke od kojih su ljudi živjeli",
+"t.p":"Svaka ratarska kultura našla je svoje tri. Klikni na jednu da je učitaš u izbornik.",
+src:"Karta klime: Köppen-Geigerova klasifikacija, 1986. do 2010., prema Rubelu i Kottku (koeppen-geiger.vu-wien.ac.at), iz rastera visoke rezolucije u paketu kgcpy (CWRU SDLE, BSD licenca), preuzorkovanog na trećinu stupnja. Granice: Natural Earth preko world-atlas. Prehrana: USDA FoodData Central, zaokruženo, na 100 g suhog zrna (svježe za gomolje). Klime kultura naše su čitanje gdje se svaka kultura tradicionalno uzgaja samo na kiši, na razini klimatskog razreda; nadmorska visina, tlo i mikroklima na kraju odlučuju.",
+foot:"Kukljica EcoOasis · otok Ugljan, Hrvatska · alat za učenje, ne agronomsko jamstvo",
+home:"Natrag na Kukljica EcoOasis",
+step:"Korak",cereal:"Žitarica",protein:"Mahunarka",oil:"Uljarica",
+anyclimate:"Sve klime",inclimate:"Samo kulture koje rastu u klimi",
+clear:"Makni klimu",reset:"Ispočetka",showout:"Pokaži kulture koje ne odgovaraju",hideout:"Sakrij kulture koje ne odgovaraju",
+fits:"odgovara",of:"od",
+noshare:"nema zajedničke klime",notin:"ne raste u",
+branch:n=>n===1?"1 uljarica":(n%10>=2&&n%10<=4&&(n<10||n>20)?n+" uljarice":n+" uljarica"),
+branchp:n=>n===1?"→ 1 mahunarka":(n%10>=2&&n%10<=4&&(n<10||n>20)?"→ "+n+" mahunarke":"→ "+n+" mahunarki"),
+climates:n=>n===1?"1 klima":(n%10>=2&&n%10<=4&&(n<10||n>20)?n+" klime":n+" klima"),
+pick:"Izaberi",
+sea:"More. Klikni na kopno.",
+landshare:"svjetskog kopna",
+alsoin:"Postoji i u",
+cropsHere:n=>"Ovdje raste "+n+" od 42 kulture",
+choose:"Izaberi ovu klimu",
+here:"Kliknuo si",
+info0:"Klikni na kartu ili izaberi klimu.",
+home2:"Kukljica",
+homeBtn:"Naša zemlja: Kukljica",
+zerocrops:"Ovdje nijedna osnovna kultura ne raste samo na kiši.",
+mapAll:"Prikazane su sve klime.",
+mapClimate:"Istaknuto: ",
+mapCrops:"Istaknuto: gdje tvoje kulture rastu zajedno",
+mapNone:"Tvoje kulture nemaju zajedničku klimu. Ništa nije istaknuto.",
+yourtriad:"Tvoja trojka",
+growTogether:"Zajedno rastu samo na kiši u klimama",
+inKuk:"Ova trojka može rasti u Kukljici.",
+notKuk:"Ova trojka bi u Kukljici trebala navodnjavanje ili zaklon.",
+plate:"Jedna osoba, jedan dan, 2000 kcal",
+plateNote:"Pretpostavljena podjela kalorija: 55% žitarica, 20% mahunarka, 15% ulje, 10% povrće povrh toga. Mase su suhog zrna i suhe mahunarke (svježe za gomolje) te istiještenog ulja; sjeme ili plod za prešanje navedeni su ispod.",
+gday:"g na dan",
+kgyear:"kg godišnje",
+protday:"g bjelančevina na dan",
+ofseed:"sjemena ili ploda za prešanje",
+known:"Poznata tradicija",
+newcombo:"Nije klasična trojka, ali odgovara klimi. Vrijedi pokušati.",
+amino:"Žitarica i mahunarka: aminokiseline se međusobno nadopunjuju.",
+aminoRoot:"Škrobni gomolj donosi vrlo malo bjelančevina, pa više bjelančevina mora doći iz mahunarke.",
+seasonW:"zimska kultura",seasonS:"ljetna kultura",seasonT:"stablo",seasonP:"trajnica",
+kcal:"kcal",fat:"mast",prot:"bjelanč.",oilc:"ulja u sjemenu",
+pickC:"Izaberi žitaricu za početak.",pickP:"Sad izaberi mahunarku.",pickO:"Sad izaberi uljaricu.",
+}};
+
+/* ---------- state ---------- */
+const qs=new URLSearchParams(location.search);
+let lang=qs.get('lang')||(()=>{try{return localStorage.getItem('kel')}catch(e){return null}})()||((navigator.language||'en').toLowerCase().startsWith('hr')?'hr':'en');
+let mode=(()=>{try{return localStorage.getItem('kem')}catch(e){return null}})()||'night';
+let climate=null, sel={c:null,p:null,o:null}, showOut=true, clicked=null;
+const HOME={lat:44.03,lon:15.25};
+const t=k=>T[lang][k]; const L=(en,hr)=>lang==='hr'?hr:en;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+const CROP={}; CROPS.forEach(c=>CROP[c[0]]={id:c[0],g:c[1],en:c[2],hr:c[3],lat:c[4],z:new Set(c[5].split(' ')),kcal:c[6],p:c[7],f:c[8],oil:c[9],season:c[10],den:c[11],dhr:c[12]});
+const G=['c','p','o'];
+const ALLZ=Object.keys(ZONES);
+const cropName=c=>L(c.en,c.hr);
+
+/* ---------- map data ---------- */
+function unrle(s,n){const a=new Uint8Array(n);let i=0;for(const tok of s.split(',')){const x=tok.indexOf('x');if(x<0){a[i++]=+tok}else{const v=+tok.slice(0,x),k=+tok.slice(x+1);a.fill(v,i,i+k);i+=k}}return a}
+const W=KG.W,H=KG.H, ZA=unrle(KG.z,W*H), CA=unrle(KG.c,W*H);
+const zoneAt=(x,y)=>{const v=ZA[y*W+x];return v?KG.zones[v-1]:null};
+const ZIDX={}; KG.zones.forEach((z,i)=>ZIDX[z]=i+1);
+let regionNames=null;
+function country(a2){if(!a2)return'';try{if(!regionNames||regionNames.l!==lang){regionNames=new Intl.DisplayNames([lang],{type:'region'});regionNames.l=lang}return regionNames.of(a2)||a2}catch(e){return a2}}
+const ll2xy=(lat,lon)=>[Math.min(W-1,Math.floor((lon+180)/360*W)),Math.min(H-1,Math.floor((90-lat)/180*H))];
+
+/* ---------- logic ---------- */
+function inter(ids,extra){ // climates shared by crops ids (and climate filter)
+  let s=new Set(climate?[climate]:ALLZ);
+  for(const id of ids){if(!id)continue;const z=CROP[id].z;s=new Set([...s].filter(x=>z.has(x)))}
+  return s;
+}
+function others(g){return G.filter(x=>x!==g).map(x=>sel[x]).filter(Boolean)}
+function fitInfo(c){ // can crop c be added given the other groups' selections and climate?
+  const base=inter(others(c.g));
+  const shared=[...base].filter(z=>c.z.has(z));
+  let reason='';
+  if(!shared.length){
+    if(climate&&!c.z.has(climate))reason=t('notin')+' '+climate;
+    else reason=t('noshare');
+  }
+  return {ok:shared.length>0,shared,reason};
+}
+function cropsIn(z){return CROPS.filter(c=>c[5].split(' ').includes(z)).length}
+function highlightSet(){
+  const any=G.some(g=>sel[g]);
+  if(any) return inter(G.map(g=>sel[g]));
+  if(climate) return new Set([climate]);
+  return null;
+}
+
+/* ---------- map render ---------- */
+const cv=document.getElementById('map'); cv.width=W; cv.height=H;
+const ctx=cv.getContext('2d'); const img=ctx.createImageData(W,H);
+function cssColor(name){const v=getComputedStyle(document.documentElement).getPropertyValue(name).trim();const m=v.match(/^#(..)(..)(..)$/);return m?[parseInt(m[1],16),parseInt(m[2],16),parseInt(m[3],16)]:[60,60,60]}
+function drawMap(){
+  const hs=highlightSet(); const land=cssColor('--land');
+  const pal=[null];
+  for(const z of KG.zones){const c=ZONES[z]?ZONES[z][4]:[128,128,128];
+    if(!hs) pal.push([...c,215]); else if(hs.has(z)) pal.push([...c,255]); else pal.push([...land,255]);}
+  const d=img.data;
+  for(let i=0;i<W*H;i++){const v=ZA[i];const o=i*4;if(!v){d[o+3]=0;continue}const p=pal[v];d[o]=p[0];d[o+1]=p[1];d[o+2]=p[2];d[o+3]=p[3]}
+  ctx.putImageData(img,0,0);
+  // state line
+  const ms=document.getElementById('mapstate');
+  const any=G.some(g=>sel[g]);
+  if(any){const n=hs.size;ms.innerHTML=n?`<b>${t('mapCrops')}</b>: ${[...hs].map(z=>z).join(', ')}`:`<b class="warn">${t('mapNone')}</b>`}
+  else if(climate) ms.innerHTML=`<b>${t('mapClimate')}${climate}</b> · ${esc(L(ZONES[climate][0],ZONES[climate][1]))}`;
+  else ms.textContent=t('mapAll');
+}
+function drawSvg(){
+  let s='';
+  for(let lat=-60;lat<=60;lat+=30)s+=`<path class="grat" d="M0 ${(90-lat)*2}H720"/>`;
+  for(let lon=-150;lon<=150;lon+=30)s+=`<path class="grat" d="M${(lon+180)*2} 0V360"/>`;
+  s+=`<path class="borders" d="${KG.borders}"/>`;
+  const hx=(HOME.lon+180)*2,hy=(90-HOME.lat)*2;
+  s+=`<circle class="pin home" cx="${hx}" cy="${hy}" r="3.2"/><text class="pintext" x="${hx+5}" y="${hy-4}">${t('home2')}</text>`;
+  if(clicked){const x=(clicked.lon+180)*2,y=(90-clicked.lat)*2;s+=`<circle class="pin" cx="${x}" cy="${y}" r="3.6"/><circle cx="${x}" cy="${y}" r="1" fill="var(--text)"/>`}
+  document.getElementById('mapsvg').innerHTML=s;
+}
+function evToLL(e){const r=cv.getBoundingClientRect();const fx=(e.clientX-r.left)/r.width,fy=(e.clientY-r.top)/r.height;return{lon:fx*360-180,lat:90-fy*180,x:Math.min(W-1,Math.max(0,Math.floor(fx*W))),y:Math.min(H-1,Math.max(0,Math.floor(fy*H)))}}
+const fmtLL=(lat,lon)=>`${Math.abs(lat).toFixed(1)}°${lat>=0?'N':'S'} ${Math.abs(lon).toFixed(1)}°${lon>=0?'E':'W'}`;
+let hoverRaf=0;
+document.getElementById('mapbox').addEventListener('mousemove',e=>{
+  if(hoverRaf)return;hoverRaf=requestAnimationFrame(()=>{hoverRaf=0;
+    const p=evToLL(e);const z=zoneAt(p.x,p.y);const c=KG.countries[CA[p.y*W+p.x]];
+    document.getElementById('hover').textContent=z?`${fmtLL(p.lat,p.lon)} · ${z} · ${L(ZONES[z][0],ZONES[z][1])}${c?' · '+country(c):''}`:fmtLL(p.lat,p.lon);
+  });
+});
+document.getElementById('mapbox').addEventListener('mouseleave',()=>{document.getElementById('hover').textContent=''});
+document.getElementById('mapbox').addEventListener('click',e=>{
+  const p=evToLL(e);
+  // search a small neighbourhood so a click just off a coast still finds land
+  let z=zoneAt(p.x,p.y),cx=p.x,cy=p.y;
+  for(let r=1;!z&&r<=3;r++)for(let dy=-r;dy<=r&&!z;dy++)for(let dx=-r;dx<=r&&!z;dx++){const x=p.x+dx,y=p.y+dy;if(x>=0&&x<W&&y>=0&&y<H&&zoneAt(x,y)){z=zoneAt(x,y);cx=x;cy=y}}
+  clicked={lat:p.lat,lon:p.lon,zone:z,country:z?KG.countries[CA[cy*W+cx]]:null};
+  if(z) setClimate(z,true); else {renderInfo();drawSvg()}
+});
+
+/* ---------- info panel ---------- */
+function renderInfo(){
+  const el=document.getElementById('info');
+  const z=climate;
+  let h='';
+  if(clicked&&!clicked.zone){h+=`<p>${fmtLL(clicked.lat,clicked.lon)}</p><p class="where">${t('sea')}</p>`}
+  if(!z){ if(!h)h=`<p class="where">${t('info0')}</p>`;
+    h+=`<div class="btnrow"><button class="btn" data-act="home">${t('homeBtn')}</button></div>`; el.innerHTML=h;bindInfo();return}
+  const Zm=ZONES[z],st=KG.stats[z]||{land:0,top:[]};
+  const col=`rgb(${Zm[4].join(',')})`;
+  h=`<div class="code"><span class="sw" style="background:${col};width:18px;height:18px"></span>${z}</div>
+     <div class="nm">${esc(L(Zm[0],Zm[1]))}</div>`;
+  if(clicked&&clicked.zone===z) h+=`<p class="where">${t('here')}: <b>${fmtLL(clicked.lat,clicked.lon)}${clicked.country?' · '+esc(country(clicked.country)):''}</b></p>`;
+  h+=`<p>${esc(L(Zm[2],Zm[3]))}</p>`;
+  h+=`<p class="where">${st.land.toLocaleString(lang)}% ${t('landshare')}. ${t('alsoin')}: <b>${st.top.map(country).map(esc).join(', ')}</b>.</p>`;
+  const n=cropsIn(z);
+  h+=`<p class="where">${n?t('cropsHere')(n):'<span class="warn">'+t('zerocrops')+'</span>'}</p>`;
+  h+=`<div class="btnrow">${n?`<a class="btn" href="#choose">${t('pick')} →</a>`:''}<button class="btn ghost" data-act="clear">${t('clear')}</button><button class="btn ghost" data-act="home">${t('homeBtn')}</button></div>`;
+  el.innerHTML=h;bindInfo();
+}
+function bindInfo(){
+  document.querySelectorAll('#info [data-act]').forEach(b=>b.onclick=()=>{
+    if(b.dataset.act==='clear'){clicked=null;setClimate(null)}
+    if(b.dataset.act==='home'){clicked={lat:HOME.lat,lon:HOME.lon,zone:'Csa',country:'HR'};setClimate('Csa',true)}
+  });
+}
+
+/* ---------- climate list ---------- */
+function renderClist(){
+  const hs=G.some(g=>sel[g])?inter(G.map(g=>sel[g])):null;
+  document.getElementById('clist').innerHTML=ZGROUPS.map(g=>`<div class="cg"><h4>${g[0]} · ${L(g[1],g[2])}</h4>${g[3].map(z=>{
+    const Zm=ZONES[z];const n=cropsIn(z);
+    return `<button class="zb${climate===z?' on':''}${hs&&hs.has(z)?' fit':''}" data-z="${z}" title="${esc(L(Zm[2],Zm[3]))}"><span class="sw" style="background:rgb(${Zm[4].join(',')})"></span><span class="k">${z}</span><span class="t">${esc(L(Zm[0],Zm[1]))}</span><span class="n">${n}</span></button>`}).join('')}</div>`).join('');
+  document.querySelectorAll('#clist .zb').forEach(b=>b.onclick=()=>{clicked=null;setClimate(climate===b.dataset.z?null:b.dataset.z)});
+}
+function setClimate(z,fromMap){
+  climate=z;
+  // drop selections that no longer fit the climate
+  if(z)for(const g of G)if(sel[g]&&!CROP[sel[g]].z.has(z))sel[g]=null;
+  renderAll();
+}
+
+/* ---------- chooser ---------- */
+function cropFacts(c){
+  const s={w:t('seasonW'),s:t('seasonS'),t:t('seasonT'),p:t('seasonP')}[c.season];
+  let f=`${c.kcal} ${t('kcal')} · ${c.p} g ${t('prot')} · ${c.f} g ${t('fat')}`;
+  if(c.g==='o'&&c.oil)f=`${c.oil}% ${t('oilc')} · `+f;
+  return f+` · ${s}`;
+}
+function tradFor(id){return TRADS.filter(tr=>tr[0].includes(id))}
+function renderTree(){
+  const tree=document.getElementById('tree');
+  const heads={c:t('cereal'),p:t('protein'),o:t('oil')};
+  let h='<svg id="links"></svg>';
+  G.forEach((g,gi)=>{
+    const list=CROPS.filter(c=>c[1]===g).map(c=>CROP[c[0]]);
+    const info=list.map(c=>({c,fi:fitInfo(c)}));
+    // count of further branches: for the next group, how many crops remain possible
+    const nextG=G[gi+1];
+    info.forEach(o=>{
+      if(nextG&&o.fi.ok){
+        const base=inter([...others(g).filter(id=>CROP[id].g!==nextG),o.c.id]);
+        o.next=CROPS.filter(x=>x[1]===nextG).filter(x=>[...base].some(z=>CROP[x[0]].z.has(z))).length;
+      }
+      o.trad=sel.c||sel.p||sel.o?TRADS.some(tr=>tr[0].includes(o.c.id)&&G.every(gg=>gg===g||!sel[gg]||tr[0].includes(sel[gg]))):false;
+    });
+    info.sort((a,b)=>(b.c.id===sel[g])-(a.c.id===sel[g])||(b.fi.ok-a.fi.ok)||(b.trad-a.trad)||(b.fi.shared.length-a.fi.shared.length));
+    const nOk=info.filter(o=>o.fi.ok).length;
+    h+=`<div class="col" data-g="${g}"><div class="colh"><span class="step">${gi+1}</span><h3 class="c-${g}">${heads[g]}</h3><span class="cnt">${nOk} ${t('of')} ${list.length} ${t('fits')}</span></div>`;
+    for(const o of info){
+      const c=o.c,isSel=sel[g]===c.id;
+      let br='';
+      if(!o.fi.ok) br=o.fi.reason;
+      else if(gi===0&&nextG) br=t('branchp')(o.next);
+      else if(gi===1) br='→ '+t('branch')(o.next);
+      else br=t('climates')(o.fi.shared.length);
+      const tr=o.trad?tradFor(c.id).filter(tr=>G.every(gg=>gg===g||!sel[gg]||tr[0].includes(sel[gg])))[0]:null;
+      h+=`<button class="crop${isSel?' sel':''}${o.fi.ok?'':' out'}" data-id="${c.id}" aria-pressed="${isSel}">
+        <div class="row"><span class="nm">${esc(cropName(c))}</span><span class="br">${esc(br)}</span></div>
+        <div class="lt">${esc(c.lat)}</div>
+        ${tr?`<div class="tr">✦ ${esc(L(tr[1],tr[2]))}</div>`:''}
+        <div class="more">${esc(L(c.den,c.dhr))}<div class="facts">${esc(cropFacts(c))}</div></div>
+      </button>`;
+    }
+    h+='</div>';
+  });
+  tree.innerHTML=h;
+  tree.classList.toggle('hideout',!showOut);
+  tree.querySelectorAll('.crop').forEach(b=>b.onclick=()=>pickCrop(b.dataset.id));
+  requestAnimationFrame(drawLinks);
+}
+function pickCrop(id){
+  const c=CROP[id];
+  if(sel[c.g]===id){sel[c.g]=null}
+  else{
+    sel[c.g]=id;
+    if(climate&&!c.z.has(climate))climate=null;
+    // a crop that does not fit the others starts a new branch: drop the ones it conflicts with
+    for(const g of G){if(g===c.g||!sel[g])continue;if(!inter([id,sel[g]]).size)sel[g]=null}
+    if(G.filter(g=>sel[g]).length===3&&!inter(G.map(g=>sel[g])).size){for(const g of G)if(g!==c.g)sel[g]=null}
+  }
+  renderAll();
+  if(G.every(g=>sel[g])) document.getElementById('result').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function drawLinks(){
+  const tree=document.getElementById('tree'),svg=document.getElementById('links');
+  if(!svg||getComputedStyle(svg).display==='none')return;
+  const R=tree.getBoundingClientRect();svg.setAttribute('viewBox',`0 0 ${R.width} ${R.height}`);
+  let s='';
+  const colors={c:'var(--cereal)',p:'var(--protein)',o:'var(--oil)'};
+  for(let i=0;i<2;i++){
+    const g=G[i],ng=G[i+1];
+    const from=sel[g]?tree.querySelector(`.col[data-g="${g}"] .crop.sel`):null;
+    if(!from)continue;
+    const a=from.getBoundingClientRect();
+    tree.querySelectorAll(`.col[data-g="${ng}"] .crop:not(.out)`).forEach(el=>{
+      const b=el.getBoundingClientRect();
+      const x1=a.right-R.left,y1=a.top+a.height/2-R.top,x2=b.left-R.left,y2=b.top+Math.min(b.height/2,18)-R.top;
+      const mx=(x1+x2)/2;const on=el.classList.contains('sel');
+      s+=`<path d="M${x1} ${y1} C${mx} ${y1} ${mx} ${y2} ${x2} ${y2}" stroke="${colors[on?ng:g]}" stroke-width="${on?2.4:1.1}" opacity="${on?1:.55}"/>`;
+    });
+  }
+  svg.innerHTML=s;
+}
+window.addEventListener('resize',()=>requestAnimationFrame(drawLinks));
+
+function renderFilter(){
+  const el=document.getElementById('filterline');
+  const n=G.filter(g=>sel[g]).length;
+  const next=!sel.c?t('pickC'):!sel.p?t('pickP'):!sel.o?t('pickO'):'';
+  let h=climate?`<span>${t('inclimate')} <b>${climate}</b> · ${esc(L(ZONES[climate][0],ZONES[climate][1]))}</span><button class="btn ghost" data-a="clear">${t('clear')}</button>`:`<span><b>${t('anyclimate')}</b></span><a class="btn ghost" href="#climate">${t('m.k')}</a>`;
+  if(n)h+=`<button class="btn ghost" data-a="reset">${t('reset')}</button>`;
+  h+=`<button class="btn ghost" data-a="out">${showOut?t('hideout'):t('showout')}</button>`;
+  if(next)h+=`<span style="color:var(--olive)">${next}</span>`;
+  el.innerHTML=h;
+  el.querySelectorAll('[data-a]').forEach(b=>b.onclick=()=>{const a=b.dataset.a;
+    if(a==='clear'){clicked=null;setClimate(null)}
+    if(a==='reset'){sel={c:null,p:null,o:null};renderAll()}
+    if(a==='out'){showOut=!showOut;renderAll()}});
+}
+
+function renderResult(){
+  const el=document.getElementById('result');
+  if(!G.every(g=>sel[g])){el.innerHTML='';return}
+  const cs=G.map(g=>CROP[sel[g]]);
+  const zs=[...inter(G.map(g=>sel[g]))];
+  const all=(()=>{let s=new Set(ALLZ);for(const c of cs)s=new Set([...s].filter(x=>c.z.has(x)));return [...s]})();
+  const tr=TRADS.find(tr=>G.every(g=>tr[0].includes(sel[g])));
+  const kuk=all.includes('Csa');
+  // plate
+  const kc=2000,share={c:.55,p:.20,o:.15};
+  const gC=kc*share.c/cs[0].kcal*100, gP=kc*share.p/cs[1].kcal*100;
+  const o=cs[2]; const oilKcal=884; const gO=kc*share.o/oilKcal*100;
+  const seed=o.oil?gO/(o.oil/100):0;
+  const prot=gC*cs[0].p/100+gP*cs[1].p/100;
+  const r0=v=>Math.round(v).toLocaleString(lang); const r5=v=>(Math.round(v/5)*5).toLocaleString(lang);
+  const yr=v=>Math.round(v*365/1000).toLocaleString(lang);
+  let h=`<div class="kicker">${t('yourtriad')}</div>
+   <div class="triad"><span class="c-c">${esc(cropName(cs[0]))}</span><span class="plus">+</span><span class="c-p">${esc(cropName(cs[1]))}</span><span class="plus">+</span><span class="c-o">${esc(cropName(cs[2]))}</span></div>`;
+  h+=`<div>${t('growTogether')}:</div><div class="chips">${all.map(z=>`<button class="chip${climate===z?' on':''}" data-z="${z}" title="${esc(L(ZONES[z][0],ZONES[z][1]))}"><span class="sw" style="background:rgb(${ZONES[z][4].join(',')})"></span>${z} · ${esc(L(ZONES[z][0],ZONES[z][1]))}</button>`).join('')}</div>`;
+  h+=`<p class="${kuk?'ok':'warn'}">${kuk?'✓ ':''}${t(kuk?'inKuk':'notKuk')}</p>`;
+  if(tr) h+=`<div class="trad"><div class="tn">✦ ${t('known')} · ${esc(L(tr[3],tr[4]))}</div><h3 style="margin:6px 0">${esc(L(tr[1],tr[2]))}</h3><p style="margin:0">${esc(L(tr[5],tr[6]))}</p></div>`;
+  else h+=`<p style="color:var(--muted)">${t('newcombo')}</p>`;
+  h+=`<h3 style="margin-top:22px">${t('plate')}</h3>
+   <div class="plate">
+    <div><div class="v c-c">${r5(gC)}</div><div class="l">${t('gday')} ${esc(cropName(cs[0]))}<br>${yr(gC)} ${t('kgyear')}</div></div>
+    <div><div class="v c-p">${r5(gP)}</div><div class="l">${t('gday')} ${esc(cropName(cs[1]))}<br>${yr(gP)} ${t('kgyear')}</div></div>
+    <div><div class="v c-o">${r0(gO)}</div><div class="l">${t('gday')} ${esc(cropName(cs[2]))}${seed?`<br>≈ ${r5(seed)} g ${t('ofseed')}`:''}</div></div>
+    <div><div class="v">${r0(prot)}</div><div class="l">${t('protday')}</div></div>
+   </div>
+   <p style="font-size:14.5px">${cs[0].p<5?t('aminoRoot'):t('amino')}</p>
+   <div class="note">${t('plateNote')}</div>`;
+  el.innerHTML=`<div class="result">${h}</div>`;
+  el.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{clicked=null;setClimate(climate===b.dataset.z?null:b.dataset.z);document.getElementById('climate').scrollIntoView({behavior:'smooth'})});
+}
+
+function renderTrads(){
+  document.getElementById('tlist').innerHTML=TRADS.map((tr,i)=>`<button class="tcard" data-i="${i}">
+    <div class="tn">${esc(L(tr[3],tr[4]))}</div>
+    <div class="tt">${tr[0].map(id=>esc(cropName(CROP[id]))).join(' · ')}</div>
+    <div class="tp">${esc(L(tr[1],tr[2]))}</div></button>`).join('');
+  document.querySelectorAll('.tcard').forEach(b=>b.onclick=()=>{
+    const tr=TRADS[+b.dataset.i];sel={c:tr[0][0],p:tr[0][1],o:tr[0][2]};
+    if(climate&&!G.every(g=>CROP[sel[g]].z.has(climate)))climate=null;
+    renderAll();document.getElementById('choose').scrollIntoView({behavior:'smooth'});
+  });
+}
+
+function renderAll(){drawMap();drawSvg();renderInfo();renderClist();renderTree();renderFilter();renderResult()}
+
+function apply(){
+  document.documentElement.lang=lang;
+  document.documentElement.dataset.mode=mode==='day'?'day':'night';
+  document.title=lang==='hr'?'Tri kulture · Kukljica EcoOasis':'Three Crops · Kukljica EcoOasis';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const v=T[lang][el.dataset.i18n];if(typeof v==='string')el.textContent=v});
+  document.getElementById('h1').innerHTML=t('h1');
+  document.getElementById('langbtn').innerHTML=lang==='hr'?'<b>HR</b> / EN':'HR / <b>EN</b>';
+  document.getElementById('modebtn').textContent=mode==='day'?'NIGHT':'DAY';
+  renderTrads();renderAll();
+}
+document.getElementById('langbtn').onclick=()=>{lang=lang==='hr'?'en':'hr';try{localStorage.setItem('kel',lang)}catch(e){}apply()};
+document.getElementById('modebtn').onclick=()=>{mode=mode==='day'?'night':'day';try{localStorage.setItem('kem',mode)}catch(e){}apply()};
+apply();
+</script>
+</body>
+</html>
