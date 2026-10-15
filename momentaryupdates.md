@@ -26,3 +26,9 @@
 > Please also make a map and color code each parcel according to the owner so we can see to which family each part belongs. So the— yes, that's it. Make a map, visual representation.
 
 5. The Owner's manual map opens "By family": eight families, one colour each (Vojvodić, Bačić, Martinović / Boško, Ninčević r. Kajica, Kaica, Morović, Gobić, Bosotina), family names written on the map, parcels shared by several families striped in their colours in proportion to their shares, the part not covered by an attached sheet in grey. The legend lists each family's sheets, people, m², share and parcels; tapping a family lights up its land. "By number of sellers" is still one tap away. The ARKOD layer app was not used: it is not in the repository and an Android emulator cannot run here. **Status:** done, v6.
+
+## 15.10.2026 (live cadastre and land register, from the ARKOD Layer app)
+
+> https://github.com/markoboskoauroville/arkod_web https://github.com/markoboskoauroville/mantra_arkod
+
+6. The Owner's manual now reads the state's records the way the ARKOD Layer app does (OSS, oss.uredjenazemlja.hr), fetched 15. 10. 2026, instead of the 2014 sheets: current possession sheets with shares and land use for all 40 parcels (the gaps are closed: PL 405, 410 and 150 found; the core parcels now have their shares), and the 21 land-register folios. A new part "Land register" and a third map view show that only 2456/2 is registered to the people who hold it; on 33 parcels the land register names other people (older generations, the Zaklada Soppe Fortezza on folio 55, the Republic of Croatia for 2450 and 2445/7). Purchase plan and steps rewritten for that. Agreed with him: the page carries names and shares only; addresses, fathers' and maiden names are in `.secret/oss_detail.json`, not published. **Status:** done, v7.

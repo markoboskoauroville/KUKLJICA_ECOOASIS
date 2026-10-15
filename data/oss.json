@@ -1,0 +1,2931 @@
+{
+ "fetched": "2026-10-15",
+ "source": "oss.uredjenazemlja.hr",
+ "parcels": {
+  "2448/13": {
+   "m2": 3213,
+   "place": "Drage",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 3213,
+     "pl": "442"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "442",
+     "people": [
+      {
+       "n": "Martinović Šimica",
+       "share": "1/2"
+      },
+      {
+       "n": "Boško Ivana",
+       "share": "1/2"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "146"
+   ]
+  },
+  "2448/14": {
+   "m2": 380,
+   "place": "Drage",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 380,
+     "pl": "442"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "442",
+     "people": [
+      {
+       "n": "Martinović Šimica",
+       "share": "1/2"
+      },
+      {
+       "n": "Boško Ivana",
+       "share": "1/2"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "146"
+   ]
+  },
+  "2448/6": {
+   "m2": 317,
+   "place": "Drage",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 159,
+     "pl": "79"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 158,
+     "pl": "70"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "79",
+     "people": [
+      {
+       "n": "Bosotina Šime",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "70",
+     "people": [
+      {
+       "n": "Bosotina Ante",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "145"
+   ]
+  },
+  "2449/1": {
+   "m2": 1298,
+   "place": "Drage",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 649,
+     "pl": "79"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 649,
+     "pl": "70"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "79",
+     "people": [
+      {
+       "n": "Bosotina Šime",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "70",
+     "people": [
+      {
+       "n": "Bosotina Ante",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "145"
+   ]
+  },
+  "2449/2": {
+   "m2": 1324,
+   "place": "Drage",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 1324,
+     "pl": "442"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "442",
+     "people": [
+      {
+       "n": "Martinović Šimica",
+       "share": "1/2"
+      },
+      {
+       "n": "Boško Ivana",
+       "share": "1/2"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "144"
+   ]
+  },
+  "2448/1": {
+   "m2": 1364,
+   "place": "Bačić",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 1364,
+     "pl": "11"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "11",
+     "people": [
+      {
+       "n": "Bačić Velimir",
+       "share": "7/36"
+      },
+      {
+       "n": "Tomasov Alenka",
+       "share": "1/36"
+      },
+      {
+       "n": "Batur Marija",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Radenko",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Branka",
+       "share": "4/36"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "643"
+   ]
+  },
+  "2448/10": {
+   "m2": 101,
+   "place": "Drage",
+   "parts": [
+    {
+     "use": "MASLINJAK",
+     "m2": 50,
+     "pl": "149"
+    },
+    {
+     "use": "MASLINJAK",
+     "m2": 51,
+     "pl": "587"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "149",
+     "people": [
+      {
+       "n": "Kaica Čedo",
+       "share": "1/3"
+      },
+      {
+       "n": "Kaica Marija",
+       "share": "1/3"
+      },
+      {
+       "n": "Senija Ivanov",
+       "share": "1/3"
+      }
+     ]
+    },
+    {
+     "pl": "587",
+     "people": [
+      {
+       "n": "Ninčević Marija",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "117"
+   ]
+  },
+  "2448/12": {
+   "m2": 1002,
+   "place": "Drage",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 1002,
+     "pl": "11"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "11",
+     "people": [
+      {
+       "n": "Bačić Velimir",
+       "share": "7/36"
+      },
+      {
+       "n": "Tomasov Alenka",
+       "share": "1/36"
+      },
+      {
+       "n": "Batur Marija",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Radenko",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Branka",
+       "share": "4/36"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "643"
+   ]
+  },
+  "2448/2": {
+   "m2": 630,
+   "place": "Bačić",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 210,
+     "pl": "11"
+    },
+    {
+     "use": "MASLINJAK",
+     "m2": 210,
+     "pl": "587"
+    },
+    {
+     "use": "MASLINJAK",
+     "m2": 210,
+     "pl": "149"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "11",
+     "people": [
+      {
+       "n": "Bačić Velimir",
+       "share": "7/36"
+      },
+      {
+       "n": "Tomasov Alenka",
+       "share": "1/36"
+      },
+      {
+       "n": "Batur Marija",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Radenko",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Branka",
+       "share": "4/36"
+      }
+     ]
+    },
+    {
+     "pl": "587",
+     "people": [
+      {
+       "n": "Ninčević Marija",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "149",
+     "people": [
+      {
+       "n": "Kaica Čedo",
+       "share": "1/3"
+      },
+      {
+       "n": "Kaica Marija",
+       "share": "1/3"
+      },
+      {
+       "n": "Senija Ivanov",
+       "share": "1/3"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "223"
+   ]
+  },
+  "2448/3": {
+   "m2": 791,
+   "place": "Bačić",
+   "parts": [
+    {
+     "use": "MASLINJAK",
+     "m2": 395,
+     "pl": "149"
+    },
+    {
+     "use": "MASLINJAK",
+     "m2": 396,
+     "pl": "587"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "149",
+     "people": [
+      {
+       "n": "Kaica Čedo",
+       "share": "1/3"
+      },
+      {
+       "n": "Kaica Marija",
+       "share": "1/3"
+      },
+      {
+       "n": "Senija Ivanov",
+       "share": "1/3"
+      }
+     ]
+    },
+    {
+     "pl": "587",
+     "people": [
+      {
+       "n": "Ninčević Marija",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "37"
+   ]
+  },
+  "2448/4": {
+   "m2": 906,
+   "place": "Bačić",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 453,
+     "pl": "106"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 227,
+     "pl": "417"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 226,
+     "pl": "418"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "106",
+     "people": [
+      {
+       "n": "Gobić Miroslav",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "417",
+     "people": [
+      {
+       "n": "Vojvodić Tomislav",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "418",
+     "people": [
+      {
+       "n": "Vojvodić Martina",
+       "share": "1/4"
+      },
+      {
+       "n": "Vojvodić Davor",
+       "share": "1/4"
+      },
+      {
+       "n": "Antica Joja",
+       "share": "2/4"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "2010"
+   ]
+  },
+  "2448/7": {
+   "m2": 655,
+   "place": "Drage",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 655,
+     "pl": "351"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "351",
+     "people": [
+      {
+       "n": "Morović Neda",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "37"
+   ]
+  },
+  "2448/8": {
+   "m2": 300,
+   "place": "Drage",
+   "parts": [
+    {
+     "use": "MASLINJAK",
+     "m2": 300,
+     "pl": "11"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "11",
+     "people": [
+      {
+       "n": "Bačić Velimir",
+       "share": "7/36"
+      },
+      {
+       "n": "Tomasov Alenka",
+       "share": "1/36"
+      },
+      {
+       "n": "Batur Marija",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Radenko",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Branka",
+       "share": "4/36"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "223"
+   ]
+  },
+  "2448/9": {
+   "m2": 409,
+   "place": "Drage",
+   "parts": [
+    {
+     "use": "MASLINJAK",
+     "m2": 409,
+     "pl": "11"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "11",
+     "people": [
+      {
+       "n": "Bačić Velimir",
+       "share": "7/36"
+      },
+      {
+       "n": "Tomasov Alenka",
+       "share": "1/36"
+      },
+      {
+       "n": "Batur Marija",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Radenko",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Branka",
+       "share": "4/36"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "221"
+   ]
+  },
+  "2449/3": {
+   "m2": 1726,
+   "place": "Drage",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 432,
+     "pl": "103"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 431,
+     "pl": "104"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 144,
+     "pl": "418"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 432,
+     "pl": "106"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 143,
+     "pl": "412"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 144,
+     "pl": "417"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "103",
+     "people": [
+      {
+       "n": "Gobić Dragutin",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "104",
+     "people": [
+      {
+       "n": "Gobić Šime",
+       "share": "1/4"
+      },
+      {
+       "n": "Gobić Krstina",
+       "share": "2/4"
+      },
+      {
+       "n": "Gobic Boris Jonny Franz",
+       "share": "1/8",
+       "abroad": "Njemačka"
+      },
+      {
+       "n": "Meštrić Miriam",
+       "share": "1/8"
+      }
+     ]
+    },
+    {
+     "pl": "418",
+     "people": [
+      {
+       "n": "Vojvodić Martina",
+       "share": "1/4"
+      },
+      {
+       "n": "Vojvodić Davor",
+       "share": "1/4"
+      },
+      {
+       "n": "Antica Joja",
+       "share": "2/4"
+      }
+     ]
+    },
+    {
+     "pl": "106",
+     "people": [
+      {
+       "n": "Gobić Miroslav",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "412",
+     "people": [
+      {
+       "n": "Vojvodić Božo",
+       "share": "1/1",
+       "abroad": "SAD"
+      }
+     ]
+    },
+    {
+     "pl": "417",
+     "people": [
+      {
+       "n": "Vojvodić Tomislav",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "2010"
+   ]
+  },
+  "2451": {
+   "m2": 1412,
+   "place": "Drage",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 1412,
+     "pl": "351"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "351",
+     "people": [
+      {
+       "n": "Morović Neda",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "37"
+   ]
+  },
+  "2452": {
+   "m2": 1515,
+   "place": "Kod Kućice",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 379,
+     "pl": "410"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 378,
+     "pl": "627"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 379,
+     "pl": "409"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 379,
+     "pl": "416"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "410",
+     "people": [
+      {
+       "n": "Vojvodić Marinko",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "627",
+     "people": [
+      {
+       "n": "Vojvodić Mladen",
+       "share": "1/2"
+      },
+      {
+       "n": "Vojvodić Ante",
+       "share": "1/2"
+      }
+     ]
+    },
+    {
+     "pl": "409",
+     "people": [
+      {
+       "n": "Vojvodić Božidar",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "416",
+     "people": [
+      {
+       "n": "Vojvodić Šime",
+       "share": "1/1",
+       "abroad": "Australija"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "35"
+   ]
+  },
+  "2453": {
+   "m2": 1023,
+   "place": "Kod Kućice",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 1023,
+     "pl": "11"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "11",
+     "people": [
+      {
+       "n": "Bačić Velimir",
+       "share": "7/36"
+      },
+      {
+       "n": "Tomasov Alenka",
+       "share": "1/36"
+      },
+      {
+       "n": "Batur Marija",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Radenko",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Branka",
+       "share": "4/36"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "777"
+   ]
+  },
+  "2454/2": {
+   "m2": 2411,
+   "place": "Kod Kućice",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 2411,
+     "pl": "627"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "627",
+     "people": [
+      {
+       "n": "Vojvodić Mladen",
+       "share": "1/2"
+      },
+      {
+       "n": "Vojvodić Ante",
+       "share": "1/2"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "55"
+   ]
+  },
+  "2454/3": {
+   "m2": 2254,
+   "place": "Kod Kućice",
+   "parts": [
+    {
+     "use": "MASLINJAK",
+     "m2": 1127,
+     "pl": "587"
+    },
+    {
+     "use": "MASLINJAK",
+     "m2": 1127,
+     "pl": "149"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "587",
+     "people": [
+      {
+       "n": "Ninčević Marija",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "149",
+     "people": [
+      {
+       "n": "Kaica Čedo",
+       "share": "1/3"
+      },
+      {
+       "n": "Kaica Marija",
+       "share": "1/3"
+      },
+      {
+       "n": "Senija Ivanov",
+       "share": "1/3"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "277"
+   ]
+  },
+  "2454/5": {
+   "m2": 811,
+   "place": "Kod Kućice",
+   "parts": [
+    {
+     "use": "MASLINJAK",
+     "m2": 406,
+     "pl": "149"
+    },
+    {
+     "use": "MASLINJAK",
+     "m2": 405,
+     "pl": "587"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "149",
+     "people": [
+      {
+       "n": "Kaica Čedo",
+       "share": "1/3"
+      },
+      {
+       "n": "Kaica Marija",
+       "share": "1/3"
+      },
+      {
+       "n": "Senija Ivanov",
+       "share": "1/3"
+      }
+     ]
+    },
+    {
+     "pl": "587",
+     "people": [
+      {
+       "n": "Ninčević Marija",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "55"
+   ]
+  },
+  "2455": {
+   "m2": 1143,
+   "place": "Kod Kućice",
+   "parts": [
+    {
+     "use": "MASLINJAK",
+     "m2": 571,
+     "pl": "149"
+    },
+    {
+     "use": "MASLINJAK",
+     "m2": 572,
+     "pl": "587"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "149",
+     "people": [
+      {
+       "n": "Kaica Čedo",
+       "share": "1/3"
+      },
+      {
+       "n": "Kaica Marija",
+       "share": "1/3"
+      },
+      {
+       "n": "Senija Ivanov",
+       "share": "1/3"
+      }
+     ]
+    },
+    {
+     "pl": "587",
+     "people": [
+      {
+       "n": "Ninčević Marija",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "119"
+   ]
+  },
+  "2456/2": {
+   "m2": 342,
+   "place": "Kod Kućice",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 342,
+     "pl": "627"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "627",
+     "people": [
+      {
+       "n": "Vojvodić Mladen",
+       "share": "1/2"
+      },
+      {
+       "n": "Vojvodić Ante",
+       "share": "1/2"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "1318"
+   ]
+  },
+  "2458/2": {
+   "m2": 519,
+   "place": "Kod Kućice",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 519,
+     "pl": "416"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "416",
+     "people": [
+      {
+       "n": "Vojvodić Šime",
+       "share": "1/1",
+       "abroad": "Australija"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "55"
+   ]
+  },
+  "2458/7": {
+   "m2": 353,
+   "place": "Kod Kućice",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 353,
+     "pl": "416"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "416",
+     "people": [
+      {
+       "n": "Vojvodić Šime",
+       "share": "1/1",
+       "abroad": "Australija"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "55"
+   ]
+  },
+  "2460/1": {
+   "m2": 1061,
+   "place": "Na Njivi",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 1061,
+     "pl": "627"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "627",
+     "people": [
+      {
+       "n": "Vojvodić Mladen",
+       "share": "1/2"
+      },
+      {
+       "n": "Vojvodić Ante",
+       "share": "1/2"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "55"
+   ]
+  },
+  "2460/10": {
+   "m2": 386,
+   "place": "Ozgor Kućice",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 193,
+     "pl": "416"
+    },
+    {
+     "use": "ŠUMA",
+     "m2": 193,
+     "pl": "405"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "416",
+     "people": [
+      {
+       "n": "Vojvodić Šime",
+       "share": "1/1",
+       "abroad": "Australija"
+      }
+     ]
+    },
+    {
+     "pl": "405",
+     "people": [
+      {
+       "n": "Vojvodić Anđelo",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "55"
+   ]
+  },
+  "2460/5": {
+   "m2": 508,
+   "place": "Na Njivi",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 170,
+     "pl": "11"
+    },
+    {
+     "use": "ŠUMA",
+     "m2": 169,
+     "pl": "587"
+    },
+    {
+     "use": "ŠUMA",
+     "m2": 169,
+     "pl": "149"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "11",
+     "people": [
+      {
+       "n": "Bačić Velimir",
+       "share": "7/36"
+      },
+      {
+       "n": "Tomasov Alenka",
+       "share": "1/36"
+      },
+      {
+       "n": "Batur Marija",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Radenko",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Branka",
+       "share": "4/36"
+      }
+     ]
+    },
+    {
+     "pl": "587",
+     "people": [
+      {
+       "n": "Ninčević Marija",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "149",
+     "people": [
+      {
+       "n": "Kaica Čedo",
+       "share": "1/3"
+      },
+      {
+       "n": "Kaica Marija",
+       "share": "1/3"
+      },
+      {
+       "n": "Senija Ivanov",
+       "share": "1/3"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "277"
+   ]
+  },
+  "2460/7": {
+   "m2": 616,
+   "place": "Njiva",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 616,
+     "pl": "409"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "409",
+     "people": [
+      {
+       "n": "Vojvodić Božidar",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "777"
+   ]
+  },
+  "2460/8": {
+   "m2": 83,
+   "place": "Njiva",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 83,
+     "pl": "11"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "11",
+     "people": [
+      {
+       "n": "Bačić Velimir",
+       "share": "7/36"
+      },
+      {
+       "n": "Tomasov Alenka",
+       "share": "1/36"
+      },
+      {
+       "n": "Batur Marija",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Radenko",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Branka",
+       "share": "4/36"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "223"
+   ]
+  },
+  "2460/9": {
+   "m2": 107,
+   "place": "Ozgor Kućice",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 54,
+     "pl": "416"
+    },
+    {
+     "use": "ŠUMA",
+     "m2": 53,
+     "pl": "405"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "416",
+     "people": [
+      {
+       "n": "Vojvodić Šime",
+       "share": "1/1",
+       "abroad": "Australija"
+      }
+     ]
+    },
+    {
+     "pl": "405",
+     "people": [
+      {
+       "n": "Vojvodić Anđelo",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "55"
+   ]
+  },
+  "2461/1": {
+   "m2": 932,
+   "place": "Na Kajičino",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 466,
+     "pl": "409"
+    },
+    {
+     "use": "ŠUMA",
+     "m2": 466,
+     "pl": "416"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "409",
+     "people": [
+      {
+       "n": "Vojvodić Božidar",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "416",
+     "people": [
+      {
+       "n": "Vojvodić Šime",
+       "share": "1/1",
+       "abroad": "Australija"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "55"
+   ]
+  },
+  "2461/2": {
+   "m2": 626,
+   "place": "Na Kajičino",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 313,
+     "pl": "409"
+    },
+    {
+     "use": "ŠUMA",
+     "m2": 313,
+     "pl": "416"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "409",
+     "people": [
+      {
+       "n": "Vojvodić Božidar",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "416",
+     "people": [
+      {
+       "n": "Vojvodić Šime",
+       "share": "1/1",
+       "abroad": "Australija"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "55"
+   ]
+  },
+  "2462/1": {
+   "m2": 374,
+   "place": "Na Kajičino",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 374,
+     "pl": "409"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "409",
+     "people": [
+      {
+       "n": "Vojvodić Božidar",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "27"
+   ]
+  },
+  "2462/2": {
+   "m2": 453,
+   "place": "Na Kajičino",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 453,
+     "pl": "11"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "11",
+     "people": [
+      {
+       "n": "Bačić Velimir",
+       "share": "7/36"
+      },
+      {
+       "n": "Tomasov Alenka",
+       "share": "1/36"
+      },
+      {
+       "n": "Batur Marija",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Radenko",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Branka",
+       "share": "4/36"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "223"
+   ]
+  },
+  "2462/3": {
+   "m2": 525,
+   "place": "Na Kajičino",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 525,
+     "pl": "11"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "11",
+     "people": [
+      {
+       "n": "Bačić Velimir",
+       "share": "7/36"
+      },
+      {
+       "n": "Tomasov Alenka",
+       "share": "1/36"
+      },
+      {
+       "n": "Batur Marija",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Radenko",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Branka",
+       "share": "4/36"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "221"
+   ]
+  },
+  "2462/4": {
+   "m2": 619,
+   "place": "Na Kajičino",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 619,
+     "pl": "409"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "409",
+     "people": [
+      {
+       "n": "Vojvodić Božidar",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "257"
+   ]
+  },
+  "2463/1": {
+   "m2": 1349,
+   "place": "Na Kajičino",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 1349,
+     "pl": "11"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "11",
+     "people": [
+      {
+       "n": "Bačić Velimir",
+       "share": "7/36"
+      },
+      {
+       "n": "Tomasov Alenka",
+       "share": "1/36"
+      },
+      {
+       "n": "Batur Marija",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Radenko",
+       "share": "12/36"
+      },
+      {
+       "n": "Bačić Branka",
+       "share": "4/36"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "43"
+   ]
+  },
+  "2463/6": {
+   "m2": 1349,
+   "place": "Na Kajičino",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 674,
+     "pl": "587"
+    },
+    {
+     "use": "ŠUMA",
+     "m2": 675,
+     "pl": "149"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "587",
+     "people": [
+      {
+       "n": "Ninčević Marija",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "149",
+     "people": [
+      {
+       "n": "Kaica Čedo",
+       "share": "1/3"
+      },
+      {
+       "n": "Kaica Marija",
+       "share": "1/3"
+      },
+      {
+       "n": "Senija Ivanov",
+       "share": "1/3"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "43"
+   ]
+  },
+  "2464": {
+   "m2": 2266,
+   "place": "Kod Lukinih",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 283,
+     "pl": "149"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 850,
+     "pl": "627"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 850,
+     "pl": "150"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 283,
+     "pl": "587"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "149",
+     "people": [
+      {
+       "n": "Kaica Čedo",
+       "share": "1/3"
+      },
+      {
+       "n": "Kaica Marija",
+       "share": "1/3"
+      },
+      {
+       "n": "Senija Ivanov",
+       "share": "1/3"
+      }
+     ]
+    },
+    {
+     "pl": "627",
+     "people": [
+      {
+       "n": "Vojvodić Mladen",
+       "share": "1/2"
+      },
+      {
+       "n": "Vojvodić Ante",
+       "share": "1/2"
+      }
+     ]
+    },
+    {
+     "pl": "150",
+     "people": [
+      {
+       "n": "Fabian Srećko Kaica",
+       "share": "1/1",
+       "abroad": "Australija"
+      }
+     ]
+    },
+    {
+     "pl": "587",
+     "people": [
+      {
+       "n": "Ninčević Marija",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "517"
+   ]
+  },
+  "2445/13": {
+   "m2": 169,
+   "place": "Vanđelje",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 169,
+     "pl": "657"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "657",
+     "people": [
+      {
+       "n": "Općina Kukljica",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "1520"
+   ]
+  },
+  "2445/7": {
+   "m2": 138296,
+   "place": "Maževica",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 573,
+     "pl": "71"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 286,
+     "pl": "78"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 4659,
+     "pl": "264"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 131860,
+     "pl": "657"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 459,
+     "pl": "79"
+    },
+    {
+     "use": "PAŠNJAK",
+     "m2": 459,
+     "pl": "1112"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "71",
+     "people": [
+      {
+       "n": "Bosotina Franko",
+       "share": "1/2"
+      },
+      {
+       "n": "Bosotina Nives",
+       "share": "1/2"
+      }
+     ]
+    },
+    {
+     "pl": "78",
+     "people": [
+      {
+       "n": "Bosotina Svetko",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "264",
+     "people": [
+      {
+       "n": "Martinović Rajko",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "657",
+     "people": [
+      {
+       "n": "Općina Kukljica",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "79",
+     "people": [
+      {
+       "n": "Bosotina Šime",
+       "share": "1/1"
+      }
+     ]
+    },
+    {
+     "pl": "1112",
+     "people": [
+      {
+       "n": "Bačić Marija",
+       "share": "1/2"
+      },
+      {
+       "n": "Mavra Mladen",
+       "share": "1/2"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "1817"
+   ]
+  },
+  "2450": {
+   "m2": 12401,
+   "place": "Drage",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 6201,
+     "pl": "657"
+    },
+    {
+     "use": "ŠUMA",
+     "m2": 6200,
+     "pl": "657"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "657",
+     "people": [
+      {
+       "n": "Općina Kukljica",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "1817"
+   ]
+  }
+ },
+ "folios": {
+  "146": {
+   "kind": "VIŠE ZK TIJELA",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/2",
+     "owners": [
+      {
+       "n": "Gobić Božo"
+      }
+     ]
+    },
+    {
+     "share": "1/2",
+     "owners": [
+      {
+       "n": "Gobić Božo"
+      }
+     ]
+    },
+    {
+     "share": "1/1",
+     "owners": [
+      {
+       "n": "Gobić Božo"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": []
+  },
+  "145": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/1",
+     "owners": [
+      {
+       "n": "Gobić Božo"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "2063/2",
+    "2448/6",
+    "2449/1",
+    "2487/3",
+    "2492/1",
+    "3624/5"
+   ]
+  },
+  "144": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/4",
+     "owners": [
+      {
+       "n": "Gobić Jakov"
+      }
+     ]
+    },
+    {
+     "share": "1/4",
+     "owners": [
+      {
+       "n": "Gobić Pero"
+      }
+     ]
+    },
+    {
+     "share": "1/4",
+     "owners": [
+      {
+       "n": "Vulin Marija"
+      }
+     ]
+    },
+    {
+     "share": "1/16",
+     "owners": [
+      {
+       "n": "Štrk Pave-Krste"
+      }
+     ]
+    },
+    {
+     "share": "2/48",
+     "owners": [
+      {
+       "n": "Štrk Goimir"
+      }
+     ]
+    },
+    {
+     "share": "1/48",
+     "owners": [
+      {
+       "n": "Štrk Gojimir"
+      }
+     ]
+    },
+    {
+     "share": "1/32",
+     "owners": [
+      {
+       "n": "Bosotina Rezija"
+      }
+     ]
+    },
+    {
+     "share": "1/32",
+     "owners": [
+      {
+       "n": "Blaslov Meri"
+      }
+     ]
+    },
+    {
+     "share": "1/32",
+     "owners": [
+      {
+       "n": "Kurtin Meri"
+      }
+     ]
+    },
+    {
+     "share": "1/32",
+     "owners": [
+      {
+       "n": "Bosotina Rezija"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "540/2",
+    "541",
+    "2053/3",
+    "2059/2",
+    "2063/3",
+    "2448/5",
+    "2449/2",
+    "2478/1",
+    "2487/2",
+    "2491",
+    "2637/3",
+    "3384/1",
+    "3384/2",
+    "3601",
+    "3605",
+    "3624/1",
+    "3624/3"
+   ]
+  },
+  "643": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/1",
+     "owners": [
+      {
+       "n": "Kajica Marija"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "2448/1",
+    "2448/12"
+   ]
+  },
+  "117": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/3",
+     "owners": [
+      {
+       "n": "Vojvodić Frane"
+      }
+     ]
+    },
+    {
+     "share": "1/3",
+     "owners": [
+      {
+       "n": "Vojvodić Danica"
+      }
+     ]
+    },
+    {
+     "share": "1/54",
+     "owners": [
+      {
+       "n": "Vojvodić Tomislav"
+      }
+     ]
+    },
+    {
+     "share": "1/54",
+     "owners": [
+      {
+       "n": "Vojvodić Jadranko"
+      }
+     ]
+    },
+    {
+     "share": "45/648",
+     "owners": [
+      {
+       "n": "Vojvodić Tomislav"
+      }
+     ]
+    },
+    {
+     "share": "15/648",
+     "owners": [
+      {
+       "n": "Vojvodić Jana"
+      }
+     ]
+    },
+    {
+     "share": "15/648",
+     "owners": [
+      {
+       "n": "Vojvodić Jan"
+      }
+     ]
+    },
+    {
+     "share": "15/648",
+     "owners": [
+      {
+       "n": "Vojvodić Filip"
+      }
+     ]
+    },
+    {
+     "share": "45/648",
+     "owners": [
+      {
+       "n": "Šango Ecia"
+      }
+     ]
+    },
+    {
+     "share": "45/648",
+     "owners": [
+      {
+       "n": "Vulin Biserka"
+      }
+     ]
+    },
+    {
+     "share": "1/108",
+     "owners": [
+      {
+       "n": "Vojvodić Tomislav"
+      }
+     ]
+    },
+    {
+     "share": "1/324",
+     "owners": [
+      {
+       "n": "Vojvodić Filip"
+      }
+     ]
+    },
+    {
+     "share": "1/324",
+     "owners": [
+      {
+       "n": "Vojvodić Jan"
+      }
+     ]
+    },
+    {
+     "share": "1/324",
+     "owners": [
+      {
+       "n": "Vojvodić Jana"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "5/3.ZGR",
+    "1699/3",
+    "1721",
+    "1722",
+    "1886/2",
+    "1966/1",
+    "1975/2",
+    "2448/10",
+    "2458/3",
+    "2458/8",
+    "2476/1",
+    "2477",
+    "2482/3",
+    "2493/1",
+    "2595/16",
+    "2617/3",
+    "3120/5",
+    "3434/3",
+    "3477",
+    "3889/2",
+    "3891/2"
+   ]
+  },
+  "223": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/4",
+     "owners": [
+      {
+       "n": "Kajica Zane"
+      }
+     ]
+    },
+    {
+     "share": "1/4",
+     "owners": [
+      {
+       "n": "Kajica Marija"
+      }
+     ]
+    },
+    {
+     "share": "1/4",
+     "owners": [
+      {
+       "n": "Bačić Anđelija"
+      }
+     ]
+    },
+    {
+     "share": "1/12",
+     "owners": [
+      {
+       "n": "Bačić Marija"
+      }
+     ]
+    },
+    {
+     "share": "1/12",
+     "owners": [
+      {
+       "n": "Bačić Anđulina"
+      }
+     ]
+    },
+    {
+     "share": "1/12",
+     "owners": [
+      {
+       "n": "Kaica Zana"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "2448/2",
+    "2448/8",
+    "2460/8",
+    "2462/2",
+    "2595/6"
+   ]
+  },
+  "37": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/2",
+     "owners": [
+      {
+       "n": "Morović Pero"
+      }
+     ]
+    },
+    {
+     "share": "4/16",
+     "owners": [
+      {
+       "n": "Morović Pero"
+      }
+     ]
+    },
+    {
+     "share": "1/16",
+     "owners": [
+      {
+       "n": "Morović Katica"
+      }
+     ]
+    },
+    {
+     "share": "1/16",
+     "owners": [
+      {
+       "n": "Morović Sam"
+      }
+     ]
+    },
+    {
+     "share": "1/16",
+     "owners": [
+      {
+       "n": "Ruby Sandy"
+      }
+     ]
+    },
+    {
+     "share": "1/16",
+     "owners": [
+      {
+       "n": "Piscitelle Antonetta"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "1944",
+    "1945/1",
+    "2448/3",
+    "2448/7",
+    "2451",
+    "2666",
+    "2667/1",
+    "3408/3",
+    "3435/1",
+    "3714",
+    "3717/4",
+    "3717/8",
+    "3719/2",
+    "3750/1",
+    "3790/1",
+    "3812/1",
+    "3851/1",
+    "3852/1",
+    "3852/3",
+    "3885/2",
+    "3886/2",
+    "3888/2"
+   ]
+  },
+  "2010": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/2",
+     "owners": [
+      {
+       "n": "Gobić Miroslav"
+      }
+     ]
+    },
+    {
+     "share": "1/2",
+     "owners": [
+      {
+       "n": "Gobić Mileva"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "172/1",
+    "172/2",
+    "172/3",
+    "2448/4",
+    "2449/3",
+    "2478/3",
+    "3604"
+   ]
+  },
+  "221": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/2",
+     "owners": [
+      {
+       "n": "Kajca Anica"
+      }
+     ]
+    },
+    {
+     "share": "1/6",
+     "owners": [
+      {
+       "n": "Kaica Marija"
+      }
+     ]
+    },
+    {
+     "share": "1/6",
+     "owners": [
+      {
+       "n": "Kaica Čedo"
+      }
+     ]
+    },
+    {
+     "share": "1/6",
+     "owners": [
+      {
+       "n": "Kaica Senija"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "303/1",
+    "2448/9",
+    "2454/4",
+    "2458/1",
+    "2460/4",
+    "2460/6",
+    "2462/3",
+    "2857/3"
+   ]
+  },
+  "35": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "2/16",
+     "owners": [
+      {
+       "n": "Vojvodić Dobroslav"
+      }
+     ]
+    },
+    {
+     "share": "2/16",
+     "owners": [
+      {
+       "n": "Vojvodić Lenko"
+      }
+     ]
+    },
+    {
+     "share": "4/16",
+     "owners": [
+      {
+       "n": "Vojvodić Nada"
+      }
+     ]
+    },
+    {
+     "share": "2/16",
+     "owners": [
+      {
+       "n": "Joja Antica"
+      }
+     ]
+    },
+    {
+     "share": "1/16",
+     "owners": [
+      {
+       "n": "Vojvodić Davor"
+      }
+     ]
+    },
+    {
+     "share": "1/16",
+     "owners": [
+      {
+       "n": "Vojvodić Martina"
+      }
+     ]
+    },
+    {
+     "share": "1/4",
+     "owners": [
+      {
+       "n": "Martinović Marija"
+      }
+     ]
+    }
+   ],
+   "burdens": 1,
+   "pending": 1,
+   "parcels": [
+    "1945/2",
+    "1946",
+    "2452",
+    "2667/2",
+    "3435/2",
+    "3715",
+    "3750/2",
+    "3789/2",
+    "3801",
+    "3806/3",
+    "3812/2",
+    "3851/2",
+    "3852/4",
+    "3853/1",
+    "3886/1",
+    "3887/1"
+   ]
+  },
+  "777": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/2",
+     "owners": [
+      {
+       "n": "Kaica Pave"
+      }
+     ]
+    },
+    {
+     "share": "1/2",
+     "owners": [
+      {
+       "n": "Kaica Blaž"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "2453",
+    "2460/7",
+    "2625/1",
+    "2857/1"
+   ]
+  },
+  "55": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/1",
+     "owners": [
+      {
+       "n": "Zaklada Soppe Fortezza, Zadar"
+      }
+     ]
+    }
+   ],
+   "burdens": 1,
+   "pending": 0,
+   "parcels": [
+    "2316",
+    "2318",
+    "2325",
+    "2326/1",
+    "2326/2",
+    "2332",
+    "2334",
+    "2355",
+    "2357",
+    "2440/1",
+    "2440/2",
+    "2443/1",
+    "2443/2",
+    "2444/1",
+    "2444/2",
+    "2444/3",
+    "2454/1",
+    "2454/2",
+    "2454/5",
+    "2458/2",
+    "2458/7",
+    "2458/10",
+    "2460/1",
+    "2460/2",
+    "2460/3",
+    "2460/9",
+    "2460/10",
+    "2461/1",
+    "2461/2",
+    "2541",
+    "2543",
+    "2550",
+    "2553/1",
+    "2553/2",
+    "2553/3",
+    "2553/4",
+    "2554",
+    "2600",
+    "2602",
+    "2609",
+    "2610/1",
+    "2612",
+    "2613",
+    "2614/1",
+    "2614/2",
+    "2615/2",
+    "2615/3",
+    "2616",
+    "2617/1",
+    "2618"
+   ]
+  },
+  "277": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/1",
+     "owners": [
+      {
+       "n": "Martinović Jakov"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "2454/3",
+    "2460/5"
+   ]
+  },
+  "119": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/2",
+     "owners": [
+      {
+       "n": "Vojvodić Ante"
+      }
+     ]
+    },
+    {
+     "share": "1/2",
+     "owners": [
+      {
+       "n": "Vojvodić Mladen"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "2455",
+    "2456/3"
+   ]
+  },
+  "1318": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/2",
+     "owners": [
+      {
+       "n": "Vojvodić Ante"
+      }
+     ]
+    },
+    {
+     "share": "1/2",
+     "owners": [
+      {
+       "n": "Vojvodić Mladen"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "2456/2"
+   ]
+  },
+  "27": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/1",
+     "owners": [
+      {
+       "n": "Martinović Tomo"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "2454/6",
+    "2462/1",
+    "3036",
+    "3038"
+   ]
+  },
+  "257": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/2",
+     "owners": [
+      {
+       "n": "Kaica Paval"
+      }
+     ]
+    },
+    {
+     "share": "3/16",
+     "owners": [
+      {
+       "n": "Kajica Krstina"
+      }
+     ]
+    },
+    {
+     "share": "3/16",
+     "owners": [
+      {
+       "n": "Kajica Milan"
+      }
+     ]
+    },
+    {
+     "share": "1/8",
+     "owners": [
+      {
+       "n": "Jašarević Marija"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "69/1.ZGR",
+    "291/1",
+    "291/3",
+    "2459",
+    "2462/4"
+   ]
+  },
+  "43": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/1",
+     "owners": [
+      {
+       "n": "Stermić Giuseppe"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "2463/1",
+    "2463/2",
+    "2463/3",
+    "2463/6",
+    "2466/1",
+    "2466/2",
+    "2468",
+    "2469/1",
+    "2469/2",
+    "2469/3",
+    "2470/1",
+    "2470/2",
+    "2474/1",
+    "2474/2",
+    "2474/3",
+    "2474/4",
+    "2474/5",
+    "2474/6",
+    "2480/1",
+    "2480/2",
+    "2480/3",
+    "2480/4",
+    "2480/5",
+    "2482/1",
+    "2482/2",
+    "2483/2",
+    "2484/1",
+    "2484/2",
+    "2485",
+    "2501/1",
+    "2501/2",
+    "2501/3",
+    "2502/1",
+    "2502/2",
+    "2508/1",
+    "2508/2",
+    "2509/1",
+    "2509/2",
+    "2512/1",
+    "2512/2",
+    "2512/3",
+    "2570/1",
+    "2570/2",
+    "2574/1",
+    "2574/2",
+    "2576",
+    "2583/1",
+    "2583/2",
+    "2585/1",
+    "2586",
+    "2603"
+   ]
+  },
+  "517": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/1",
+     "owners": [
+      {
+       "n": "Mazor Mile"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "2464",
+    "2472",
+    "2481",
+    "3571/1",
+    "3571/2",
+    "3571/3"
+   ]
+  },
+  "1520": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/3",
+     "owners": [
+      {
+       "n": "Štrk Pave"
+      }
+     ]
+    },
+    {
+     "share": "1/3",
+     "owners": [
+      {
+       "n": "Bilan Božica"
+      }
+     ]
+    },
+    {
+     "share": "1/3",
+     "owners": [
+      {
+       "n": "Martinović Dragomir"
+      }
+     ]
+    }
+   ],
+   "burdens": 1,
+   "pending": 0,
+   "parcels": [
+    "242/1",
+    "244/3",
+    "248/1",
+    "251/1",
+    "259/1",
+    "260/4",
+    "274/2",
+    "277/3",
+    "283/1",
+    "295/3",
+    "303/2",
+    "404/2",
+    "2445/13"
+   ]
+  },
+  "1817": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/1",
+     "owners": [
+      {
+       "n": "Republika Hrvatska"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "1013/1",
+    "1013/10",
+    "2445/7",
+    "2450",
+    "2896/16",
+    "2896/26"
+   ]
+  }
+ }
+}
