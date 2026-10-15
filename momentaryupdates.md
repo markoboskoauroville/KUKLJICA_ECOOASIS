@@ -20,3 +20,9 @@
 > Please make a new section. This is all public data inside my Google Site Oasis called the Owner's Manual, which is statistical view of the owners of the land inside the parcel I marked for my project. We need to see who to contact to buy the land, but right now make like who owns which parcel. and who is the owner of most of the parcels and make different statistical analysis of parcels, their sizes and owners. So it's easy for my lawyer to make a plan to purchase all these parcels for my NGO.
 
 4. "Owner's manual" section (`#owners`, after The land, in the nav as Owners) built from the parcel map data: 40 private parcels, 3,75 ha, 15 possession sheets, 29 people. A map shaded by number of sheets per parcel (tap a parcel or a holder to light up everything they hold), a ranking by sheet, person and family, size and fragmentation statistics, a purchase plan ordered by area with notes for the lawyer (holders abroad, off-book shares, unknown shares, shared parcels) and next steps, and a searchable, sortable register with CSV download. Municipal land listed separately. **Status:** done, v5.
+
+## 15.10.2026 (map by family)
+
+> Please also make a map and color code each parcel according to the owner so we can see to which family each part belongs. So the— yes, that's it. Make a map, visual representation.
+
+5. The Owner's manual map opens "By family": eight families, one colour each (Vojvodić, Bačić, Martinović / Boško, Ninčević r. Kajica, Kaica, Morović, Gobić, Bosotina), family names written on the map, parcels shared by several families striped in their colours in proportion to their shares, the part not covered by an attached sheet in grey. The legend lists each family's sheets, people, m², share and parcels; tapping a family lights up its land. "By number of sellers" is still one tap away. The ARKOD layer app was not used: it is not in the repository and an Android emulator cannot run here. **Status:** done, v6.

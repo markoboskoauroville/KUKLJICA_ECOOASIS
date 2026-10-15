@@ -22,11 +22,13 @@
   --body:'IBM Plex Sans',system-ui,sans-serif;
   --mono:'IBM Plex Mono',ui-monospace,monospace;
   --maxw:1180px;
+  --f1:#3987e5; --f2:#d95926; --f3:#199e70; --f4:#c98500; --f5:#d55181; --f6:#008300; --f7:#9085e9; --f8:#e66767;
 }
 html[data-mode="day"]{
   --bg:#f4f2ed; --surface:#e9e5db; --line:#d2ccbe;
   --text:#1a1f26; --muted:#5c6672;
   --limestone:#3a3222;
+  --f1:#2a78d6; --f2:#eb6834; --f3:#1baf7a; --f4:#eda100; --f5:#e87ba4; --f6:#008300; --f7:#6250d6; --f8:#e34948;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -214,6 +216,18 @@ ol.steps li b{display:block;font-family:var(--mono);font-size:10px;letter-spacin
 #owmap .pp.check{stroke:var(--olive);stroke-width:2;stroke-dasharray:4 3}
 #owmap .pp.sel{fill:var(--ochre)}
 #owmap .pp.dim{fill-opacity:.35}
+#owmap.fm .pp.sel{stroke:var(--text);stroke-width:2.4}
+#owmap.fm .pp.dim{fill-opacity:.16}
+#owmap .fl{font-family:var(--body);font-size:10.5px;font-weight:500;letter-spacing:.01em}
+#owmap.fm text.id{font-size:7.5px;fill:var(--muted)}
+.owfam{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:4px 14px;margin-top:12px}
+.owfam button{display:grid;grid-template-columns:16px minmax(0,1fr) auto;gap:8px;align-items:center;text-align:left;background:none;border:1px solid transparent;border-radius:2px;padding:6px 6px;cursor:pointer;color:var(--text);font-family:var(--body);font-size:13.5px}
+.owfam button:hover,.owfam button.on{border-color:var(--line);background:var(--surface)}
+.owfam button i{width:16px;height:12px;border-radius:2px}
+.owfam button small{font-family:var(--mono);font-size:10.5px;color:var(--muted);white-space:nowrap}
+.owleg .owfam button span{display:block;min-width:0}
+.owfam button span small{display:block;white-space:normal}
+.owleg .owfam button i{width:16px;height:12px}
 #owmap .pp:hover{stroke:var(--text);stroke-width:2}
 #owmap text{font-family:var(--mono);font-size:8.5px;fill:var(--text);pointer-events:none;paint-order:stroke;stroke:var(--surface);stroke-width:2.5px}
 .owleg{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:12px;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
@@ -356,6 +370,7 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
   <p class="owsub" data-i18n="own.mapp"></p>
   <div class="owmapwrap">
     <div>
+      <div class="owtabs" id="owmaptabs" style="margin-top:0"></div>
       <svg id="owmap" role="img" aria-labelledby="owmaptitle"><title id="owmaptitle">Parcels and holders</title></svg>
       <div class="owleg" id="owleg"></div>
     </div>
@@ -770,7 +785,7 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
   <div data-i18n="foot.credit"></div>
   <div data-i18n="foot.sources"></div>
 </div></footer>
-<div class="ver">v5</div>
+<div class="ver">v6</div>
 
 <script>
 /* ============================ i18n ============================ */
@@ -962,7 +977,8 @@ en:{
 "own.legal":"A possession sheet (posjedovni list) is a cadastral record of who uses a parcel. It is not proof of ownership. Ownership is proven only by the land-registry extract (zemljišnoknjižni izvadak). The sheets used here date from {pld} and holders may have died or sold since, so every name below must be checked against the land registry before any offer is made.",
 "own.k.parcels":"private parcels","own.k.area":"hectares, private","own.k.sheets":"possession sheets","own.k.people":"named people","own.k.top3":"of the area held by the top 3 sheets","own.k.abroad":"holders listed abroad","own.k.gap":"m² not covered by an attached sheet","own.k.muni":"ha municipal land next to the project",
 "own.maph":"Map of holdings",
-"own.mapp":"Each parcel is shaded by how many possession sheets share it: the darker, the more sellers. Tap a parcel to see its holders and light up everything else they hold. Tap a name in the ranking below to do the same.",
+"own.mapp":"Two views of the same parcels. By family gives every family its own colour, so you can see at a glance which part of the hillside belongs to whom; a parcel shared by several families is striped in their colours, in proportion to their shares. By number of sellers shades each parcel by how many possession sheets share it. Tap a parcel, a family in the legend, or a name in the ranking below to light up everything that holder has.",
+"own.mt.fam":"By family","own.mt.k":"By number of sellers","own.leg.mix":"shared by several families","own.leg.gap":"no sheet attached for this part","own.fam.note":"Families are grouped by possession sheet: PL 11 is the Bačić heirs with Tomasov and Batur, PL 418 includes Joja Antica, PL 104 includes Meštrić Miriam. Ninčević Marija was born Kajica and may be one family with the Kaica sheet; they are kept apart here until that is confirmed.",
 "own.leg.k1":"one sheet","own.leg.k2":"two sheets","own.leg.k3":"three or more","own.leg.core":"core parcel","own.leg.check":"to verify","own.leg.mu":"Općina Kukljica","own.leg.cx":"other parcel, no sheet attached","own.leg.sel":"selected holder",
 "own.panel.idle":"Tap a parcel on the map or a holder in the ranking.",
 "own.panel.parcel":"Parcel","own.panel.holder":"Holder","own.panel.share":"share","own.panel.gap":"Not covered by any attached sheet: {m} m². The rest is held by someone whose sheet is not attached.","own.panel.unknown":"Shares not known: per the parcel list only. Extract needed.","own.panel.holds":"Holds {m} m² in {c} parcels, {pc} of the project.","own.panel.parcels":"Parcels",
@@ -1177,7 +1193,8 @@ hr:{
 "own.legal":"Posjedovni list je katastarski zapis o tome tko koristi česticu. Nije dokaz vlasništva. Vlasništvo dokazuje samo zemljišnoknjižni izvadak. Ovdje korišteni listovi su od {pld}. i posjednici su od tada možda umrli ili prodali, pa svako ime niže treba provjeriti u zemljišnim knjigama prije bilo kakve ponude.",
 "own.k.parcels":"privatnih čestica","own.k.area":"hektara, privatno","own.k.sheets":"posjedovnih listova","own.k.people":"imenovanih osoba","own.k.top3":"površine drže tri najveća lista","own.k.abroad":"posjednika u inozemstvu","own.k.gap":"m² bez priloženog lista","own.k.muni":"ha općinske zemlje uz projekt",
 "own.maph":"Karta posjeda",
-"own.mapp":"Svaka čestica je zatamnjena prema broju posjedovnih listova koji je dijele: što tamnija, to više prodavatelja. Dodirni česticu da vidiš njezine posjednike i osvijetliš sve ostalo što drže. Isto radi i dodir imena u poretku niže.",
+"own.mapp":"Dva pogleda na iste čestice. Po obitelji daje svakoj obitelji svoju boju, pa se na prvi pogled vidi koji dio padine pripada kome; čestica koju dijeli više obitelji prugasta je u njihovim bojama, razmjerno udjelima. Po broju prodavatelja sjenča svaku česticu prema broju posjedovnih listova koji je dijele. Dodirni česticu, obitelj u legendi ili ime u poretku niže da osvijetliš sve što taj posjednik drži.",
+"own.mt.fam":"Po obitelji","own.mt.k":"Po broju prodavatelja","own.leg.mix":"dijeli više obitelji","own.leg.gap":"za ovaj dio nema priloženog lista","own.fam.note":"Obitelji su grupirane po posjedovnom listu: PL 11 su nasljednici Bačić s Tomasov i Batur, PL 418 uključuje Joja Anticu, PL 104 uključuje Meštrić Miriam. Ninčević Marija rođena je Kajica i možda je ista obitelj kao list Kaica; ovdje su odvojeni dok se to ne potvrdi.",
 "own.leg.k1":"jedan list","own.leg.k2":"dva lista","own.leg.k3":"tri ili više","own.leg.core":"središnja čestica","own.leg.check":"za provjeru","own.leg.mu":"Općina Kukljica","own.leg.cx":"druga čestica, bez lista","own.leg.sel":"odabrani posjednik",
 "own.panel.idle":"Dodirni česticu na karti ili posjednika u poretku.",
 "own.panel.parcel":"Čestica","own.panel.holder":"Posjednik","own.panel.share":"udio","own.panel.gap":"Nije pokriveno nijednim priloženim listom: {m} m². Ostatak drži netko čiji list nije priložen.","own.panel.unknown":"Udjeli nisu poznati: samo prema popisu čestica. Potreban izvadak.","own.panel.holds":"Drži {m} m² na {c} čestica, {pc} projekta.","own.panel.parcels":"Čestice",
@@ -1528,6 +1545,12 @@ const OWM=(()=>{
     gap:P.reduce((a,p)=>a+Math.max(0,p.gap),0), mun:OWN.mun.reduce((a,m)=>a+m[1],0)};
 })();
 
+/* families for the map, one colour each, in order of area. Grouped by possession sheet. */
+const OWFAM=[['Vojvodić',['627','409','416','417','418','412']],['Bačić',['11']],['Martinović / Boško',['442']],['Ninčević (r. Kajica)',['587']],
+  ['Kaica',['149']],['Morović',['351']],['Gobić',['106','103','104']],['Bosotina',['70/79']]];
+const OWFOF={}; OWFAM.forEach(([n,pls],i)=>pls.forEach(pl=>OWFOF[pl]=i));
+let owMapMode='fam';
+function owParcelFams(p){const m={};p.h.forEach(([pl,v])=>{const i=OWFOF[pl];m[i]=(m[i]||0)+v;});return Object.entries(m).map(([i,v])=>[+i,v]).sort((a,b)=>b[1]-a[1]);}
 function owSheetName(s){return 'PL '+s.pl;}
 function owSheetWho(s,withFrac){return s.persons.map(x=>owEsc(x.n)+(withFrac&&x.a!=null?` <span class="x" style="display:inline">${x.a}/${x.b}</span>`:'')).join(' · ');}
 function owSelPls(){ if(!owSel) return new Set(); return owSel.pls; }
@@ -1563,10 +1586,31 @@ function owMap(){
   let s=`<title id="owmaptitle">${owEsc(tt('own.maph'))}</title><defs><pattern id="owhatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="var(--muted)" stroke-width="1" opacity=".45"/></pattern><clipPath id="owclip"><rect width="${W}" height="${H}"/></clipPath></defs><g clip-path="url(#owclip)">`;
   OWN.ctx.forEach(([id,m2,g])=>{s+=`<path class="cx" d="${path(g)}"><title>${id} · ${owNum(m2)} m²</title></path>`;});
   OWN.mun.forEach(([id,m2,cov,g])=>{s+=`<path class="mu" d="${path(g)}"><title>${id} · ${owNum(m2)} m² · Općina Kukljica</title></path>`;});
-  OWM.P.forEach(p=>{s+=`<path class="pp k${Math.min(p.k,3)} ${p.s}" data-id="${p.id}" tabindex="0" role="button" aria-label="${p.id}" d="${path(p.g)}"/>`;});
-  OWM.P.filter(p=>p.m2>=900).forEach(p=>{const [cx,cy]=cen(p.g);s+=`<text x="${cx.toFixed(1)}" y="${(cy+3).toFixed(1)}" text-anchor="middle">${p.id}</text>`;});
+  const fm=owMapMode==='fam'; let defs='';
+  OWM.P.forEach((p,j)=>{
+    let st='';
+    if(fm){const fs=owParcelFams(p);
+      if(fs.length===1&&p.gap<=0) st=`style="fill:var(--f${fs[0][0]+1})"`;
+      else{ const per=9; let x=0, r='';
+        fs.forEach(([i,v])=>{const w=per*v/p.m2;r+=`<rect x="${x.toFixed(2)}" width="${w.toFixed(2)}" height="${per}" style="fill:var(--f${i+1})"/>`;x+=w;});
+        if(p.gap>0) r+=`<rect x="${x.toFixed(2)}" width="${(per-x).toFixed(2)}" height="${per}" style="fill:var(--line)"/>`;
+        defs+=`<pattern id="owp${j}" width="${per}" height="${per}" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">${r}</pattern>`;
+        st=`style="fill:url(#owp${j})"`; }}
+    s+=`<path class="pp k${Math.min(p.k,3)} ${p.s}" data-id="${p.id}" tabindex="0" role="button" aria-label="${p.id}" ${st} d="${path(p.g)}"/>`;});
+  const famAt=new Set(), famXY=[];
+  if(fm) OWFAM.forEach(([n],i)=>{
+    const cand=OWM.P.map(p=>[p,(owParcelFams(p).find(f=>f[0]===i)||[0,0])[1]]).filter(c=>c[1]>0).sort((a,b)=>b[1]-a[1]).map(c=>c[0]);
+    const nm=n.split(' ')[0], hw=nm.length*3.1;
+    const ok=(x,y)=>!famXY.some(([fx,fy,fw])=>Math.abs(fx-x)<fw+hw+4&&Math.abs(fy-y)<12);
+    let spot=null;
+    for(const p of cand){ if(famAt.has(p.id)) continue; const [cx,cy]=cen(p.g);
+      const dy=[0,-14,14].find(d=>ok(cx,cy+d)); if(dy!==undefined){spot=[p,cx,cy+dy];break;} }
+    if(!spot&&cand[0]){const [cx,cy]=cen(cand[0].g);spot=[cand[0],cx,cy];}
+    if(spot){const [best,cx,cy]=spot;famAt.add(best.id);famXY.push([cx,cy,hw]);s+=`<text class="fl" x="${cx.toFixed(1)}" y="${(cy+4).toFixed(1)}" text-anchor="middle">${owEsc(nm)}</text>`;}});
+  OWM.P.filter(p=>p.m2>=900&&!famAt.has(p.id)).forEach(p=>{const [cx,cy]=cen(p.g);if(famXY.some(([fx,fy,hw])=>Math.abs(fx-cx)<hw+16&&Math.abs(fy-cy)<12))return;s+=`<text class="id" x="${cx.toFixed(1)}" y="${(cy+3).toFixed(1)}" text-anchor="middle">${p.id}</text>`;});
+  s=s.replace('</defs>',defs+'</defs>');
   s+='</g>';
-  const svg=document.getElementById('owmap'); svg.setAttribute('viewBox',`0 0 ${W.toFixed(0)} ${H.toFixed(0)}`); svg.innerHTML=s;
+  const svg=document.getElementById('owmap'); svg.classList.toggle('fm',fm); svg.setAttribute('viewBox',`0 0 ${W.toFixed(0)} ${H.toFixed(0)}`); svg.innerHTML=s;
   const tip=document.getElementById('owtip');
   svg.querySelectorAll('.pp').forEach(el=>{
     const p=OWM.P.find(q=>q.id===el.dataset.id);
@@ -1578,7 +1622,20 @@ function owMap(){
     el.addEventListener('click',pick);
     el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick();}});
   });
+  document.getElementById('owmaptabs').innerHTML=['fam','k'].map(m=>`<button type="button" class="${m===owMapMode?'on':''}" data-m="${m}">${tt('own.mt.'+m)}</button>`).join('');
+  document.querySelectorAll('#owmaptabs button').forEach(b=>b.addEventListener('click',()=>{owMapMode=b.dataset.m;owMap();}));
   const sw=(st,lab)=>`<span><i style="${st}"></i>${tt(lab)}</span>`;
+  if(fm){
+    const fa=OWFAM.map(([n,pls],i)=>{const m2=pls.reduce((a,pl)=>a+OWM.sheets[pl].m2,0);const ppl=new Set();pls.forEach(pl=>OWM.sheets[pl].persons.forEach(x=>ppl.add(x.n)));
+      const ps=new Set();pls.forEach(pl=>OWM.sheets[pl].parcels.forEach(id=>ps.add(id)));return {n,pls,i,m2,ppl:ppl.size,c:ps.size};});
+    document.getElementById('owleg').innerHTML=`<div class="owfam" style="width:100%">`+fa.map(f=>`<button type="button" data-i="${f.i}"><i style="background:var(--f${f.i+1})"></i><span>${owEsc(f.n)}<small>${f.pls.map(p=>'PL '+p).join(', ')} · ${f.ppl} ${tt('own.people')}</small></span><small>${owNum(f.m2)} m²<br>${owPct(f.m2/OWM.total)} · ${owPar(f.c)}</small></button>`).join('')+`</div>`+
+      sw('background:repeating-linear-gradient(45deg,var(--f1) 0 4px,var(--f2) 4px 8px)','own.leg.mix')+sw('background:var(--line)','own.leg.gap')+sw('border:2px solid var(--olive)','own.leg.core')+sw('border:2px dashed var(--olive)','own.leg.check')+
+      sw('background:repeating-linear-gradient(45deg,var(--muted) 0 1px,transparent 1px 4px)','own.leg.mu')+sw('border:1px solid var(--muted)','own.leg.cx')+
+      `<p class="x" style="margin:6px 0 0;max-width:70ch;line-height:1.6">${tt('own.fam.note')}</p>`;
+    document.querySelectorAll('#owleg .owfam button').forEach(b=>b.addEventListener('click',()=>{const f=fa[+b.dataset.i];
+      if(owSel&&owSel.kind==='famleg'&&owSel.label===f.n){owSelect(null);return;} owSelectSheets(f.n,f.pls,'famleg');}));
+    owPaintSel(); return;
+  }
   document.getElementById('owleg').innerHTML=
     sw('background:rgba(42,161,152,.28)','own.leg.k1')+sw('background:rgba(42,161,152,.55)','own.leg.k2')+sw('background:rgba(42,161,152,.88)','own.leg.k3')+
     sw('background:var(--ochre)','own.leg.sel')+sw('border:2px solid var(--olive)','own.leg.core')+sw('border:2px dashed var(--olive)','own.leg.check')+
@@ -1590,6 +1647,7 @@ function owPaintSel(){
   document.querySelectorAll('#owmap .pp').forEach(el=>{
     const p=OWM.P.find(q=>q.id===el.dataset.id), on=owSel&&p.h.some(([pl])=>pls.has(pl));
     el.classList.toggle('sel',!!on); el.classList.toggle('dim',!!owSel&&!on);});
+  document.querySelectorAll('#owleg .owfam button').forEach(el=>el.classList.toggle('on',!!owSel&&owSel.kind==='famleg'&&owSel.label===OWFAM[+el.dataset.i][0]));
   document.querySelectorAll('#owrank .owbar').forEach(el=>el.classList.toggle('on',!!owSel&&owSel.kind===owView&&owSel.label===el.dataset.key));
   document.querySelectorAll('#owreg tr[data-id]').forEach(el=>el.classList.toggle('hl',!!owSel&&owSel.parcels.has(el.dataset.id)));
 }
