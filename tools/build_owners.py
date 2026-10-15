@@ -23,15 +23,18 @@ OSS = ROOT / 'data' / 'oss.json'
 DETAIL = ROOT / '.secret' / 'oss_detail.json'
 INDEX = ROOT / 'index.html'
 
-parcels = json.loads(re.search(r'^const PARCELS = (\[.*\]);\s*$', KARTA.read_text(encoding='utf-8'), re.M).group(1))
+import sys
+sys.path.insert(0, str(ROOT / 'tools'))
+import project
+parcels = project.karta()
 oss = json.loads(OSS.read_text(encoding='utf-8'))
 detail = json.loads(DETAIL.read_text(encoding='utf-8')) if DETAIL.exists() else None
 
-PROJECT = ('core', 'check', 'doc')
-proj = [p for p in parcels if p['s'] in PROJECT]
+proj = [dict(p, s=st) for p, st in project.project(parcels)]
+in_project = {p['id'] for p in proj}
 muni = [p for p in parcels if p['s'] == 'opcina']
 SPELL = {'Gobic': 'Gobić'}  # same family, spelled without the diacritic on one sheet
-FIRST_NAME_FIRST = {'Antica Joja': 'Joja', 'Senija Ivanov': 'Ivanov'}  # written first name first on the sheet
+FIRST_NAME_FIRST = {'Antica Joja': 'Joja', 'Senija Ivanov': 'Ivanov', 'Edi Maričić': 'Maričić', 'Biserka Vulin': 'Vulin', 'Filip Vojvodić': 'Vojvodić'}  # written first name first on the sheet
 
 def ring(p):
     return [[round(x, 6), round(y, 6)] for x, y in p['g'][0]]
@@ -95,10 +98,10 @@ for p in muni:
 xs = [pt[0] for r in rows for pt in r[4]]; ys = [pt[1] for r in rows for pt in r[4]]
 x0, x1, y0, y1 = min(xs), max(xs), min(ys), max(ys)
 ctx = [[p['id'], p['m2'], ring(p)] for p in parcels
-       if p['s'] == 'other' and any(x0 <= x <= x1 and y0 <= y <= y1 for x, y in p['g'][0])]
+       if p['s'] == 'other' and p['id'] not in in_project and any(x0 <= x <= x1 and y0 <= y <= y1 for x, y in p['g'][0])]
 
 y, m, d = oss['fetched'].split('-')
-data = {'date': '7. 9. 2026.', 'pldate': f'{int(d)}. {int(m)}. {y}.', 'p': rows, 'pl': sheets, 'zk': zk, 'mun': mrows,
+data = {'date': '7. 9. 2026.', 'pldate': f'{int(d)}. {int(m)}. {y}.', 'iso': oss['fetched'], 'p': rows, 'pl': sheets, 'zk': zk, 'mun': mrows,
         'ctx': ctx, 'box': [x0, x1, y0, y1]}
 line = 'const OWN=' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';'
 

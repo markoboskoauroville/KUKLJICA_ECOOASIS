@@ -1726,6 +1726,286 @@
     "517"
    ]
   },
+  "2448/11": {
+   "m2": 133,
+   "place": "Drage",
+   "parts": [
+    {
+     "use": "MASLINJAK",
+     "m2": 133,
+     "pl": "150"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "150",
+     "people": [
+      {
+       "n": "Fabian Srećko Kaica",
+       "share": "1/1",
+       "abroad": "Australija"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "118"
+   ]
+  },
+  "2448/5": {
+   "m2": 698,
+   "place": "Drage",
+   "parts": [
+    {
+     "use": "MASLINJAK",
+     "m2": 698,
+     "pl": "442"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "442",
+     "people": [
+      {
+       "n": "Martinović Šimica",
+       "share": "1/2"
+      },
+      {
+       "n": "Boško Ivana",
+       "share": "1/2"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "144"
+   ]
+  },
+  "2454/1": {
+   "m2": 3377,
+   "place": "Kod Kućice",
+   "parts": [
+    {
+     "use": "PAŠNJAK",
+     "m2": 3377,
+     "pl": "150"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "150",
+     "people": [
+      {
+       "n": "Fabian Srećko Kaica",
+       "share": "1/1",
+       "abroad": "Australija"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "55"
+   ]
+  },
+  "2454/4": {
+   "m2": 621,
+   "place": "Kod Kućice",
+   "parts": [
+    {
+     "use": "MASLINJAK",
+     "m2": 621,
+     "pl": "150"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "150",
+     "people": [
+      {
+       "n": "Fabian Srećko Kaica",
+       "share": "1/1",
+       "abroad": "Australija"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "221"
+   ]
+  },
+  "2456/1": {
+   "m2": 339,
+   "place": "Mažovica",
+   "parts": [
+    {
+     "use": "MASLINJAK",
+     "m2": 339,
+     "pl": "557"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "557",
+     "people": [
+      {
+       "n": "Edi Maričić",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "839"
+   ]
+  },
+  "2456/3": {
+   "m2": 902,
+   "place": "Kod Kućice",
+   "parts": [
+    {
+     "use": "MASLINJAK",
+     "m2": 902,
+     "pl": "150"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "150",
+     "people": [
+      {
+       "n": "Fabian Srećko Kaica",
+       "share": "1/1",
+       "abroad": "Australija"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "119"
+   ]
+  },
+  "2459": {
+   "m2": 227,
+   "place": "Kod Kućice",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 227,
+     "pl": "406"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "406",
+     "people": [
+      {
+       "n": "Vojvodić Tomislav",
+       "share": "3/12"
+      },
+      {
+       "n": "Vojvodić Jana",
+       "share": "1/12"
+      },
+      {
+       "n": "Vojvodić Jan",
+       "share": "1/12"
+      },
+      {
+       "n": "Šango Ecia",
+       "share": "3/12"
+      },
+      {
+       "n": "Biserka Vulin",
+       "share": "3/12"
+      },
+      {
+       "n": "Filip Vojvodić",
+       "share": "1/12"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "257"
+   ]
+  },
+  "2460/2": {
+   "m2": 1057,
+   "place": "Na Njivi",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 1057,
+     "pl": "150"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "150",
+     "people": [
+      {
+       "n": "Fabian Srećko Kaica",
+       "share": "1/1",
+       "abroad": "Australija"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "55"
+   ]
+  },
+  "2460/4": {
+   "m2": 463,
+   "place": "Na Njivi",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 463,
+     "pl": "150"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "150",
+     "people": [
+      {
+       "n": "Fabian Srećko Kaica",
+       "share": "1/1",
+       "abroad": "Australija"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "221"
+   ]
+  },
+  "2463/2": {
+   "m2": 1510,
+   "place": "Na Kajičino",
+   "parts": [
+    {
+     "use": "ŠUMA",
+     "m2": 1510,
+     "pl": "196"
+    }
+   ],
+   "sheets": [
+    {
+     "pl": "196",
+     "people": [
+      {
+       "n": "Lisica Ante",
+       "share": "1/1"
+      }
+     ]
+    }
+   ],
+   "folios": [
+    "43"
+   ]
+  },
   "2445/13": {
    "m2": 169,
    "place": "Vanđelje",
@@ -2854,6 +3134,274 @@
     "3571/1",
     "3571/2",
     "3571/3"
+   ]
+  },
+  "118": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "13/80",
+     "owners": [
+      {
+       "n": "Vojvodić Šime"
+      }
+     ]
+    },
+    {
+     "share": "13/80",
+     "owners": [
+      {
+       "n": "Vojvodić Jadre"
+      }
+     ]
+    },
+    {
+     "share": "1/64",
+     "owners": [
+      {
+       "n": "Lisica Šime"
+      }
+     ]
+    },
+    {
+     "share": "1/64",
+     "owners": [
+      {
+       "n": "Lisica Carlo"
+      }
+     ]
+    },
+    {
+     "share": "1/64",
+     "owners": [
+      {
+       "n": "Lisica Augustin"
+      }
+     ]
+    },
+    {
+     "share": "39/640",
+     "owners": [
+      {
+       "n": "Vojvodić Anđelko"
+      }
+     ]
+    },
+    {
+     "share": "39/640",
+     "owners": [
+      {
+       "n": "Vojvodić Marija"
+      }
+     ]
+    },
+    {
+     "share": "195/2560",
+     "owners": [
+      {
+       "n": "Vojvodić Anđelo"
+      }
+     ]
+    },
+    {
+     "share": "26/2560",
+     "owners": [
+      {
+       "n": "Vojvodić Milan"
+      }
+     ]
+    },
+    {
+     "share": "1/128",
+     "owners": [
+      {
+       "n": "Lisica Franica"
+      }
+     ]
+    },
+    {
+     "share": "13/640",
+     "owners": [
+      {
+       "n": "Boško Denis"
+      }
+     ]
+    },
+    {
+     "share": "18/160",
+     "owners": [
+      {
+       "n": "Vojvodić Ante"
+      }
+     ]
+    },
+    {
+     "share": "18/160",
+     "owners": [
+      {
+       "n": "Vojvodić Mladen"
+      }
+     ]
+    },
+    {
+     "share": "5/80",
+     "owners": [
+      {
+       "n": "Martinović Krstina-Marija"
+      }
+     ]
+    },
+    {
+     "share": "195/2560",
+     "owners": [
+      {
+       "n": "Vojvodić Božidar"
+      }
+     ]
+    },
+    {
+     "share": "13/2560",
+     "owners": [
+      {
+       "n": "Boško Marinko"
+      }
+     ]
+    },
+    {
+     "share": "13/2560",
+     "owners": [
+      {
+       "n": "Boško Svetko"
+      }
+     ]
+    },
+    {
+     "share": "13/2560",
+     "owners": [
+      {
+       "n": "Boško Tomislav"
+      }
+     ]
+    },
+    {
+     "share": "13/7680",
+     "owners": [
+      {
+       "n": "Boško Marinko"
+      }
+     ]
+    },
+    {
+     "share": "13/7680",
+     "owners": [
+      {
+       "n": "Boško Svetko"
+      }
+     ]
+    },
+    {
+     "share": "13/7680",
+     "owners": [
+      {
+       "n": "Boško Tomislav"
+      }
+     ]
+    },
+    {
+     "share": "1/384",
+     "owners": [
+      {
+       "n": "Bilan Diana"
+      }
+     ]
+    },
+    {
+     "share": "1/384",
+     "owners": [
+      {
+       "n": "Martinović Franka"
+      }
+     ]
+    },
+    {
+     "share": "1/384",
+     "owners": [
+      {
+       "n": "Selestrin Dragana"
+      }
+     ]
+    }
+   ],
+   "burdens": 1,
+   "pending": 0,
+   "parcels": [
+    "5/1.ZGR",
+    "5/4.ZGR",
+    "1651",
+    "1699/1",
+    "1798/5",
+    "1966/2",
+    "1975/1",
+    "2448/11",
+    "2458/5",
+    "2458/9",
+    "2476/2",
+    "2482/4",
+    "2493/2",
+    "2591/3",
+    "2595/5",
+    "2595/15",
+    "3120/23",
+    "3434/2",
+    "3476",
+    "3891/4",
+    "3892/2"
+   ]
+  },
+  "839": {
+   "kind": "VLASNIČKI",
+   "office": "Zemljišnoknjižni odjel Zadar",
+   "shares": [
+    {
+     "share": "1/2",
+     "owners": [
+      {
+       "n": "Kaica Marija"
+      }
+     ]
+    },
+    {
+     "share": "1/6",
+     "owners": [
+      {
+       "n": "Bačić Marija"
+      }
+     ]
+    },
+    {
+     "share": "1/6",
+     "owners": [
+      {
+       "n": "Bačić Anđulina"
+      }
+     ]
+    },
+    {
+     "share": "1/6",
+     "owners": [
+      {
+       "n": "Kaica Zana"
+      }
+     ]
+    }
+   ],
+   "burdens": 0,
+   "pending": 0,
+   "parcels": [
+    "2456/1",
+    "2458/6",
+    "2857/2"
    ]
   },
   "1520": {

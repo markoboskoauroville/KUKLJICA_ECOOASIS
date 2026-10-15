@@ -78,9 +78,12 @@ def reg_name(raw):
     return ' '.join(w[:2]).title(), ' '.join(w[2:])
 
 def parcel_numbers():
-    html = (ROOT / 'index.html').read_text(encoding='utf-8')
-    own = json.loads(re.search(r'^const OWN=(\{.*\});$', html, re.M).group(1))
-    return [p[0] for p in own['p']] + [m[0] for m in own['mun']]
+    """The project (tools/project.py) and the municipal parcels next to it."""
+    import sys
+    sys.path.insert(0, str(ROOT / 'tools'))
+    import project
+    parcels = project.karta()
+    return [p['id'] for p, _ in project.project(parcels)] + [p['id'] for p in parcels if p['s'] == 'opcina']
 
 def main():
     RAW.mkdir(parents=True, exist_ok=True)
@@ -135,6 +138,10 @@ def main():
     for fo in pub['folios'].values():
         for sh in fo['shares']:
             sh['owners'] = [{'n': x['n']} for x in sh['owners']]
+    if OUT.exists():  # nothing changed: keep the date of the last change, so the page and git stay still
+        old = json.loads(OUT.read_text(encoding='utf-8'))
+        if {k: v for k, v in old.items() if k != 'fetched'} == {k: v for k, v in pub.items() if k != 'fetched'}:
+            pub['fetched'] = old['fetched']
     OUT.write_text(json.dumps(pub, ensure_ascii=False, indent=1), encoding='utf-8')
     print('wrote', OUT, 'and', DETAIL)
 

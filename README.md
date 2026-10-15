@@ -32,3 +32,14 @@ Data, refreshed in two steps from the repo root:
    shares, folio numbers and the country of holders abroad. Delete `.secret/oss/` to fetch afresh.
 2. `python3 tools/build_owners.py` joins that with the DGU geometry in `.build/karta.html` and writes
    the data line between the `OWNERS-DATA` markers in `index.html`.
+
+Which parcels count: `tools/project.py`, the field map's listed parcels plus any parcel whose edge runs
+at least 60 % along them (found 15.10.2026: 2454/1 and nine more, marked "inside the area").
+
+Staying current:
+- **Check the cadastre now** (button in the section) reads every parcel again through
+  `functions/api/oss/[[path]].js`, a Cloudflare Pages Function that only answers for k.o. Kukljica and
+  its land book and cuts every answer down to names and shares. Changes are listed and drawn at once
+  and kept in that browser. It works on the Cloudflare site, not on GitHub Pages or a local file.
+- `.github/workflows/refresh-owners.yml` runs both tools every morning and commits and deploys only
+  when the cadastre or the land register changed.

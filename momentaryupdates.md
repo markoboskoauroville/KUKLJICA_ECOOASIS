@@ -32,3 +32,12 @@
 > https://github.com/markoboskoauroville/arkod_web https://github.com/markoboskoauroville/mantra_arkod
 
 6. The Owner's manual now reads the state's records the way the ARKOD Layer app does (OSS, oss.uredjenazemlja.hr), fetched 15. 10. 2026, instead of the 2014 sheets: current possession sheets with shares and land use for all 40 parcels (the gaps are closed: PL 405, 410 and 150 found; the core parcels now have their shares), and the 21 land-register folios. A new part "Land register" and a third map view show that only 2456/2 is registered to the people who hold it; on 33 parcels the land register names other people (older generations, the Zaklada Soppe Fortezza on folio 55, the Republic of Croatia for 2450 and 2445/7). Purchase plan and steps rewritten for that. Agreed with him: the page carries names and shares only; addresses, fathers' and maiden names are in `.secret/oss_detail.json`, not published. **Status:** done, v7.
+
+## 15.10.2026 (refresh, the gap, private PDF)
+
+> Please also make in owner's manual refreshment. So if I check refresh, maybe cadaster has changed or owner's manual changed, owner's data changed. So app is live and can fetch new data if something has changed. It will update the page itself. Give me a PDF with the analysis of the owners with all this private data only for me. Nothing goes public. Create PDF.
+> Why this part is empty? There is nothing. Who owns this partcel
+
+7. The gap was 2454/1 (3 377 m², PL 150 Fabian Srećko Kaica, folio 55), in the field map but never on the list. Every parcel whose edge runs mostly along the project is now counted, marked "inside the area": ten parcels, 9 327 m² (six of them PL 150, and 2448/5 is PL 442). **Status:** done, v8.
+8. "Check the cadastre now" button, a Pages Function proxy that passes names and shares only, and a daily workflow that commits and deploys when the records change. **Status:** done, v8; the button and the morning check need the site on Cloudflare (the deploy secrets).
+9. Private PDF with addresses, fathers' and maiden names, burdens: made in `.secret/`, sent to him in the session, never committed. **Status:** done.

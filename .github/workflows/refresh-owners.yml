@@ -1,0 +1,57 @@
+name: Refresh Owner's manual
+# Every morning: read the project parcels again from the state's cadastre and land register
+# (tools/fetch_oss.py), rebuild the page data (tools/build_owners.py), and if anything changed,
+# commit it to main and deploy. Raw answers and private detail live only on the runner's disk
+# (.secret/ is git-ignored) and are thrown away with it.
+on:
+  schedule:
+    - cron: '23 4 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: refresh-owners
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read the state's records
+        run: python3 tools/fetch_oss.py
+      - name: Rebuild the page data
+        run: python3 tools/build_owners.py
+      - name: Commit if anything changed
+        id: commit
+        run: |
+          if git diff --quiet -- data/oss.json index.html; then
+            echo "Nothing changed in the cadastre or the land register."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/oss.json index.html
+            git commit -m "Owner's manual: cadastre or land register changed ($(date -u +%Y-%m-%d))"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Check deploy credentials
+        id: creds
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CF_API_TOKEN" ] || [ -z "$CF_ACCOUNT_ID" ]; then echo "ready=false" >> "$GITHUB_OUTPUT"; else echo "ready=true" >> "$GITHUB_OUTPUT"; fi
+      # a push made with GITHUB_TOKEN does not start the deploy workflow, so deploy here
+      - name: Build and deploy
+        if: steps.creds.outputs.ready == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          bash build.sh
+          npx --yes wrangler@4 pages deploy dist --project-name kukljica-ecooasis --branch main
