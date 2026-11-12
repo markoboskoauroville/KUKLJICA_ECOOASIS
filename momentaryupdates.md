@@ -20,3 +20,5 @@
 > /Users/markobosko/Pictures/Panorama Stitching/IMG_20251217_124553537_PANORAMA.tiff Please make this photo small size, good for web, and add it to the photo gallery inside my website Kuklica Eco Oasis.
 
 > please teach Queen how to do this Now you need to supervise her before each move. She's going to ask approval from you, so she doesn't mess up my website.
+
+4. The panorama of 17.12.2025 (from Pictures/Panorama Stitching, 322 MB TIFF) as a 2400 x 1025 JPEG of 430 KB in a new section "Photo gallery / Fotogalerija" before "join", full width, captions EN/HR. **Status:** done, v5 by Queen (Groq AI Studio), every step approved by Claude Code, live at kukljica-ecooasis.pages.dev/#gallery and confirmed by her screenshot. The README's live address now names Cloudflare Pages.
