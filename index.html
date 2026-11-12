@@ -164,6 +164,7 @@ ol.steps li:before{content:counter(st,decimal-leading-zero);position:absolute;le
 ol.steps li b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 
 /* gallery */
+.pano{margin:34px 0}.pano img{width:100%;height:auto;display:block}
 .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin:34px 0}
 .gal figure{margin:0}
 .gal.real img{width:100%;aspect-ratio:4/3;object-fit:cover}
@@ -641,6 +642,13 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
   <div class="inf" id="inflist"></div>
 </div></section>
 
+<section id="gallery"><div class="wrap"><div class="slab"></div>
+  <div class="kicker" data-i18n="gal.kicker"></div>
+  <h2 data-i18n="gal.h"></h2>
+  <figure class="pano"><img src="img/panorama-2025-12-17.jpg" alt="Panorama over green Mediterranean shrubland to the sea and small islands under an overcast sky" loading="lazy" width="2400" height="1025"><figcaption data-i18n="gal.c1"></figcaption></figure>
+  <!-- gallery:end -->
+</div></section>
+
 <section id="join"><div class="wrap"><div class="slab"></div>
   <div class="kicker" data-i18n="join.kicker"></div>
   <h2 data-i18n="join.h"></h2>
@@ -659,6 +667,7 @@ footer{padding:56px 0 40px;font-family:var(--mono);font-size:11px;color:var(--mu
 /* ============================ i18n ============================ */
 const T = {
 en:{
+"gal.kicker":"Photo gallery","gal.h":"Views of the land","gal.c1":"Over the macchia to the sea and the small islands, an overcast December noon (17 December 2025).",
 "credit.kacan":"Aerial photographs by Boris Kačan · boriskacan.com · used with permission",
 "land.cap2":"The headland and the tombolo that joins it to the rest of the land. The pale line is the beach path.",
 "hist.cap":"Aleppo pine canopy on the parcel. Dense, even and almost unbroken, with the old terrace lines still readable beneath it.",
@@ -842,6 +851,7 @@ en:{
 "foot.sources":"Sources: boriskacan.com · sadhanaforest.org · dragodid.org · suhozid.hr · geaviva.net · auroville.org"
 },
 hr:{
+"gal.kicker":"Fotogalerija","gal.h":"Pogledi na posjed","gal.c1":"Preko makije prema moru i otočićima, oblačno prosinačko podne (17. prosinca 2025.).",
 "credit.kacan":"Zračne fotografije Boris Kačan · boriskacan.com · objavljeno uz dopuštenje",
 "land.cap2":"Rt i prevlaka koja ga spaja s ostatkom zemlje. Svijetla crta je put po žalu.",
 "hist.cap":"Sklop alepskog bora na čestici. Gust, ujednačen i gotovo neprekinut, a ispod njega se još čitaju stare linije terasa.",
