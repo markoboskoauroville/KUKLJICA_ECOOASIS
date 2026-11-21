@@ -9,6 +9,12 @@
 
 2. His own bunja photos (Google Photos album "Brac-5/27/14", 27.5.2014, not copyrighted) in the bunja section, and Green and Go as a child project. **Status:** done, v3: "Prave bunje, Brač, svibanj 2014." with six photos and captions in HR and EN, after the six visualisations; a section "Projekt izdanak: Green and Go Croatian Islands" before the phases, with the solar bunja and a link.
 
+## 11.10.2026
+
+> adapt the growing principle to my diet, rice and dal, olive oil; Marko diet plan on the website with all numbers; what grows in Dalmatia, the climate; reread the Pelman transcript
+
+3. New section "Marko's plate / Markov tanjur" after Growing food, EN and HR, with nav link. Daily plate (2,202 kcal, 66.6 g protein), year quantities and land (1,175 m², 1.7% of the site), rice vs local grain, a rain/summer-water matrix of Dalmatian crops, Zadar climate figures, a staple calendar. The empty area bar in Growing food is now drawn. **Status:** done.
+
 ## 12.10.2026 (Three crops app)
 
 > A fun project for Eco Oasis. Next to the section, you need to link— also build a web app. So we have a section of growing food. We have 3 kinds of crops. One is cereal, second is whatever is second, protein or something, and third one is oil. So you read the principles of 3 components of food for humans. which is the basic of calories, and then vegetable came on top. And the function of the app is to choose 3, 3 groups of food with assistance. So for example, I can choose rice as cereal, and then for other 2, the applications give me multiple options like a tree. And then when I select second one, I have a Third one, uh, options. So basically, as I'm selecting, I'm narrowing the options until I find the right 3 combinations. And there will be a map of climates and list of climates. And when user choose a climate, it will be highlighted in the map. And also, if the user click on the map, it will tell where this climate exists. And then this, the source of food will be reduced to the ones which can grow there without any special modifications. So let's make this 3 crops chooser, advisor, educator, etc.
